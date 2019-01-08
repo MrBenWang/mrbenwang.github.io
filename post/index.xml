@@ -13,10 +13,10 @@
     
     <item>
       <title>[转]逻辑谬误列表(序言)</title>
-      <link>https://mrbenwang.github.io/post/0020-logical-fallacy-list-foreword/</link>
+      <link>https://mrbenwang.github.io/post/20181207-logical-fallacy-list-foreword/</link>
       <pubDate>Fri, 07 Dec 2018 14:56:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0020-logical-fallacy-list-foreword/</guid>
+      <guid>https://mrbenwang.github.io/post/20181207-logical-fallacy-list-foreword/</guid>
       <description>&lt;p&gt;我在网上浏览文章的时候，无意间在&lt;code&gt;评论区&lt;/code&gt;发现了，这个非常有价值的系列评论，我不能放置原文链接，见谅。&lt;br /&gt;
 同时，为了保留这份资料，为以后重新学习，实践后再来重学。故此由此系列，我对原评论有结构调整。&lt;code&gt;遗憾：原文没有找到&lt;/code&gt;&lt;br /&gt;
 &lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>我的戊戌年</title>
-      <link>https://mrbenwang.github.io/post/0025-review-my-wuxu-year/</link>
+      <link>https://mrbenwang.github.io/post/20181225-review-my-wuxu-year/</link>
       <pubDate>Tue, 25 Dec 2018 15:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0025-review-my-wuxu-year/</guid>
+      <guid>https://mrbenwang.github.io/post/20181225-review-my-wuxu-year/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;子曰：“吾十有五，而志于学，三十而立，四十而不惑，五十而知天命，六十而耳顺，七十而从心所欲，不逾矩。”&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -40,10 +40,10 @@
     
     <item>
       <title>*根据时间戳，增量同步数据的解决办法</title>
-      <link>https://mrbenwang.github.io/post/0024-incremen-sync-by-datetime/</link>
+      <link>https://mrbenwang.github.io/post/20181215-incremen-sync-by-datetime/</link>
       <pubDate>Sat, 15 Dec 2018 15:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0024-incremen-sync-by-datetime/</guid>
+      <guid>https://mrbenwang.github.io/post/20181215-incremen-sync-by-datetime/</guid>
       <description>&lt;p&gt;最近在工作中遇到一个比较棘手的问题，客户端从服务端同步数据的问题。&lt;br /&gt;
 思考这个解决的方法还是花费了不少的精力。
 &lt;/p&gt;</description>
@@ -51,10 +51,10 @@
     
     <item>
       <title>[转]逻辑谬误列表(例子)</title>
-      <link>https://mrbenwang.github.io/post/0023-logical-fallacy-list-ex/</link>
+      <link>https://mrbenwang.github.io/post/20181207-logical-fallacy-list-ex/</link>
       <pubDate>Fri, 07 Dec 2018 17:50:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0023-logical-fallacy-list-ex/</guid>
+      <guid>https://mrbenwang.github.io/post/20181207-logical-fallacy-list-ex/</guid>
       <description>&lt;p&gt;&lt;div class=&#34;shortcode-notice note&#34;&gt;
   &lt;div class=&#34;shortcode-notice-title note&#34;&gt;
     
@@ -70,10 +70,10 @@
     
     <item>
       <title>[转]逻辑谬误列表(13-24)</title>
-      <link>https://mrbenwang.github.io/post/0022-logical-fallacy-list-2/</link>
+      <link>https://mrbenwang.github.io/post/20181207-logical-fallacy-list-2/</link>
       <pubDate>Fri, 07 Dec 2018 16:56:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0022-logical-fallacy-list-2/</guid>
+      <guid>https://mrbenwang.github.io/post/20181207-logical-fallacy-list-2/</guid>
       <description>&lt;p&gt;13.合成谬误/分割谬误&lt;br /&gt;
 14.轶事谬误（Anecdotal Fallacy）&lt;br /&gt;
 15.诉诸情感（appeal to emotion）&lt;br /&gt;
@@ -91,10 +91,10 @@
     
     <item>
       <title>[转]逻辑谬误列表(1-12)</title>
-      <link>https://mrbenwang.github.io/post/0021-logical-fallacy-list-1/</link>
+      <link>https://mrbenwang.github.io/post/20181207-logical-fallacy-list-1/</link>
       <pubDate>Fri, 07 Dec 2018 15:56:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0021-logical-fallacy-list-1/</guid>
+      <guid>https://mrbenwang.github.io/post/20181207-logical-fallacy-list-1/</guid>
       <description>&lt;ol&gt;
 &lt;li&gt;稻草人论证（Strawman）&lt;/li&gt;
 &lt;li&gt;滑坡谬误（Slippery slope）&lt;/li&gt;
@@ -115,10 +115,10 @@
     
     <item>
       <title>我来回答一些这36个问题</title>
-      <link>https://mrbenwang.github.io/post/0019-i-ask-the-36-questions/</link>
+      <link>https://mrbenwang.github.io/post/20181130-i-ask-the-36-questions/</link>
       <pubDate>Fri, 30 Nov 2018 16:30:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0019-i-ask-the-36-questions/</guid>
+      <guid>https://mrbenwang.github.io/post/20181130-i-ask-the-36-questions/</guid>
       <description>&lt;p&gt;问题来自于，纽约时报《The 36 Questions That Lead to Love》：&lt;a href=&#34;https://www.nytimes.com/2015/01/11/fashion/no-37-big-wedding-or-small.html&#34;&gt;英文原文&lt;/a&gt;  -  &lt;a href=&#34;https://cn.nytimes.com/culture/20150123/t23questions/&#34;&gt;中文翻译&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;div class=&#34;shortcode-notice info&#34;&gt;
@@ -140,10 +140,10 @@
     
     <item>
       <title>双十一之于经济并不是一件好事情</title>
-      <link>https://mrbenwang.github.io/post/0018-double-eleven-in-china-is-not-a-good-thing/</link>
+      <link>https://mrbenwang.github.io/post/20181129-double-eleven-in-china-is-not-a-good-thing/</link>
       <pubDate>Thu, 29 Nov 2018 15:30:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0018-double-eleven-in-china-is-not-a-good-thing/</guid>
+      <guid>https://mrbenwang.github.io/post/20181129-double-eleven-in-china-is-not-a-good-thing/</guid>
       <description>&lt;h1 id=&#34;双十一之于经济并不是一件好事情&#34;&gt;双十一之于经济并不是一件好事情。&lt;/h1&gt;
 
 &lt;p&gt;我认为双十一的成长已经到头了，并且它所产生的恶果。将会至少影响到明年半年的经济情况。总的来说，我认为这是&lt;code&gt;非常非常不好&lt;/code&gt;的事情。&lt;br /&gt;
@@ -153,10 +153,10 @@
     
     <item>
       <title>自学日语记录历程</title>
-      <link>https://mrbenwang.github.io/post/0017-japanese-language-study-for-3months/</link>
+      <link>https://mrbenwang.github.io/post/20181107-japanese-language-study-for-3months/</link>
       <pubDate>Wed, 07 Nov 2018 09:33:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0017-japanese-language-study-for-3months/</guid>
+      <guid>https://mrbenwang.github.io/post/20181107-japanese-language-study-for-3months/</guid>
       <description>&lt;p&gt;不知不觉就已经学习日语三个月了，有点点小小的心得和经验。&lt;br /&gt;
 这篇文章：一方面是整理，记忆，留作以后回忆使用，另一方面，也想对和我一样学习日语的人，如果能有&lt;code&gt;一点点帮助&lt;/code&gt;就再好不过了。
 &lt;/p&gt;</description>
@@ -164,10 +164,10 @@
     
     <item>
       <title>*域名注册经历的一些分享</title>
-      <link>https://mrbenwang.github.io/post/0016-domain-registration-share/</link>
+      <link>https://mrbenwang.github.io/post/20180930-domain-registration-share/</link>
       <pubDate>Sun, 30 Sep 2018 09:04:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0016-domain-registration-share/</guid>
+      <guid>https://mrbenwang.github.io/post/20180930-domain-registration-share/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;一次偶然机会，看了一下新建一个&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;VPS实例&lt;/a&gt;的价格，发现最低价的配置，没有&lt;code&gt;ip4&lt;/code&gt;了(所幸我的还是ip4)，只能使用&lt;code&gt;ipv6&lt;/code&gt;。&lt;code&gt;2001:0db8:85a3:08d3:1319:8a2e:0370:7344&lt;/code&gt; 这样的ip地址，又长又难记忆。如果有个域名那不就简单记忆了嘛。&lt;br /&gt;
@@ -177,10 +177,10 @@
     
     <item>
       <title>由shadowsocks转为v2ray的体验</title>
-      <link>https://mrbenwang.github.io/post/0015-give-up-ss-and-change-to-v2ray/</link>
+      <link>https://mrbenwang.github.io/post/20180929-give-up-ss-and-change-to-v2ray/</link>
       <pubDate>Sat, 29 Sep 2018 15:04:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0015-give-up-ss-and-change-to-v2ray/</guid>
+      <guid>https://mrbenwang.github.io/post/20180929-give-up-ss-and-change-to-v2ray/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;最近一段时间，总感觉&lt;code&gt;shadowsocks&lt;/code&gt;用起来非常的慢，时不时的断网，我就觉得可能不太对劲了。在issues看到有不少人提到，可能已经被人工智能识别，所以非常堪忧。
@@ -189,10 +189,10 @@
     
     <item>
       <title>*Hugo &#43; github 搭建个人博客</title>
-      <link>https://mrbenwang.github.io/post/0014-hugo-plus-github-build-blog/</link>
+      <link>https://mrbenwang.github.io/post/20180927-hugo-plus-github-build-blog/</link>
       <pubDate>Thu, 27 Sep 2018 15:13:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0014-hugo-plus-github-build-blog/</guid>
+      <guid>https://mrbenwang.github.io/post/20180927-hugo-plus-github-build-blog/</guid>
       <description>&lt;p&gt;很早以前就有想法，搭建一个个人的博客。没有实现的原因：一方面个人的服务器&lt;code&gt;不太安全&lt;/code&gt;，并且掉线，欠费等等，维护起来麻烦，另一方面，文章编辑发布起来也&lt;code&gt;不方便&lt;/code&gt;。&lt;/p&gt;
 
 &lt;p&gt;后来了解到 github 提供了博客的功能，也一直没有实践。也鉴于上次文章被删，我也就开始实践了起来，&lt;code&gt;有一个备份总好于无&lt;/code&gt;。&lt;br /&gt;
@@ -201,11 +201,11 @@
     
     <item>
       <title>*在公网上的Linux，我的一些配置分享</title>
-      <link>https://mrbenwang.github.io/post/0013-linux-on-public-share-some-configration/</link>
+      <link>https://mrbenwang.github.io/post/20180926-linux-on-public-share-some-configration/</link>
       <pubDate>Wed, 26 Sep 2018 10:16:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0013-linux-on-public-share-some-configration/</guid>
-      <description>&lt;p&gt;去年的时候，有一篇介绍在&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;vultr&lt;/a&gt; 上 &lt;a href=&#34;https://mrbenwang.github.io/post/0009-build-ss-on-vultr-vps/&#34;&gt;搭建ss服务器&lt;/a&gt; 的文章，由于某些众所周知的原因，被阿里云删除。&lt;/p&gt;
+      <guid>https://mrbenwang.github.io/post/20180926-linux-on-public-share-some-configration/</guid>
+      <description>&lt;p&gt;去年的时候，有一篇介绍在&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;vultr&lt;/a&gt; 上 &lt;a href=&#34;https://mrbenwang.github.io/post/20170329-build-ss-on-vultr-vps/&#34;&gt;搭建ss服务器&lt;/a&gt; 的文章，由于某些众所周知的原因，被阿里云删除。&lt;/p&gt;
 
 &lt;p&gt;后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用&lt;code&gt;lastb&lt;/code&gt;命令，着实下了一跳，我的vps每天都有&lt;code&gt;几万次的失败登陆记录&lt;/code&gt;。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上&lt;strong&gt;所有国家&lt;/strong&gt;都有来过。&lt;/p&gt;
 
@@ -215,10 +215,10 @@
     
     <item>
       <title>*究竟什么样的技术分享文章，不会被和谐?</title>
-      <link>https://mrbenwang.github.io/post/0012-what-a-fuck-cnblog-delete-my-articel/</link>
+      <link>https://mrbenwang.github.io/post/20180724-what-a-fuck-cnblog-delete-my-articel/</link>
       <pubDate>Tue, 24 Jul 2018 20:42:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0012-what-a-fuck-cnblog-delete-my-articel/</guid>
+      <guid>https://mrbenwang.github.io/post/20180724-what-a-fuck-cnblog-delete-my-articel/</guid>
       <description>&lt;p&gt;大概半年的时间，没有登陆了博客园了。今天心血来潮登上账号来看看，看到一条短消息，让我非常愤怒！&lt;br /&gt;
 &lt;img src=&#34;https://mrbenwang.github.io/images/0012-what-a-fuck-cnblog-delete-my-articel/1.jpg&#34; alt=&#34;at first know&#34; /&gt;&lt;br /&gt;
 &lt;/p&gt;</description>
@@ -226,10 +226,10 @@
     
     <item>
       <title>*记一次【模拟点击】，WinForm小软件开发过程</title>
-      <link>https://mrbenwang.github.io/post/0011-simulator-click-baidu-ads/</link>
+      <link>https://mrbenwang.github.io/post/20170921-simulator-click-baidu-ads/</link>
       <pubDate>Thu, 21 Sep 2017 22:08:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0011-simulator-click-baidu-ads/</guid>
+      <guid>https://mrbenwang.github.io/post/20170921-simulator-click-baidu-ads/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;年初四月份的时候，有朋友找到我，说想开发一个模拟点击的软件。最终软件做完后，发现效果不理想。唯一开发的我是认为&lt;code&gt;最好是放弃&lt;/code&gt;了，做运营的他，&lt;code&gt;坚持&lt;/code&gt;这个没问题，说是改变合作方式。最终也是不了了之了。
@@ -238,10 +238,10 @@
     
     <item>
       <title>*使用VBA，优化处理Excel表格</title>
-      <link>https://mrbenwang.github.io/post/0010-process-excel-with-vba/</link>
+      <link>https://mrbenwang.github.io/post/20170719-process-excel-with-vba/</link>
       <pubDate>Wed, 19 Jul 2017 18:00:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0010-process-excel-with-vba/</guid>
+      <guid>https://mrbenwang.github.io/post/20170719-process-excel-with-vba/</guid>
       <description>&lt;p&gt;上周末，XX给我抱怨：因为计算绩效奖金，把2个人的工资发错了，还被扣了500元。问的缘由得知，她每个月要处理十来个excel表格，每次都要手动修改里面的值，如果修改了一处，其他地方也要修改，然后还要多处地方核对。导致光这件事情就要消耗三四天，伤神费力。&lt;/p&gt;
 
 &lt;p&gt;我就问她，整个是不是都是&lt;code&gt;机械性重复的工作&lt;/code&gt;，如果是的话，完全可以&lt;strong&gt;用电脑来代替&lt;/strong&gt;。然后我就帮她找工具来优化她的工作，减少出错机会。
@@ -250,10 +250,10 @@
     
     <item>
       <title>记一次搭建SS服务器，完整的过程。</title>
-      <link>https://mrbenwang.github.io/post/0009-build-ss-on-vultr-vps/</link>
+      <link>https://mrbenwang.github.io/post/20170329-build-ss-on-vultr-vps/</link>
       <pubDate>Wed, 29 Mar 2017 12:04:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0009-build-ss-on-vultr-vps/</guid>
+      <guid>https://mrbenwang.github.io/post/20170329-build-ss-on-vultr-vps/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;这几天为了登录外网查询资料，谷歌经常抽风，国外的博客也打不开，都要整崩溃了。我以前（直到昨天以前）都是使用&lt;code&gt;修改hosts&lt;/code&gt;来访问外网的，用的是 &lt;a href=&#34;https://laod.cn/hosts&#34;&gt;老D（https://laod.cn/hosts）&lt;/a&gt; 无偿分享的hosts。&lt;/p&gt;
@@ -264,19 +264,19 @@
     
     <item>
       <title>*python 爬虫 记录</title>
-      <link>https://mrbenwang.github.io/post/0008-python-spider-note/</link>
+      <link>https://mrbenwang.github.io/post/20170224-python-spider-note/</link>
       <pubDate>Fri, 24 Feb 2017 12:33:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0008-python-spider-note/</guid>
+      <guid>https://mrbenwang.github.io/post/20170224-python-spider-note/</guid>
       <description>python3 爬虫需要安装：requests，beautifulsoup4，html5lib 带有中文的需要这样写，要不然就会出现乱码 1 2 3 html = response.content.decode(&amp;#34;utf8&amp;#34;) with open(&amp;#34;a.html&amp;#34;, &amp;#39;w&amp;#39;) as</description>
     </item>
     
     <item>
       <title>*使用OneNote的COM组件，实现OCR功能。</title>
-      <link>https://mrbenwang.github.io/post/0007-use-onenote-achieve-orc/</link>
+      <link>https://mrbenwang.github.io/post/20160831-use-onenote-achieve-orc/</link>
       <pubDate>Wed, 31 Aug 2016 16:50:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0007-use-onenote-achieve-orc/</guid>
+      <guid>https://mrbenwang.github.io/post/20160831-use-onenote-achieve-orc/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;在业务系统开发的过程中，很多情况下会去&lt;code&gt;识别图片中的相关信息&lt;/code&gt;，并且把信息录入到系统中。现在希望通过&lt;code&gt;自动化&lt;/code&gt;的方式录入，就有了以下的工作。&lt;br /&gt;
@@ -286,10 +286,10 @@
     
     <item>
       <title>*关于json 与 Request Header 的Content-Type 一些关系。</title>
-      <link>https://mrbenwang.github.io/post/0006-json-and-request-header-content-type/</link>
+      <link>https://mrbenwang.github.io/post/20160607-json-and-request-header-content-type/</link>
       <pubDate>Tue, 07 Jun 2016 12:06:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/0006-json-and-request-header-content-type/</guid>
+      <guid>https://mrbenwang.github.io/post/20160607-json-and-request-header-content-type/</guid>
       <description>&lt;p&gt;由于最近遇到关于，ashx文件 ajax解析参数的问题。查询网上很多资料后，已经解决。&lt;br /&gt;
 鉴于网上已经足够多的，关于这个问题的文章。大部分内容来自互联网，我这里只是做一些整理和记录。特此说明并非原创。
 &lt;/p&gt;</description>
