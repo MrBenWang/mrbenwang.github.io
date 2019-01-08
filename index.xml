@@ -2146,9 +2146,20 @@ A：我并不认为孩童应该往大街上乱跑。/B：把小孩关起来，�
 &lt;p&gt;是一种非形式谬误，使用连串的因果推论，却&lt;strong&gt;夸大&lt;/strong&gt;了每个环节的&lt;strong&gt;因果强度&lt;/strong&gt;，而得到不合理的结论。&lt;br /&gt;
 有些说法将连续体谬误也归为滑坡谬误，但近来已较少这样使用。&lt;/p&gt;
 
-&lt;p&gt;滑坡谬误的典型形式为“如果发生Ａ，接着就会发生Ｂ，接着就会发生Ｃ，接着就会发生Ｄ，……，接着就会发生Ｚ”，而后通常会明示或暗示地推论“Ｚ不应该发生，因此我们不应允许Ａ发生”。 Ａ至Ｂ、Ｂ至Ｃ、Ｃ至Ｄ、……等因果关系好似一个个“坡”，从Ａ推论至Ｚ的过程就像一个滑坡。&lt;/p&gt;
+&lt;div class=&#34;shortcode-notice note&#34;&gt;
+  &lt;div class=&#34;shortcode-notice-title note&#34;&gt;
+    
+      滑坡谬误的典型形式
+    
+  &lt;/div&gt;
+  &lt;p&gt;“如果发生Ａ，接着就会发生Ｂ，接着就会发生Ｃ，接着就会发生Ｄ，……，接着就会发生Ｚ”&lt;br /&gt;
+而后通常会明示或暗示地推论“Ｚ不应该发生，因此我们不应允许Ａ发生”。&lt;br /&gt;
+Ａ至Ｂ、Ｂ至Ｃ、Ｃ至Ｄ、……等因果关系好似一个个“坡”，从Ａ推论至Ｚ的过程就像一个滑坡。&lt;/p&gt;
 
-&lt;p&gt;滑坡谬误的问题在于，每个“坡”的因果强度不一，有些因果关系只是可能、而非必然，有些因果关系相当微弱，有些因果关系甚至是未知或缺乏证据的，因而即使Ａ发生，也无法一路滑到Ｚ，Ｚ并非必然（或极可能）发生。&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;滑坡谬误的问题在于，每个“&lt;code&gt;坡&lt;/code&gt;”的&lt;strong&gt;因果强度不一&lt;/strong&gt;，有些因果关系&lt;strong&gt;只是可能&lt;/strong&gt;、而&lt;strong&gt;非必然&lt;/strong&gt;，有些因果关系相当微弱，有些因果关系甚至是未知或缺乏证据的，因而即使Ａ发生，也无法一路滑到Ｚ，Ｚ并非必然（或极可能）发生。&lt;/p&gt;
 
 &lt;p&gt;相对地，若有充足证据显示每个“坡”都有合理、强烈的因果连结，即不构成滑坡谬误。&lt;/p&gt;
 
@@ -2171,9 +2182,9 @@ A：我并不认为孩童应该往大街上乱跑。/B：把小孩关起来，�
 
 &lt;h2 id=&#34;3-片面辩护-special-pleading&#34;&gt;3. 片面辩护（special pleading）&lt;/h2&gt;
 
-&lt;p&gt;是一种非形式谬误，主张某些情况是一般性原则的例外，却提出无关的理由。&lt;/p&gt;
+&lt;p&gt;是一种非形式谬误，主张某些情况是&lt;strong&gt;一般性原则&lt;/strong&gt;的&lt;strong&gt;例外&lt;/strong&gt;，却提出无关的理由。&lt;/p&gt;
 
-&lt;p&gt;人类是一种很有趣的生物，他们对犯错误有一种愚蠢的厌恶。许多人宁愿创造一些方法以能够持坚陈旧的观念，也不愿意欣然接受通过更好的理解去改变自己的想法所能带来的益处。 （意思大概就是宁愿千方百计的坚持自己以前的想法，也不愿意改变自己的想法，尽管改变想法可以明明可以使自己获益）&lt;/p&gt;
+&lt;p&gt;人类是一种很有趣的生物，他们对犯错误有一种愚蠢的厌恶。许多人宁愿创造一些方法以能够持坚陈旧的观念，也&lt;strong&gt;不愿意欣然接受&lt;/strong&gt;通过更好的理解去改变自己的想法所能带来的益处。 （意思大概就是宁愿千方百计的坚持自己以前的想法，也&lt;strong&gt;不愿意改变&lt;/strong&gt;自己的想法，尽管改变想法可以明明可以使自己获益）&lt;/p&gt;
 
 &lt;div class=&#34;shortcode-notice info&#34;&gt;
   &lt;div class=&#34;shortcode-notice-title info&#34;&gt;
@@ -2196,7 +2207,7 @@ A：我并不认为孩童应该往大街上乱跑。/B：把小孩关起来，�
 
 &lt;p&gt;亦称为蒙地卡罗谬误（The Monte Carlo Fallacy），是一种概率谬误，主张由于某事发生了很多次，因此接下来不太可能发生；或者由于某事很久没发生，因此接下来很可能会发生。&lt;/p&gt;
 
-&lt;p&gt;赌徒谬误的思维方式像是如此：抛一枚公平的硬币，连续出现越多次反面朝上，下次抛出正面的概率就越大，抛出反面的概率就越小。&lt;/p&gt;
+&lt;p&gt;赌徒谬误的思维方式像是如此：抛一枚公平的硬币，连续出现越多次反面朝上，下次抛出正面的概率就越大，抛出反面的概率就越小。(从概率上面来说，单独的每次抛出硬币概率都是相同的)&lt;/p&gt;
 
 &lt;div class=&#34;shortcode-notice info&#34;&gt;
   &lt;div class=&#34;shortcode-notice-title info&#34;&gt;
@@ -2217,11 +2228,12 @@ A：我并不认为孩童应该往大街上乱跑。/B：把小孩关起来，�
 
 &lt;h2 id=&#34;5-假两难-推理-论证-false-dilemma&#34;&gt;5. 假两难（推理、论证）（False dilemma）&lt;/h2&gt;
 
-&lt;p&gt;又称非黑即白（black-or-white）、伪（假）二分法、伪二择（选）一法、伪两面法、双刀法等，是提出少数选项（一般是两个，但有可能是三个或更多）要人从中择一，但这些选择并未涵盖所有的可能性。非黑即白是一种非形式谬误。&lt;/p&gt;
+&lt;p&gt;又称非黑即白（black-or-white）、伪（假）二分法、伪二择（选）一法、伪两面法、双刀法等，是提出少数选项（一般是两个，但有可能是三个或更多）要人从中择一，但这些选择并&lt;strong&gt;未涵盖&lt;/strong&gt;&lt;code&gt;所有的可能性&lt;/code&gt;。非黑即白是一种非形式谬误。&lt;/p&gt;
 
-&lt;p&gt;非黑即白是基于对排中律的误用。排中律只适合衡量非此即彼的二元观念（例如“对与错”、“真与假”等等），用于其他范畴未必恰当。要破解此类谬误，可证明除了论证中提出的选项外，还有其他可能。&lt;/p&gt;
+&lt;p&gt;非黑即白是基于对排中律的误用【排中律：形式逻辑的基本规律之一，指在同一时间、同一关系下，对同一对象所作的两个互相矛盾的判断，其中必有并且只有一个是真的，不能有中间状况。】&lt;br /&gt;
+排中律只适合衡量非此即彼的二元观念（例如“对与错”、“真与假”等等），用于其他范畴未必恰当。要破解此类谬误，可证明除了论证中提出的选项外，还有其他可能。&lt;/p&gt;
 
-&lt;p&gt;有时假两难是被刻意提出以迫使他人做出选择的，但其他时候它是因不小心忽略其他可能性而成，而非蓄意造成的。&lt;/p&gt;
+&lt;p&gt;有时，假两难是被刻意提出，以迫使他人做出选择的；但其他时候，它是因不小心忽略其他可能性而成，而非蓄意造成的。&lt;/p&gt;
 
 &lt;div class=&#34;shortcode-notice info&#34;&gt;
   &lt;div class=&#34;shortcode-notice-title info&#34;&gt;
@@ -2242,9 +2254,9 @@ A：我并不认为孩童应该往大街上乱跑。/B：把小孩关起来，�
 
 &lt;h2 id=&#34;6-因果谬误-causal-fallacy&#34;&gt;6. 因果谬误（Causal Fallacy）&lt;/h2&gt;
 
-&lt;p&gt;虚假原因（英语：false cause）或乱赋因果（拉丁语：non causa pro causa），是一种非形式谬误，泛指各种未有充分证据便轻率断定因果关系的不当推论。&lt;/p&gt;
+&lt;p&gt;虚假原因（英语：false cause）或乱赋因果（拉丁语：non causa pro causa），是一种非形式谬误，泛指各种&lt;strong&gt;未有充分证据&lt;/strong&gt;便&lt;strong&gt;轻率断定因果关系&lt;/strong&gt;的不当推论。&lt;/p&gt;
 
-&lt;p&gt;许多人会将事物之间的联系（这些事物一起发生或依次发生）混淆为它们之间的因果（一个事物实际上导致了另一个事物的发生）。有时候，这种联系只是偶然的，或者它是可以被归因于一个常见的原因。&lt;/p&gt;
+&lt;p&gt;许多人会将事物之间的联系（这些事物&lt;code&gt;一起发生&lt;/code&gt;或&lt;code&gt;依次发生&lt;/code&gt;）混淆为它们之间的因果（一个事物实际上导致了另一个事物的发生）。有时候，这种联系只是偶然的，或者它是可以被归因于一个常见的原因。&lt;/p&gt;
 
 &lt;div class=&#34;shortcode-notice info&#34;&gt;
   &lt;div class=&#34;shortcode-notice-title info&#34;&gt;
@@ -2265,7 +2277,7 @@ A：我并不认为孩童应该往大街上乱跑。/B：把小孩关起来，�
 
 &lt;h2 id=&#34;7-诉诸人身谬误-英语-ad-hominem-fallacy&#34;&gt;7. 诉诸人身谬误（英语：ad hominem fallacy）&lt;/h2&gt;
 
-&lt;p&gt;指借由与当前论题无关之个人特质，如人格、动机、态度、地位、阶级或处境等，作为驳斥对方或支持己方论证的理据。诉诸人身又称作“对人不对事”、“因人废言”或“因人设事”、“以人废言”。&lt;/p&gt;
+&lt;p&gt;指借由&lt;strong&gt;与当前论题无关&lt;/strong&gt;之&lt;code&gt;个人特质&lt;/code&gt;，如人格、动机、态度、地位、阶级或处境等，作为驳斥对方或支持己方论证的理据。诉诸人身又称作“&lt;code&gt;对人不对事&lt;/code&gt;”、“&lt;code&gt;因人废言&lt;/code&gt;”或“&lt;code&gt;因人设事&lt;/code&gt;”、“&lt;code&gt;以人废言&lt;/code&gt;”。&lt;/p&gt;
 
 &lt;p&gt;诉诸人身可诉诸负面特质（也称作人身攻击谬误）、正面特质、或中立特质。&lt;/p&gt;
 
@@ -2290,9 +2302,9 @@ A：我并不认为孩童应该往大街上乱跑。/B：把小孩关起来，�
 
 &lt;h2 id=&#34;8-既定观点问题-英语-loaded-question&#34;&gt;8. 既定观点问题（英语：loaded question）&lt;/h2&gt;
 
-&lt;p&gt;有时也称复合问题（英语：complex question；拉丁语：plurium interrogationum），系在问题中掺入预设的观点，对方一旦回答，就等同承认这些观点是真的。如果回答者并未同意该预设，仅是因正面回答问题而被迫承认，以其回答证成预设则属谬误。&lt;/p&gt;
+&lt;p&gt;有时也称复合问题（英语：complex question；拉丁语：plurium interrogationum），系在问题中&lt;strong&gt;掺入&lt;/strong&gt;&lt;code&gt;预设的观点&lt;/code&gt;，对方一旦回答，就等同承认这些观点是真的。如果回答者并未同意该预设，仅是因正面回答问题而被迫承认，以其回答证成预设则属谬误。&lt;/p&gt;
 
-&lt;p&gt;既定观点问题谬误对于转移合理辩论路线特别有效，这是由于人们易于激动或是易被煽动的本性。既定观点问题的受者会被迫加强他们的自我防范，从而可能导致慌乱或是处于不利地位。&lt;/p&gt;
+&lt;p&gt;既定观点问题谬误对于转移合理辩论路线特别有效，这是由于&lt;code&gt;人们易于激动&lt;/code&gt;或是&lt;code&gt;易被煽动的本性&lt;/code&gt;。既定观点问题的受者会被迫加强他们的自我防范，从而可能导致慌乱或是处于不利地位。&lt;/p&gt;
 
 &lt;div class=&#34;shortcode-notice info&#34;&gt;
   &lt;div class=&#34;shortcode-notice-title info&#34;&gt;
@@ -2313,11 +2325,11 @@ A：我并不认为孩童应该往大街上乱跑。/B：把小孩关起来，�
 
 &lt;h2 id=&#34;9-诉诸群众-拉丁语-argumentum-ad-populum&#34;&gt;9. 诉诸群众（拉丁语：Argumentum ad populum）&lt;/h2&gt;
 
-&lt;p&gt;是一种逻辑谬误、一种社会心理的状态、也是一种宣传的技巧，常被称为“从众”，代表人类害怕在社会中被孤立，因而向社会其他多数靠拢的一种过程。&lt;/p&gt;
+&lt;p&gt;是一种逻辑谬误、一种社会心理的状态、也是一种宣传的技巧，常被称为“从众”，代表人类&lt;strong&gt;害怕&lt;/strong&gt;在社会中&lt;code&gt;被孤立&lt;/code&gt;，因而向社会其他多数靠拢的一种过程。&lt;/p&gt;
 
 &lt;p&gt;诉诸群众尚有许多称呼，如诉诸多数（appeal to the majority）、诉诸大数（Argumentum ad numerum）、诉诸民主（appeal to the democracy）、诉诸信念（appeal to belief）、共识谬误（consensus fallacy）、乐队花车谬误（bandwagon fallacy）等等。&lt;/p&gt;
 
-&lt;p&gt;这种论据的瑕疵在于一个观念的流行性跟它的正确性没有丝毫关联。如果真有这种关联的话，那么根据流行的观念，地球在历史上很长的时间里确实就是（天圆）地方的。&lt;/p&gt;
+&lt;p&gt;这种论据的瑕疵在于，一个观念的&lt;strong&gt;流行性&lt;/strong&gt;跟它的&lt;strong&gt;正确性&lt;/strong&gt;&lt;code&gt;没有丝毫关联&lt;/code&gt;。如果真有这种关联的话，那么根据流行的观念，地球在历史上很长的时间里确实就是（天圆）地方的。&lt;/p&gt;
 
 &lt;div class=&#34;shortcode-notice info&#34;&gt;
   &lt;div class=&#34;shortcode-notice-title info&#34;&gt;
@@ -2338,9 +2350,9 @@ A：我并不认为孩童应该往大街上乱跑。/B：把小孩关起来，�
 
 &lt;h2 id=&#34;10-窃取论点-英语-begging-the-question&#34;&gt;10. 窃取论点（英语：begging the question）&lt;/h2&gt;
 
-&lt;p&gt;（英语：begging the question 或question begging；拉丁语：petitio principii），又称乞求论点、乞题、丐题等等，是在论证时把不该视为理所当然的命题预设为理所当然，这是一种不当预设的非形式谬误。&lt;/p&gt;
+&lt;p&gt;（英语：begging the question 或question begging；拉丁语：petitio principii），又称乞求论点、乞题、丐题等等，是在论证时把&lt;code&gt;不该视为理所当然的命题&lt;/code&gt;&lt;strong&gt;预设为&lt;/strong&gt;&lt;code&gt;理所当然&lt;/code&gt;，这是一种不当预设的非形式谬误。&lt;/p&gt;
 
-&lt;p&gt;这个逻辑性不连贯的论据通常在人们已有一个根深蒂固的假设时发生。因此他们会将已经占据他们脑海的观点理解为是别人给出的。循环论证坏大多数情况下是因为它不是非常好。&lt;/p&gt;
+&lt;p&gt;这个逻辑性不连贯的论据通常在，人们已有一个根深蒂固的假设时发生。因此他们会将，已经占据他们脑海的观点，理解为是别人给出的。&lt;del&gt;循环论证坏大多数情况下是因为它不是非常好。&lt;/del&gt;&lt;/p&gt;
 
 &lt;div class=&#34;shortcode-notice info&#34;&gt;
   &lt;div class=&#34;shortcode-notice-title info&#34;&gt;
@@ -2363,7 +2375,7 @@ A：我并不认为孩童应该往大街上乱跑。/B：把小孩关起来，�
 
 &lt;p&gt;（英语：Appeal to Authority；拉丁语：Argumentum ad Verecundiam）或伪托权威、援假权威，是一种特殊类型的归纳论证，通常以统计三段论的形式来表达。虽然某些类别的诉诸权威有时会构成有力的归纳论点，但是诉诸权威通常都是被误用的。&lt;/p&gt;
 
-&lt;p&gt;非常重要的一点是这种谬误不应当用于无视专家或科学的论述观点。诉诸权威不是正当的论据，但也不能因此认为忽视一个被证实为在某个问题方面学识渊博的专家的主张是合理的，除非你跟他在那个方面有着类似层次的认识。&lt;/p&gt;
+&lt;p&gt;非常重要的一点是，这种谬误不应当用于，无视专家或科学的论述观点。诉诸权威不是正当的论据，但也不能因此认为忽视一个被证实为，在某个问题方面学识渊博的专家的主张是合理的，除非你跟他在那个方面有着类似层次的认识。&lt;/p&gt;
 
 &lt;div class=&#34;shortcode-notice info&#34;&gt;
   &lt;div class=&#34;shortcode-notice-title info&#34;&gt;
@@ -2386,7 +2398,7 @@ A：我并不认为孩童应该往大街上乱跑。/B：把小孩关起来，�
 
 &lt;p&gt;（英语：appeal to nature；拉丁语：argumentum ad naturam）是一种非形式谬误，系主张某个现象很自然，因而是可取的；或主张某个现象不自然，因而是不可取的。&lt;/p&gt;
 
-&lt;p&gt;许多自然的东西也被认为是好的，但这个可以使我们死思考产生偏见。不过自然本身并不意味着好货坏。比如，谋杀可以被认为是非常自然的，不过这部意味着它是正当的。&lt;/p&gt;
+&lt;p&gt;许多自然的东西也被认为是好的，但这个可以使我们思考产生偏见。不过自然本身并不意味着好或坏。比如，谋杀可以被认为是非常自然的，不过这不意味着它是正当的。&lt;/p&gt;
 
 &lt;div class=&#34;shortcode-notice info&#34;&gt;
   &lt;div class=&#34;shortcode-notice-title info&#34;&gt;
