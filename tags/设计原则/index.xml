@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>设计原则 on 风雪夜归人</title>
+    <link>https://mrbenwang.github.io/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</link>
+    <description>Recent content in 设计原则 on 风雪夜归人</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 23 Sep 2014 16:59:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://mrbenwang.github.io/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>*设计原则记录</title>
+      <link>https://mrbenwang.github.io/post/0001-design-principle-note/</link>
+      <pubDate>Tue, 23 Sep 2014 16:59:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/0001-design-principle-note/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;找到系统中变化的部分，将变化的部分同其它稳定的部分隔开。&lt;/li&gt;
+&lt;li&gt;面向接口编程，而不要面向实现编程。&lt;/li&gt;
+&lt;li&gt;优先使用对象组合，而非类继承。&lt;/li&gt;
+&lt;li&gt;软件实体应当对扩展开放，对修改关闭。&lt;/li&gt;
+&lt;li&gt;继承必须确保超类所拥有的性质在子类中仍然成立。&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

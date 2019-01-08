@@ -1,0 +1,26 @@
+.post .post-content a
+{
+    color: #0366d6;
+    border-bottom: 1px solid #0366d6;
+}
+
+.post .post-content code
+{
+    padding: 5px 7px;
+
+}
+
+.post .post-content .read-more .read-more-link{
+    border-bottom:0px;
+}
+
+.post .post-content code,.post .post-content pre {
+    font-family: source sans pro,helvetica neue,Arial,sans-serif;
+}
+
+#busuanzi_value_site_uv,#busuanzi_value_site_pv {
+    padding: 5px 7px;
+    background: #f8f5ec;
+    border-radius: 4px;
+    color: #0366d6;
+}

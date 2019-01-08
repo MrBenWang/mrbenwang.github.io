@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>增量同步 on 风雪夜归人</title>
+    <link>https://mrbenwang.github.io/tags/%E5%A2%9E%E9%87%8F%E5%90%8C%E6%AD%A5/</link>
+    <description>Recent content in 增量同步 on 风雪夜归人</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 15 Dec 2018 15:20:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://mrbenwang.github.io/tags/%E5%A2%9E%E9%87%8F%E5%90%8C%E6%AD%A5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>*根据时间戳，增量同步数据的解决办法</title>
+      <link>https://mrbenwang.github.io/post/0024-incremen-sync-by-datetime/</link>
+      <pubDate>Sat, 15 Dec 2018 15:20:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/0024-incremen-sync-by-datetime/</guid>
+      <description>&lt;p&gt;最近在工作中遇到一个比较棘手的问题，客户端从服务端同步数据的问题。&lt;br /&gt;
+思考这个解决的方法还是花费了不少的精力。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

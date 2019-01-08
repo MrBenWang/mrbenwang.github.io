@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zh-cn" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>*Hugo &#43; github 搭建个人博客 - 风雪夜归人</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Long" />
+  <meta name="description" content="很早以前就有想法，搭建一个个人的博客。没有实现的原因：一方面个人的服务器不太安全，并且掉线，欠费等等，维护起来麻烦，另一方面，文章编辑发布起来也不方便。
+后来了解到 github 提供了博客的功能，也一直没有实践。也鉴于上次文章被删，我也就开始实践了起来，有一个备份总好于无。
+" />
+
+  <meta name="keywords" content="码农, 逻辑, 自由" />
+
+
+
+<meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
+
+
+<meta name="generator" content="Hugo 0.49" />
+
+
+<link rel="canonical" href="https://mrbenwang.github.io/post/0014-hugo-plus-github-build-blog/" />
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.c8c1ff75dee09b44060a6c38f41b9036bac2512ccdb22d7f296cec12dc786375.css" integrity="sha256-yMH/dd7gm0QGCmw49BuQNrrCUSzNsi1/KWzsEtx4Y3U=" media="screen">
+
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="*Hugo &#43; github 搭建个人博客" />
+<meta property="og:description" content="很早以前就有想法，搭建一个个人的博客。没有实现的原因：一方面个人的服务器不太安全，并且掉线，欠费等等，维护起来麻烦，另一方面，文章编辑发布起来也不方便。
+
+后来了解到 github 提供了博客的功能，也一直没有实践。也鉴于上次文章被删，我也就开始实践了起来，有一个备份总好于无。
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mrbenwang.github.io/post/0014-hugo-plus-github-build-blog/" /><meta property="article:published_time" content="2018-09-27T15:13:00&#43;08:00"/>
+<meta property="article:modified_time" content="2018-09-27T15:13:00&#43;08:00"/>
+
+<meta itemprop="name" content="*Hugo &#43; github 搭建个人博客">
+<meta itemprop="description" content="很早以前就有想法，搭建一个个人的博客。没有实现的原因：一方面个人的服务器不太安全，并且掉线，欠费等等，维护起来麻烦，另一方面，文章编辑发布起来也不方便。
+
+后来了解到 github 提供了博客的功能，也一直没有实践。也鉴于上次文章被删，我也就开始实践了起来，有一个备份总好于无。
+">
+
+
+<meta itemprop="datePublished" content="2018-09-27T15:13:00&#43;08:00" />
+<meta itemprop="dateModified" content="2018-09-27T15:13:00&#43;08:00" />
+<meta itemprop="wordCount" content="1858">
+
+
+
+<meta itemprop="keywords" content="github," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="*Hugo &#43; github 搭建个人博客"/>
+<meta name="twitter:description" content="很早以前就有想法，搭建一个个人的博客。没有实现的原因：一方面个人的服务器不太安全，并且掉线，欠费等等，维护起来麻烦，另一方面，文章编辑发布起来也不方便。
+
+后来了解到 github 提供了博客的功能，也一直没有实践。也鉴于上次文章被删，我也就开始实践了起来，有一个备份总好于无。
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-130619472-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">风雪夜归人</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/">主页</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">归档</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/tags/">标签</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/categories/">分类</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于</a>
+          
+        
+      </li>
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      风雪夜归人
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/">主页</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">归档</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/tags/">标签</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/categories/">分类</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于</a>
+          
+
+        
+
+      </li>
+    
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">*Hugo &#43; github 搭建个人博客</h1>
+      
+      <div class="post-meta">
+        <time datetime="2018-09-27" class="post-time">
+          2018-09-27 15:13
+        </time>
+        <div class="post-category">
+            <a href="https://mrbenwang.github.io/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/"> 技术随笔 </a>
+            
+          </div>
+        <span class="more-meta"> 约 1858 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#hugo-搭建过程">HUGO 搭建过程</a>
+<ul>
+<li><a href="#选择什么程序生成">选择什么程序生成</a></li>
+<li><a href="#选择hugo主题">选择HUGO主题</a></li>
+<li><a href="#hugo生成静态站点">Hugo生成静态站点</a></li>
+<li><a href="#自定义的-js-和-css">自定义的 js 和 css</a></li>
+<li><a href="#github-发布">github 发布</a></li>
+</ul></li>
+<li><a href="#结语">结语</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>很早以前就有想法，搭建一个个人的博客。没有实现的原因：一方面个人的服务器<code>不太安全</code>，并且掉线，欠费等等，维护起来麻烦，另一方面，文章编辑发布起来也<code>不方便</code>。</p>
+
+<p>后来了解到 github 提供了博客的功能，也一直没有实践。也鉴于上次文章被删，我也就开始实践了起来，<code>有一个备份总好于无</code>。<br />
+</p>
+
+<h2 id="hugo-搭建过程">HUGO 搭建过程</h2>
+
+<h3 id="选择什么程序生成">选择什么程序生成</h3>
+
+<p>这个是我第一个纠结的地方，我当时把选择集中在三个选项里面：<code>Jekyll</code>，<code>Hexo</code>，<code>Hugo</code>。当然是一定要支持<code>markdown</code>。</p>
+
+<p>针对选择谁这个问题，我也是在网上查了大量的文章：</p>
+
+<ul>
+<li><a href="https://github.com/jekyll/jekyll">Jekyll</a> 由<code>Ruby</code>语言，三个里面最悠久，网上有关的问题，解决办法也比较多。官网主题较多；个人主机搭建的话，这个还是比较好，插件比较多。</li>
+<li><a href="https://github.com/hexojs/hexo">Hexo</a> 用<code>Nodejs</code>生成的。Hexo有一个相对较大的社区，但大多数是非英语人士（来自中国）。</li>
+<li><a href="https://github.com/gohugoio/hugo">Hugo</a> 用<code>Go</code>构建的静态站点生成器。它被宣传为“世界上最快的网站构建框架”。属于后起之秀，主题较少。</li>
+</ul>
+
+<p><img src="/images/0014-hugo-plus-github-build-blog/1.jpg" alt="Jekyll-Hexo-Hugo对比" /></p>
+
+<p>当时，我纠结了半天。最终决定使用<code>Hugo</code>,主要原因有下：</p>
+
+<ol>
+<li>GO语言是最新的语言；</li>
+<li>hugo 是最新的生成器，功能方面也肯定集成了之前其他生成器的优点；</li>
+<li>不用安装，windows下需要一个<code>exe</code>程序，就可以生成静态文件了。这个是我选择他的最关键原因。</li>
+</ol>
+
+<h3 id="选择hugo主题">选择HUGO主题</h3>
+
+<ul>
+<li>只要上面的程序确定了，选择主题相对就比较轻松了。可是选择主题，有个人主观审美在里面，总会有这样那样的不太满意的地方。</li>
+<li>我当时在官网上，看了很多主题，都不是特别喜欢，没有一眼就看上的那种。中文官网上更少，估计三十个主题都没有。</li>
+<li>心里盘算着，实在不能偷懒，就拿一个改改算了。</li>
+</ul>
+
+<p>最终，我也记不清当时是怎么搜到这个 <a href="https://github.com/MrBenWang/hugo-theme-jane">hugo-theme-jane</a> 主题的，印象中好像是一通乱搜。。。</p>
+
+<h3 id="hugo生成静态站点">Hugo生成静态站点</h3>
+
+<p>其实这方面网上的文章很多，我这里就不做全面介绍了。推荐参考 <a href="http://www.gohugo.org/">中文官方文档</a></p>
+
+<ul>
+<li>建议使用<a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97">git submodule clone</a>下载主题，好处就是<strong>修改子模块之后只对子模块的版本库产生影响，对父项目的版本库不会产生任何影响</strong>,</li>
+<li>修改<code>config.toml</code>文件。相当于该站点的hugo配置文件，涉及到博客标题，分页，作者声明等等。</li>
+<li><code>shortcodes</code>自定义标签，新增<code>themes/jane/layouts/shortcodes/expand.html</code>，类似于博客园的<code>代码折叠</code>标签。</li>
+</ul>
+
+<p><strong>注意：</strong> details 和 summary 是HTML 5 中的新标签。IE，Firefox都不支持</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">details</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">summary</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;background-color:#f5f5f5;border:1px solid #ccc;padding:5px;&#34;</span><span class="p">&gt;</span>
+        {{ with .Get 0}}{{.}}{{else}}click to expand{{ end }}
+    <span class="p">&lt;/</span><span class="nt">summary</span><span class="p">&gt;</span>
+    {{.Inner}}
+<span class="p">&lt;/</span><span class="nt">details</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>在文章编辑中使用<a href="https://github.com/MrBenWang/mrbenwang.github.io-hugo/blob/master/content/post/process-excel-with-vba.md">参考</a>， <a href="https://mrbenwang.github.io/post/process-excel-with-vba/">效果</a> <strong>下面第二个字符，反斜杠\为了不变成折叠效果</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html">{\{% expand &#34;hugo代码折叠代码&#34; %}}
+中间为被折叠的代码
+{\{% /expand %}}</code></pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li>因为主题 <code>jane</code> 是由 nodejs 生成的，如果改了主题的话，需要用node重新生成一下。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">我偷懒直接手动修改node生成后的文件，
+themes/jane/static/dist/jane.min.css
+themes/jane/static/dist/jane.min.css.map</code></pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li>图片的路径在<code>static/images</code>下面，在文章中使用路径，不包含static，例如<code>![show 404 page](/images/testjpg.jpg)</code></li>
+<li>使用 hugo.exe 生成的静态文件，在<code>public</code>目录下，建议不要修改；需要修改的话，改模板文件。</li>
+</ul>
+
+<h3 id="自定义的-js-和-css">自定义的 js 和 css</h3>
+
+<p><strong>强烈建议</strong>把一些自定义的功能，或者样式。按照这样的方式修改，不要去改themes</p>
+
+<p>在配置文件<code>config.toml</code>中，填写上这两个配置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-config" data-lang="config"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-config" data-lang="config"># Link custom CSS and JS assets
+#   (relative to /static/css and /static/js respectively)
+customCSS = []        # if [&#39;custom.css&#39;], load &#39;/static/css/custom.css&#39; file
+customJS = []         # if [&#39;custom.js&#39;], load &#39;/static/js/custom.js&#39; file</code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>注意</strong>，这个是对全站点生效的，要加上必要的<code>选择器</code>。</p>
+
+<h3 id="github-发布">github 发布</h3>
+
+<ul>
+<li>github上面只有两条规则，仓库<code>{账号名称}.github.io</code> 和一个根目录下的 <code>index.html</code> 文件</li>
+<li>在我的github上面创建了三个仓库，</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">hugo-theme-jane ：是直接fork的主题，有修改需求；强烈建议把修改放到/static/css/目录下；
+mrbenwang.github.io-hugo ：这个是有关于 hugo 的仓库；
+mrbenwang.github.io ：最终的展示静态页面，是最重要的。github 的博客主要是从这里面来读取的。</code></pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li>使用 git submodule 命令：我把 <code>public</code> 和 <code>themes/jane</code> 都分别做了不同的git目标；<code>.gitmodules</code>文件内容如下<br /></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-config" data-lang="config"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-config" data-lang="config">[submodule &#34;public&#34;]
+    path = public
+    url = https://github.com/MrBenWang/mrbenwang.github.io.git
+[submodule &#34;themes/jane&#34;]
+    path = themes/jane
+    url = https://github.com/MrBenWang/hugo-theme-jane.git</code></pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li>public 或 themes/jane 提交前，一定要记得先<code>git checkout master</code>。<a href="https://blog.devtang.com/2013/05/08/git-submodule-issues/">参考链接</a></li>
+</ul>
+
+<blockquote>
+<p>这里的坑在于，默认 git submodule update 并不会将 submodule 切到任何 branch，所以，默认下 submodule 的 HEAD 是处于游离状态的 (‘detached HEAD’ state)。所以在修改前，记得一定要用 git checkout master 将当前的 submodule 分支切换到 master，然后才能做修改和提交。</p>
+</blockquote>
+
+<p>如果你不慎忘记切换到 master 分支，又做了提交，可以用 cherry-pick 命令挽救。具体做法如下：</p>
+
+<ol>
+<li>用 git checkout master 将 HEAD 从游离状态切换到 master 分支 , 这时候，git 会报 Warning 说有一个提交没有在 branch 上，记住这个提交的 change-id（假如 change-id 为 aaaa)</li>
+<li>用 git cherry-pick aaaa 来将刚刚的提交作用在 master 分支上</li>
+<li>用 git push 将更新提交到远程版本库中</li>
+</ol>
+
+<h2 id="结语">结语</h2>
+
+<p>搭建这个时间，有一些久了，记忆有些模糊，中间过程有些遗漏和错误，欢迎指出。</p>
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Long</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-09-27 15:13</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content">原创文章，如需转载请注明文章作者和出处。谢谢！</span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://mrbenwang.github.io/tags/github/">github</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/0015-give-up-ss-and-change-to-v2ray/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">由shadowsocks转为v2ray的体验</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/0013-linux-on-public-share-some-configration/">
+            <span class="next-text nav-default">*在公网上的Linux，我的一些配置分享</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "MrBenWang/comments-for-my-blog"
+            issue-term="pathname"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
+
+  
+
+  
+
+  
+  
+    
+
+
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  
+  
+    <a href="mailto:258927389@qq.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/MrBenWang" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://weibo.com/wzlblair" rel="me noopener" class="iconfont"
+      title="weibo"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M385.714286 733.714286q12-19.428571 6.285714-39.428571t-25.714286-28.571429q-19.428571-8-41.714286-0.571429t-34.285714 26.285714q-12.571429 19.428571-7.428571 39.142857t24.571429 28.857143 42.571429 1.428571 35.714286-27.142857zm53.714286-69.142857q4.571429-7.428571 2-15.142857t-10-10.571429q-8-2.857143-16.285714 2.857143t-12.285714 10.571429q-9.714286 17.714286 7.428571 25.714286 8 2.857143 16.571429 2.857143t12.571429-10.571429zm99.428571 61.142857q-25.714286 58.285714-90.285714 85.714286t-128 6.857143q-61.142857-19.428571-84.285714-72.285714t3.714286-107.142857q26.857143-53.142857 86.571429-79.428571t120.285714-10.857143q63.428571 16.571429 90.571429 68.285714t1.428571 108.857143zm178.285714-91.428571q-5.142857-54.857143-50.857143-97.142857t-119.142857-62.285714-156.857143-12q-127.428571 13.142857-211.142857 80.857143t-75.714286 151.142857q5.142857 54.857143 50.857143 97.142857t119.142857 62.285714 156.857143 12q127.428571-13.142857 211.142857-80.857143t75.714286-151.142857zm176 2.285714q0 38.857143-21.142857 79.714286t-62.285714 78.285714-96.285714 67.142857-129.142857 47.428571-154.571429 17.714286-157.142857-19.142857-137.428571-53.142857-98-86.285714-37.142857-114q0-65.714286 39.714286-140t112.857143-147.428571q96.571429-96.571429 195.142857-134.857143t140.857143 4q37.142857 36.571429 11.428571 119.428571-2.285714 8-0.571429 11.428571t5.714286 4 8.285714 2.857143 7.714286-2l3.428571-1.142857q79.428571-33.714286 140.571429-33.714286t87.428571 34.857143q25.714286 36 0 101.714286-1.142857 7.428571-2.571429 11.428571t2.571429 7.142857 6.857143 4.285714 9.714286 3.428571q32.571429 10.285714 58.857143 26.857143t45.714286 46.571429 19.428571 66.571429zm-42.285714-356.571429q24 26.857143 31.142857 62t-3.714286 67.142857q-4.571429 13.142857-16.857143 19.428571t-25.428571 2.285714q-13.142857-4.571429-19.428571-16.857143t-2.285714-25.428571q11.428571-36-13.714286-63.428571t-61.142857-20q-13.714286 2.857143-25.714286-4.571429t-14.285714-21.142857q-2.857143-13.714286 4.571429-25.428571t21.142857-14.571429q34.285714-7.428571 68 3.142857t57.714286 37.428571zm103.428571-93.142857q49.714286 54.857143 64.285714 127.142857t-7.714286 138q-5.142857 15.428571-19.428571 22.857143t-29.714286 2.285714-22.857143-19.428571-2.857143-29.714286q16-46.857143 5.714286-98.285714t-45.714286-90.285714q-35.428571-39.428571-84.571429-54.571429t-98.857143-4.857143q-16 3.428571-29.714286-5.428571t-17.142857-24.857143 5.428571-29.428571 24.857143-16.857143q70.285714-14.857143 139.428571 6.571429t118.857143 76.857143z"></path>
+</svg>
+
+    </a>
+
+
+<a href="https://mrbenwang.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+  
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  
+  
+
+  <span class="copyright-year">
+    &copy;
+    
+    2015 -
+    2019
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+      Long
+      
+    </span></span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw="></script>
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/custom.js"></script>
+
+
+</body>
+</html>

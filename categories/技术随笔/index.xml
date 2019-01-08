@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术随笔 on 风雪夜归人</title>
+    <link>https://mrbenwang.github.io/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/</link>
+    <description>Recent content in 技术随笔 on 风雪夜归人</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 29 Sep 2018 15:04:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://mrbenwang.github.io/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>由shadowsocks转为v2ray的体验</title>
+      <link>https://mrbenwang.github.io/post/0015-give-up-ss-and-change-to-v2ray/</link>
+      <pubDate>Sat, 29 Sep 2018 15:04:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/0015-give-up-ss-and-change-to-v2ray/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;最近一段时间，总感觉&lt;code&gt;shadowsocks&lt;/code&gt;用起来非常的慢，时不时的断网，我就觉得可能不太对劲了。在issues看到有不少人提到，可能已经被人工智能识别，所以非常堪忧。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>*Hugo &#43; github 搭建个人博客</title>
+      <link>https://mrbenwang.github.io/post/0014-hugo-plus-github-build-blog/</link>
+      <pubDate>Thu, 27 Sep 2018 15:13:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/0014-hugo-plus-github-build-blog/</guid>
+      <description>&lt;p&gt;很早以前就有想法，搭建一个个人的博客。没有实现的原因：一方面个人的服务器&lt;code&gt;不太安全&lt;/code&gt;，并且掉线，欠费等等，维护起来麻烦，另一方面，文章编辑发布起来也&lt;code&gt;不方便&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;后来了解到 github 提供了博客的功能，也一直没有实践。也鉴于上次文章被删，我也就开始实践了起来，&lt;code&gt;有一个备份总好于无&lt;/code&gt;。&lt;br /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>*在公网上的Linux，我的一些配置分享</title>
+      <link>https://mrbenwang.github.io/post/0013-linux-on-public-share-some-configration/</link>
+      <pubDate>Wed, 26 Sep 2018 10:16:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/0013-linux-on-public-share-some-configration/</guid>
+      <description>&lt;p&gt;去年的时候，有一篇介绍在&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;vultr&lt;/a&gt; 上 &lt;a href=&#34;https://mrbenwang.github.io/post/0009-build-ss-on-vultr-vps/&#34;&gt;搭建ss服务器&lt;/a&gt; 的文章，由于某些众所周知的原因，被阿里云删除。&lt;/p&gt;
+
+&lt;p&gt;后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用&lt;code&gt;lastb&lt;/code&gt;命令，着实下了一跳，我的vps每天都有&lt;code&gt;几万次的失败登陆记录&lt;/code&gt;。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上&lt;strong&gt;所有国家&lt;/strong&gt;都有来过。&lt;/p&gt;
+
+&lt;p&gt;这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>*记一次【模拟点击】，WinForm小软件开发过程</title>
+      <link>https://mrbenwang.github.io/post/0011-simulator-click-baidu-ads/</link>
+      <pubDate>Thu, 21 Sep 2017 22:08:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/0011-simulator-click-baidu-ads/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;年初四月份的时候，有朋友找到我，说想开发一个模拟点击的软件。最终软件做完后，发现效果不理想。唯一开发的我是认为&lt;code&gt;最好是放弃&lt;/code&gt;了，做运营的他，&lt;code&gt;坚持&lt;/code&gt;这个没问题，说是改变合作方式。最终也是不了了之了。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>*使用VBA，优化处理Excel表格</title>
+      <link>https://mrbenwang.github.io/post/0010-process-excel-with-vba/</link>
+      <pubDate>Wed, 19 Jul 2017 18:00:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/0010-process-excel-with-vba/</guid>
+      <description>&lt;p&gt;上周末，XX给我抱怨：因为计算绩效奖金，把2个人的工资发错了，还被扣了500元。问的缘由得知，她每个月要处理十来个excel表格，每次都要手动修改里面的值，如果修改了一处，其他地方也要修改，然后还要多处地方核对。导致光这件事情就要消耗三四天，伤神费力。&lt;/p&gt;
+
+&lt;p&gt;我就问她，整个是不是都是&lt;code&gt;机械性重复的工作&lt;/code&gt;，如果是的话，完全可以&lt;strong&gt;用电脑来代替&lt;/strong&gt;。然后我就帮她找工具来优化她的工作，减少出错机会。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>记一次搭建SS服务器，完整的过程。</title>
+      <link>https://mrbenwang.github.io/post/0009-build-ss-on-vultr-vps/</link>
+      <pubDate>Wed, 29 Mar 2017 12:04:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/0009-build-ss-on-vultr-vps/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;这几天为了登录外网查询资料，谷歌经常抽风，国外的博客也打不开，都要整崩溃了。我以前（直到昨天以前）都是使用&lt;code&gt;修改hosts&lt;/code&gt;来访问外网的，用的是 &lt;a href=&#34;https://laod.cn/hosts&#34;&gt;老D（https://laod.cn/hosts）&lt;/a&gt; 无偿分享的hosts。&lt;/p&gt;
+
+&lt;p&gt;直到昨天我终于受不了了，听闻前同事使用的是VULTR 来搭建SS服务器，价格也非常便宜，比买vpn划算多了，还安全，还多了一台服务器。然后就下定决心，一劳永逸的解决上网问题。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>*设计原则记录</title>
+      <link>https://mrbenwang.github.io/post/0001-design-principle-note/</link>
+      <pubDate>Tue, 23 Sep 2014 16:59:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/0001-design-principle-note/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;找到系统中变化的部分，将变化的部分同其它稳定的部分隔开。&lt;/li&gt;
+&lt;li&gt;面向接口编程，而不要面向实现编程。&lt;/li&gt;
+&lt;li&gt;优先使用对象组合，而非类继承。&lt;/li&gt;
+&lt;li&gt;软件实体应当对扩展开放，对修改关闭。&lt;/li&gt;
+&lt;li&gt;继承必须确保超类所拥有的性质在子类中仍然成立。&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>简单的3个SQL视图搞定所有SqlServer数据库字典</title>
+      <link>https://mrbenwang.github.io/post/old_article/00-zone/051-three-sql-for-mssql/</link>
+      <pubDate>Tue, 29 Mar 2011 10:54:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/old_article/00-zone/051-three-sql-for-mssql/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;SqlServer2000数据库字典&amp;ndash;表结构.sql&lt;/li&gt;
+&lt;li&gt;SqlServer2005数据库字典&amp;ndash;表结构.sql&lt;/li&gt;
+&lt;li&gt;SqlServer数据库字典&amp;ndash;索引.sql&lt;/li&gt;
+&lt;li&gt;SqlServer数据库字典&amp;ndash;表.视图等等.sql&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>功能方法</title>
+      <link>https://mrbenwang.github.io/post/old_article/00-zone/049-function-method/</link>
+      <pubDate>Mon, 02 Aug 2010 11:04:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/old_article/00-zone/049-function-method/</guid>
+      <description>正文 一、获取指定文件夹下文件名 Directory.GetFiles();方法&amp;hellip; 返回包含文件名的路径.然后再截取文件名 1 2 3 string[] filenames=Directory.GetFiles(path);</description>
+    </item>
+    
+    <item>
+      <title>学习资料</title>
+      <link>https://mrbenwang.github.io/post/old_article/00-zone/048-it-learning-materials/</link>
+      <pubDate>Mon, 26 Jul 2010 23:21:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/old_article/00-zone/048-it-learning-materials/</guid>
+      <description>&lt;h1 id=&#34;正文&#34;&gt;正文&lt;/h1&gt;
+
+&lt;p&gt;正则表达式：&lt;br /&gt;
+&lt;a href=&#34;http://wenku.baidu.com/view/c8d2ab4769eae009581becda.html&#34;&gt;http://wenku.baidu.com/view/c8d2ab4769eae009581becda.html&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://blog.csdn.net/zhoufoxcn/archive/2010/03/04/5346869.aspx&#34;&gt;http://blog.csdn.net/zhoufoxcn/archive/2010/03/04/5346869.aspx&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;WINHEX手工修正分区文件系统结构法（转）&lt;br /&gt;
+&lt;a href=&#34;http://apps.hi.baidu.com/share/detail/9932152&#34;&gt;http://apps.hi.baidu.com/share/detail/9932152&lt;/a&gt;&lt;br /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Script</title>
+      <link>https://mrbenwang.github.io/post/old_article/00-zone/047-script-/</link>
+      <pubDate>Sat, 24 Jul 2010 18:40:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/old_article/00-zone/047-script-/</guid>
+      <description>&lt;p&gt;一、建个O盘 .cmd&lt;br /&gt;
+二、显示桌面 .scf&lt;br /&gt;
+三、Hidden 深度隐藏文件夹&lt;br /&gt;
+四、vbs 电脑发声&lt;br /&gt;
+五、vbs 自动注册qq号&lt;br /&gt;
+六、bat 疯狂打开CMD&lt;br /&gt;
+七、cs 不用中间量，交换值&lt;br /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>C#实现QQ自动登录器实现原理</title>
+      <link>https://mrbenwang.github.io/post/old_article/00-zone/044-csharp-auto-login-qq/</link>
+      <pubDate>Fri, 30 Apr 2010 00:07:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/old_article/00-zone/044-csharp-auto-login-qq/</guid>
+      <description>&lt;h1 id=&#34;正文&#34;&gt;正文&lt;/h1&gt;
+
+&lt;p&gt;实现代码&lt;br /&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-CSharp&#34; data-lang=&#34;CSharp&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-CSharp&#34; data-lang=&#34;CSharp&#34;&gt;&lt;span class=&#34;k&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;QQLogin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;QQ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Pwd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Security&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Cryptography&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MD5&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;md5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Security&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Cryptography&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MD5CryptoServiceProvider&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;  
+    &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;QQPwd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Convert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ToBase64String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;md5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ComputeHash&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Encoding&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UTF8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GetBytes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Pwd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)));&lt;/span&gt;  
+    &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Diagnostics&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Process&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pro&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Diagnostics&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Process&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;  
+    &lt;span class=&#34;n&#34;&gt;pro&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;StartInfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FileName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;@&amp;#34;D:\Program Files\Tencent\QQ\QQ.exe&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
+    &lt;span class=&#34;n&#34;&gt;pro&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;StartInfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Arguments&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/start QQUIN:&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;txtQQ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Trim&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; PWDHASH:&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;QQPwd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; /stat:40&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
+    &lt;span class=&#34;n&#34;&gt;pro&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Start&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;  
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

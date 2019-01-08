@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://mrbenwang.github.io/sitemap.xml
