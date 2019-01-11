@@ -83,7 +83,7 @@
 
 <meta itemprop="datePublished" content="2018-09-26T10:16:00&#43;08:00" />
 <meta itemprop="dateModified" content="2018-09-26T10:16:00&#43;08:00" />
-<meta itemprop="wordCount" content="2524">
+<meta itemprop="wordCount" content="2616">
 
 
 
@@ -328,7 +328,7 @@ if (!doNotTrack) {
             <a href="https://mrbenwang.github.io/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/"> 技术随笔 </a>
             
           </div>
-        <span class="more-meta"> 约 2524 字 </span>
+        <span class="more-meta"> 约 2616 字 </span>
           <span class="more-meta"> 预计阅读 6 分钟 </span>
 
         
@@ -350,7 +350,8 @@ if (!doNotTrack) {
 <ul>
 <li><a href="#具体配置">具体配置</a>
 <ul>
-<li><a href="#安装-denyhosts">安装 denyhosts</a></li>
+<li><a href="#安装-denyhosts"><del>安装 denyhosts</del></a></li>
+<li><a href="#fail2ban-代替-denyhosts">Fail2Ban 代替 denyhosts</a></li>
 <li><a href="#使用密钥登陆">使用密钥登陆</a></li>
 <li><a href="#禁用root用户">禁用root用户</a></li>
 <li><a href="#更改-ssh-端口">更改 ssh 端口</a></li>
@@ -378,7 +379,7 @@ if (!doNotTrack) {
 
 <h2 id="具体配置">具体配置</h2>
 
-<h3 id="安装-denyhosts">安装 denyhosts</h3>
+<h3 id="安装-denyhosts"><del>安装 denyhosts</del></h3>
 
 <p>denyhosts 是查询了几万次的失败记录后，立即安装的。维基上面的简介</p>
 <div class="highlight"><div class="chroma">
@@ -406,6 +407,28 @@ if (!doNotTrack) {
 <p>PS：把失败的记录基本降为0以后，我考虑通过邮件第一时间通知我，有人尝试登陆我的主机。后来再网上在查询，好像是不直接支持的，还需要安装专门发送邮件的postfix，仅仅为了这个发送邮件，好像也没有太大的必要。就放弃了。</p>
 </blockquote>
 
+<h3 id="fail2ban-代替-denyhosts">Fail2Ban 代替 denyhosts</h3>
+
+<p><a href="https://apps.fedoraproject.org/packages/denyhosts">CentOS7 库里面删除了 denyhosts</a></p>
+
+<blockquote>
+<p>Denyhosts is unmaintained upstream and does not support systemd or firewalld. Please use Fail2Ban<br />
+翻译：Denyhosts 最新版本不支持：systemd 和 firewalld</p>
+</blockquote>
+
+<p>很简单，命令很简单：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">yum install fail2ban <span class="c1">#安装
+</span><span class="c1"></span>systemctl <span class="nb">enable</span> fail2ban <span class="c1">#开机自动启动
+</span><span class="c1"></span>systemctl start fail2ban # 开启服务</code></pre></td></tr></table>
+</div>
+</div>
 <h3 id="使用密钥登陆">使用密钥登陆</h3>
 
 <p><a href="https://zh.wikipedia.org/wiki/RSA%E5%8A%A0%E5%AF%86%E6%BC%94%E7%AE%97%E6%B3%95">维基：RSA非对称加密算法</a> 我也就了解到，是大数的质因数分解，也简单做推算过，目前还是很安全的。有兴趣可以去网上找，<a href="https://weibo.com/tv/v/GfGM6Asg9?fid=1034:b278ef8fda19fe8c5bd3fd1aa30e3ad4">李永乐老师的讲解</a>。</p>
