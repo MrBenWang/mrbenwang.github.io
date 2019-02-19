@@ -17,6 +17,13 @@
   </url>
   
   <url>
+    <loc>https://mrbenwang.github.io/post/20190121-backup-infomation/</loc>
+    <lastmod>2019-02-19T16:58:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://mrbenwang.github.io/post/20181225-review-my-wuxu-year/</loc>
     <lastmod>2018-12-30T13:29:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -115,6 +122,13 @@
   </url>
   
   <url>
+    <loc>https://mrbenwang.github.io/post/old_article/04-other/010-youdao-shouyi/</loc>
+    <lastmod>2017-09-01T13:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://mrbenwang.github.io/post/20170719-process-excel-with-vba/</loc>
     <lastmod>2017-07-19T18:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -187,13 +201,6 @@
   <url>
     <loc>https://mrbenwang.github.io/post/20150415-cross-domain-upload-img/</loc>
     <lastmod>2015-04-15T11:39:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://mrbenwang.github.io/post/20150213-was-kicked-out-qq-group/</loc>
-    <lastmod>2015-02-13T09:57:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -381,13 +388,6 @@
   </url>
   
   <url>
-    <loc>https://mrbenwang.github.io/post/old_article/00-zone/051-three-sql-for-mssql/</loc>
-    <lastmod>2011-03-29T10:54:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://mrbenwang.github.io/post/old_article/00-zone/050-daily-2011-2-14/</loc>
     <lastmod>2011-02-14T08:45:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -416,27 +416,6 @@
   </url>
   
   <url>
-    <loc>https://mrbenwang.github.io/post/old_article/00-zone/049-function-method/</loc>
-    <lastmod>2010-08-02T11:04:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://mrbenwang.github.io/post/old_article/00-zone/048-it-learning-materials/</loc>
-    <lastmod>2010-07-26T23:21:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://mrbenwang.github.io/post/old_article/00-zone/047-script-/</loc>
-    <lastmod>2010-07-24T18:40:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://mrbenwang.github.io/post/old_article/00-zone/045-huo-bu-dan-xing/</loc>
     <lastmod>2010-07-15T17:13:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -446,13 +425,6 @@
   <url>
     <loc>https://mrbenwang.github.io/post/old_article/00-zone/046-my-qzone-record/</loc>
     <lastmod>2010-05-27T18:23:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://mrbenwang.github.io/post/old_article/00-zone/044-csharp-auto-login-qq/</loc>
-    <lastmod>2010-04-30T00:07:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -544,13 +516,6 @@
   <url>
     <loc>https://mrbenwang.github.io/post/old_article/00-zone/034-reading-university-why/</loc>
     <lastmod>2009-11-13T10:28:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://mrbenwang.github.io/post/old_article/00-zone/033-dream-haha/</loc>
-    <lastmod>2009-11-04T21:47:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -696,13 +661,6 @@
   </url>
   
   <url>
-    <loc>https://mrbenwang.github.io/post/old_article/00-zone/026-horror/</loc>
-    <lastmod>2009-03-05T22:04:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://mrbenwang.github.io/post/old_article/01-baidu/190-daliy-2012-03-14/</loc>
     <lastmod>2009-03-03T20:01:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -773,13 +731,6 @@
   </url>
   
   <url>
-    <loc>https://mrbenwang.github.io/post/old_article/00-zone/016-the-best-thing-to-do/</loc>
-    <lastmod>2008-11-23T01:17:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://mrbenwang.github.io/post/old_article/00-zone/015-chinese-bed-people/</loc>
     <lastmod>2008-10-11T10:40:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -815,13 +766,6 @@
   </url>
   
   <url>
-    <loc>https://mrbenwang.github.io/post/old_article/00-zone/005-sudden-feeling/</loc>
-    <lastmod>2008-03-22T03:08:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://mrbenwang.github.io/post/old_article/00-zone/003-some-thoughts-about-xi-zang/</loc>
     <lastmod>2008-03-21T21:29:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -831,13 +775,6 @@
   <url>
     <loc>https://mrbenwang.github.io/post/old_article/00-zone/002-on-lantern-festival-night/</loc>
     <lastmod>2008-02-21T21:48:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://mrbenwang.github.io/post/old_article/01-baidu/122-zan-shi-gao-bie/</loc>
-    <lastmod>2008-02-20T20:31:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -913,20 +850,6 @@
   </url>
   
   <url>
-    <loc>https://mrbenwang.github.io/post/old_article/01-baidu/111-qing-nian-wu-nai/</loc>
-    <lastmod>2007-06-17T21:44:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://mrbenwang.github.io/post/old_article/01-baidu/110-gaokao-coming/</loc>
-    <lastmod>2007-06-06T18:46:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://mrbenwang.github.io/post/old_article/01-baidu/109-tong-meng-qi-yuan/</loc>
     <lastmod>2007-05-04T19:09:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -950,20 +873,6 @@
   <url>
     <loc>https://mrbenwang.github.io/post/old_article/01-baidu/106-time-works-product/</loc>
     <lastmod>2007-03-23T13:54:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://mrbenwang.github.io/post/old_article/01-baidu/105-gao-kao/</loc>
-    <lastmod>2007-03-03T22:03:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://mrbenwang.github.io/post/old_article/01-baidu/104-children-voice/</loc>
-    <lastmod>2007-03-03T10:27:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -998,7 +907,7 @@
   
   <url>
     <loc>https://mrbenwang.github.io/tags/</loc>
-    <lastmod>2008-03-22T03:08:00+08:00</lastmod>
+    <lastmod>2008-03-21T21:29:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -1074,7 +983,7 @@
   
   <url>
     <loc>https://mrbenwang.github.io/tags/</loc>
-    <lastmod>2008-03-22T03:08:00+08:00</lastmod>
+    <lastmod>2008-03-21T21:29:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -1242,7 +1151,7 @@
   
   <url>
     <loc>https://mrbenwang.github.io/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2018-12-30T13:29:00+08:00</lastmod>
+    <lastmod>2019-02-19T16:58:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

@@ -6,10 +6,28 @@
     <description>Recent content in 生活随笔 on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 25 Dec 2018 15:20:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 21 Jan 2019 22:20:00 +0800</lastBuildDate>
     
 	<atom:link href="https://mrbenwang.github.io/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>完成“局域网”数据备份</title>
+      <link>https://mrbenwang.github.io/post/20190121-backup-infomation/</link>
+      <pubDate>Mon, 21 Jan 2019 22:20:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/20190121-backup-infomation/</guid>
+      <description>&lt;p&gt;刚刚，我用了三个小时的时间，清空了自己的新浪微博。仅仅保留第一条和最后一条。&lt;/p&gt;
+
+&lt;h1 id=&#34;引言&#34;&gt;引言&lt;/h1&gt;
+
+&lt;p&gt;我在年前的时候，已经完成了大陆局域网的所有网络个人信息的备份。2018年中断断续续的备份了，百度网盘，qq空间，百度贴吧，新浪微博，等等。&lt;/p&gt;
+
+&lt;p&gt;我发现我这个20多年的老网虫(1998年第一次上网，网吧还叫&lt;code&gt;网络培训中心&lt;/code&gt;)，大陆的上网好多我的足迹，太久远的没办法找到。还能够找寻到的都一一做了备份。&lt;/p&gt;
+
+&lt;p&gt;现在，终于开始了清理。我受&lt;code&gt;社会工程学&lt;/code&gt;的启发，为了保护自己的人身安全，为了保护自己的个人隐私。我决定，开始逐步删除掉，我留下的痕迹。虽然他们可能还有额外的备份。&lt;br /&gt;
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>我的戊戌年</title>
@@ -70,16 +88,6 @@
       <guid>https://mrbenwang.github.io/post/20150810-install-win10-on-macbook-air/</guid>
       <description>&lt;p&gt;这个月初，一个女性朋友托我帮她装电脑，往 MacBook Air上面装 Windows 系统，原因是windows用的习惯，用起来顺手。&lt;br /&gt;
 然后用脚趾头考虑了一下，就一口答应下来了。难道这就是一个标准程序员的命么，修电脑，装系统，最近又多了一个任务，帮忙买手机。o(╯□╰)o
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>*老子再也不加什么所谓的技术群了，顶撞群主的话，就被踢了。</title>
-      <link>https://mrbenwang.github.io/post/20150213-was-kicked-out-qq-group/</link>
-      <pubDate>Fri, 13 Feb 2015 09:57:00 +0800</pubDate>
-      
-      <guid>https://mrbenwang.github.io/post/20150213-was-kicked-out-qq-group/</guid>
-      <description>&lt;p&gt;麻痹的，气死我了，老子再也不加什么所谓的技术群了。 就说了一句顶撞群主的话，就被踢了。马来隔壁的！！！
 &lt;/p&gt;</description>
     </item>
     
