@@ -177,6 +177,275 @@
     </item>
     
     <item>
+      <title>我的经济知识学习小结</title>
+      <link>https://mrbenwang.github.io/post/20190403-my-economic-learning/</link>
+      <pubDate>Tue, 02 Apr 2019 22:20:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/20190403-my-economic-learning/</guid>
+      
+        <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+
+&lt;p&gt;从去年开始，&lt;strong&gt;有意识&lt;/strong&gt;的&lt;code&gt;记录&lt;/code&gt;和&lt;code&gt;收集&lt;/code&gt;，从各类财经视频中学习到的经济学小知识。毕竟不是系统的学习，当时只是为了更好的了解和解释，当时的一些经济现象。在这里，就简单的做一个学习小结。&lt;br /&gt;
+在此，再此特别感谢&lt;code&gt;世光&lt;/code&gt;和&lt;code&gt;金钱爆&lt;/code&gt;节目组，所作的知识普及。&lt;br /&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&#34;经济知识&#34;&gt;经济知识&lt;/h2&gt;
+
+&lt;h3 id=&#34;货币&#34;&gt;货币&lt;/h3&gt;
+
+&lt;p&gt;货币的基本属性：交易价值、储存价值、投机价值。(缺一不可)&lt;br /&gt;
+为什么&lt;strong&gt;比特币就是个骗局&lt;/strong&gt;，在金融人士看来就是个笑话。因为他只有投机价值，根本不能算作货币。&lt;br /&gt;
+&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/17-货币属性.jpg&#34; alt=&#34;货币属性&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;通货膨胀&#34;&gt;通货膨胀&lt;/h4&gt;
+
+&lt;p&gt;通货膨胀的原因：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;需求拉动&lt;/code&gt;的通货膨胀：例如，央行增加货币供给；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;成本推动&lt;/code&gt;的通货膨胀：例如，国际原油价格上扬；&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;通货膨胀的不良后果&amp;mdash;&amp;ndash;&lt;code&gt;财富重分配&lt;/code&gt;：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;实质购买力下降&lt;/strong&gt;：例如存100万，年利率5%，通货膨胀率10%。一年后获得资金 100*1.05=105万，&lt;strong&gt;实质购买力&lt;/strong&gt; &lt;sup&gt;105&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1&lt;/sub&gt;.1=95.4545万；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;降低负债比率&lt;/strong&gt;：例如向银行借100万，年利率5%，通货膨胀率10%。一年后须还资金 100*1.05=105万，银行实际得到&lt;strong&gt;货币价值&lt;/strong&gt;仅剩95.4545万；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;税率扭曲&lt;/strong&gt;：例如卖了股票一年后出售，赚了15%收益，通货膨胀率15%。实际上没有赚到钱，但政府依然&lt;strong&gt;征收&lt;/strong&gt;15%&lt;strong&gt;资本利得&lt;/strong&gt;，依然造成财务重分配。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;利率&#34;&gt;利率&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;实际利率(Real Interest Rate)&lt;/code&gt;：指贷方牺牲&lt;strong&gt;现在的&lt;/strong&gt;消费机会，而将资金&lt;strong&gt;让给&lt;/strong&gt;借方先使用所应该获得的报酬。&lt;br /&gt;
+在贷方收回贷款之后，可能因为通货膨胀而使贷方所回收的本金&lt;strong&gt;无法购买&lt;/strong&gt;到&lt;strong&gt;借贷之前&lt;/strong&gt;的物品，为了弥补购买力的损失，贷方会要求相当于通货膨胀率的补偿。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;费雪方程式 - 存款期间的实际利率是： ir = in(名目利率)-p(通货膨胀率)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;全球化趋势的五大变化(麦肯锡全球研究所《在转型中的全球化：贸易和价值链的未来》)：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;跨境商品贸易萎缩；&lt;/li&gt;
+&lt;li&gt;服务贸易增速加速；&lt;/li&gt;
+&lt;li&gt;劳动力成本重要性下降；&lt;/li&gt;
+&lt;li&gt;研发创新日益重要；&lt;/li&gt;
+&lt;li&gt;区域贸易更加集中；&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;利率倒挂&#34;&gt;利率倒挂&lt;/h4&gt;
+
+&lt;div class=&#34;shortcode-notice info&#34;&gt;
+  &lt;div class=&#34;shortcode-notice-title info&#34;&gt;
+    
+      利息由来
+    
+  &lt;/div&gt;
+  &lt;p&gt;A把钱借给B，是一种资源支配权的转移。A将资产转移给B，B在一定期限内对资产享有了支配权，用来满足自我，而A在一段时间内丧失了支配权。&lt;br /&gt;
+显然，这个时间越长对B越有利。如果是亲友之间的无抵押无利息借款，那就更是如此了。&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;p&gt;当时间变成负报酬，&lt;code&gt;当前&lt;/code&gt;比&lt;code&gt;远期&lt;/code&gt;更值钱。所产生的严重后果，不可能像想。所以这只能是短期现象，不可能成为长期现象。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;在经济层面上，&lt;strong&gt;很多事情都是互为因果&lt;/strong&gt;。比如利率倒挂导致经济衰退，还是经济衰退导致利率倒挂。因果性是一定存在，只是几率和或然率的问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;全要素生产率&#34;&gt;全要素生产率&lt;/h3&gt;
+
+&lt;p&gt;全部要素的生产率（TFP，Total Factor Productivity）又称技术进步率：是索洛等新古典学派经济学家从20世纪60年代以来发展的增长核算中，衡量纯技术进步对生产的贡献。此经济增长理论在近代被广泛运用。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;全要素生产率并非所有要素的生产率，而是指经济增长中&lt;strong&gt;不能&lt;/strong&gt;归因于有关的&lt;code&gt;有形生产要素&lt;/code&gt;的增长的那部分，因而全要素生产率只能用来&lt;strong&gt;衡量&lt;/strong&gt;&lt;code&gt;除去所有有形生产要素以外&lt;/code&gt;的&lt;code&gt;纯技术进步&lt;/code&gt;的生产率的增长。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;纯技术进步包括&lt;code&gt;知识&lt;/code&gt;、&lt;code&gt;教育&lt;/code&gt;、&lt;code&gt;技术培训&lt;/code&gt;、&lt;code&gt;规模经济&lt;/code&gt;、&lt;code&gt;组织管理&lt;/code&gt;等方面的改善，所以又称&lt;strong&gt;非具体化的技术进步&lt;/strong&gt;，&lt;strong&gt;“天降馅饼”&lt;/strong&gt;。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;全要素生产率是指全部生产要素(包括&lt;code&gt;资本&lt;/code&gt;、&lt;code&gt;劳动&lt;/code&gt;、&lt;code&gt;土地&lt;/code&gt;，但通常分析&lt;strong&gt;略去土地&lt;/strong&gt;)投入量都不变时，生产量仍能增加的部分。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;无法从总产量中直接计算出来，故只能采取间接的办法：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;GY=GA+aGL+bGK&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GY——经济增长率&lt;/li&gt;
+&lt;li&gt;GA——全要素生产率增长率（又称索洛余值 技术进步率）&lt;/li&gt;
+&lt;li&gt;GL——劳动增加率&lt;/li&gt;
+&lt;li&gt;GK——资本增长率&lt;/li&gt;
+&lt;li&gt;a——劳动份额&lt;/li&gt;
+&lt;li&gt;b——资本份额&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;内生增长理论&#34;&gt;内生增长理论&lt;/h4&gt;
+
+&lt;p&gt;传统经济学通常假定投入要素会导致规&lt;strong&gt;模报酬递减&lt;/strong&gt;。例如，资本或劳动力投入越多，其每一单位的产出会开始出现下滑，这样的特征决定了&lt;strong&gt;经济增长的不会持续&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;保罗*罗默 1986和1990 分别建立两个&lt;code&gt;内生增长模型&lt;/code&gt;，加入&lt;code&gt;技术水平&lt;/code&gt;要素，当这个要素投入生产时，会&lt;code&gt;产生正外部性&lt;/code&gt;，实现&lt;strong&gt;规模报酬递增&lt;/strong&gt;，从而实现&lt;strong&gt;持续的经济增长&lt;/strong&gt;。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;内生增长模型的产出函数：&lt;strong&gt;Y = F(K,L,H,t)&lt;/strong&gt;四个投入要素。&lt;code&gt;资本K&lt;/code&gt;，&lt;code&gt;劳动L&lt;/code&gt;(非技术劳动)，&lt;code&gt;人类力资本H&lt;/code&gt;(熟练劳动力，用受教育时间表示)，&lt;code&gt;技术水平t&lt;/code&gt;(用专利来衡量，强调创新)。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;因此，&lt;strong&gt;知识&lt;/strong&gt;由两部分构成：一是&lt;code&gt;人力资本&lt;/code&gt;，具有竞争性；另一是&lt;code&gt;技术水平&lt;/code&gt;，是非竞争性，可实现无限的增长；&lt;/li&gt;
+&lt;li&gt;一个国家若要获得持续的经济增长，由于知识的&lt;strong&gt;溢出效应&lt;/strong&gt;和&lt;strong&gt;专利的垄断&lt;/strong&gt;。政府干预及对科研，教育增加投入是必要的。政府可通过向研究者，中间产品的购买者，最终产品的生产者提供。&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;剩余价值&#34;&gt;剩余价值&lt;/h3&gt;
+
+&lt;p&gt;这个小的标题可能不准确，但是为了把以下的几幅图归为一类。这个可能是最好的标题了。我喜欢这种，用&lt;strong&gt;数学逻辑&lt;/strong&gt;来解释的问题。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/01-生产者剩余.jpg&#34; alt=&#34;生产者剩余&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/02-消费者剩余.jpg&#34; alt=&#34;消费者剩余&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;差别定价&#34;&gt;差别定价&lt;/h4&gt;
+
+&lt;p&gt;在实际的生活中，我们经常遇到差别定价的情况。以及商场的打折，优惠卷等等。各种各样形式的差别定价策略。在&lt;code&gt;李永乐老师&lt;/code&gt;的科普视频中&lt;a href=&#34;https://www.youtube.com/watch?v=CDORrtQu3fE&#34;&gt;《网购的优惠规则为啥这么复杂？竟然是商家利益最大化的原因！李永乐老师讲价格歧视》&lt;/a&gt;，也有相关的数学理论推导。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/03-差别定价.jpg&#34; alt=&#34;差别定价&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我的理解：为了社会福利最大化。简单点就是最大限度，获取消费者口袋中的钱。下面的例子，非常好的解释了差别定价策略。&lt;br /&gt;
+&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/04-差别定价_例子.jpg&#34; alt=&#34;差别定价_例子&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;资产证券化产品&#34;&gt;资产证券化产品&lt;/h3&gt;
+
+&lt;p&gt;我最初看到这张图的时候，满脸也是&lt;strong&gt;黑人问号&lt;/strong&gt;。这算是打开了我的视野，简单的了解到，&lt;code&gt;打包出售&lt;/code&gt;，&lt;code&gt;证券化&lt;/code&gt;，这一类新鲜的事物。&lt;br /&gt;
+&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/06-资产证券化产品.jpg&#34; alt=&#34;资产证券化产品&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;三元悖论&#34;&gt;三元悖论&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E4%B8%89%E5%85%83%E6%82%96%E8%AE%BA&#34;&gt;wiki-三元悖论&lt;/a&gt;：是国际金融学中的原则，指一个国家&lt;strong&gt;不可能&lt;/strong&gt;&lt;code&gt;同时完成&lt;/code&gt;下列三者：资本自由进出（Capital mobility）、固定汇率（Exchange rate）、独立自主的货币政策（Monetary policy）。&lt;/p&gt;
+
+&lt;p&gt;在实际的生活中，我们经常遇到三元悖论的衍生。就像找对象要求对方：既有钱，又帅，还关心你；要么这种人不存在，要么就是骗子。下图表达不合适，不过意义表达清楚了。&lt;br /&gt;
+&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/08-不可能三角.jpg&#34; alt=&#34;不可能三角&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;周期循环&#34;&gt;周期循环&lt;/h3&gt;
+
+&lt;p&gt;在我的观念中，万事万物都是周期循环的。宇宙就像是&lt;code&gt;咬住自己尾巴的蛇&lt;/code&gt;一样。下面简单罗列一下：信贷周期、库存周期&lt;/p&gt;
+
+&lt;h4 id=&#34;信贷周期&#34;&gt;信贷周期&lt;/h4&gt;
+
+&lt;p&gt;这个是我第一次认识的东西。分享一个经济学科普视频：&lt;a href=&#34;https://www.youtube.com/watch?v=rFV7wdEX-Mo&#34;&gt;《经济机器是怎样运行的 (时长30分钟) Ray Dalio》&lt;/a&gt;&lt;br /&gt;
+桥水基金在2013年做的经济学科普视频，讲的都是大白话，像我这种小白都能完全理解，并且还有很多语言的版本。大赞！！！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/09-三种周期.jpg&#34; alt=&#34;三种周期&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;生产率的提高：比如火的使用，铁器的使用，工业革命等等；&lt;/li&gt;
+&lt;li&gt;短期债务周期：一般是5－8年发生一次，国家一般通过降低利率增加信贷；&lt;/li&gt;
+&lt;li&gt;长期债务周期：一般70－80年，利率已经很低，调整也起不了了作用，比短期债务周期更加严重。我个人推测，&lt;code&gt;战争&lt;/code&gt;可能是&lt;strong&gt;最终的最终&lt;/strong&gt;解决方案了。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;还是看视频吧，他已经讲的非常好了。我做的任何解释，都是不如视频讲的好。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/10-三种周期组合在一起.jpg&#34; alt=&#34;三种周期组合在一起&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;库存周期&#34;&gt;库存周期&lt;/h4&gt;
+
+&lt;p&gt;最近从PMI，中了解到库存周期，对于经济前瞻性的影响。也慢慢学习从PMI，M1，M2，CPI，PPI 这些经济指标来看待经济。&lt;br /&gt;
+&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/18-库存周期循坏图.jpg&#34; alt=&#34;库存周期循坏图&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;从PMI的细项中，可以逻辑推导出库存周期的大致位置。不过，经济是&lt;strong&gt;非常非常复杂&lt;/strong&gt;的，&lt;code&gt;金融市场是这个世界上最复杂的系统&lt;/code&gt;。&lt;br /&gt;
+&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/19-PMI的细项逻辑.jpg&#34; alt=&#34;PMI的细项逻辑&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;三个建议&#34;&gt;三个建议&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;第一：不要让债务的增长收入超过收入。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;第二，不要让收入的增长速度超过生产率。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;第三，尽一切努力提高生产率。&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;BY，雷伊·达里奥，桥水基金创始人、总裁，福布斯全球第88位。《原则》作者&lt;br /&gt;
+我发现金钱爆他们做的图，里面也有引用视频中的小人。哈哈哈，算是一个小彩蛋吧。&lt;br /&gt;
+&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/11-信贷周期.jpg&#34; alt=&#34;信贷周期&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;交易成本&#34;&gt;交易成本&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;搜寻成本&lt;/code&gt;，&lt;code&gt;协议成本&lt;/code&gt;，&lt;code&gt;订约成本&lt;/code&gt;，&lt;code&gt;监督成本&lt;/code&gt;，&lt;code&gt;执行成本&lt;/code&gt;。&lt;br /&gt;
+为什么B2B不会产生巨头？比如：C2C的淘宝，B2C的京东。因为企业与企业间的&lt;code&gt;搜寻成本&lt;/code&gt;，已经降到非常地的水平。&lt;br /&gt;
+为什么有些企业宁愿污染环境，赔钱给政府也要生产？&lt;code&gt;监督成本&lt;/code&gt;低，&lt;code&gt;执行成本&lt;/code&gt;过高。还有另外一个因素&lt;strong&gt;内部成本 ＞ 外部成本&lt;/strong&gt;。&lt;br /&gt;
+&lt;strong&gt;放屁&lt;/strong&gt;，内部成本外部化。这就涉及到内部成本和外部成本的区别。&lt;strong&gt;环境污染&lt;/strong&gt;，也是成本和外部成本的差别。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/13-科斯定理_交易成本理论.jpg&#34; alt=&#34;科斯定理_交易成本理论&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;艾尔斯伯格悖论&#34;&gt;艾尔斯伯格悖论&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;人们对于不确定风险的厌恶程度，要强于对确定性风险的厌恶程度。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;李永乐老师也有讲这个，具体哪一集忘记了😅😅😅。&lt;br /&gt;
+它的一个衍生在现实生活中，人们总是&lt;strong&gt;厌恶损失&lt;/strong&gt;。丢失100元的痛苦，比获得200元的愉悦；情感更加强烈。&lt;br /&gt;
+&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/14-埃尔斯伯格悖论.jpg&#34; alt=&#34;埃尔斯伯格悖论&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;主观期望效用，我搜索引擎看了一下，还是一脸懵逼。。。&lt;br /&gt;
+&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/15-主观期望效用.jpg&#34; alt=&#34;主观期望效用&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;家庭经济学&#34;&gt;家庭经济学&lt;/h3&gt;
+
+&lt;p&gt;《家庭经济分析》，这本书起初被人鄙夷，居然来量化感情，但是后面却越来越备受重视。我一定要抽空读一下。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;为什么男女组合的家庭，才是家庭生产的最优解？&lt;/li&gt;
+&lt;li&gt;孩子视为耐用消费品：抚育成人需要耗费人力资源、资本和时间等投入；&lt;/li&gt;
+&lt;li&gt;男女的家庭，社会分工等。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/16-家庭经济分析.jpg&#34; alt=&#34;家庭经济分析&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;财务知识&#34;&gt;财务知识&lt;/h2&gt;
+
+&lt;h3 id=&#34;增值税&#34;&gt;增值税&lt;/h3&gt;
+
+&lt;p&gt;我是个财务方面的小白，不过我算是看懂一点点。中国为什么要实施增值税，而不采用欧美普遍的直接税。还是因为中国太落后的了。。。&lt;br /&gt;
+&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/05-增值税VAT.jpg&#34; alt=&#34;增值税VAT&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;杜邦分析法&#34;&gt;杜邦分析法&lt;/h3&gt;
+
+&lt;p&gt;据说是看财报的利器。可是我还是一脸懵逼。&lt;br /&gt;
+&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/20-杜邦分析法中的财务指标关系.jpg&#34; alt=&#34;杜邦分析法中的财务指标关系&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;资产负债表&#34;&gt;资产负债表&lt;/h3&gt;
+
+&lt;p&gt;这个算是，我整个学习中的&lt;strong&gt;重中之重&lt;/strong&gt;。它被无数次的提及，他是&lt;code&gt;恒等式&lt;/code&gt;：资产等于负债除以权益(&lt;code&gt;A=L/E&lt;/code&gt;)。&lt;br /&gt;
+&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/12-BalanceSheet.jpg&#34; alt=&#34;BalanceSheet&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;杠杆率，则是负债和权益比。&lt;br /&gt;
+&lt;img src=&#34;https://mrbenwang.github.io/images/20190403-my-economic-learning/07-杠杆率.jpg&#34; alt=&#34;杠杆率&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;其他&#34;&gt;其他&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;不要用时间换金钱：时间 x 劳动生产率 = 价值;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;为他人提供价值&lt;/strong&gt;：①为他人解决问题；②提高他人生活品质；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;杠杆&lt;/strong&gt;不要在长期投资中使用；使用的时候要&lt;code&gt;分散投资&lt;/code&gt;使用；&lt;/li&gt;
+&lt;li&gt;政治，站队；这都是超高的杠杆，几千倍几万倍；&lt;/li&gt;
+&lt;li&gt;要投资&lt;code&gt;生产性&lt;/code&gt;资产，而不是&lt;code&gt;消费性&lt;/code&gt;资产；土地是生产性资产，汽车是消费性资产；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;一次微分&lt;/code&gt;&lt;strong&gt;抓趋势&lt;/strong&gt;，&lt;code&gt;二次微分&lt;/code&gt;&lt;strong&gt;抓拐点&lt;/strong&gt;。韭菜喜欢抓拐点，当然是趋势更重要了。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;百度和谷歌的差别：&lt;br /&gt;
+一个问题在google会&lt;strong&gt;变成知识&lt;/strong&gt;，不仅解决你的问题，还包括你&lt;strong&gt;没有想到的问题&lt;/strong&gt;；在百度变成五个壮阳药，三个美容解决方案，两个或者更多的心理问题。&lt;br /&gt;
+中国怎么和国外竞争。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;外包，是社会分工的产物。也就是专业的人，做专业的事情。大趋势，逆潮流是不可能的。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;一个城市&lt;strong&gt;不是&lt;/strong&gt;一个村庄的扩大版，一个大公司也&lt;strong&gt;不是&lt;/strong&gt;一个小企业的扩大版；&lt;/li&gt;
+&lt;li&gt;公司，是集合一系列社会资源，通过管理的形式，产生利润；企业四要素：资金，工资，土地，利润；&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;路漫漫其修远兮&#34;&gt;路漫漫其修远兮&lt;/h2&gt;
+
+&lt;p&gt;我知道这这段时间，在这篇文章里面，很多很多东西我仅仅理解了表面。我也知道我有很多完全看不懂，完全理解不了。不过，我还可以&lt;strong&gt;忍受不理解的东西&lt;/strong&gt;，同时也没有&lt;strong&gt;感觉到厌烦&lt;/strong&gt;。我不期望我能更专业的去学习，去理解。只要能&lt;code&gt;轻松愉快&lt;/code&gt;的&lt;strong&gt;满足我的好奇心&lt;/strong&gt;就足矣。&lt;/p&gt;
+
+&lt;p&gt;路漫漫其修远兮，吾将上下而求索。我对于经济金融方面的爱好，是我近两年最新的发现。同时，希望我能走的更远。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>由‘美国大学舞弊案’引发，社会阶级的思考</title>
       <link>https://mrbenwang.github.io/post/20190319-social-class-thinking/</link>
       <pubDate>Tue, 19 Mar 2019 16:20:00 +0800</pubDate>
@@ -3370,7 +3639,8 @@ A：我并不认为孩童应该往大街上乱跑。/B：把小孩关起来，�
 
 &lt;h3 id=&#34;v2ray搭建过程&#34;&gt;v2ray搭建过程&lt;/h3&gt;
 
-&lt;p&gt;购买 vps 服务器，可参考：&lt;a href=&#34;https://mrbenwang.github.io/post/20170329-build-ss-on-vultr-vps/&#34;&gt;记一次搭建SS服务器，完整的过程&lt;/a&gt;，后半部分 shadowsocks 配置可以不看。&lt;/p&gt;
+&lt;p&gt;购买 vps 服务器，可参考：&lt;a href=&#34;https://mrbenwang.github.io/post/20170329-build-ss-on-vultr-vps/&#34;&gt;《记一次搭建SS服务器，完整的过程》&lt;/a&gt;，后半部分 shadowsocks 配置可以不看。&lt;br /&gt;
+顺便推荐一下&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;vultr&lt;/a&gt;的个人注册码哈：&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;https://www.vultr.com/?ref=7136316&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;其实与其说是搭建过程，不如说是配置config的过程，因为官网已经给出了一键安装脚本。&lt;/p&gt;
 
@@ -4354,223 +4624,6 @@ firewall-cmd --reload&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&g
 &lt;li&gt;看半衰期长的答案；&lt;/li&gt;
 &lt;li&gt;写半衰期长的答案。&lt;/li&gt;
 &lt;/ol&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>*使用VBA，优化处理Excel表格</title>
-      <link>https://mrbenwang.github.io/post/20170719-process-excel-with-vba/</link>
-      <pubDate>Wed, 19 Jul 2017 18:00:00 +0800</pubDate>
-      
-      <guid>https://mrbenwang.github.io/post/20170719-process-excel-with-vba/</guid>
-      
-        <description>&lt;p&gt;上周末，XX给我抱怨：因为计算绩效奖金，把2个人的工资发错了，还被扣了500元。问的缘由得知，她每个月要处理十来个excel表格，每次都要手动修改里面的值，如果修改了一处，其他地方也要修改，然后还要多处地方核对。导致光这件事情就要消耗三四天，伤神费力。&lt;/p&gt;
-
-&lt;p&gt;我就问她，整个是不是都是&lt;code&gt;机械性重复的工作&lt;/code&gt;，如果是的话，完全可以&lt;strong&gt;用电脑来代替&lt;/strong&gt;。然后我就帮她找工具来优化她的工作，减少出错机会。
-&lt;/p&gt;
-
-&lt;h2 id=&#34;现状&#34;&gt;现状&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;目前他们公司总共有四五十人；&lt;/li&gt;
-&lt;li&gt;需要整理的excel有12份；&lt;/li&gt;
-&lt;li&gt;excel间有很多重复数据，同样的数据存在在多分表中；&lt;/li&gt;
-&lt;li&gt;excel之间相互引用数据很频繁，杂乱，牵一发而动全身。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;两种方案&#34;&gt;两种方案&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;使用HRM管理系统，在网上找到三套有源码的软件：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;仅仅在github上面找到一个中文的系统 &lt;a href=&#34;https://github.com/dreajay/hrms&#34;&gt;hrms&lt;/a&gt;(github大量英文系统)。&amp;ndash;需要自己找服务器部署&lt;/li&gt;
-&lt;li&gt;悟空HRM，PHP开源，文档也比较详细，中文。试用了一下在线版本，功能无法满足需求，需要二次开发，同步需要服务器部署。&lt;/li&gt;
-&lt;li&gt;OrangeHRM，是阿里云市场里面，也需要购买服务器。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;总结&lt;/code&gt;：现在目前找到的都是web版的系统，都需要在线部署。没有找到桌面版本，可以立即使用的那种。都不太适合目前的情况。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;使用Excel自带的函数和宏，来实现简化实际工作的，&lt;code&gt;最终实现此方案&lt;/code&gt;：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;重新梳理Excel间的关系，提取出：原始数据、规则(函数计算后的数据)；&lt;/li&gt;
-&lt;li&gt;原始数据，抽取出来作为独立的Excel，类似于数据库的概念：
-
-&lt;ul&gt;
-&lt;li&gt;稳定数据：不经常变动的数据，如：人员基本信息，固定工资等；&lt;/li&gt;
-&lt;li&gt;月数据：每月统计都会发生变化的数据，如：考勤数据，绩效等；&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;规则，编辑成Excel模板文件(*.xltx)，里面&lt;code&gt;一定不存在&lt;/code&gt;原始类的数据：
-
-&lt;ul&gt;
-&lt;li&gt;引用：引用自原始数据，所有引用只能来源原始数据，不能出现引用引用的数据；&lt;/li&gt;
-&lt;li&gt;计算公式：使用excel的函数，如：=sum()等；&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;使用VBA宏，根据原始数据和模板文件，生成不带公式的纯xlsx文件。目的，不依赖其他文件。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;宏代码&#34;&gt;宏代码&lt;/h2&gt;
-
-&lt;p&gt;实现功能（&lt;a href=&#34;https://mrbenwang.github.io/files/Excel_Test.rar&#34;&gt;下载demo&lt;/a&gt;）：&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;批量读取模板文件，生成xlsx文件；&lt;a href=&#34;https://msdn.microsoft.com/VBA/Excel-VBA/articles/xlfileformat-enumeration-excel&#34;&gt;官方文档另存的枚举类型&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;替换掉excel中的公式，只显示值。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;details&gt;
-  &lt;summary style=&#34;background-color:#f5f5f5;border:1px solid #ccc;padding:5px;&#34;&gt;
-    全部宏代码
-    
-  &lt;/summary&gt;
-  &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vba&#34; data-lang=&#34;vba&#34;&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;60
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;61
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;62
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;63
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;64
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;65
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vba&#34; data-lang=&#34;vba&#34;&gt;Sub ChangeFileFormat(xltxFolder, xlsxFolder)
-
-    Dim strCurrentFileExt   As String
-    Dim strNewFileExt       As String
-    Dim objFSO              As Object
-    Dim objFolder           As Object
-    Dim objFile             As Object
-    Dim xlFile              As Workbook
-    Dim strNewName          As String
-    Dim strXltxFolderPath       As String
-    Dim strXlsxFolderPath       As String
-
-    Set objFSO = CreateObject(&amp;#34;Scripting.FileSystemObject&amp;#34;)
-
-    strCurrentFileExt = &amp;#34;.xltx&amp;#34;
-    strNewFileExt = &amp;#34;.xlsx&amp;#34;
-
-    strXltxFolderPath = ThisWorkbook.Path &amp;amp; &amp;#34;\&amp;#34; &amp;amp; xltxFolder &amp;amp; &amp;#34;\&amp;#34;
-    strXlsxFolderPath = ThisWorkbook.Path &amp;amp; &amp;#34;\&amp;#34; &amp;amp; xlsxFolder &amp;amp; &amp;#34;\&amp;#34;
-
-    If Not objFSO.FolderExists(strXltxFolderPath) Then   &amp;#39;判断指定文件夹是否存在 
-        MsgBox &amp;#34;【模板文件】文件夹不存在&amp;#34;
-        Exit Sub
-    End If
-
-    If Not objFSO.FolderExists(strXlsxFolderPath) Then   &amp;#39;判断指定文件夹是否存在
-        fs.CreateFolder strXlsxFolderPath
-    End If
-
-    Set objFolder = objFSO.getfolder(strXltxFolderPath)
-    For Each objFile In objFolder.Files &amp;#39;循环所有的模板文件
-        strNewName = objFile.Name
-        If Right(strNewName, Len(strCurrentFileExt)) = strCurrentFileExt Then
-            Application.AskToUpdateLinks = False     &amp;#39;关闭程序询问更新链接提示
-            Application.DisplayAlerts = False
-            ThisWorkbook.UpdateLinks = xlUpdateLinksAlways  &amp;#39;更新链接
-
-            Set xlFile = Workbooks.Open(objFile.Path, , True) &amp;#39;读取模板文件
-            For Each sh In xlFile.Sheets  &amp;#39;替换文件中的公式
-               sh.UsedRange.Value = sh.UsedRange.Value
-            Next
-
-            strNewName = Replace(strNewName, strCurrentFileExt, strNewFileExt) &amp;#39;替换文件名为新的文件名
-            Select Case strNewFileExt
-            Case &amp;#34;.xlsx&amp;#34;
-                xlFile.SaveAs strXlsxFolderPath &amp;amp; strNewName, XlFileFormat.xlOpenXMLWorkbook &amp;#39;保存为不带宏的excel
-            Case &amp;#34;.xlsm&amp;#34;
-                xlFile.SaveAs strXlsxFolderPath &amp;amp; strNewName, XlFileFormat.xlOpenXMLWorkbookMacroEnabled &amp;#39;保存为带宏的excel
-            End Select
-            xlFile.Close
-            Application.AskToUpdateLinks = True
-            Application.DisplayAlerts = True
-        End If
-    Next objFile
-
-ClearMemory:
-    strCurrentFileExt = vbNullString
-    strNewFileExt = vbNullString
-    Set objFSO = Nothing
-    Set objFolder = Nothing
-    Set objFile = Nothing
-    Set xlFile = Nothing
-    strNewName = vbNullString
-    strFolderPath = vbNullString
-End Sub&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/details&gt;
-
-
-&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
-
-&lt;p&gt;在这个过程中，考虑的时候，使用到了：模块，数据唯一性，避免交叉引用，这些开发中的经验。&lt;/p&gt;
-
-&lt;p&gt;其实我觉得，整个过程中，VBA的编写占据了我最多的时间。查资料，找文档。（百度就是个大坑！！！）&lt;/p&gt;
-
-&lt;p&gt;不熟悉Excel函数导致，当我写完一个宏的时候，发现VLOOKUP已经早就实现这个功能了。&lt;/p&gt;</description>
       
     </item>
     
