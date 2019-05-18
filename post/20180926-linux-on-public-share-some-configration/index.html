@@ -25,7 +25,8 @@
 <meta name="author" content="Long" />
   <meta name="description" content="去年的时候，有一篇介绍在vultr 上 搭建ss服务器 的文章，由于某些众所周知的原因，被阿里云删除。
 后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用lastb命令，着实下了一跳，我的vps每天都有几万次的失败登陆记录。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上所有国家都有来过。
-这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。 " />
+这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。
+" />
 
   <meta name="keywords" content="码农, 逻辑, 自由" />
 
@@ -34,7 +35,7 @@
 <meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
 
 
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.53" />
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/20180926-linux-on-public-share-some-configration/" />
@@ -66,8 +67,7 @@
 
 后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用lastb命令，着实下了一跳，我的vps每天都有几万次的失败登陆记录。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上所有国家都有来过。
 
-这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。
-" />
+这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mrbenwang.github.io/post/20180926-linux-on-public-share-some-configration/" /><meta property="article:published_time" content="2018-09-26T10:16:00&#43;08:00"/>
 <meta property="article:modified_time" content="2018-09-26T10:16:00&#43;08:00"/>
@@ -77,8 +77,7 @@
 
 后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用lastb命令，着实下了一跳，我的vps每天都有几万次的失败登陆记录。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上所有国家都有来过。
 
-这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。
-">
+这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。">
 
 
 <meta itemprop="datePublished" content="2018-09-26T10:16:00&#43;08:00" />
@@ -94,8 +93,7 @@
 
 后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用lastb命令，着实下了一跳，我的vps每天都有几万次的失败登陆记录。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上所有国家都有来过。
 
-这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。
-"/>
+这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -374,8 +372,7 @@ if (!doNotTrack) {
 
 <p>后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用<code>lastb</code>命令，着实下了一跳，我的vps每天都有<code>几万次的失败登陆记录</code>。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上<strong>所有国家</strong>都有来过。</p>
 
-<p>这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。
-</p>
+<p>这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。</p>
 
 <h2 id="具体配置">具体配置</h2>
 
@@ -435,16 +432,16 @@ if (!doNotTrack) {
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">yum install fail2ban <span class="c1">#安装
-</span><span class="c1"></span>systemctl <span class="nb">enable</span> fail2ban <span class="c1">#开机自动启动
-</span><span class="c1"></span>systemctl start fail2ban <span class="c1"># 开启服务
-</span><span class="c1"></span>
-<span class="c1">#查看被ban IP，其中sshd为名称，比如上面的[wordpress]
-</span><span class="c1"></span>fail2ban-client status sshd
-<span class="c1">#删除被ban IP
-</span><span class="c1"></span>fail2ban-client <span class="nb">set</span> sshd delignoreip <span class="m">192</span>.168.111.111
-<span class="c1">#查看日志
-</span><span class="c1"></span>tail /var/log/fail2ban.log
+<pre class="chroma"><code class="language-shell" data-lang="shell">yum install fail2ban <span class="c1">#安装</span>
+systemctl <span class="nb">enable</span> fail2ban <span class="c1">#开机自动启动</span>
+systemctl start fail2ban <span class="c1"># 开启服务</span>
+
+<span class="c1">#查看被ban IP，其中sshd为名称，比如上面的[wordpress]</span>
+fail2ban-client status sshd
+<span class="c1">#删除被ban IP</span>
+fail2ban-client <span class="nb">set</span> sshd delignoreip <span class="m">192</span>.168.111.111
+<span class="c1">#查看日志</span>
+tail /var/log/fail2ban.log
 ipset list
 firewall-cmd --direct --get-all-rules</code></pre></td></tr></table>
 </div>
@@ -482,8 +479,8 @@ firewall-cmd --direct --get-all-rules</code></pre></td></tr></table>
 <span class="nv">filter</span>  <span class="o">=</span> sshd
 <span class="nv">port</span>    <span class="o">=</span> <span class="m">8822</span>
 <span class="nv">bantime</span> <span class="o">=</span> -1
-<span class="nv">action</span> <span class="o">=</span> %<span class="o">(</span>banaction<span class="o">)</span>s<span class="o">[</span><span class="nv">name</span><span class="o">=</span>%<span class="o">(</span>__name__<span class="o">)</span>s, <span class="nv">bantime</span><span class="o">=</span><span class="m">0</span>, <span class="nv">port</span><span class="o">=</span><span class="s2">&#34;%(port)s&#34;</span>, <span class="nv">protocol</span><span class="o">=</span><span class="s2">&#34;%(protocol)s&#34;</span>, <span class="nv">chain</span><span class="o">=</span><span class="s2">&#34;%(chain)s&#34;</span><span class="o">]</span>   <span class="c1"># 老版本的bug，新版本已经修复
-</span><span class="c1"></span><span class="nv">logpath</span> <span class="o">=</span> /var/log/secure</code></pre></td></tr></table>
+<span class="nv">action</span> <span class="o">=</span> %<span class="o">(</span>banaction<span class="o">)</span>s<span class="o">[</span><span class="nv">name</span><span class="o">=</span>%<span class="o">(</span>__name__<span class="o">)</span>s, <span class="nv">bantime</span><span class="o">=</span><span class="m">0</span>, <span class="nv">port</span><span class="o">=</span><span class="s2">&#34;%(port)s&#34;</span>, <span class="nv">protocol</span><span class="o">=</span><span class="s2">&#34;%(protocol)s&#34;</span>, <span class="nv">chain</span><span class="o">=</span><span class="s2">&#34;%(chain)s&#34;</span><span class="o">]</span>   <span class="c1"># 老版本的bug，新版本已经修复</span>
+<span class="nv">logpath</span> <span class="o">=</span> /var/log/secure</code></pre></td></tr></table>
 </div>
 </div>
 <h3 id="使用密钥登陆">使用密钥登陆</h3>
@@ -559,10 +556,10 @@ firewall-cmd --direct --get-all-rules</code></pre></td></tr></table>
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"> <span class="c1"># wheel组 sudo不需要密码
-</span><span class="c1"></span>sed -i <span class="s1">&#39;s/^%wheel.*/%wheel ALL=(ALL) NOPASSWD: ALL/g&#39;</span> /etc/sudoers
- <span class="c1"># wheel组 su 不需要密码
-</span><span class="c1"></span>sed -i <span class="s1">&#39;s/^#auth\s\+sufficient\s\+pam_wheel.so\s\+trust\s\+use_uid/auth sufficient pam_wheel.so trust use_uid/g&#39;</span> /etc/pam.d/su</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-shell" data-lang="shell"> <span class="c1"># wheel组 sudo不需要密码</span>
+sed -i <span class="s1">&#39;s/^%wheel.*/%wheel ALL=(ALL) NOPASSWD: ALL/g&#39;</span> /etc/sudoers
+ <span class="c1"># wheel组 su 不需要密码</span>
+sed -i <span class="s1">&#39;s/^#auth\s\+sufficient\s\+pam_wheel.so\s\+trust\s\+use_uid/auth sufficient pam_wheel.so trust use_uid/g&#39;</span> /etc/pam.d/su</code></pre></td></tr></table>
 </div>
 </div>
 <h3 id="防火墙设置">防火墙设置</h3>

@@ -20,8 +20,7 @@
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;一次偶然机会，看了一下新建一个&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;VPS实例&lt;/a&gt;的价格，发现最低价的配置，没有&lt;code&gt;ip4&lt;/code&gt;了(所幸我的还是ip4)，只能使用&lt;code&gt;ipv6&lt;/code&gt;。&lt;code&gt;2001:0db8:85a3:08d3:1319:8a2e:0370:7344&lt;/code&gt; 这样的ip地址，又长又难记忆。如果有个域名那不就简单记忆了嘛。&lt;br /&gt;
-&lt;img src=&#34;https://mrbenwang.github.io/images/0016-domain-registration-share/ipv6_only.jpg&#34; alt=&#34;ipv6_only&#34; /&gt;
-&lt;/p&gt;</description>
+&lt;img src=&#34;https://mrbenwang.github.io/images/0016-domain-registration-share/ipv6_only.jpg&#34; alt=&#34;ipv6_only&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -32,8 +31,7 @@
       <guid>https://mrbenwang.github.io/post/20180929-give-up-ss-and-change-to-v2ray/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 
-&lt;p&gt;最近一段时间，总感觉&lt;code&gt;shadowsocks&lt;/code&gt;用起来非常的慢，时不时的断网，我就觉得可能不太对劲了。在issues看到有不少人提到，可能已经被人工智能识别，所以非常堪忧。
-&lt;/p&gt;</description>
+&lt;p&gt;最近一段时间，总感觉&lt;code&gt;shadowsocks&lt;/code&gt;用起来非常的慢，时不时的断网，我就觉得可能不太对劲了。在issues看到有不少人提到，可能已经被人工智能识别，所以非常堪忧。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -46,8 +44,7 @@
 
 &lt;p&gt;后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用&lt;code&gt;lastb&lt;/code&gt;命令，着实下了一跳，我的vps每天都有&lt;code&gt;几万次的失败登陆记录&lt;/code&gt;。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上&lt;strong&gt;所有国家&lt;/strong&gt;都有来过。&lt;/p&gt;
 
-&lt;p&gt;这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。
-&lt;/p&gt;</description>
+&lt;p&gt;这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -60,8 +57,7 @@
 
 &lt;p&gt;这几天为了登录外网查询资料，谷歌经常抽风，国外的博客也打不开，都要整崩溃了。我以前（直到昨天以前）都是使用&lt;code&gt;修改hosts&lt;/code&gt;来访问外网的，用的是 &lt;a href=&#34;https://laod.cn/hosts&#34;&gt;老D（https://laod.cn/hosts）&lt;/a&gt; 无偿分享的hosts。&lt;/p&gt;
 
-&lt;p&gt;直到昨天我终于受不了了，听闻前同事使用的是VULTR 来搭建SS服务器，价格也非常便宜，比买vpn划算多了，还安全，还多了一台服务器。然后就下定决心，一劳永逸的解决上网问题。
-&lt;/p&gt;</description>
+&lt;p&gt;直到昨天我终于受不了了，听闻前同事使用的是VULTR 来搭建SS服务器，价格也非常便宜，比买vpn划算多了，还安全，还多了一台服务器。然后就下定决心，一劳永逸的解决上网问题。&lt;/p&gt;</description>
     </item>
     
   </channel>

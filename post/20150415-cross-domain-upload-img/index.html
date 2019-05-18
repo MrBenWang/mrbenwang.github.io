@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Long" />
-  <meta name="description" content="关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。 " />
+  <meta name="description" content="关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。
+" />
 
   <meta name="keywords" content="码农, 逻辑, 自由" />
 
@@ -32,7 +33,7 @@
 <meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
 
 
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.53" />
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/20150415-cross-domain-upload-img/" />
@@ -60,15 +61,13 @@
 
 
 <meta property="og:title" content="*跨域上传图片的尝试过程，最终成功了。哈哈" />
-<meta property="og:description" content="关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。
-" />
+<meta property="og:description" content="关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mrbenwang.github.io/post/20150415-cross-domain-upload-img/" /><meta property="article:published_time" content="2015-04-15T11:39:00&#43;08:00"/>
 <meta property="article:modified_time" content="2015-04-15T11:39:00&#43;08:00"/>
 
 <meta itemprop="name" content="*跨域上传图片的尝试过程，最终成功了。哈哈">
-<meta itemprop="description" content="关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。
-">
+<meta itemprop="description" content="关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。">
 
 
 <meta itemprop="datePublished" content="2015-04-15T11:39:00&#43;08:00" />
@@ -80,8 +79,7 @@
 <meta itemprop="keywords" content="跨域," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="*跨域上传图片的尝试过程，最终成功了。哈哈"/>
-<meta name="twitter:description" content="关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。
-"/>
+<meta name="twitter:description" content="关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -336,8 +334,7 @@ if (!doNotTrack) {
 
     
     <div class="post-content">
-      <p>关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。
-</p>
+      <p>关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。</p>
 
 <p>首先，项目是一个ERP，针对的是公司的一个小型电商的网站。项目经理让我搭建一个图片服务器， 当时也是为了完（尝）成（尝）任（新）务（鲜），用的都是当时从没接触过的。通过百度就选择了 Nginx + Nodejs + express + ImageMagick 来实现的。 当时还简单看了一下淘宝的TFS（Taobao FileSystem）太高大上了，因为预估网站图片不会非常多，就用系统自带的文件系统。  Nodejs也是边学边写，可是调试express  这种MVC的时候，就不管用了。。。试了很久也不行。。。   就采用边看api 边打印出来调试。总算可以上传，下载浏览图片了。</p>
 

@@ -17,6 +17,13 @@
   </url>
   
   <url>
+    <loc>https://mrbenwang.github.io/post/20190514-reshape-healthy-life/</loc>
+    <lastmod>2019-05-14T16:40:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://mrbenwang.github.io/post/20190404-what-person-do-i-become/</loc>
     <lastmod>2019-04-10T17:40:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -95,7 +102,7 @@
   
   <url>
     <loc>https://mrbenwang.github.io/post/20181107-japanese-language-study-for-3months/</loc>
-    <lastmod>2019-03-27T10:16:00+08:00</lastmod>
+    <lastmod>2019-05-13T10:16:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1038,6 +1045,13 @@
   </url>
   
   <url>
+    <loc>https://mrbenwang.github.io/tags/%E5%81%A5%E5%BA%B7/</loc>
+    <lastmod>2019-05-14T16:40:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://mrbenwang.github.io/tags/%E5%8F%8C%E5%8D%81%E4%B8%80/</loc>
     <lastmod>2018-11-29T15:30:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1151,7 +1165,7 @@
   
   <url>
     <loc>https://mrbenwang.github.io/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E/</loc>
-    <lastmod>2019-03-27T10:16:00+08:00</lastmod>
+    <lastmod>2019-05-13T10:16:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -1185,8 +1199,15 @@
   </url>
   
   <url>
+    <loc>https://mrbenwang.github.io/tags/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2019-05-14T16:40:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://mrbenwang.github.io/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2019-04-10T17:40:00+08:00</lastmod>
+    <lastmod>2019-05-14T16:40:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
