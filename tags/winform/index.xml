@@ -13,26 +13,26 @@
     
     <item>
       <title>*记一次【模拟点击】，WinForm小软件开发过程</title>
-      <link>https://mrbenwang.github.io/post/20170921-simulator-click-baidu-ads/</link>
+      <link>https://mrbenwang.github.io/post/2014-2017/20170921-simulator-click-baidu-ads/</link>
       <pubDate>Thu, 21 Sep 2017 22:08:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20170921-simulator-click-baidu-ads/</guid>
+      <guid>https://mrbenwang.github.io/post/2014-2017/20170921-simulator-click-baidu-ads/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 
-&lt;p&gt;年初四月份的时候，有朋友找到我，说想开发一个模拟点击的软件。最终软件做完后，发现效果不理想。唯一开发的我是认为&lt;code&gt;最好是放弃&lt;/code&gt;了，做运营的他，&lt;code&gt;坚持&lt;/code&gt;这个没问题，说是改变合作方式。最终也是不了了之了。
+&lt;p&gt;年初四月份的时候，有朋友找到我，说想开发一个模拟点击的软件。最终软件做完后，发现效果不理想。唯一开发的我是认为&lt;code&gt;最好是放弃&lt;/code&gt;了，做运营的他，&lt;code&gt;坚持&lt;/code&gt;这个没问题，说是改变合作方式。最终也是不了了之了。&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>*使用OneNote的COM组件，实现OCR功能。</title>
-      <link>https://mrbenwang.github.io/post/20160831-use-onenote-achieve-orc/</link>
+      <link>https://mrbenwang.github.io/post/2014-2017/20160831-use-onenote-achieve-orc/</link>
       <pubDate>Wed, 31 Aug 2016 16:50:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20160831-use-onenote-achieve-orc/</guid>
+      <guid>https://mrbenwang.github.io/post/2014-2017/20160831-use-onenote-achieve-orc/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;在业务系统开发的过程中，很多情况下会去&lt;code&gt;识别图片中的相关信息&lt;/code&gt;，并且把信息录入到系统中。现在希望通过&lt;code&gt;自动化&lt;/code&gt;的方式录入，就有了以下的工作。&lt;br /&gt;
-在对比了几个OCR软件在中文识别方面的准确率后，决定使用微软的OneNote开发相应的功能。
+在对比了几个OCR软件在中文识别方面的准确率后，决定使用微软的OneNote开发相应的功能。&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     

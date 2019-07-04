@@ -13,10 +13,10 @@
     
     <item>
       <title>[转]逻辑谬误列表(序言)</title>
-      <link>https://mrbenwang.github.io/post/20181207-logical-fallacy-list-foreword/</link>
+      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/</link>
       <pubDate>Fri, 07 Dec 2018 14:56:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20181207-logical-fallacy-list-foreword/</guid>
+      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/</guid>
       <description>&lt;p&gt;我在网上浏览文章的时候，无意间在&lt;code&gt;评论区&lt;/code&gt;发现了，这个非常有价值的系列评论，我不能放置原文链接，见谅。&lt;br /&gt;
 同时，为了保留这份资料，为以后重新学习，实践后再来重学。故此由此系列，我对原评论有结构调整。&lt;code&gt;遗憾：原文没有找到&lt;/code&gt;&lt;br /&gt;
 &lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>相遇总是偶然，离别却是必然</title>
-      <link>https://mrbenwang.github.io/post/20190606-meeting-and-parting/</link>
+      <link>https://mrbenwang.github.io/post/2019/20190606-meeting-and-parting/</link>
       <pubDate>Thu, 06 Jun 2019 14:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20190606-meeting-and-parting/</guid>
+      <guid>https://mrbenwang.github.io/post/2019/20190606-meeting-and-parting/</guid>
       <description>&lt;h1 id=&#34;序言&#34;&gt;序言&lt;/h1&gt;
 
 &lt;p&gt;很久没有以一篇文章的方式，抒发自己的情感了，大都是朋友圈的只言片语。这两年写的最多的就是技术方面，或者是偏理性的文章。上周在医院住院期间，不用考虑工作，不用考虑吃穿，也不用强制完成当日的目标。脑子也就空闲了出来，也就发现了身边的美景和那久违的感动。&lt;br /&gt;
@@ -36,54 +36,54 @@
     
     <item>
       <title>*C#执行批处理命令</title>
-      <link>https://mrbenwang.github.io/post/20190520-csharp-exectue-bat/</link>
+      <link>https://mrbenwang.github.io/post/2019/20190520-csharp-exectue-bat/</link>
       <pubDate>Mon, 20 May 2019 14:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20190520-csharp-exectue-bat/</guid>
+      <guid>https://mrbenwang.github.io/post/2019/20190520-csharp-exectue-bat/</guid>
       <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
 
-&lt;p&gt;前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。
+&lt;p&gt;前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>重塑健康的生活</title>
-      <link>https://mrbenwang.github.io/post/20190514-reshape-healthy-life/</link>
+      <link>https://mrbenwang.github.io/post/2019/20190514-reshape-healthy-life/</link>
       <pubDate>Tue, 14 May 2019 16:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20190514-reshape-healthy-life/</guid>
+      <guid>https://mrbenwang.github.io/post/2019/20190514-reshape-healthy-life/</guid>
       <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 
 &lt;p&gt;从去年开始，我开始&lt;strong&gt;有意识的改变&lt;/strong&gt;自己的&lt;code&gt;生活状况&lt;/code&gt;。尤其是从上个月开始，起初我在 YouTube 上面，只是看健身方面的内容，关于健身姿势啦，细节啦，要点啦，饮食啦之类的内容。后来 YouTube 又给我推送了，关于&lt;code&gt;驼背伸脖子&lt;/code&gt;，&lt;code&gt;骨骼健康&lt;/code&gt;，&lt;code&gt;脊柱健康&lt;/code&gt;的东西。就&lt;strong&gt;意识到&lt;/strong&gt;健康的重要，开始去重塑自己的体态，纠正伴随我二十多年的不健康姿势。&lt;/p&gt;
 
 &lt;p&gt;首先感谢，那些分享视频的 YouTuber 。我回想起小学，初中时候，被很多人说起过自己的驼背，像个&lt;code&gt;小老头&lt;/code&gt;，当时完全没有当回事。工作后虽然意识到问题了，但仍然不知道怎么去改变。现在&lt;strong&gt;这些科学的知识改变了我&lt;/strong&gt;，虽然它迟到了，但还不晚。&lt;/p&gt;
 
-&lt;p&gt;本篇文章主要讲日常生活习惯，改变还是需要靠平时，健康还是要靠自己。顽张れ！
+&lt;p&gt;本篇文章主要讲日常生活习惯，改变还是需要靠平时，健康还是要靠自己。顽张れ！&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>我变成了什么样的人？</title>
-      <link>https://mrbenwang.github.io/post/20190404-what-person-do-i-become/</link>
+      <link>https://mrbenwang.github.io/post/2019/20190404-what-person-do-i-become/</link>
       <pubDate>Fri, 05 Apr 2019 20:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20190404-what-person-do-i-become/</guid>
+      <guid>https://mrbenwang.github.io/post/2019/20190404-what-person-do-i-become/</guid>
       <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 
 &lt;p&gt;时间过的好快啊，上次在&lt;code&gt;行动&lt;/code&gt;和&lt;code&gt;意识&lt;/code&gt;上面&lt;strong&gt;改变自己&lt;/strong&gt;，是四五年前(2014-2015)。那个时候的我，变得勇于尝试很多从未接触过的事物，比如敷面膜，烫发，经验分享，参加社交活动。其中，有些成为了我的生活习惯，有些则不适合我被抛弃。&lt;/p&gt;
 
 &lt;p&gt;自从骨折以后，尤其是去年植骨手术后。我的&lt;code&gt;心态&lt;/code&gt;和&lt;code&gt;观念想法&lt;/code&gt;，发生了很大的变化。起初，我并没有意识到我的改变，它慢慢的累积，累积；直到年初，在油管上看到文睿讲&lt;code&gt;《人与人比，最终要看福分》&lt;/code&gt;这期视频里，突然意识到，我的内心发生了很多的变化。&lt;/p&gt;
 
-&lt;p&gt;当时我还有给他留言，表达我内心的困惑。他只是让我内心要平和，同时也要看到他人的优点，这一类鸡汤话，&lt;strong&gt;并没有彻底解决我的疑问&lt;/strong&gt;。这次，我就尝试自己来理性的分析，解释&lt;code&gt;合理化自己&lt;/code&gt;。
+&lt;p&gt;当时我还有给他留言，表达我内心的困惑。他只是让我内心要平和，同时也要看到他人的优点，这一类鸡汤话，&lt;strong&gt;并没有彻底解决我的疑问&lt;/strong&gt;。这次，我就尝试自己来理性的分析，解释&lt;code&gt;合理化自己&lt;/code&gt;。&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>我的经济知识学习小结</title>
-      <link>https://mrbenwang.github.io/post/20190403-my-economic-learning/</link>
+      <link>https://mrbenwang.github.io/post/2019/20190403-my-economic-learning/</link>
       <pubDate>Tue, 02 Apr 2019 22:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20190403-my-economic-learning/</guid>
+      <guid>https://mrbenwang.github.io/post/2019/20190403-my-economic-learning/</guid>
       <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 
 &lt;p&gt;从去年开始，&lt;strong&gt;有意识&lt;/strong&gt;的&lt;code&gt;记录&lt;/code&gt;和&lt;code&gt;收集&lt;/code&gt;，从各类财经视频中学习到的经济学小知识。毕竟不是系统的学习，当时只是为了更好的了解和解释，当时的一些经济现象。在这里，就简单的做一个学习小结。&lt;br /&gt;
@@ -93,10 +93,10 @@
     
     <item>
       <title>由‘美国大学舞弊案’引发，社会阶级的思考</title>
-      <link>https://mrbenwang.github.io/post/20190319-social-class-thinking/</link>
+      <link>https://mrbenwang.github.io/post/2019/20190319-social-class-thinking/</link>
       <pubDate>Tue, 19 Mar 2019 16:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20190319-social-class-thinking/</guid>
+      <guid>https://mrbenwang.github.io/post/2019/20190319-social-class-thinking/</guid>
       <description>&lt;p&gt;前两天美国大学舞弊案，造成的影响还是蛮大的(&lt;strong&gt;不过国内我身边的人，基本都不知道，不关心&lt;/strong&gt;)。结合&lt;code&gt;杨世光&lt;/code&gt;和&lt;code&gt;丁万鸣&lt;/code&gt;从&lt;strong&gt;社会阶级角度&lt;/strong&gt;的解读，深深的启发了我。最近几天我一直在思考&lt;code&gt;社会阶级&lt;/code&gt;这方面的东西，形成一点点自己的思考。&lt;/p&gt;
 
 &lt;p&gt;首先，简单说一下案件内容：&lt;br /&gt;
@@ -117,10 +117,10 @@
     
     <item>
       <title>完成“局域网”数据备份</title>
-      <link>https://mrbenwang.github.io/post/20190121-backup-infomation/</link>
+      <link>https://mrbenwang.github.io/post/2019/20190121-backup-infomation/</link>
       <pubDate>Mon, 21 Jan 2019 22:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20190121-backup-infomation/</guid>
+      <guid>https://mrbenwang.github.io/post/2019/20190121-backup-infomation/</guid>
       <description>&lt;p&gt;刚刚，我用了三个小时的时间，清空了自己的新浪微博。仅仅保留第一条和最后一条。&lt;/p&gt;
 
 &lt;h1 id=&#34;引言&#34;&gt;引言&lt;/h1&gt;
@@ -135,37 +135,37 @@
     
     <item>
       <title>我的戊戌年</title>
-      <link>https://mrbenwang.github.io/post/20181225-review-my-wuxu-year/</link>
+      <link>https://mrbenwang.github.io/post/2018/20181225-review-my-wuxu-year/</link>
       <pubDate>Tue, 25 Dec 2018 15:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20181225-review-my-wuxu-year/</guid>
+      <guid>https://mrbenwang.github.io/post/2018/20181225-review-my-wuxu-year/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;子曰：“吾十有五，而志于学，三十而立，四十而不惑，五十而知天命，六十而耳顺，七十而从心所欲，不逾矩。”&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;论语这句话，有很多种解读，我倾向的是，讲的是人内在精神方面的：三十确立了个人基础的观念和意志；四十个人的观念完全成型，不再做细微调整不再怀疑自己。&lt;br /&gt;
 这一年所经历，所作出的改变挺大的。尤其是在&lt;strong&gt;意识的觉醒&lt;/strong&gt;，&lt;strong&gt;世界观-价值观-方法论&lt;/strong&gt;的重塑。&lt;br /&gt;
-依靠社会阅历的累积与逻辑推理，把应试教育和宣传洗脑硬塞进脑袋中的屎，一点点的都给抖了出去。屎臭味仍然还在，现在有意识的去祛除它。&lt;code&gt;试问谁能未觉醒 听真那自由在奏鸣&lt;/code&gt;
+依靠社会阅历的累积与逻辑推理，把应试教育和宣传洗脑硬塞进脑袋中的屎，一点点的都给抖了出去。屎臭味仍然还在，现在有意识的去祛除它。&lt;code&gt;试问谁能未觉醒 听真那自由在奏鸣&lt;/code&gt;&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>*根据时间戳，增量同步数据的解决办法</title>
-      <link>https://mrbenwang.github.io/post/20181215-incremen-sync-by-datetime/</link>
+      <link>https://mrbenwang.github.io/post/2018/20181215-incremen-sync-by-datetime/</link>
       <pubDate>Sat, 15 Dec 2018 15:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20181215-incremen-sync-by-datetime/</guid>
+      <guid>https://mrbenwang.github.io/post/2018/20181215-incremen-sync-by-datetime/</guid>
       <description>&lt;p&gt;最近在工作中遇到一个比较棘手的问题，客户端从服务端同步数据的问题。&lt;br /&gt;
-思考这个解决的方法还是花费了不少的精力。
+思考这个解决的方法还是花费了不少的精力。&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[转]逻辑谬误列表(例子)</title>
-      <link>https://mrbenwang.github.io/post/20181207-logical-fallacy-list-ex/</link>
+      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-ex/</link>
       <pubDate>Fri, 07 Dec 2018 17:50:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20181207-logical-fallacy-list-ex/</guid>
+      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-ex/</guid>
       <description>&lt;p&gt;&lt;div class=&#34;shortcode-notice note&#34;&gt;
   &lt;div class=&#34;shortcode-notice-title note&#34;&gt;
     
@@ -181,10 +181,10 @@
     
     <item>
       <title>[转]逻辑谬误列表(13-24)</title>
-      <link>https://mrbenwang.github.io/post/20181207-logical-fallacy-list-2/</link>
+      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-2/</link>
       <pubDate>Fri, 07 Dec 2018 16:56:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20181207-logical-fallacy-list-2/</guid>
+      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-2/</guid>
       <description>&lt;p&gt;13.合成谬误/分割谬误&lt;br /&gt;
 14.轶事谬误（Anecdotal Fallacy）&lt;br /&gt;
 15.诉诸情感（appeal to emotion）&lt;br /&gt;
@@ -202,10 +202,10 @@
     
     <item>
       <title>[转]逻辑谬误列表(1-12)</title>
-      <link>https://mrbenwang.github.io/post/20181207-logical-fallacy-list-1/</link>
+      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-1/</link>
       <pubDate>Fri, 07 Dec 2018 15:56:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20181207-logical-fallacy-list-1/</guid>
+      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-1/</guid>
       <description>&lt;ol&gt;
 &lt;li&gt;稻草人论证（Strawman）&lt;/li&gt;
 &lt;li&gt;滑坡谬误（Slippery slope）&lt;/li&gt;
@@ -226,10 +226,10 @@
     
     <item>
       <title>我来回答一些这36个问题</title>
-      <link>https://mrbenwang.github.io/post/20181130-i-ask-the-36-questions/</link>
+      <link>https://mrbenwang.github.io/post/2018/20181130-i-ask-the-36-questions/</link>
       <pubDate>Fri, 30 Nov 2018 16:30:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20181130-i-ask-the-36-questions/</guid>
+      <guid>https://mrbenwang.github.io/post/2018/20181130-i-ask-the-36-questions/</guid>
       <description>&lt;p&gt;问题来自于，纽约时报《The 36 Questions That Lead to Love》：&lt;a href=&#34;https://www.nytimes.com/2015/01/11/fashion/no-37-big-wedding-or-small.html&#34;&gt;英文原文&lt;/a&gt;  -  &lt;a href=&#34;https://cn.nytimes.com/culture/20150123/t23questions/&#34;&gt;中文翻译&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;div class=&#34;shortcode-notice info&#34;&gt;
@@ -251,10 +251,10 @@
     
     <item>
       <title>双十一之于经济并不是一件好事情</title>
-      <link>https://mrbenwang.github.io/post/20181129-double-eleven-in-china-is-not-a-good-thing/</link>
+      <link>https://mrbenwang.github.io/post/2018/20181129-double-eleven-not-a-good-thing/</link>
       <pubDate>Thu, 29 Nov 2018 15:30:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20181129-double-eleven-in-china-is-not-a-good-thing/</guid>
+      <guid>https://mrbenwang.github.io/post/2018/20181129-double-eleven-not-a-good-thing/</guid>
       <description>&lt;h1 id=&#34;双十一之于经济并不是一件好事情&#34;&gt;双十一之于经济并不是一件好事情。&lt;/h1&gt;
 
 &lt;p&gt;我认为双十一的成长已经到头了，并且它所产生的恶果。将会至少影响到明年半年的经济情况。总的来说，我认为这是&lt;code&gt;非常非常不好&lt;/code&gt;的事情。&lt;br /&gt;
@@ -264,46 +264,46 @@
     
     <item>
       <title>自学日语记录历程</title>
-      <link>https://mrbenwang.github.io/post/20181107-japanese-language-study-for-3months/</link>
+      <link>https://mrbenwang.github.io/post/2018/20181107-japanese-language-study-for-3months/</link>
       <pubDate>Wed, 07 Nov 2018 09:33:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20181107-japanese-language-study-for-3months/</guid>
+      <guid>https://mrbenwang.github.io/post/2018/20181107-japanese-language-study-for-3months/</guid>
       <description>&lt;p&gt;不知不觉就已经学习日语三个月了，有点点小小的心得和经验。&lt;br /&gt;
-这篇文章：一方面是整理，记忆，留作以后回忆使用，另一方面，也想对和我一样学习日语的人，如果能有&lt;code&gt;一点点帮助&lt;/code&gt;就再好不过了。
+这篇文章：一方面是整理，记忆，留作以后回忆使用，另一方面，也想对和我一样学习日语的人，如果能有&lt;code&gt;一点点帮助&lt;/code&gt;就再好不过了。&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>*域名注册经历的一些分享</title>
-      <link>https://mrbenwang.github.io/post/20180930-domain-registration-share/</link>
+      <link>https://mrbenwang.github.io/post/2018/20180930-domain-registration-share/</link>
       <pubDate>Sun, 30 Sep 2018 09:04:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20180930-domain-registration-share/</guid>
+      <guid>https://mrbenwang.github.io/post/2018/20180930-domain-registration-share/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;一次偶然机会，看了一下新建一个&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;VPS实例&lt;/a&gt;的价格，发现最低价的配置，没有&lt;code&gt;ip4&lt;/code&gt;了(所幸我的还是ip4)，只能使用&lt;code&gt;ipv6&lt;/code&gt;。&lt;code&gt;2001:0db8:85a3:08d3:1319:8a2e:0370:7344&lt;/code&gt; 这样的ip地址，又长又难记忆。如果有个域名那不就简单记忆了嘛。&lt;br /&gt;
-&lt;img src=&#34;https://mrbenwang.github.io/images/0016-domain-registration-share/ipv6_only.jpg&#34; alt=&#34;ipv6_only&#34; /&gt;
+&lt;img src=&#34;https://mrbenwang.github.io/images/2018/20180930-domain-registration-share/ipv6_only.jpg&#34; alt=&#34;ipv6_only&#34; /&gt;&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>由shadowsocks转为v2ray的体验</title>
-      <link>https://mrbenwang.github.io/post/20180929-give-up-ss-and-change-to-v2ray/</link>
+      <link>https://mrbenwang.github.io/post/2018/20180929-give-up-ss-and-change-to-v2ray/</link>
       <pubDate>Sat, 29 Sep 2018 15:04:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20180929-give-up-ss-and-change-to-v2ray/</guid>
+      <guid>https://mrbenwang.github.io/post/2018/20180929-give-up-ss-and-change-to-v2ray/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 
-&lt;p&gt;最近一段时间，总感觉&lt;code&gt;shadowsocks&lt;/code&gt;用起来非常的慢，时不时的断网，我就觉得可能不太对劲了。在issues看到有不少人提到，可能已经被人工智能识别，所以非常堪忧。
+&lt;p&gt;最近一段时间，总感觉&lt;code&gt;shadowsocks&lt;/code&gt;用起来非常的慢，时不时的断网，我就觉得可能不太对劲了。在issues看到有不少人提到，可能已经被人工智能识别，所以非常堪忧。&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>*Hugo &#43; github 搭建个人博客</title>
-      <link>https://mrbenwang.github.io/post/20180927-hugo-plus-github-build-blog/</link>
+      <link>https://mrbenwang.github.io/post/2018/20180927-hugo-plus-github-build-blog/</link>
       <pubDate>Thu, 27 Sep 2018 15:13:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20180927-hugo-plus-github-build-blog/</guid>
+      <guid>https://mrbenwang.github.io/post/2018/20180927-hugo-plus-github-build-blog/</guid>
       <description>&lt;p&gt;很早以前就有想法，搭建一个个人的博客。没有实现的原因：一方面个人的服务器&lt;code&gt;不太安全&lt;/code&gt;，并且掉线，欠费等等，维护起来麻烦，另一方面，文章编辑发布起来也&lt;code&gt;不方便&lt;/code&gt;。&lt;/p&gt;
 
 &lt;p&gt;后来了解到 github 提供了博客的功能，也一直没有实践。也鉴于上次文章被删，我也就开始实践了起来，&lt;code&gt;有一个备份总好于无&lt;/code&gt;。&lt;br /&gt;
@@ -312,15 +312,15 @@
     
     <item>
       <title>*在公网上的Linux，我的一些配置分享</title>
-      <link>https://mrbenwang.github.io/post/20180926-linux-on-public-share-some-configration/</link>
+      <link>https://mrbenwang.github.io/post/2018/20180926-linux-on-public-share-some-configration/</link>
       <pubDate>Wed, 26 Sep 2018 10:16:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20180926-linux-on-public-share-some-configration/</guid>
-      <description>&lt;p&gt;去年的时候，有一篇介绍在&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;vultr&lt;/a&gt; 上 &lt;a href=&#34;https://mrbenwang.github.io/post/20170329-build-ss-on-vultr-vps/&#34;&gt;搭建ss服务器&lt;/a&gt; 的文章，由于某些众所周知的原因，被阿里云删除。&lt;/p&gt;
+      <guid>https://mrbenwang.github.io/post/2018/20180926-linux-on-public-share-some-configration/</guid>
+      <description>&lt;p&gt;去年的时候，有一篇介绍在&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;vultr&lt;/a&gt; 上 &lt;a href=&#34;https://mrbenwang.github.io/post/2014-2017/20170329-build-ss-on-vultr-vps/&#34;&gt;搭建ss服务器&lt;/a&gt; 的文章，由于某些众所周知的原因，被阿里云删除。&lt;/p&gt;
 
 &lt;p&gt;后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用&lt;code&gt;lastb&lt;/code&gt;命令，着实下了一跳，我的vps每天都有&lt;code&gt;几万次的失败登陆记录&lt;/code&gt;。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上&lt;strong&gt;所有国家&lt;/strong&gt;都有来过。&lt;/p&gt;
 
-&lt;p&gt;这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。
+&lt;p&gt;这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     

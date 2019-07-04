@@ -13,16 +13,16 @@
     
     <item>
       <title>*设计原则记录</title>
-      <link>https://mrbenwang.github.io/post/20140923-design-principle-note/</link>
+      <link>https://mrbenwang.github.io/post/2014-2017/20140923-design-principle-note/</link>
       <pubDate>Tue, 23 Sep 2014 16:59:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20140923-design-principle-note/</guid>
+      <guid>https://mrbenwang.github.io/post/2014-2017/20140923-design-principle-note/</guid>
       <description>&lt;ol&gt;
-&lt;li&gt;找到系统中变化的部分，将变化的部分同其它稳定的部分隔开。&lt;/li&gt;
-&lt;li&gt;面向接口编程，而不要面向实现编程。&lt;/li&gt;
-&lt;li&gt;优先使用对象组合，而非类继承。&lt;/li&gt;
-&lt;li&gt;软件实体应当对扩展开放，对修改关闭。&lt;/li&gt;
-&lt;li&gt;继承必须确保超类所拥有的性质在子类中仍然成立。&lt;/li&gt;
+&lt;li&gt;找到系统中变化的部分，将变化的部分同其它稳定的部分隔开。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;面向接口编程，而不要面向实现编程。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;优先使用对象组合，而非类继承。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;软件实体应当对扩展开放，对修改关闭。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;继承必须确保超类所拥有的性质在子类中仍然成立。&lt;br /&gt;&lt;/li&gt;
 &lt;/ol&gt;</description>
     </item>
     

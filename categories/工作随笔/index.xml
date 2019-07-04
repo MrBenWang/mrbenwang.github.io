@@ -13,67 +13,67 @@
     
     <item>
       <title>*C#执行批处理命令</title>
-      <link>https://mrbenwang.github.io/post/20190520-csharp-exectue-bat/</link>
+      <link>https://mrbenwang.github.io/post/2019/20190520-csharp-exectue-bat/</link>
       <pubDate>Mon, 20 May 2019 14:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20190520-csharp-exectue-bat/</guid>
+      <guid>https://mrbenwang.github.io/post/2019/20190520-csharp-exectue-bat/</guid>
       <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
 
-&lt;p&gt;前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。
+&lt;p&gt;前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>*根据时间戳，增量同步数据的解决办法</title>
-      <link>https://mrbenwang.github.io/post/20181215-incremen-sync-by-datetime/</link>
+      <link>https://mrbenwang.github.io/post/2018/20181215-incremen-sync-by-datetime/</link>
       <pubDate>Sat, 15 Dec 2018 15:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20181215-incremen-sync-by-datetime/</guid>
+      <guid>https://mrbenwang.github.io/post/2018/20181215-incremen-sync-by-datetime/</guid>
       <description>&lt;p&gt;最近在工作中遇到一个比较棘手的问题，客户端从服务端同步数据的问题。&lt;br /&gt;
-思考这个解决的方法还是花费了不少的精力。
+思考这个解决的方法还是花费了不少的精力。&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>*python 爬虫 记录</title>
-      <link>https://mrbenwang.github.io/post/20170224-python-spider-note/</link>
+      <link>https://mrbenwang.github.io/post/2014-2017/20170224-python-spider-note/</link>
       <pubDate>Fri, 24 Feb 2017 12:33:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20170224-python-spider-note/</guid>
+      <guid>https://mrbenwang.github.io/post/2014-2017/20170224-python-spider-note/</guid>
       <description>python3 爬虫需要安装：requests，beautifulsoup4，html5lib 带有中文的需要这样写，要不然就会出现乱码 1 2 3 html = response.content.decode(&amp;#34;utf8&amp;#34;) with open(&amp;#34;a.html&amp;#34;, &amp;#39;w&amp;#39;) as</description>
     </item>
     
     <item>
       <title>*使用OneNote的COM组件，实现OCR功能。</title>
-      <link>https://mrbenwang.github.io/post/20160831-use-onenote-achieve-orc/</link>
+      <link>https://mrbenwang.github.io/post/2014-2017/20160831-use-onenote-achieve-orc/</link>
       <pubDate>Wed, 31 Aug 2016 16:50:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20160831-use-onenote-achieve-orc/</guid>
+      <guid>https://mrbenwang.github.io/post/2014-2017/20160831-use-onenote-achieve-orc/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;在业务系统开发的过程中，很多情况下会去&lt;code&gt;识别图片中的相关信息&lt;/code&gt;，并且把信息录入到系统中。现在希望通过&lt;code&gt;自动化&lt;/code&gt;的方式录入，就有了以下的工作。&lt;br /&gt;
-在对比了几个OCR软件在中文识别方面的准确率后，决定使用微软的OneNote开发相应的功能。
+在对比了几个OCR软件在中文识别方面的准确率后，决定使用微软的OneNote开发相应的功能。&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>*关于json 与 Request Header 的Content-Type 一些关系。</title>
-      <link>https://mrbenwang.github.io/post/20160607-json-and-request-header-content-type/</link>
+      <link>https://mrbenwang.github.io/post/2014-2017/20160607-json-and-request-header-content-type/</link>
       <pubDate>Tue, 07 Jun 2016 12:06:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20160607-json-and-request-header-content-type/</guid>
+      <guid>https://mrbenwang.github.io/post/2014-2017/20160607-json-and-request-header-content-type/</guid>
       <description>&lt;p&gt;由于最近遇到关于，ashx文件 ajax解析参数的问题。查询网上很多资料后，已经解决。&lt;br /&gt;
-鉴于网上已经足够多的，关于这个问题的文章。大部分内容来自互联网，我这里只是做一些整理和记录。特此说明并非原创。
+鉴于网上已经足够多的，关于这个问题的文章。大部分内容来自互联网，我这里只是做一些整理和记录。特此说明并非原创。&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>*跨域上传图片的尝试过程，最终成功了。哈哈</title>
-      <link>https://mrbenwang.github.io/post/20150415-cross-domain-upload-img/</link>
+      <link>https://mrbenwang.github.io/post/2014-2017/20150415-cross-domain-upload-img/</link>
       <pubDate>Wed, 15 Apr 2015 11:39:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20150415-cross-domain-upload-img/</guid>
-      <description>&lt;p&gt;关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。
+      <guid>https://mrbenwang.github.io/post/2014-2017/20150415-cross-domain-upload-img/</guid>
+      <description>&lt;p&gt;关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     

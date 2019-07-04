@@ -13,10 +13,10 @@
     
     <item>
       <title>*python 爬虫 记录</title>
-      <link>https://mrbenwang.github.io/post/20170224-python-spider-note/</link>
+      <link>https://mrbenwang.github.io/post/2014-2017/20170224-python-spider-note/</link>
       <pubDate>Fri, 24 Feb 2017 12:33:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/20170224-python-spider-note/</guid>
+      <guid>https://mrbenwang.github.io/post/2014-2017/20170224-python-spider-note/</guid>
       <description>python3 爬虫需要安装：requests，beautifulsoup4，html5lib 带有中文的需要这样写，要不然就会出现乱码 1 2 3 html = response.content.decode(&amp;#34;utf8&amp;#34;) with open(&amp;#34;a.html&amp;#34;, &amp;#39;w&amp;#39;) as</description>
     </item>
     
