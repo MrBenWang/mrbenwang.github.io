@@ -23,6 +23,16 @@
     </item>
     
     <item>
+      <title>关于&lt;软件架构和架构师培训&gt;后的点点想法</title>
+      <link>https://mrbenwang.github.io/post/2019/20190819-about-architect-train/</link>
+      <pubDate>Mon, 19 Aug 2019 15:27:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2019/20190819-about-architect-train/</guid>
+      <description>&lt;p&gt;上周四的时候，公司的唯一一位国内的架构师，来做培训。顺便就记录一下，我的一些思考和想法吧。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>我脑袋中的自由</title>
       <link>https://mrbenwang.github.io/post/2019/20190709-freedom-in-my-head/</link>
       <pubDate>Tue, 09 Jul 2019 15:27:00 +0800</pubDate>
@@ -306,18 +316,6 @@
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;最近一段时间，总感觉&lt;code&gt;shadowsocks&lt;/code&gt;用起来非常的慢，时不时的断网，我就觉得可能不太对劲了。在issues看到有不少人提到，可能已经被人工智能识别，所以非常堪忧。&lt;br /&gt;
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>*Hugo &#43; github 搭建个人博客</title>
-      <link>https://mrbenwang.github.io/post/2018/20180927-hugo-plus-github-build-blog/</link>
-      <pubDate>Thu, 27 Sep 2018 15:13:00 +0800</pubDate>
-      
-      <guid>https://mrbenwang.github.io/post/2018/20180927-hugo-plus-github-build-blog/</guid>
-      <description>&lt;p&gt;很早以前就有想法，搭建一个个人的博客。没有实现的原因：一方面个人的服务器&lt;code&gt;不太安全&lt;/code&gt;，并且掉线，欠费等等，维护起来麻烦，另一方面，文章编辑发布起来也&lt;code&gt;不方便&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;后来了解到 github 提供了博客的功能，也一直没有实践。也鉴于上次文章被删，我也就开始实践了起来，&lt;code&gt;有一个备份总好于无&lt;/code&gt;。&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     

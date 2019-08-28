@@ -178,6 +178,129 @@
     </item>
     
     <item>
+      <title>关于&lt;软件架构和架构师培训&gt;后的点点想法</title>
+      <link>https://mrbenwang.github.io/post/2019/20190819-about-architect-train/</link>
+      <pubDate>Mon, 19 Aug 2019 15:27:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2019/20190819-about-architect-train/</guid>
+      
+        <description>&lt;p&gt;上周四的时候，公司的唯一一位国内的架构师，来做培训。顺便就记录一下，我的一些思考和想法吧。
+&lt;/p&gt;
+
+&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+
+&lt;p&gt;在很早以前的时候，我的个人职业规划的目标就是架构师，在后续的工作，学习了解中。越来越认识到，成为一个架构师是如何的困难，渐渐也就淡忘了这个想法。在这次的培训中，他讲解的很多的内容，现在已经忘记的差不多了(&lt;code&gt;完全符合学习金字塔&lt;/code&gt;)，只能分享一下我个人的观点了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mrbenwang.github.io/images/2019/20190819-about-architect-train/03-cone-of-learning.jpg&#34; alt=&#34;学习金字塔&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;抽象归纳的能力&#34;&gt;抽象归纳的能力&lt;/h2&gt;
+
+&lt;p&gt;在我的观念中，这是一个非常非常重要的能力。现在的&lt;strong&gt;所有的&lt;/strong&gt;&lt;code&gt;科学结论&lt;/code&gt;，都是从这个能力上长出来的。&lt;br /&gt;
+人类发明的工具，越来越多的代替人类的&lt;code&gt;功能延伸&lt;/code&gt;(如望远镜&lt;strong&gt;延伸视野&lt;/strong&gt;，起重机&lt;strong&gt;延伸力量&lt;/strong&gt;)；就连大脑也有逐渐&lt;strong&gt;被替代的趋势&lt;/strong&gt;，如现今火爆的人工智能；但我个人认为，目前&lt;strong&gt;唯一最难最替代&lt;/strong&gt;，就是&lt;code&gt;抽象&lt;/code&gt;和&lt;code&gt;归纳&lt;/code&gt;的能力。&lt;/p&gt;
+
+&lt;p&gt;架构师的作用，应该是从现实的环境中，&lt;code&gt;自下而上&lt;/code&gt;的&lt;strong&gt;一层层的抽象归纳&lt;/strong&gt;，将底层的大量问题，归纳为四五个高度抽象的问题；然后，解决这四五个高度抽象问题之间的逻辑问题，说不定还顺带解决了未发现的细节。&lt;br /&gt;
+比如，就像&lt;code&gt;物理定律&lt;/code&gt;的发现，在实际的实验中，归纳总结出规律，验证规律；再总结，再验证，不断地的循环。然后，达到普遍使用的情况。我现在想到的就是，&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E9%A6%AC%E5%85%8B%E5%A3%AB%E5%A8%81%E6%96%B9%E7%A8%8B%E7%B5%84&#34;&gt;麦克斯韦方程组&lt;/a&gt;可以解释宇宙间一切的电磁现象，&lt;code&gt;恰当的数学形式&lt;/code&gt;才能充分展示&lt;code&gt;经验方法&lt;/code&gt;中&lt;strong&gt;看不到的整体性&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;如下图的举例，要解决实际的问题，&lt;strong&gt;解决方案的产生&lt;/strong&gt;，应该是由&lt;code&gt;从下而上&lt;/code&gt;来层层抽象归纳；但是在实际中，很多人都是从上而下来一步步的规划，这样就非常容易产生偏离，成为屠龙术：&lt;br /&gt;
+可参考，项目管理和系统工程中的&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%B7%A5%E4%BD%9C%E5%88%86%E8%A7%A3%E7%BB%93%E6%9E%84&#34;&gt;WBS工作分解结构&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;具体的功能；实现代码的部分，大部分都是&lt;code&gt;CRUD 增删改查&lt;/code&gt;的场景；&lt;/li&gt;
+&lt;li&gt;模块，一系列功能的抽象；一般是软件开发人员来实现，比如，人员管理，邮件管理模块；&lt;/li&gt;
+&lt;li&gt;子程序，多个模块的汇总；一般由核心程序员来做，比如，后台管理，邮件监控服务；&lt;/li&gt;
+&lt;li&gt;领域，多个子程序互相辅助组成；一般是项目经理来划分的，比如，人力资源，财务等原子领域；&lt;/li&gt;
+&lt;li&gt;单系统，多领域组合成，可以独立运作；大多是项目经理所在的层次，大项目也会有架构师的参与；抽象的层次会，如企业资源管理系统；&lt;/li&gt;
+&lt;li&gt;多系统；一定是由架构师所决定的层次，要定义各个系统的职责范围，接口协议规则，数据的流转方式等；&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;最上层是决策层制定的战略目标，比如提高周转率，降低失业率等，这些&lt;code&gt;极度抽象&lt;/code&gt;的事物；&lt;/del&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mrbenwang.github.io/images/2019/20190819-about-architect-train/01-software-system-level.jpg&#34; alt=&#34;举例-软件系统分层&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;架构限制软件&#34;&gt;架构限制软件&lt;/h2&gt;
+
+&lt;p&gt;个人认为，一个好的架构，是要在设计阶段就&lt;strong&gt;限制&lt;/strong&gt;软件开发的&lt;code&gt;发展方向&lt;/code&gt;和&lt;code&gt;功能范围&lt;/code&gt;，不允许到后期，出现南辕北辙的情况。目的也是为了，节约成本(&lt;code&gt;时间成本&lt;/code&gt;和&lt;code&gt;资金成本&lt;/code&gt;)。&lt;br /&gt;
+假设软件的目标，是制造一个三角形，在前期就通过各种&lt;code&gt;工具&lt;/code&gt;，&lt;code&gt;定义&lt;/code&gt;和&lt;code&gt;规则&lt;/code&gt;，限定它不会变成四边形或五边形。突然想到，为什么不把三角形称为三边形，网上大概查了一下，只是大家的约定成俗。&lt;/p&gt;
+
+&lt;p&gt;架构的作用就是：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;定义，软件中的关键组织；比如，定义什么是人员，分哪些部门；&lt;/li&gt;
+&lt;li&gt;制定软件中的运行规则；比如，接口的定义；协议的使用；&lt;/li&gt;
+&lt;li&gt;整个软件生命周期中，人员的行为规范；比如，代码规范，文档规范；&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;大型的软件设计而已&#34;&gt;大型的软件设计而已&lt;/h2&gt;
+
+&lt;p&gt;越来越发现，&lt;strong&gt;软件架构就是大型的软件设计&lt;/strong&gt;。有点类似于&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E5%88%86%E5%BD%A2&#34;&gt;分形&lt;/a&gt;，&lt;a href=&#34;https://zh.wikipedia.org/wiki/%E8%87%AA%E7%9B%B8%E4%BC%BC&#34;&gt;自相似&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mrbenwang.github.io/images/2019/20190819-about-architect-train/04-animated_construction01.gif&#34; alt=&#34;分析-引用自维基&#34; /&gt;  &lt;img src=&#34;https://mrbenwang.github.io/images/2019/20190819-about-architect-train/04-animated_construction02.jpg&#34; alt=&#34;分析-引用自维基&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;软件架构，是由一个个&lt;code&gt;小型的软件设计&lt;/code&gt;组成；而一个个小型的软件设计，则是由&lt;code&gt;更小的软件设计&lt;/code&gt;组成；而&lt;strong&gt;这个软件架构又是另一个软件中的软件设计&lt;/strong&gt;。越来越像，那条著名的&lt;code&gt;衔尾蛇&lt;/code&gt;(咬着自己尾巴的蛇)一样。没想到还真找到了，这副物理课本上的图片。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://mrbenwang.github.io/images/2019/20190819-about-architect-train/02-ouroboros.jpg&#34; alt=&#34;衔尾蛇&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;说起来很绕，但是如果理解了的话，可以解释很多的社会现象。比如，一个家庭，一个社区，一个县，一个省，国家。在结构上是相似的，也应了成语&lt;code&gt;以小见大&lt;/code&gt;。但这也仅仅是结构上面的，千万不能&lt;code&gt;管中窥豹&lt;/code&gt;。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;一个个人在意的指标是：赚了多少现金，有多少现金存款，工作如何，社会关系如何等，这一类&lt;code&gt;非常具象&lt;/code&gt;的事物。&lt;/li&gt;
+&lt;li&gt;一个县市在意的指标是：引入了企业的数字，税收收入数字，犯罪率等，这一类的抽象程度明显高于个人；&lt;/li&gt;
+&lt;li&gt;一个国家在意的指标是：CPI，PPI，PMI，M1，M2，基尼系数，GDP等等这类，大部分人听都没有听过的名词。更别说理解里面的内涵。因为国家的决策者，所处的高度，决定他们&lt;strong&gt;只能通过&lt;/strong&gt;这一类&lt;code&gt;高度抽象&lt;/code&gt;的事物，来&lt;strong&gt;决定这辆“火车”&lt;/strong&gt;的&lt;code&gt;行经方向&lt;/code&gt;。&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;t型人才和π型人才&#34;&gt;T型人才和π型人才&lt;/h2&gt;
+
+&lt;p&gt;不太认同他的关于π型人才的观点，我认为只会存在T型人才。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I型人：只拥有单一专长，较无法拥有多领域的专长。&lt;/li&gt;
+&lt;li&gt;T型人：就是瞄准一个领域，不断向下钻研，形状像一个T字。可以使你有基本的广度以及一个专长领域的深度。&lt;/li&gt;
+&lt;li&gt;π型人：具有双专长、熟悉双领域、怀有双视野、适任双职位、拥有双文凭、或精通双外语的人，都可称为「π型人」。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;因为，人类目前的领域中，不存在&lt;code&gt;绝对的孤立&lt;/code&gt;。某一领域越深入，它的层次越高，就会可能与其他领域相连通。到最后，就到达&lt;strong&gt;所有学科的根基&lt;/strong&gt;&amp;mdash;&lt;code&gt;哲学&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;现代的物理学家，为了大统一理论前仆后继，认为宇宙间万物可以用一种理论来解释。&lt;br /&gt;
+&lt;div class=&#34;shortcode-notice note&#34;&gt;
+  &lt;div class=&#34;shortcode-notice-title note&#34;&gt;
+    
+      引自：
+    
+  &lt;/div&gt;
+  &lt;p&gt;以麦克斯韦方程组为核心的电磁理论，是经典物理学最引以自豪的成就之一。它所揭示出的电磁相互作用的完美统一，为物理学家树立了这样一种信念：&lt;/p&gt;
+
+&lt;p&gt;物质的各种相互作用在&lt;code&gt;更高层次上&lt;/code&gt;应该是&lt;strong&gt;统一的&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&#34;架构师需要的三个条件&#34;&gt;架构师需要的三个条件&lt;/h2&gt;
+
+&lt;p&gt;最后，我向他验证了一下，架构师的需要的三个条件。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;专业能力，T型的那一竖条；&lt;/li&gt;
+&lt;li&gt;学习能力，不断扩展T型那一横条；&lt;/li&gt;
+&lt;li&gt;培养训练，通用能力；整个源自于，我认为大部分领域中，都包含的能力。比如，交流沟通，自制力，团队协作，应变，创新等；&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;后记&#34;&gt;后记&lt;/h2&gt;
+
+&lt;p&gt;其实很早的时候(大概半个月前)，我就有记录这篇文章的想法。可是，最近的行动力，真的真的真的很差劲。可能是受JLPT考试的打击，心态大崩导致的。哪怕非常的空闲，也想去玩游戏，看视频去浪费，也不愿意去学习，来写文章，这类有意义的事情。我目前的状态，还是处于非常😟😟😟。&lt;/p&gt;
+
+&lt;div class=&#34;shortcode-notice note&#34;&gt;
+  &lt;div class=&#34;shortcode-notice-title note&#34;&gt;
+    
+      note
+    
+  &lt;/div&gt;
+  &lt;p&gt;凡夫畏果&lt;br /&gt;
+菩萨畏因&lt;/p&gt;
+
+&lt;/div&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>我脑袋中的自由</title>
       <link>https://mrbenwang.github.io/post/2019/20190709-freedom-in-my-head/</link>
       <pubDate>Tue, 09 Jul 2019 15:27:00 +0800</pubDate>
@@ -2296,7 +2419,7 @@ C：以及教职员工的子女；&lt;code&gt;继承&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;代码实例&#34;&gt;代码实例&lt;/h4&gt;
 
-&lt;p&gt;以下是已经使用了半年的代码，做了简化，换行的处理，方便阅读。&lt;br /&gt;
+&lt;p&gt;以下是已经使用了半年的代码，做了简化，换行的处理，方便阅读。本文重点描述在服务端，&lt;strong&gt;可以只看服务端的代码&lt;/strong&gt;。&lt;br /&gt;
 以下代码使用 &lt;code&gt;C#&lt;/code&gt;，&lt;code&gt;Linq&lt;/code&gt;来编写，如果没有学过这类语言，通过&lt;strong&gt;方法的英文名称&lt;/strong&gt;也能大概猜出意思，另外，&lt;strong&gt;注释写的比较详细&lt;/strong&gt;，不再额外解释。&lt;/p&gt;
 
 &lt;details&gt;
@@ -5182,7 +5305,19 @@ N5，N4 全部是平假名的时候，基本上看不懂什么意思，只是有
 &lt;p&gt;以下就简单记录一下，这段时间的学习内容吧。首先，把红蓝宝书每章后面的课后练习题，认认真真做到了第十章，倍受打击，准确率实在低的吓人。然后中断做练习题，又开始重读《大家的日本语》初级上下两册，读第三遍的时候，很多的句子，细节都可以意识到了，尤其是第一册的时候，所有句子读起来非常的自然，意思也完全可以自己理解得到位(包括很多的语法细节)。&lt;br /&gt;
 但是在重读下册的时候，理解还是还不够完整，有些句子还需要借助辅导书，才能够完全理解。我认为下册我应该到达了70%~80%的理解了。下次再重读的时候，直接从下册开始，因为上册内容太简单了，可以说完全吃透了。&lt;/p&gt;
 
-&lt;p&gt;我本来以为自己这两三个月看红蓝宝书，没有什么进步的。但是从这次的重读来看，还是有不小的进步，很多句子&lt;strong&gt;不再&lt;/strong&gt;&lt;code&gt;似是而非&lt;/code&gt;，对日语的语法细节更加清晰。下一步，计划去实体书店，翻翻看有什么适合自己的日语学习书籍。加油~~💪💪💪&lt;/p&gt;</description>
+&lt;p&gt;我本来以为自己这两三个月看红蓝宝书，没有什么进步的。但是从这次的重读来看，还是有不小的进步，很多句子&lt;strong&gt;不再&lt;/strong&gt;&lt;code&gt;似是而非&lt;/code&gt;，对日语的语法细节更加清晰。下一步，计划去实体书店，翻翻看有什么适合自己的日语学习书籍。加油~~💪💪💪&lt;/p&gt;
+
+&lt;h2 id=&#34;8月6日&#34;&gt;8月6日&lt;/h2&gt;
+
+&lt;p&gt;从上次考完JLPT后，放飞自我了两个礼拜，是完全没有看书的那种。明显的感觉到了自己的水平差距(&lt;code&gt;达克效应&lt;/code&gt;从自信的山顶，直接跌倒谷底)，我一直在思考，下一步改用什么样的参考书，红蓝宝书明显难度太高了。去医院复查的时候，顺便去大书店转哟了一圈，对比了很多的日语N2级别参考书籍，还是只有《新标准日本语中级》可能最适合我当前的水平了。&lt;br /&gt;
+回家的路上，立马淘宝下单。周二下单，周五就到了。这样又过了两个礼拜，自己只在网上看完了第一颗的视频，而书上的第一颗内容没有仔细去看，真的感觉好颓废啊。可真的又提不起去学的动力了，只能慢慢的去磨，慢慢的学习。&lt;br /&gt;
+我晚上又要做饭，又要健身，又要看财经，又要学尤克里里。真的感觉时间好不够用，要做的事情太多了。希望下次我来这里记录的时候，可以至少学到第五课，顽张れ！！💪💪💪&lt;/p&gt;
+
+&lt;h2 id=&#34;8月27日&#34;&gt;8月27日&lt;/h2&gt;
+
+&lt;p&gt;今天N2的成绩出来了，不出预科不合格，再一次验证了概率的正确。我只是想不到，居然这么的差，差到都想哭的境地。我幸幸苦苦的学习了一年，跟乱猜的成绩居然是一样的，那我这一年学习的意义又是什么呢？！真的是跌到了绝望的深渊。&lt;br /&gt;
+堕落的二十天，第二课练习题都没做完，完全一副不想学的架势。这次成绩出来了，更加在伤口上撒盐。我都有放弃日语学习的打算了，本来以为自己在这次的考试中，起码能到中等水平，谁知道，连瞎蒙的都比不上。这该怎么办？怎么来修复倍受打击的心态。。。但是完全放弃不学的话，天天玩游戏，总感觉浑浑噩噩，极强的负罪感，完全没有当时努力学习的充实感。&lt;br /&gt;
+我在想如何来调整日语学习？是更轻松的，大量看日剧，从听力入手；还是继续以前的强撸教材；还是暂停。我目前还是偏向于听日语的视频，教材为辅助。但真的很害怕自己坚持不下去了，该怎么办&lt;del&gt;焦虑&lt;/del&gt;忧愁~~。&lt;/p&gt;</description>
       
     </item>
     
@@ -5305,340 +5440,6 @@ N5，N4 全部是平假名的时候，基本上看不懂什么意思，只是有
 &lt;p&gt;免费的域名跳转还是有问题的，有时候发现无法跳转，有时候出现&lt;code&gt;429 Too Many Requests&lt;/code&gt;，将就一下，不影响使用。&lt;/p&gt;
 
 &lt;p&gt;总的来说感觉不错，满足了我的需求。另外，我在一些域名查询的网站上，也没有查出来我的域名。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>由shadowsocks转为v2ray的体验</title>
-      <link>https://mrbenwang.github.io/post/2018/20180929-give-up-ss-and-change-to-v2ray/</link>
-      <pubDate>Sat, 29 Sep 2018 15:04:00 +0800</pubDate>
-      
-      <guid>https://mrbenwang.github.io/post/2018/20180929-give-up-ss-and-change-to-v2ray/</guid>
-      
-        <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-
-&lt;p&gt;最近一段时间，总感觉&lt;code&gt;shadowsocks&lt;/code&gt;用起来非常的慢，时不时的断网，我就觉得可能不太对劲了。在issues看到有不少人提到，可能已经被人工智能识别，所以非常堪忧。&lt;br /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;并且使用ss的android端，在flyme这个辣鸡系统上，不能使用用Kotlin重写的版本，并且&lt;code&gt;老版本4.3.3&lt;/code&gt;还一直出现各种奇怪的情况。&lt;a href=&#34;https://github.com/shadowsocks/shadowsocks-android/issues/1589&#34;&gt;github issues&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;两三年前魅族确实性价比蛮高的，flymeOS体验很好。最近这一年用感觉越来不好了，网上负面报道也偏多，越来越感觉是&lt;code&gt;昨日黄花&lt;/code&gt;。&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;导致我要坚定得抛弃魅族，是因为一直停留在Android 7.0(最近发布了基于8.0的flyme)。&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;我希望用到最新的 Android 9.0 版本，最好是谷歌手机可以接收到最新的推送那种，但是太贵了。国产手机也只剩便宜了。&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://mrbenwang.github.io/images/2018/20180929-give-up-ss-and-change-to-v2ray/flyme.jpg&#34; alt=&#34;Avoid Flyme devices in the future.&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;实践过程&#34;&gt;实践过程&lt;/h2&gt;
-
-&lt;h3 id=&#34;改用-go-shadowsocks2&#34;&gt;改用 go-shadowsocks2&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/shadowsocks/go-shadowsocks2&#34;&gt;go-shadowsocks2&lt;/a&gt; 当时决定改用这个的时候，原因主要是：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;使用了 AEAD 加密，比 shadowsocks-go 更加激进，相对来说更加安全；&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;go 语言编写的；&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;支持原来SS的windows客户端，Android端；&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;不过后来证明，这个并没有多大的提升，还是不稳定，容易断网；并且shadowsocks已经被列为 &lt;strong&gt;重点照顾&lt;/strong&gt; 目标了，不管怎么换加密算法也是白搭，不如找一个小众的翻墙梯子。&lt;/p&gt;
-
-&lt;h3 id=&#34;v2ray搭建过程&#34;&gt;v2ray搭建过程&lt;/h3&gt;
-
-&lt;p&gt;购买 vps 服务器，可参考：&lt;a href=&#34;https://mrbenwang.github.io/post/2014-2017/20170329-build-ss-on-vultr-vps/&#34;&gt;《记一次搭建SS服务器，完整的过程》&lt;/a&gt;，后半部分 shadowsocks 配置可以不看。&lt;br /&gt;
-顺便推荐一下&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;vultr&lt;/a&gt;的个人注册码哈：&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;https://www.vultr.com/?ref=7136316&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;其实与其说是搭建过程，不如说是配置config的过程，因为官网已经给出了一键安装脚本。&lt;/p&gt;
-
-&lt;p&gt;简单看了一下脚本，大部分代码都是为了适配不同的linux发行版本。关键的步骤也就是，下载，解压，安装，初始化配置文件。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bash &amp;lt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;curl -L -s https://install.direct/go.sh&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;所以说关键就是配置文件了，具体的配置问题&lt;a href=&#34;https://www.v2ray.com/chapter_02/01_overview.html&#34;&gt;官方文档&lt;/a&gt;已经解释的很清楚了，我就简单说一点点：&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;我同时配置了&lt;del&gt;&lt;code&gt;shadowsocks&lt;/code&gt;&lt;/del&gt;，&lt;code&gt;vmess-kcp&lt;/code&gt;，&lt;code&gt;vmess-tcp&lt;/code&gt; 三种翻墙方式。因为kcp容易被赛门铁克误杀，所以存在 &lt;strong&gt;tcp&lt;/strong&gt; 的方式；&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;建议使用&lt;code&gt;vmess&lt;/code&gt;，毕竟冷门，同时用 &lt;code&gt;kcp&lt;/code&gt; 流量换速度；&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;del&gt;&lt;code&gt;shadowsocks&lt;/code&gt;密码要长长长&lt;/del&gt;(&lt;strong&gt;不推荐&lt;/strong&gt;)；另外，&lt;code&gt;vmess 的 id&lt;/code&gt;就是那个 GUID相当于密码，这些是需要妥善保管的；&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;缓存可以根据自身情况设置，建议越大越好，图片可见 &lt;strong&gt;体验结果&lt;/strong&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;2019-01-07注&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;完全抛弃 &lt;code&gt;shadowsocks&lt;/code&gt;，使用人多，容易被罚款100元。&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;端口&lt;strong&gt;不要&lt;/strong&gt;再用 &lt;code&gt;8080&lt;/code&gt; 这一类的端口了，属于常见端口，危险！危险！危险！&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;开放 防火墙端口。 如果使用 kcp 的话，防火墙参数选择&lt;strong&gt;udp&lt;/strong&gt;: &lt;code&gt;firewall-cmd --zone=public --permanent --add-port=${你的端口}/udp&lt;/code&gt;；使用其他的则是&lt;strong&gt;tcp&lt;/strong&gt;: &lt;code&gt;firewall-cmd --zone=public --permanent --add-port=${你的端口}/tcp&lt;/code&gt;。  设置完成后，别忘了重启：&lt;code&gt;systemctl restart firewalld&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;details&gt;
-  &lt;summary style=&#34;background-color:#f5f5f5;border:1px solid #ccc;padding:5px;&#34;&gt;
-    我的config配置
-    
-  &lt;/summary&gt;
-  &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vba&#34; data-lang=&#34;vba&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;  1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 18
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 19
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 20
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 21
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 22
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 23
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 24
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 25
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 26
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 27
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 28
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 29
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 30
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 31
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 32
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 33
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 34
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 35
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 36
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 37
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 38
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 39
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 40
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 41
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 42
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 43
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 44
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 45
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 46
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 47
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 48
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 49
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 50
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 51
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 52
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 53
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 54
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 55
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 56
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 57
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 58
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 59
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 60
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 61
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 62
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 63
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 64
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 65
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 66
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 67
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 68
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 69
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 70
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 71
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 72
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 73
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 74
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 75
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 76
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 77
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 78
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 79
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 80
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 81
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 82
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 83
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 84
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 85
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 86
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 87
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 88
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 89
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 90
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 91
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 92
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 93
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 94
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 95
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 96
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 97
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 98
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 99
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;100
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;101
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;102
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;103
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;104
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;105
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;106
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;107
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;108
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vba&#34; data-lang=&#34;vba&#34;&gt;{
-  &amp;#34;log&amp;#34;: {
-    &amp;#34;access&amp;#34;: &amp;#34;/var/log/v2ray/access.log&amp;#34;,
-    &amp;#34;error&amp;#34;: &amp;#34;/var/log/v2ray/error.log&amp;#34;,
-    &amp;#34;loglevel&amp;#34;: &amp;#34;warning&amp;#34;
-  },
-  &amp;#34;inbound&amp;#34;: {
-    &amp;#34;port&amp;#34;: ~~8080~~,
-    &amp;#34;protocol&amp;#34;: &amp;#34;vmess&amp;#34;,
-    &amp;#34;tag&amp;#34;: &amp;#34;kcpvmess&amp;#34;,
-    &amp;#34;streamSettings&amp;#34;: {
-      &amp;#34;network&amp;#34;: &amp;#34;kcp&amp;#34;
-    },
-    &amp;#34;settings&amp;#34;: {
-      &amp;#34;clients&amp;#34;: [
-        {
-          &amp;#34;id&amp;#34;: &amp;#34;244d5911-88ec-45a2-9850-35551c80048a&amp;#34;,
-          &amp;#34;email&amp;#34;: &amp;#34;kcpvmess@v2ray.com&amp;#34;,
-          &amp;#34;level&amp;#34;: 1,
-          &amp;#34;alterId&amp;#34;: 64
-        }
-      ],
-      &amp;#34;default&amp;#34;: {
-        &amp;#34;level&amp;#34;: 0,
-        &amp;#34;alterId&amp;#34;: 64
-      },
-      &amp;#34;disableInsecureEncryption&amp;#34;: true
-    },
-    &amp;#34;sniffing&amp;#34;: {
-      &amp;#34;enabled&amp;#34;: false,
-      &amp;#34;destOverride&amp;#34;: [
-        &amp;#34;http&amp;#34;,
-        &amp;#34;tls&amp;#34;
-      ]
-    }
-  },
-  &amp;#34;inboundDetour&amp;#34;: [
-    {
-      &amp;#34;port&amp;#34;: ~~8090~~,
-      &amp;#34;protocol&amp;#34;: &amp;#34;vmess&amp;#34;,
-      &amp;#34;tag&amp;#34;: &amp;#34;tcpvmess&amp;#34;,
-      &amp;#34;streamSettings&amp;#34;: {
-        &amp;#34;network&amp;#34;: &amp;#34;tcp&amp;#34;
-      },
-      &amp;#34;settings&amp;#34;: {
-        &amp;#34;clients&amp;#34;: [
-          {
-            &amp;#34;id&amp;#34;: &amp;#34;d8d27272-0e7c-48eb-aa13-bb1a6467de6e&amp;#34;,
-            &amp;#34;email&amp;#34;: &amp;#34;tcpvmess@v2ray.com&amp;#34;,
-            &amp;#34;level&amp;#34;: 1,
-            &amp;#34;alterId&amp;#34;: 64
-          }
-        ],
-        &amp;#34;default&amp;#34;: {
-          &amp;#34;level&amp;#34;: 0,
-          &amp;#34;alterId&amp;#34;: 64
-        },
-        &amp;#34;disableInsecureEncryption&amp;#34;: true
-      },
-      &amp;#34;sniffing&amp;#34;: {
-        &amp;#34;enabled&amp;#34;: false,
-        &amp;#34;destOverride&amp;#34;: [
-          &amp;#34;http&amp;#34;,
-          &amp;#34;tls&amp;#34;
-        ]
-      }
-    }
-  ],
-  &amp;#34;outbound&amp;#34;: {
-    &amp;#34;protocol&amp;#34;: &amp;#34;freedom&amp;#34;,
-    &amp;#34;settings&amp;#34;: {}
-  },
-  &amp;#34;outboundDetour&amp;#34;: [
-    {
-      &amp;#34;protocol&amp;#34;: &amp;#34;blackhole&amp;#34;,
-      &amp;#34;settings&amp;#34;: {},
-      &amp;#34;tag&amp;#34;: &amp;#34;blocked&amp;#34;
-    }
-  ],
-  &amp;#34;routing&amp;#34;: {
-    &amp;#34;strategy&amp;#34;: &amp;#34;rules&amp;#34;,
-    &amp;#34;settings&amp;#34;: {
-      &amp;#34;rules&amp;#34;: [
-        {
-          &amp;#34;type&amp;#34;: &amp;#34;field&amp;#34;,
-          &amp;#34;ip&amp;#34;: [
-            &amp;#34;geoip:private&amp;#34;
-          ],
-          &amp;#34;outboundTag&amp;#34;: &amp;#34;blocked&amp;#34;
-        }
-      ]
-    },
-    &amp;#34;transport&amp;#34;: {
-      &amp;#34;kcpSettings&amp;#34;: {
-        &amp;#34;mtu&amp;#34;: 1350,
-        &amp;#34;tti&amp;#34;: 20,
-        &amp;#34;uplinkCapacity&amp;#34;: 10,
-        &amp;#34;downlinkCapacity&amp;#34;: 10,
-        &amp;#34;congestion&amp;#34;: false,
-        &amp;#34;readBufferSize&amp;#34;: 1,
-        &amp;#34;writeBufferSize&amp;#34;: 1,
-        &amp;#34;header&amp;#34;: {
-          &amp;#34;type&amp;#34;: &amp;#34;none&amp;#34;
-        }
-      }
-    }
-  }
-}&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/details&gt;
-
-
-&lt;h3 id=&#34;windows-android-端的选择&#34;&gt;windows，Android 端的选择&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;windows 版本，&lt;a href=&#34;https://github.com/2dust/v2rayN&#34;&gt;v2rayN&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;类shadowsocks操作界面，有PAC模式，bug也比较少。&lt;/p&gt;
-
-&lt;p&gt;我之前是用的&lt;a href=&#34;https://github.com/nobody3u/V2RayGCon&#34;&gt;V2RayGCon&lt;/a&gt;。操作界面可以慢慢熟悉，关键还是没有我想要的PAC。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Android 版本，&lt;a href=&#34;https://github.com/2dust/v2rayNG&#34;&gt;v2rayNG&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;与上面的windows版本，均出自同一个作者，简单易用。&lt;/p&gt;
-
-&lt;p&gt;垃圾的flyme 居然没有出现问题了，谢天谢地。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;体验结果&#34;&gt;体验结果&lt;/h2&gt;
-
-&lt;p&gt;非常棒，断网的情况不明显了。并且速度立马上来了，在油管看1080p 也没有太大的压力。&lt;/p&gt;
-
-&lt;p&gt;可以从我的使用量就可以看出来是多棒了，并且&lt;code&gt;received&lt;/code&gt;和&lt;code&gt;sent&lt;/code&gt;折线，不再像shadowsocks那样重合，可见缓存有多重要。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://mrbenwang.github.io/images/2018/20180929-give-up-ss-and-change-to-v2ray/1.jpg&#34; alt=&#34;networkshow&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://mrbenwang.github.io/images/2018/20180929-give-up-ss-and-change-to-v2ray/2.jpg&#34; alt=&#34;networkshow2&#34; /&gt;&lt;/p&gt;</description>
       
     </item>
     

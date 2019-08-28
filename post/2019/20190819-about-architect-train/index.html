@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>技术随笔 · 风雪夜归人</title>
+  <title>关于&lt;软件架构和架构师培训&gt;后的点点想法 - 风雪夜归人</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Long" />
-  <meta name="description" content="不妄图通过努力改变命运，而是为了追求真理和美。" />
+  <meta name="description" content="上周四的时候，公司的唯一一位国内的架构师，来做培训。顺便就记录一下，我的一些思考和想法吧。 " />
+
   <meta name="keywords" content="码农, 逻辑, 自由" />
 
 
@@ -34,8 +35,7 @@
 <meta name="generator" content="Hugo 0.49" />
 
 
-<link rel="canonical" href="https://mrbenwang.github.io/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/" />
-<link href="https://mrbenwang.github.io/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/index.xml" rel="alternate" type="application/rss+xml" title="风雪夜归人" />
+<link rel="canonical" href="https://mrbenwang.github.io/post/2019/20190819-about-architect-train/" />
 
 
 
@@ -59,18 +59,29 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="技术随笔" />
-<meta property="og:description" content="不妄图通过努力改变命运，而是为了追求真理和美。" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://mrbenwang.github.io/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/" />
-<meta property="og:updated_time" content="2018-09-30T09:04:00&#43;08:00"/>
+<meta property="og:title" content="关于&lt;软件架构和架构师培训&gt;后的点点想法" />
+<meta property="og:description" content="上周四的时候，公司的唯一一位国内的架构师，来做培训。顺便就记录一下，我的一些思考和想法吧。
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mrbenwang.github.io/post/2019/20190819-about-architect-train/" /><meta property="article:published_time" content="2019-08-19T15:27:00&#43;08:00"/>
+<meta property="article:modified_time" content="2019-08-28T15:27:00&#43;08:00"/>
 
-<meta itemprop="name" content="技术随笔">
-<meta itemprop="description" content="不妄图通过努力改变命运，而是为了追求真理和美。">
+<meta itemprop="name" content="关于&lt;软件架构和架构师培训&gt;后的点点想法">
+<meta itemprop="description" content="上周四的时候，公司的唯一一位国内的架构师，来做培训。顺便就记录一下，我的一些思考和想法吧。
+">
 
+
+<meta itemprop="datePublished" content="2019-08-19T15:27:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-08-19T15:27:00&#43;08:00" />
+<meta itemprop="wordCount" content="2292">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="技术随笔"/>
-<meta name="twitter:description" content="不妄图通过努力改变命运，而是为了追求真理和美。"/>
+<meta name="twitter:title" content="关于&lt;软件架构和架构师培训&gt;后的点点想法"/>
+<meta name="twitter:description" content="上周四的时候，公司的唯一一位国内的架构师，来做培训。顺便就记录一下，我的一些思考和想法吧。
+"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -290,116 +301,226 @@ if (!doNotTrack) {
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">关于&lt;软件架构和架构师培训&gt;后的点点想法</h1>
+      
+      <div class="post-meta">
+        <time datetime="2019-08-19" class="post-time">
+          2019-08-19 15:27
+        </time>
+        <div class="post-category">
+            <a href="https://mrbenwang.github.io/categories/%E7%82%B9%E7%82%B9%E6%83%B3%E6%B3%95/"> 点点想法 </a>
+            
+          </div>
+        <span class="more-meta"> 约 2292 字 </span>
+          <span class="more-meta"> 预计阅读 5 分钟 </span>
 
-<section id="archive" class="archive">
-  
-  
-  <div class="archive-title category">
-    <h2 class="archive-name">分类： 技术随笔</h2>
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#前言">前言</a>
+<ul>
+<li><a href="#抽象归纳的能力">抽象归纳的能力</a></li>
+<li><a href="#架构限制软件">架构限制软件</a></li>
+<li><a href="#大型的软件设计而已">大型的软件设计而已</a></li>
+<li><a href="#t型人才和π型人才">T型人才和π型人才</a></li>
+<li><a href="#架构师需要的三个条件">架构师需要的三个条件</a></li>
+<li><a href="#后记">后记</a></li>
+</ul></li>
+</ul>
+</nav>
   </div>
-  
-  
+</div>
 
-  
-  <div class="archive-post">
-    <time datetime="2018-09-30" class="archive-post-time">
-      2018-09-30
-    </time>
-    <span class="archive-post-title">
-      <a href="/post/2018/20180930-domain-registration-share/" class="archive-post-link">
-        *域名注册经历的一些分享
-      </a>
-    </span>
+    
+    <div class="post-content">
+      <p>上周四的时候，公司的唯一一位国内的架构师，来做培训。顺便就记录一下，我的一些思考和想法吧。
+</p>
+
+<h1 id="前言">前言</h1>
+
+<p>在很早以前的时候，我的个人职业规划的目标就是架构师，在后续的工作，学习了解中。越来越认识到，成为一个架构师是如何的困难，渐渐也就淡忘了这个想法。在这次的培训中，他讲解的很多的内容，现在已经忘记的差不多了(<code>完全符合学习金字塔</code>)，只能分享一下我个人的观点了。</p>
+
+<p><img src="/images/2019/20190819-about-architect-train/03-cone-of-learning.jpg" alt="学习金字塔" /></p>
+
+<h2 id="抽象归纳的能力">抽象归纳的能力</h2>
+
+<p>在我的观念中，这是一个非常非常重要的能力。现在的<strong>所有的</strong><code>科学结论</code>，都是从这个能力上长出来的。<br />
+人类发明的工具，越来越多的代替人类的<code>功能延伸</code>(如望远镜<strong>延伸视野</strong>，起重机<strong>延伸力量</strong>)；就连大脑也有逐渐<strong>被替代的趋势</strong>，如现今火爆的人工智能；但我个人认为，目前<strong>唯一最难最替代</strong>，就是<code>抽象</code>和<code>归纳</code>的能力。</p>
+
+<p>架构师的作用，应该是从现实的环境中，<code>自下而上</code>的<strong>一层层的抽象归纳</strong>，将底层的大量问题，归纳为四五个高度抽象的问题；然后，解决这四五个高度抽象问题之间的逻辑问题，说不定还顺带解决了未发现的细节。<br />
+比如，就像<code>物理定律</code>的发现，在实际的实验中，归纳总结出规律，验证规律；再总结，再验证，不断地的循环。然后，达到普遍使用的情况。我现在想到的就是，<a href="https://zh.wikipedia.org/wiki/%E9%A6%AC%E5%85%8B%E5%A3%AB%E5%A8%81%E6%96%B9%E7%A8%8B%E7%B5%84">麦克斯韦方程组</a>可以解释宇宙间一切的电磁现象，<code>恰当的数学形式</code>才能充分展示<code>经验方法</code>中<strong>看不到的整体性</strong>。</p>
+
+<p>如下图的举例，要解决实际的问题，<strong>解决方案的产生</strong>，应该是由<code>从下而上</code>来层层抽象归纳；但是在实际中，很多人都是从上而下来一步步的规划，这样就非常容易产生偏离，成为屠龙术：<br />
+可参考，项目管理和系统工程中的<a href="https://zh.wikipedia.org/wiki/%E5%B7%A5%E4%BD%9C%E5%88%86%E8%A7%A3%E7%BB%93%E6%9E%84">WBS工作分解结构</a></p>
+
+<ul>
+<li>具体的功能；实现代码的部分，大部分都是<code>CRUD 增删改查</code>的场景；</li>
+<li>模块，一系列功能的抽象；一般是软件开发人员来实现，比如，人员管理，邮件管理模块；</li>
+<li>子程序，多个模块的汇总；一般由核心程序员来做，比如，后台管理，邮件监控服务；</li>
+<li>领域，多个子程序互相辅助组成；一般是项目经理来划分的，比如，人力资源，财务等原子领域；</li>
+<li>单系统，多领域组合成，可以独立运作；大多是项目经理所在的层次，大项目也会有架构师的参与；抽象的层次会，如企业资源管理系统；</li>
+<li>多系统；一定是由架构师所决定的层次，要定义各个系统的职责范围，接口协议规则，数据的流转方式等；</li>
+<li><del>最上层是决策层制定的战略目标，比如提高周转率，降低失业率等，这些<code>极度抽象</code>的事物；</del></li>
+</ul>
+
+<p><img src="/images/2019/20190819-about-architect-train/01-software-system-level.jpg" alt="举例-软件系统分层" /></p>
+
+<h2 id="架构限制软件">架构限制软件</h2>
+
+<p>个人认为，一个好的架构，是要在设计阶段就<strong>限制</strong>软件开发的<code>发展方向</code>和<code>功能范围</code>，不允许到后期，出现南辕北辙的情况。目的也是为了，节约成本(<code>时间成本</code>和<code>资金成本</code>)。<br />
+假设软件的目标，是制造一个三角形，在前期就通过各种<code>工具</code>，<code>定义</code>和<code>规则</code>，限定它不会变成四边形或五边形。突然想到，为什么不把三角形称为三边形，网上大概查了一下，只是大家的约定成俗。</p>
+
+<p>架构的作用就是：</p>
+
+<ul>
+<li>定义，软件中的关键组织；比如，定义什么是人员，分哪些部门；</li>
+<li>制定软件中的运行规则；比如，接口的定义；协议的使用；</li>
+<li>整个软件生命周期中，人员的行为规范；比如，代码规范，文档规范；</li>
+</ul>
+
+<h2 id="大型的软件设计而已">大型的软件设计而已</h2>
+
+<p>越来越发现，<strong>软件架构就是大型的软件设计</strong>。有点类似于<a href="https://zh.wikipedia.org/wiki/%E5%88%86%E5%BD%A2">分形</a>，<a href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%9B%B8%E4%BC%BC">自相似</a>。</p>
+
+<p><img src="/images/2019/20190819-about-architect-train/04-animated_construction01.gif" alt="分析-引用自维基" />  <img src="/images/2019/20190819-about-architect-train/04-animated_construction02.jpg" alt="分析-引用自维基" /></p>
+
+<p>软件架构，是由一个个<code>小型的软件设计</code>组成；而一个个小型的软件设计，则是由<code>更小的软件设计</code>组成；而<strong>这个软件架构又是另一个软件中的软件设计</strong>。越来越像，那条著名的<code>衔尾蛇</code>(咬着自己尾巴的蛇)一样。没想到还真找到了，这副物理课本上的图片。</p>
+
+<p><img src="/images/2019/20190819-about-architect-train/02-ouroboros.jpg" alt="衔尾蛇" /></p>
+
+<p>说起来很绕，但是如果理解了的话，可以解释很多的社会现象。比如，一个家庭，一个社区，一个县，一个省，国家。在结构上是相似的，也应了成语<code>以小见大</code>。但这也仅仅是结构上面的，千万不能<code>管中窥豹</code>。</p>
+
+<ul>
+<li>一个个人在意的指标是：赚了多少现金，有多少现金存款，工作如何，社会关系如何等，这一类<code>非常具象</code>的事物。</li>
+<li>一个县市在意的指标是：引入了企业的数字，税收收入数字，犯罪率等，这一类的抽象程度明显高于个人；</li>
+<li>一个国家在意的指标是：CPI，PPI，PMI，M1，M2，基尼系数，GDP等等这类，大部分人听都没有听过的名词。更别说理解里面的内涵。因为国家的决策者，所处的高度，决定他们<strong>只能通过</strong>这一类<code>高度抽象</code>的事物，来<strong>决定这辆“火车”</strong>的<code>行经方向</code>。<br /></li>
+</ul>
+
+<h2 id="t型人才和π型人才">T型人才和π型人才</h2>
+
+<p>不太认同他的关于π型人才的观点，我认为只会存在T型人才。</p>
+
+<ul>
+<li>I型人：只拥有单一专长，较无法拥有多领域的专长。</li>
+<li>T型人：就是瞄准一个领域，不断向下钻研，形状像一个T字。可以使你有基本的广度以及一个专长领域的深度。</li>
+<li>π型人：具有双专长、熟悉双领域、怀有双视野、适任双职位、拥有双文凭、或精通双外语的人，都可称为「π型人」。</li>
+</ul>
+
+<p>因为，人类目前的领域中，不存在<code>绝对的孤立</code>。某一领域越深入，它的层次越高，就会可能与其他领域相连通。到最后，就到达<strong>所有学科的根基</strong>&mdash;<code>哲学</code>。</p>
+
+<p>现代的物理学家，为了大统一理论前仆后继，认为宇宙间万物可以用一种理论来解释。<br />
+<div class="shortcode-notice note">
+  <div class="shortcode-notice-title note">
+    
+      引自：
+    
   </div>
-  
-  <div class="archive-post">
-    <time datetime="2018-09-29" class="archive-post-time">
-      2018-09-29
-    </time>
-    <span class="archive-post-title">
-      <a href="/post/2018/20180929-give-up-ss-and-change-to-v2ray/" class="archive-post-link">
-        由shadowsocks转为v2ray的体验
-      </a>
-    </span>
+  <p>以麦克斯韦方程组为核心的电磁理论，是经典物理学最引以自豪的成就之一。它所揭示出的电磁相互作用的完美统一，为物理学家树立了这样一种信念：</p>
+
+<p>物质的各种相互作用在<code>更高层次上</code>应该是<strong>统一的</strong>。</p>
+
+</div>
+</p>
+
+<h2 id="架构师需要的三个条件">架构师需要的三个条件</h2>
+
+<p>最后，我向他验证了一下，架构师的需要的三个条件。</p>
+
+<ul>
+<li>专业能力，T型的那一竖条；</li>
+<li>学习能力，不断扩展T型那一横条；</li>
+<li>培养训练，通用能力；整个源自于，我认为大部分领域中，都包含的能力。比如，交流沟通，自制力，团队协作，应变，创新等；</li>
+</ul>
+
+<h2 id="后记">后记</h2>
+
+<p>其实很早的时候(大概半个月前)，我就有记录这篇文章的想法。可是，最近的行动力，真的真的真的很差劲。可能是受JLPT考试的打击，心态大崩导致的。哪怕非常的空闲，也想去玩游戏，看视频去浪费，也不愿意去学习，来写文章，这类有意义的事情。我目前的状态，还是处于非常😟😟😟。</p>
+
+<div class="shortcode-notice note">
+  <div class="shortcode-notice-title note">
+    
+      note
+    
   </div>
+  <p>凡夫畏果<br />
+菩萨畏因</p>
+
+</div>
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Long</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2019-08-28 15:27</span>
+  </p>
   
-  <div class="archive-post">
-    <time datetime="2018-09-27" class="archive-post-time">
-      2018-09-27
-    </time>
-    <span class="archive-post-title">
-      <a href="/post/2018/20180927-hugo-plus-github-build-blog/" class="archive-post-link">
-        *Hugo &#43; github 搭建个人博客
-      </a>
-    </span>
-  </div>
-  
-  <div class="archive-post">
-    <time datetime="2018-09-26" class="archive-post-time">
-      2018-09-26
-    </time>
-    <span class="archive-post-title">
-      <a href="/post/2018/20180926-linux-on-public-share-some-configration/" class="archive-post-link">
-        *在公网上的Linux，我的一些配置分享
-      </a>
-    </span>
-  </div>
-  
-  <div class="archive-post">
-    <time datetime="2017-09-21" class="archive-post-time">
-      2017-09-21
-    </time>
-    <span class="archive-post-title">
-      <a href="/post/2014-2017/20170921-simulator-click-baidu-ads/" class="archive-post-link">
-        *记一次【模拟点击】，WinForm小软件开发过程
-      </a>
-    </span>
-  </div>
-  
-  <div class="archive-post">
-    <time datetime="2017-07-19" class="archive-post-time">
-      2017-07-19
-    </time>
-    <span class="archive-post-title">
-      <a href="/post/2014-2017/20170719-process-excel-with-vba/" class="archive-post-link">
-        *使用VBA，优化处理Excel表格
-      </a>
-    </span>
-  </div>
-  
-  <div class="archive-post">
-    <time datetime="2017-03-29" class="archive-post-time">
-      2017-03-29
-    </time>
-    <span class="archive-post-title">
-      <a href="/post/2014-2017/20170329-build-ss-on-vultr-vps/" class="archive-post-link">
-        记一次搭建SS服务器，完整的过程。
-      </a>
-    </span>
-  </div>
-  
-  <div class="archive-post">
-    <time datetime="2014-09-23" class="archive-post-time">
-      2014-09-23
-    </time>
-    <span class="archive-post-title">
-      <a href="/post/2014-2017/20140923-design-principle-note/" class="archive-post-link">
-        *设计原则记录
-      </a>
-    </span>
-  </div>
-  
-</section>
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content">原创文章，如需转载请注明文章作者和出处。谢谢！</span>
+  </p>
+</div>
 
 
+    
+    
 
+    <footer class="post-footer">
+      
 
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2018/20181207-logical-fallacy-list-foreword/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
 
+            </i>
+            <span class="prev-text nav-default">[转]逻辑谬误列表(序言)</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/2019/20190709-freedom-in-my-head/">
+            <span class="next-text nav-default">我脑袋中的自由</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
 
-  
-  
-  
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
 
   
   
@@ -409,11 +530,23 @@ if (!doNotTrack) {
 
   
   
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "MrBenWang/comments-for-my-blog"
+            issue-term="pathname"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
+
+  
+
+  
 
   
   
-
-
+    
 
 
 

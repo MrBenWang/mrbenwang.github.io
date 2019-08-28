@@ -114,19 +114,6 @@
     </item>
     
     <item>
-      <title>*域名注册经历的一些分享</title>
-      <link>https://mrbenwang.github.io/post/2018/20180930-domain-registration-share/</link>
-      <pubDate>Sun, 30 Sep 2018 09:04:00 +0800</pubDate>
-      
-      <guid>https://mrbenwang.github.io/post/2018/20180930-domain-registration-share/</guid>
-      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-
-&lt;p&gt;一次偶然机会，看了一下新建一个&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;VPS实例&lt;/a&gt;的价格，发现最低价的配置，没有&lt;code&gt;ip4&lt;/code&gt;了(所幸我的还是ip4)，只能使用&lt;code&gt;ipv6&lt;/code&gt;。&lt;code&gt;2001:0db8:85a3:08d3:1319:8a2e:0370:7344&lt;/code&gt; 这样的ip地址，又长又难记忆。如果有个域名那不就简单记忆了嘛。&lt;br /&gt;
-&lt;img src=&#34;https://mrbenwang.github.io/images/2018/20180930-domain-registration-share/ipv6_only.jpg&#34; alt=&#34;ipv6_only&#34; /&gt;&lt;br /&gt;
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>*究竟什么样的技术分享文章，不会被和谐?</title>
       <link>https://mrbenwang.github.io/post/2018/20180724-what-a-fuck-cnblog-delete-my-articel/</link>
       <pubDate>Tue, 24 Jul 2018 20:42:00 +0800</pubDate>
@@ -257,6 +244,15 @@
       <guid>https://mrbenwang.github.io/post/old_article/01-baidu/192-daliy-2011-12-07/</guid>
       <description>&lt;p&gt;上个礼拜五，公司活动去KTV。市场总监67年的廖哥，读书的时候留学过日本，所有点播的日语歌，当然就是他的了。 不过有一首歌他不唱，说放原音，欣赏，欣赏。 然后就有些奇怪，到底是什么好歌在这里欣赏（之前他唱的歌也挺好听的，也有听过的），播放的MV也是《东京爱情故事》片头的放歌那段。 可惜的是没有原唱，不过看的那段mv 感觉还是很亲切的感觉。&lt;br /&gt;
 &lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>祸不单行</title>
+      <link>https://mrbenwang.github.io/post/old_article/00-zone/045-huo-bu-dan-xing/</link>
+      <pubDate>Thu, 15 Jul 2010 17:13:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/old_article/00-zone/045-huo-bu-dan-xing/</guid>
+      <description>正文 昨天晚上睡到肚子疼，半夜睡觉也懒的管了。 到早上，受不了了去厕所蹲一泡，结果拉肚了，也没有注意。 继续喝水，那水也是一个星期前烧的，结果可想</description>
     </item>
     
   </channel>
