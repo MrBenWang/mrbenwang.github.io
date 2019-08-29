@@ -33,7 +33,7 @@
 <meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
 
 
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.57.2" />
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2019/20190520-csharp-exectue-bat/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.c8c1ff75dee09b44060a6c38f41b9036bac2512ccdb22d7f296cec12dc786375.css" integrity="sha256-yMH/dd7gm0QGCmw49BuQNrrCUSzNsi1/KWzsEtx4Y3U=" media="screen">
+<link rel="stylesheet" href="/sass/jane.min.af20b78e95c84de86b00a0242a4a77bd2601700e1b250edf27537d957ac0041d.css" integrity="sha256-ryC3jpXITehrAKAkKkp3vSYBcA4bJQ7fJ1N9lXrABB0=" media="screen" crossorigin="anonymous">
 
 
 
@@ -63,21 +63,19 @@
 <meta property="og:title" content="*C#执行批处理命令" />
 <meta property="og:description" content="背景
 
-前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。
-" />
+前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mrbenwang.github.io/post/2019/20190520-csharp-exectue-bat/" /><meta property="article:published_time" content="2019-05-20T14:20:00&#43;08:00"/>
-<meta property="article:modified_time" content="2019-05-20T16:40:00&#43;08:00"/>
-
+<meta property="og:url" content="https://mrbenwang.github.io/post/2019/20190520-csharp-exectue-bat/" />
+<meta property="article:published_time" content="2019-05-20T14:20:00+08:00" />
+<meta property="article:modified_time" content="2019-05-20T16:40:00+08:00" />
 <meta itemprop="name" content="*C#执行批处理命令">
 <meta itemprop="description" content="背景
 
-前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。
-">
+前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。">
 
 
 <meta itemprop="datePublished" content="2019-05-20T14:20:00&#43;08:00" />
-<meta itemprop="dateModified" content="2019-05-20T14:20:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-05-20T16:40:00&#43;08:00" />
 <meta itemprop="wordCount" content="1800">
 
 
@@ -87,8 +85,7 @@
 <meta name="twitter:title" content="*C#执行批处理命令"/>
 <meta name="twitter:description" content="背景
 
-前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。
-"/>
+前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -138,7 +135,7 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">归档</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">全部文章</a>
           
         
       </li><li class="mobile-menu-item">
@@ -159,9 +156,25 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于我</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于</a>
           
         
+      </li>
+    
+
+    
+      <li class="mobile-menu-item">
+        <a id="openSearchMobile" class="mobile-menu-item-link menu-item-search" href="#">
+          <i class="iconfont">
+            <svg version="1.1" viewBox="0 0 1024 1024"
+  xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M973.81454219 973.81454219a91.78207815 91.78207815 0 0 1-129.80999631 0l-161.97482118-161.97482118a425.48527711 425.48527711 0 0 1-230.35931791 68.16531768 428.3346319 428.3346319 0 1 1 428.3346319-428.3346319 425.48527711 425.48527711 0 0 1-68.16531768 230.35931791l162.02961656 161.97482118a91.83687354 91.83687354 0 0 1-0.05479538 129.80999631zM451.67040679 145.69361559a305.97679241 305.97679241 0 1 0 0 611.95358361 305.97679241 305.97679241 0 0 0 0-611.95358361z">
+  </path>
+</svg>
+
+          </i>
+        </a>
       </li>
     
   </ul>
@@ -229,6 +242,36 @@ if (!doNotTrack) {
   
 
   
+    
+<div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div id="closeSearch" title="Close" class="close">X</div>
+      <div class="modal-header">
+        <div class="modal-title">Search</div>
+      </div>
+      <div class="modal-body">
+          <script>
+            (function() {
+              var cx = '015982908853339398897:duxagwzp5jn';
+              var gcse = document.createElement('script');
+              gcse.type = 'text/javascript';
+              gcse.async = true;
+              gcse.src = (document.location.protocol == 'https:' ? 'https:' :
+                  'http:') +
+                '//cse.google.com/cse.js?cx=' + cx;
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(gcse, s);
+            })();
+          </script>
+          <gcse:search></gcse:search>
+      </div>
+    </div>
+</div>
+
+  
+
+  
 
   <header id="header" class="header container">
     <div class="logo-wrapper">
@@ -258,7 +301,7 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">归档</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">全部文章</a>
           
 
         
@@ -291,13 +334,31 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于我</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于</a>
           
 
         
 
       </li>
     
+
+    
+    
+
+    
+      <li class="menu-item">
+        <a id="openSearch" class="menu-item-link menu-item-search" href="#">
+          <i class="iconfont">
+            <svg version="1.1" viewBox="0 0 1024 1024"
+  xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M973.81454219 973.81454219a91.78207815 91.78207815 0 0 1-129.80999631 0l-161.97482118-161.97482118a425.48527711 425.48527711 0 0 1-230.35931791 68.16531768 428.3346319 428.3346319 0 1 1 428.3346319-428.3346319 425.48527711 425.48527711 0 0 1-68.16531768 230.35931791l162.02961656 161.97482118a91.83687354 91.83687354 0 0 1-0.05479538 129.80999631zM451.67040679 145.69361559a305.97679241 305.97679241 0 1 0 0 611.95358361 305.97679241 305.97679241 0 0 0 0-611.95358361z">
+  </path>
+</svg>
+
+          </i>
+        </a>
+      </li>
     
   </ul>
 </nav>
@@ -354,8 +415,7 @@ if (!doNotTrack) {
     <div class="post-content">
       <h1 id="背景">背景</h1>
 
-<p>前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。<br />
-</p>
+<p>前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。</p>
 
 <h2 id="直接调用bat文件">直接调用bat文件</h2>
 
@@ -379,7 +439,8 @@ if (!doNotTrack) {
     <span class="n">myPro</span><span class="p">.</span><span class="n">StartInfo</span><span class="p">.</span><span class="n">CreateNoWindow</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
     <span class="n">myPro</span><span class="p">.</span><span class="n">Start</span><span class="p">();</span>
     <span class="n">myPro</span><span class="p">.</span><span class="n">WaitForExit</span><span class="p">();</span>
-<span class="p">}</span></code></pre></td></tr></table>
+<span class="p">}</span>
+</code></pre></td></tr></table>
 </div>
 </div></p>
 
@@ -433,7 +494,7 @@ if (!doNotTrack) {
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="k">static</span> <span class="k">void</span> <span class="n">Main</span><span class="p">(</span><span class="kt">string</span><span class="na">[]</span> <span class="n">args</span><span class="p">)</span>
+<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="k">static</span> <span class="k">void</span> <span class="n">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;请输入要执行的命令:&#34;</span><span class="p">);</span>
     <span class="kt">string</span> <span class="n">strInput</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
@@ -455,7 +516,8 @@ if (!doNotTrack) {
 
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">strOuput</span><span class="p">);</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">ReadKey</span><span class="p">();</span>
-<span class="p">}</span></code></pre></td></tr></table>
+<span class="p">}</span>
+</code></pre></td></tr></table>
 </div>
 </div></p>
 
@@ -568,7 +630,8 @@ if (!doNotTrack) {
 <span class="k">private</span> <span class="k">void</span> <span class="n">Redirected</span><span class="p">(</span><span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">dataList</span><span class="p">,</span> <span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">DataReceivedEventArgs</span> <span class="n">e</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Data</span> <span class="p">!=</span> <span class="k">null</span><span class="p">){</span> <span class="n">dataList</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Data</span><span class="p">);</span> <span class="p">}</span>
-<span class="p">}</span></code></pre></td></tr></table>
+<span class="p">}</span>
+</code></pre></td></tr></table>
 </div>
 </div></p>
     </div>
@@ -582,12 +645,15 @@ if (!doNotTrack) {
   </p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
-    <span class="item-content">2019-05-20 16:40</span>
+    <span class="item-content">
+      2019-05-20 16:40
+      
+    </span>
   </p>
   
   <p class="copyright-item">
     <span class="item-title">许可协议</span>
-    <span class="item-content">原创文章，如需转载请注明文章作者和出处。谢谢！</span>
+    <span class="item-content">原创文章，如需转载请注明文章作者和出处。<br/><a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">署名 4.0 国际 (CC BY 4.0)</a></span>
   </p>
 </div>
 
@@ -637,8 +703,12 @@ if (!doNotTrack) {
 
   
   
+  
+  
 
   
+  
+
   
 
   
@@ -647,6 +717,7 @@ if (!doNotTrack) {
       <script src="https://utteranc.es/client.js"
             repo= "MrBenWang/comments-for-my-blog"
             issue-term="pathname"
+            theme="github-light"
             crossorigin="anonymous"
             async>
       </script>
@@ -658,17 +729,17 @@ if (!doNotTrack) {
   
 
   
-  
+
     
 
-
+  
 
         </div>
       </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="social-links">
+      <div class="icon-links">
   
   
     <a href="mailto:wzlblair@foxmail.com" rel="me noopener" class="iconfont"
@@ -713,7 +784,7 @@ if (!doNotTrack) {
 </svg>
 
   </a>
-  
+   
 </div>
 
 <div class="copyright">
@@ -725,13 +796,10 @@ if (!doNotTrack) {
     Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
   </span>
 
-  
-  
-
   <span class="copyright-year">
     &copy;
     
-    2007 -
+      2007 -
     2019
     <span class="heart">
       
@@ -745,10 +813,16 @@ if (!doNotTrack) {
 
       </i>
     </span><span class="author">
-      Long
-      
-    </span></span>
+        Long
+        
+      </span></span>
+
+  
+  
+
+  
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -770,7 +844,13 @@ if (!doNotTrack) {
 
 
 
-<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw="></script>
+<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw=" crossorigin="anonymous"></script>
+
+
+
+
+
+
 
 
 
@@ -790,6 +870,25 @@ if (!doNotTrack) {
 
 
 
+
+
+
+  <script>
+    $("#openSearch, #openSearchMobile").click(function(){
+      $(".modal-dialog").addClass("visible");
+    });
+
+    $("#closeSearch").click(function(){
+      $(".modal-dialog").removeClass("visible");
+    });
+
+    $(document).click(function(event) {
+    
+      if (!$(event.target).closest(".modal-content, #openSearch, #openSearchMobile").length) {
+        $("body").find(".modal-dialog").removeClass("visible");
+      }
+    });
+  </script>
 
 
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>V2ray on 风雪夜归人</title>
+    <title>v2ray on 风雪夜归人</title>
     <link>https://mrbenwang.github.io/tags/v2ray/</link>
-    <description>Recent content in V2ray on 风雪夜归人</description>
+    <description>Recent content in v2ray on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 29 Sep 2018 15:04:00 +0800</lastBuildDate>
@@ -19,8 +19,7 @@
       <guid>https://mrbenwang.github.io/post/2018/20180929-give-up-ss-and-change-to-v2ray/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 
-&lt;p&gt;最近一段时间，总感觉&lt;code&gt;shadowsocks&lt;/code&gt;用起来非常的慢，时不时的断网，我就觉得可能不太对劲了。在issues看到有不少人提到，可能已经被人工智能识别，所以非常堪忧。&lt;br /&gt;
-&lt;/p&gt;</description>
+&lt;p&gt;最近一段时间，总感觉&lt;code&gt;shadowsocks&lt;/code&gt;用起来非常的慢，时不时的断网，我就觉得可能不太对劲了。在issues看到有不少人提到，可能已经被人工智能识别，所以非常堪忧。&lt;/p&gt;</description>
     </item>
     
   </channel>

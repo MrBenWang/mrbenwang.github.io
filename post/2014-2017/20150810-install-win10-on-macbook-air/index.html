@@ -34,7 +34,7 @@
 <meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
 
 
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.57.2" />
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2014-2017/20150810-install-win10-on-macbook-air/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.c8c1ff75dee09b44060a6c38f41b9036bac2512ccdb22d7f296cec12dc786375.css" integrity="sha256-yMH/dd7gm0QGCmw49BuQNrrCUSzNsi1/KWzsEtx4Y3U=" media="screen">
+<link rel="stylesheet" href="/sass/jane.min.af20b78e95c84de86b00a0242a4a77bd2601700e1b250edf27537d957ac0041d.css" integrity="sha256-ryC3jpXITehrAKAkKkp3vSYBcA4bJQ7fJ1N9lXrABB0=" media="screen" crossorigin="anonymous">
 
 
 
@@ -63,16 +63,14 @@
 
 <meta property="og:title" content="*在MacBook Air 上装Win10的，反反复复的失败过程。" />
 <meta property="og:description" content="这个月初，一个女性朋友托我帮她装电脑，往 MacBook Air上面装 Windows 系统，原因是windows用的习惯，用起来顺手。
-然后用脚趾头考虑了一下，就一口答应下来了。难道这就是一个标准程序员的命么，修电脑，装系统，最近又多了一个任务，帮忙买手机。o(╯□╰)o
-" />
+然后用脚趾头考虑了一下，就一口答应下来了。难道这就是一个标准程序员的命么，修电脑，装系统，最近又多了一个任务，帮忙买手机。o(╯□╰)o" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mrbenwang.github.io/post/2014-2017/20150810-install-win10-on-macbook-air/" /><meta property="article:published_time" content="2015-08-10T18:19:00&#43;08:00"/>
-<meta property="article:modified_time" content="2015-08-10T18:19:00&#43;08:00"/>
-
+<meta property="og:url" content="https://mrbenwang.github.io/post/2014-2017/20150810-install-win10-on-macbook-air/" />
+<meta property="article:published_time" content="2015-08-10T18:19:00+08:00" />
+<meta property="article:modified_time" content="2015-08-10T18:19:00+08:00" />
 <meta itemprop="name" content="*在MacBook Air 上装Win10的，反反复复的失败过程。">
 <meta itemprop="description" content="这个月初，一个女性朋友托我帮她装电脑，往 MacBook Air上面装 Windows 系统，原因是windows用的习惯，用起来顺手。
-然后用脚趾头考虑了一下，就一口答应下来了。难道这就是一个标准程序员的命么，修电脑，装系统，最近又多了一个任务，帮忙买手机。o(╯□╰)o
-">
+然后用脚趾头考虑了一下，就一口答应下来了。难道这就是一个标准程序员的命么，修电脑，装系统，最近又多了一个任务，帮忙买手机。o(╯□╰)o">
 
 
 <meta itemprop="datePublished" content="2015-08-10T18:19:00&#43;08:00" />
@@ -85,8 +83,7 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="*在MacBook Air 上装Win10的，反反复复的失败过程。"/>
 <meta name="twitter:description" content="这个月初，一个女性朋友托我帮她装电脑，往 MacBook Air上面装 Windows 系统，原因是windows用的习惯，用起来顺手。
-然后用脚趾头考虑了一下，就一口答应下来了。难道这就是一个标准程序员的命么，修电脑，装系统，最近又多了一个任务，帮忙买手机。o(╯□╰)o
-"/>
+然后用脚趾头考虑了一下，就一口答应下来了。难道这就是一个标准程序员的命么，修电脑，装系统，最近又多了一个任务，帮忙买手机。o(╯□╰)o"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -136,7 +133,7 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">归档</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">全部文章</a>
           
         
       </li><li class="mobile-menu-item">
@@ -157,9 +154,25 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于我</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于</a>
           
         
+      </li>
+    
+
+    
+      <li class="mobile-menu-item">
+        <a id="openSearchMobile" class="mobile-menu-item-link menu-item-search" href="#">
+          <i class="iconfont">
+            <svg version="1.1" viewBox="0 0 1024 1024"
+  xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M973.81454219 973.81454219a91.78207815 91.78207815 0 0 1-129.80999631 0l-161.97482118-161.97482118a425.48527711 425.48527711 0 0 1-230.35931791 68.16531768 428.3346319 428.3346319 0 1 1 428.3346319-428.3346319 425.48527711 425.48527711 0 0 1-68.16531768 230.35931791l162.02961656 161.97482118a91.83687354 91.83687354 0 0 1-0.05479538 129.80999631zM451.67040679 145.69361559a305.97679241 305.97679241 0 1 0 0 611.95358361 305.97679241 305.97679241 0 0 0 0-611.95358361z">
+  </path>
+</svg>
+
+          </i>
+        </a>
       </li>
     
   </ul>
@@ -227,6 +240,36 @@ if (!doNotTrack) {
   
 
   
+    
+<div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div id="closeSearch" title="Close" class="close">X</div>
+      <div class="modal-header">
+        <div class="modal-title">Search</div>
+      </div>
+      <div class="modal-body">
+          <script>
+            (function() {
+              var cx = '015982908853339398897:duxagwzp5jn';
+              var gcse = document.createElement('script');
+              gcse.type = 'text/javascript';
+              gcse.async = true;
+              gcse.src = (document.location.protocol == 'https:' ? 'https:' :
+                  'http:') +
+                '//cse.google.com/cse.js?cx=' + cx;
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(gcse, s);
+            })();
+          </script>
+          <gcse:search></gcse:search>
+      </div>
+    </div>
+</div>
+
+  
+
+  
 
   <header id="header" class="header container">
     <div class="logo-wrapper">
@@ -256,7 +299,7 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">归档</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">全部文章</a>
           
 
         
@@ -289,13 +332,31 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于我</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于</a>
           
 
         
 
       </li>
     
+
+    
+    
+
+    
+      <li class="menu-item">
+        <a id="openSearch" class="menu-item-link menu-item-search" href="#">
+          <i class="iconfont">
+            <svg version="1.1" viewBox="0 0 1024 1024"
+  xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M973.81454219 973.81454219a91.78207815 91.78207815 0 0 1-129.80999631 0l-161.97482118-161.97482118a425.48527711 425.48527711 0 0 1-230.35931791 68.16531768 428.3346319 428.3346319 0 1 1 428.3346319-428.3346319 425.48527711 425.48527711 0 0 1-68.16531768 230.35931791l162.02961656 161.97482118a91.83687354 91.83687354 0 0 1-0.05479538 129.80999631zM451.67040679 145.69361559a305.97679241 305.97679241 0 1 0 0 611.95358361 305.97679241 305.97679241 0 0 0 0-611.95358361z">
+  </path>
+</svg>
+
+          </i>
+        </a>
+      </li>
     
   </ul>
 </nav>
@@ -342,8 +403,7 @@ if (!doNotTrack) {
     
     <div class="post-content">
       <p>这个月初，一个女性朋友托我帮她装电脑，往 MacBook Air上面装 Windows 系统，原因是windows用的习惯，用起来顺手。<br />
-然后用脚趾头考虑了一下，就一口答应下来了。难道这就是一个标准程序员的命么，修电脑，装系统，最近又多了一个任务，帮忙买手机。o(╯□╰)o<br />
-</p>
+然后用脚趾头考虑了一下，就一口答应下来了。难道这就是一个标准程序员的命么，修电脑，装系统，最近又多了一个任务，帮忙买手机。o(╯□╰)o</p>
 
 <p>在家里，我先简单百度了一下Mac是什么鬼，然后顺便看了一下网上有一大堆苹果电脑装Windows 的教程，可见还是有很多的成功例子。也没就没有仔细去看，然后就放心大胆的在家里，装备个U盘，用大白菜做成U盘启动。顺便也幻想了一下，顺利的装机后，请我吃饭的场景了。可是，结果完全不是这个样子的。</p>
 
@@ -404,12 +464,15 @@ if (!doNotTrack) {
   </p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
-    <span class="item-content">2015-08-10 18:19</span>
+    <span class="item-content">
+      2015-08-10 18:19
+      
+    </span>
   </p>
   
   <p class="copyright-item">
     <span class="item-title">许可协议</span>
-    <span class="item-content">原创文章，如需转载请注明文章作者和出处。谢谢！</span>
+    <span class="item-content">原创文章，如需转载请注明文章作者和出处。<br/><a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">署名 4.0 国际 (CC BY 4.0)</a></span>
   </p>
 </div>
 
@@ -459,8 +522,12 @@ if (!doNotTrack) {
 
   
   
+  
+  
 
   
+  
+
   
 
   
@@ -469,6 +536,7 @@ if (!doNotTrack) {
       <script src="https://utteranc.es/client.js"
             repo= "MrBenWang/comments-for-my-blog"
             issue-term="pathname"
+            theme="github-light"
             crossorigin="anonymous"
             async>
       </script>
@@ -480,17 +548,17 @@ if (!doNotTrack) {
   
 
   
-  
+
     
 
-
+  
 
         </div>
       </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="social-links">
+      <div class="icon-links">
   
   
     <a href="mailto:wzlblair@foxmail.com" rel="me noopener" class="iconfont"
@@ -535,7 +603,7 @@ if (!doNotTrack) {
 </svg>
 
   </a>
-  
+   
 </div>
 
 <div class="copyright">
@@ -547,13 +615,10 @@ if (!doNotTrack) {
     Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
   </span>
 
-  
-  
-
   <span class="copyright-year">
     &copy;
     
-    2007 -
+      2007 -
     2019
     <span class="heart">
       
@@ -567,10 +632,16 @@ if (!doNotTrack) {
 
       </i>
     </span><span class="author">
-      Long
-      
-    </span></span>
+        Long
+        
+      </span></span>
+
+  
+  
+
+  
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -592,7 +663,13 @@ if (!doNotTrack) {
 
 
 
-<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw="></script>
+<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw=" crossorigin="anonymous"></script>
+
+
+
+
+
+
 
 
 
@@ -612,6 +689,25 @@ if (!doNotTrack) {
 
 
 
+
+
+
+  <script>
+    $("#openSearch, #openSearchMobile").click(function(){
+      $(".modal-dialog").addClass("visible");
+    });
+
+    $("#closeSearch").click(function(){
+      $(".modal-dialog").removeClass("visible");
+    });
+
+    $(document).click(function(event) {
+    
+      if (!$(event.target).closest(".modal-content, #openSearch, #openSearchMobile").length) {
+        $("body").find(".modal-dialog").removeClass("visible");
+      }
+    });
+  </script>
 
 
 

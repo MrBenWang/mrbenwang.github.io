@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on 风雪夜归人</title>
+    <title>linux on 风雪夜归人</title>
     <link>https://mrbenwang.github.io/tags/linux/</link>
-    <description>Recent content in Linux on 风雪夜归人</description>
+    <description>Recent content in linux on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 26 Sep 2018 10:16:00 +0800</lastBuildDate>
@@ -21,8 +21,7 @@
 
 &lt;p&gt;后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用&lt;code&gt;lastb&lt;/code&gt;命令，着实下了一跳，我的vps每天都有&lt;code&gt;几万次的失败登陆记录&lt;/code&gt;。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上&lt;strong&gt;所有国家&lt;/strong&gt;都有来过。&lt;/p&gt;
 
-&lt;p&gt;这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。&lt;br /&gt;
-&lt;/p&gt;</description>
+&lt;p&gt;这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。&lt;/p&gt;</description>
     </item>
     
   </channel>

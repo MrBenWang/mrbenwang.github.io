@@ -19,8 +19,7 @@
       <guid>https://mrbenwang.github.io/post/2019/20190520-csharp-exectue-bat/</guid>
       <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
 
-&lt;p&gt;前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。&lt;br /&gt;
-&lt;/p&gt;</description>
+&lt;p&gt;前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。&lt;/p&gt;</description>
     </item>
     
   </channel>

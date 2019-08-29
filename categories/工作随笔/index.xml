@@ -19,8 +19,7 @@
       <guid>https://mrbenwang.github.io/post/2019/20190520-csharp-exectue-bat/</guid>
       <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
 
-&lt;p&gt;前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。&lt;br /&gt;
-&lt;/p&gt;</description>
+&lt;p&gt;前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -30,8 +29,7 @@
       
       <guid>https://mrbenwang.github.io/post/2018/20181215-incremen-sync-by-datetime/</guid>
       <description>&lt;p&gt;最近在工作中遇到一个比较棘手的问题，客户端从服务端同步数据的问题。&lt;br /&gt;
-思考这个解决的方法还是花费了不少的精力。&lt;br /&gt;
-&lt;/p&gt;</description>
+思考这个解决的方法还是花费了不少的精力。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -52,8 +50,7 @@
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;在业务系统开发的过程中，很多情况下会去&lt;code&gt;识别图片中的相关信息&lt;/code&gt;，并且把信息录入到系统中。现在希望通过&lt;code&gt;自动化&lt;/code&gt;的方式录入，就有了以下的工作。&lt;br /&gt;
-在对比了几个OCR软件在中文识别方面的准确率后，决定使用微软的OneNote开发相应的功能。&lt;br /&gt;
-&lt;/p&gt;</description>
+在对比了几个OCR软件在中文识别方面的准确率后，决定使用微软的OneNote开发相应的功能。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -63,8 +60,7 @@
       
       <guid>https://mrbenwang.github.io/post/2014-2017/20160607-json-and-request-header-content-type/</guid>
       <description>&lt;p&gt;由于最近遇到关于，ashx文件 ajax解析参数的问题。查询网上很多资料后，已经解决。&lt;br /&gt;
-鉴于网上已经足够多的，关于这个问题的文章。大部分内容来自互联网，我这里只是做一些整理和记录。特此说明并非原创。&lt;br /&gt;
-&lt;/p&gt;</description>
+鉴于网上已经足够多的，关于这个问题的文章。大部分内容来自互联网，我这里只是做一些整理和记录。特此说明并非原创。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -73,8 +69,7 @@
       <pubDate>Wed, 15 Apr 2015 11:39:00 +0800</pubDate>
       
       <guid>https://mrbenwang.github.io/post/2014-2017/20150415-cross-domain-upload-img/</guid>
-      <description>&lt;p&gt;关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。&lt;br /&gt;
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -83,8 +78,7 @@
       <pubDate>Fri, 22 Jul 2011 13:22:00 +0800</pubDate>
       
       <guid>https://mrbenwang.github.io/post/old_article/01-baidu/131-goodbye-my-first-job/</guid>
-      <description>&lt;p&gt;距上一次写的，已经大半年了，距上上次写的，已经一年零三天了，这一年的变化挺多的，试用一个月后，正式工作，到今年4月25号，正式的结束了这第一份工作，最后名头是个项目经理。在这个创业型公司，可以说我跟公司一起度过了最艰难的时期了吧，因为最后老板是这么说的。虽然公司很赚钱，但是我不认可公司的产品，并且老板并没有给我多少开发的工作，只是驻地支持，虽然很轻松，时间长了我还是很不喜欢。&lt;br /&gt;
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;距上一次写的，已经大半年了，距上上次写的，已经一年零三天了，这一年的变化挺多的，试用一个月后，正式工作，到今年4月25号，正式的结束了这第一份工作，最后名头是个项目经理。在这个创业型公司，可以说我跟公司一起度过了最艰难的时期了吧，因为最后老板是这么说的。虽然公司很赚钱，但是我不认可公司的产品，并且老板并没有给我多少开发的工作，只是驻地支持，虽然很轻松，时间长了我还是很不喜欢。&lt;/p&gt;</description>
     </item>
     
   </channel>

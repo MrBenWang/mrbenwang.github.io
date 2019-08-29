@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Orc on 风雪夜归人</title>
+    <title>orc on 风雪夜归人</title>
     <link>https://mrbenwang.github.io/tags/orc/</link>
-    <description>Recent content in Orc on 风雪夜归人</description>
+    <description>Recent content in orc on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 31 Aug 2016 16:50:00 +0800</lastBuildDate>
@@ -20,8 +20,7 @@
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;在业务系统开发的过程中，很多情况下会去&lt;code&gt;识别图片中的相关信息&lt;/code&gt;，并且把信息录入到系统中。现在希望通过&lt;code&gt;自动化&lt;/code&gt;的方式录入，就有了以下的工作。&lt;br /&gt;
-在对比了几个OCR软件在中文识别方面的准确率后，决定使用微软的OneNote开发相应的功能。&lt;br /&gt;
-&lt;/p&gt;</description>
+在对比了几个OCR软件在中文识别方面的准确率后，决定使用微软的OneNote开发相应的功能。&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -33,7 +33,7 @@
 <meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
 
 
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.57.2" />
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2014-2017/20150415-cross-domain-upload-img/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.c8c1ff75dee09b44060a6c38f41b9036bac2512ccdb22d7f296cec12dc786375.css" integrity="sha256-yMH/dd7gm0QGCmw49BuQNrrCUSzNsi1/KWzsEtx4Y3U=" media="screen">
+<link rel="stylesheet" href="/sass/jane.min.af20b78e95c84de86b00a0242a4a77bd2601700e1b250edf27537d957ac0041d.css" integrity="sha256-ryC3jpXITehrAKAkKkp3vSYBcA4bJQ7fJ1N9lXrABB0=" media="screen" crossorigin="anonymous">
 
 
 
@@ -61,28 +61,25 @@
 
 
 <meta property="og:title" content="*跨域上传图片的尝试过程，最终成功了。哈哈" />
-<meta property="og:description" content="关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。
-" />
+<meta property="og:description" content="关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mrbenwang.github.io/post/2014-2017/20150415-cross-domain-upload-img/" /><meta property="article:published_time" content="2015-04-15T11:39:00&#43;08:00"/>
-<meta property="article:modified_time" content="2015-04-15T11:39:00&#43;08:00"/>
-
+<meta property="og:url" content="https://mrbenwang.github.io/post/2014-2017/20150415-cross-domain-upload-img/" />
+<meta property="article:published_time" content="2015-04-15T11:39:00+08:00" />
+<meta property="article:modified_time" content="2015-04-15T11:39:00+08:00" />
 <meta itemprop="name" content="*跨域上传图片的尝试过程，最终成功了。哈哈">
-<meta itemprop="description" content="关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。
-">
+<meta itemprop="description" content="关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。">
 
 
 <meta itemprop="datePublished" content="2015-04-15T11:39:00&#43;08:00" />
 <meta itemprop="dateModified" content="2015-04-15T11:39:00&#43;08:00" />
-<meta itemprop="wordCount" content="1552">
+<meta itemprop="wordCount" content="1551">
 
 
 
 <meta itemprop="keywords" content="跨域," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="*跨域上传图片的尝试过程，最终成功了。哈哈"/>
-<meta name="twitter:description" content="关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。
-"/>
+<meta name="twitter:description" content="关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -132,7 +129,7 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">归档</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">全部文章</a>
           
         
       </li><li class="mobile-menu-item">
@@ -153,9 +150,25 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于我</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于</a>
           
         
+      </li>
+    
+
+    
+      <li class="mobile-menu-item">
+        <a id="openSearchMobile" class="mobile-menu-item-link menu-item-search" href="#">
+          <i class="iconfont">
+            <svg version="1.1" viewBox="0 0 1024 1024"
+  xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M973.81454219 973.81454219a91.78207815 91.78207815 0 0 1-129.80999631 0l-161.97482118-161.97482118a425.48527711 425.48527711 0 0 1-230.35931791 68.16531768 428.3346319 428.3346319 0 1 1 428.3346319-428.3346319 425.48527711 425.48527711 0 0 1-68.16531768 230.35931791l162.02961656 161.97482118a91.83687354 91.83687354 0 0 1-0.05479538 129.80999631zM451.67040679 145.69361559a305.97679241 305.97679241 0 1 0 0 611.95358361 305.97679241 305.97679241 0 0 0 0-611.95358361z">
+  </path>
+</svg>
+
+          </i>
+        </a>
       </li>
     
   </ul>
@@ -223,6 +236,36 @@ if (!doNotTrack) {
   
 
   
+    
+<div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div id="closeSearch" title="Close" class="close">X</div>
+      <div class="modal-header">
+        <div class="modal-title">Search</div>
+      </div>
+      <div class="modal-body">
+          <script>
+            (function() {
+              var cx = '015982908853339398897:duxagwzp5jn';
+              var gcse = document.createElement('script');
+              gcse.type = 'text/javascript';
+              gcse.async = true;
+              gcse.src = (document.location.protocol == 'https:' ? 'https:' :
+                  'http:') +
+                '//cse.google.com/cse.js?cx=' + cx;
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(gcse, s);
+            })();
+          </script>
+          <gcse:search></gcse:search>
+      </div>
+    </div>
+</div>
+
+  
+
+  
 
   <header id="header" class="header container">
     <div class="logo-wrapper">
@@ -252,7 +295,7 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">归档</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">全部文章</a>
           
 
         
@@ -285,13 +328,31 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于我</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于</a>
           
 
         
 
       </li>
     
+
+    
+    
+
+    
+      <li class="menu-item">
+        <a id="openSearch" class="menu-item-link menu-item-search" href="#">
+          <i class="iconfont">
+            <svg version="1.1" viewBox="0 0 1024 1024"
+  xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M973.81454219 973.81454219a91.78207815 91.78207815 0 0 1-129.80999631 0l-161.97482118-161.97482118a425.48527711 425.48527711 0 0 1-230.35931791 68.16531768 428.3346319 428.3346319 0 1 1 428.3346319-428.3346319 425.48527711 425.48527711 0 0 1-68.16531768 230.35931791l162.02961656 161.97482118a91.83687354 91.83687354 0 0 1-0.05479538 129.80999631zM451.67040679 145.69361559a305.97679241 305.97679241 0 1 0 0 611.95358361 305.97679241 305.97679241 0 0 0 0-611.95358361z">
+  </path>
+</svg>
+
+          </i>
+        </a>
+      </li>
     
   </ul>
 </nav>
@@ -315,7 +376,7 @@ if (!doNotTrack) {
             <a href="https://mrbenwang.github.io/categories/%E5%B7%A5%E4%BD%9C%E9%9A%8F%E7%AC%94/"> 工作随笔 </a>
             
           </div>
-        <span class="more-meta"> 约 1552 字 </span>
+        <span class="more-meta"> 约 1551 字 </span>
           <span class="more-meta"> 预计阅读 4 分钟 </span>
 
         
@@ -337,8 +398,7 @@ if (!doNotTrack) {
 
     
     <div class="post-content">
-      <p>关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。<br />
-</p>
+      <p>关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。</p>
 
 <p>首先，项目是一个ERP，针对的是公司的一个小型电商的网站。项目经理让我搭建一个图片服务器， 当时也是为了完（尝）成（尝）任（新）务（鲜），用的都是当时从没接触过的。通过百度就选择了 Nginx + Nodejs + express + ImageMagick 来实现的。 当时还简单看了一下淘宝的TFS（Taobao FileSystem）太高大上了，因为预估网站图片不会非常多，就用系统自带的文件系统。  Nodejs也是边学边写，可是调试express  这种MVC的时候，就不管用了。。。试了很久也不行。。。   就采用边看api 边打印出来调试。总算可以上传，下载浏览图片了。</p>
 
@@ -365,12 +425,14 @@ if (!doNotTrack) {
 
 <li><p>后来发现WebUpload，会先发送一个OPTIONS的请求，百度了一下才发现，HTTP 协议不止 POST 和 GET 。<br />
 <div class="shortcode-notice note">
-  <div class="shortcode-notice-title note">
-    
-      note
-    
-  </div>
-  <p>浏览器在跨域请求前会发个options请求来验证是否跨域，所以后端再处理这个options请求时，要告诉浏览器一些信息。其实就是个header信息。</p>
+<div class="shortcode-notice-title note"></p>
+
+<p>note</p></li>
+</ol>
+
+<p></div></p>
+
+<p>浏览器在跨域请求前会发个options请求来验证是否跨域，所以后端再处理这个options请求时，要告诉浏览器一些信息。其实就是个header信息。</p>
 
 <p>TTP 请求方法并不是只有 GET 和 POST ，只是最常用的。据RFC2616标准（现行的HTTP/1.1）得知，通常有以下8种方法：OPTIONS、GET、HEAD、POST、PUT、DELETE、TRACE 和CONNECT。</p>
 
@@ -380,12 +442,11 @@ if (!doNotTrack) {
 1、获取服务器支持的HTTP请求方法；也是黑客经常使用的方法。<br />
 2、用来检查服务器的性能。例如：AJAX进行跨域请求时的预检，需要向另外一个域名的资源发送一个HTTP OPTIONS请求头，用以判断实际发送的请求是否安全。</p>
 
-</div>
-</p></li>
+<p></div></p>
 
-<li><p>发现 Webupload 发送的 OPTIONS请求，虽然阻止，但是，返回的状态码是200，也就是说Nginx是配置正确的，赶紧将Nginx配置改回来。</p></li>
-
-<li><p>后来灵光一闪，想起 Express 的路由好像会控制，接收什么协议的访问。然后赶紧尝试看看，成功了很是兴奋。<br />
+<ol>
+<li>发现 Webupload 发送的 OPTIONS请求，虽然阻止，但是，返回的状态码是200，也就是说Nginx是配置正确的，赶紧将Nginx配置改回来。<br /></li>
+<li>后来灵光一闪，想起 Express 的路由好像会控制，接收什么协议的访问。然后赶紧尝试看看，成功了很是兴奋。<br />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
@@ -394,7 +455,6 @@ if (!doNotTrack) {
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">router</span><span class="o">=</span><span class="nx">express</span><span class="p">.</span><span class="nx">Router</span><span class="p">();</span>  
@@ -405,7 +465,7 @@ if (!doNotTrack) {
 <span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/upload&#39;</span><span class="p">,</span><span class="nx">file_ctrl</span><span class="p">.</span><span class="nx">upload</span><span class="p">);</span>
 </code></pre></td></tr></table>
 </div>
-</div></p></li>
+</div></li>
 </ol>
 
 <p>最后再放两张图，成功和失败 返回的Response Headers信息，确实不同。 基于这个，那不是所有的跨域问题都可以解决了，像网上说的Jsonp，iframe 完全都可以不用了。嘿嘿<br />
@@ -423,12 +483,15 @@ if (!doNotTrack) {
   </p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
-    <span class="item-content">2015-04-15 11:39</span>
+    <span class="item-content">
+      2015-04-15 11:39
+      
+    </span>
   </p>
   
   <p class="copyright-item">
     <span class="item-title">许可协议</span>
-    <span class="item-content">原创文章，如需转载请注明文章作者和出处。谢谢！</span>
+    <span class="item-content">原创文章，如需转载请注明文章作者和出处。<br/><a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">署名 4.0 国际 (CC BY 4.0)</a></span>
   </p>
 </div>
 
@@ -478,8 +541,12 @@ if (!doNotTrack) {
 
   
   
+  
+  
 
   
+  
+
   
 
   
@@ -488,6 +555,7 @@ if (!doNotTrack) {
       <script src="https://utteranc.es/client.js"
             repo= "MrBenWang/comments-for-my-blog"
             issue-term="pathname"
+            theme="github-light"
             crossorigin="anonymous"
             async>
       </script>
@@ -499,17 +567,17 @@ if (!doNotTrack) {
   
 
   
-  
+
     
 
-
+  
 
         </div>
       </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="social-links">
+      <div class="icon-links">
   
   
     <a href="mailto:wzlblair@foxmail.com" rel="me noopener" class="iconfont"
@@ -554,7 +622,7 @@ if (!doNotTrack) {
 </svg>
 
   </a>
-  
+   
 </div>
 
 <div class="copyright">
@@ -566,13 +634,10 @@ if (!doNotTrack) {
     Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
   </span>
 
-  
-  
-
   <span class="copyright-year">
     &copy;
     
-    2007 -
+      2007 -
     2019
     <span class="heart">
       
@@ -586,10 +651,16 @@ if (!doNotTrack) {
 
       </i>
     </span><span class="author">
-      Long
-      
-    </span></span>
+        Long
+        
+      </span></span>
+
+  
+  
+
+  
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -611,7 +682,13 @@ if (!doNotTrack) {
 
 
 
-<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw="></script>
+<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw=" crossorigin="anonymous"></script>
+
+
+
+
+
+
 
 
 
@@ -631,6 +708,25 @@ if (!doNotTrack) {
 
 
 
+
+
+
+  <script>
+    $("#openSearch, #openSearchMobile").click(function(){
+      $(".modal-dialog").addClass("visible");
+    });
+
+    $("#closeSearch").click(function(){
+      $(".modal-dialog").removeClass("visible");
+    });
+
+    $(document).click(function(event) {
+    
+      if (!$(event.target).closest(".modal-content, #openSearch, #openSearchMobile").length) {
+        $("body").find(".modal-dialog").removeClass("visible");
+      }
+    });
+  </script>
 
 
 
