@@ -34,7 +34,7 @@
 <meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
 
 
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.57.2" />
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2014-2017/20160831-use-onenote-achieve-orc/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.c8c1ff75dee09b44060a6c38f41b9036bac2512ccdb22d7f296cec12dc786375.css" integrity="sha256-yMH/dd7gm0QGCmw49BuQNrrCUSzNsi1/KWzsEtx4Y3U=" media="screen">
+<link rel="stylesheet" href="/sass/jane.min.af20b78e95c84de86b00a0242a4a77bd2601700e1b250edf27537d957ac0041d.css" integrity="sha256-ryC3jpXITehrAKAkKkp3vSYBcA4bJQ7fJ1N9lXrABB0=" media="screen" crossorigin="anonymous">
 
 
 
@@ -65,18 +65,16 @@
 <meta property="og:description" content="背景
 
 在业务系统开发的过程中，很多情况下会去识别图片中的相关信息，并且把信息录入到系统中。现在希望通过自动化的方式录入，就有了以下的工作。
-在对比了几个OCR软件在中文识别方面的准确率后，决定使用微软的OneNote开发相应的功能。
-" />
+在对比了几个OCR软件在中文识别方面的准确率后，决定使用微软的OneNote开发相应的功能。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mrbenwang.github.io/post/2014-2017/20160831-use-onenote-achieve-orc/" /><meta property="article:published_time" content="2016-08-31T16:50:00&#43;08:00"/>
-<meta property="article:modified_time" content="2016-08-31T16:50:00&#43;08:00"/>
-
+<meta property="og:url" content="https://mrbenwang.github.io/post/2014-2017/20160831-use-onenote-achieve-orc/" />
+<meta property="article:published_time" content="2016-08-31T16:50:00+08:00" />
+<meta property="article:modified_time" content="2016-08-31T16:50:00+08:00" />
 <meta itemprop="name" content="*使用OneNote的COM组件，实现OCR功能。">
 <meta itemprop="description" content="背景
 
 在业务系统开发的过程中，很多情况下会去识别图片中的相关信息，并且把信息录入到系统中。现在希望通过自动化的方式录入，就有了以下的工作。
-在对比了几个OCR软件在中文识别方面的准确率后，决定使用微软的OneNote开发相应的功能。
-">
+在对比了几个OCR软件在中文识别方面的准确率后，决定使用微软的OneNote开发相应的功能。">
 
 
 <meta itemprop="datePublished" content="2016-08-31T16:50:00&#43;08:00" />
@@ -91,8 +89,7 @@
 <meta name="twitter:description" content="背景
 
 在业务系统开发的过程中，很多情况下会去识别图片中的相关信息，并且把信息录入到系统中。现在希望通过自动化的方式录入，就有了以下的工作。
-在对比了几个OCR软件在中文识别方面的准确率后，决定使用微软的OneNote开发相应的功能。
-"/>
+在对比了几个OCR软件在中文识别方面的准确率后，决定使用微软的OneNote开发相应的功能。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -142,7 +139,7 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">归档</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">全部文章</a>
           
         
       </li><li class="mobile-menu-item">
@@ -163,9 +160,25 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于我</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于</a>
           
         
+      </li>
+    
+
+    
+      <li class="mobile-menu-item">
+        <a id="openSearchMobile" class="mobile-menu-item-link menu-item-search" href="#">
+          <i class="iconfont">
+            <svg version="1.1" viewBox="0 0 1024 1024"
+  xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M973.81454219 973.81454219a91.78207815 91.78207815 0 0 1-129.80999631 0l-161.97482118-161.97482118a425.48527711 425.48527711 0 0 1-230.35931791 68.16531768 428.3346319 428.3346319 0 1 1 428.3346319-428.3346319 425.48527711 425.48527711 0 0 1-68.16531768 230.35931791l162.02961656 161.97482118a91.83687354 91.83687354 0 0 1-0.05479538 129.80999631zM451.67040679 145.69361559a305.97679241 305.97679241 0 1 0 0 611.95358361 305.97679241 305.97679241 0 0 0 0-611.95358361z">
+  </path>
+</svg>
+
+          </i>
+        </a>
       </li>
     
   </ul>
@@ -233,6 +246,36 @@ if (!doNotTrack) {
   
 
   
+    
+<div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div id="closeSearch" title="Close" class="close">X</div>
+      <div class="modal-header">
+        <div class="modal-title">Search</div>
+      </div>
+      <div class="modal-body">
+          <script>
+            (function() {
+              var cx = '015982908853339398897:duxagwzp5jn';
+              var gcse = document.createElement('script');
+              gcse.type = 'text/javascript';
+              gcse.async = true;
+              gcse.src = (document.location.protocol == 'https:' ? 'https:' :
+                  'http:') +
+                '//cse.google.com/cse.js?cx=' + cx;
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(gcse, s);
+            })();
+          </script>
+          <gcse:search></gcse:search>
+      </div>
+    </div>
+</div>
+
+  
+
+  
 
   <header id="header" class="header container">
     <div class="logo-wrapper">
@@ -262,7 +305,7 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">归档</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">全部文章</a>
           
 
         
@@ -295,13 +338,31 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于我</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于</a>
           
 
         
 
       </li>
     
+
+    
+    
+
+    
+      <li class="menu-item">
+        <a id="openSearch" class="menu-item-link menu-item-search" href="#">
+          <i class="iconfont">
+            <svg version="1.1" viewBox="0 0 1024 1024"
+  xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M973.81454219 973.81454219a91.78207815 91.78207815 0 0 1-129.80999631 0l-161.97482118-161.97482118a425.48527711 425.48527711 0 0 1-230.35931791 68.16531768 428.3346319 428.3346319 0 1 1 428.3346319-428.3346319 425.48527711 425.48527711 0 0 1-68.16531768 230.35931791l162.02961656 161.97482118a91.83687354 91.83687354 0 0 1-0.05479538 129.80999631zM451.67040679 145.69361559a305.97679241 305.97679241 0 1 0 0 611.95358361 305.97679241 305.97679241 0 0 0 0-611.95358361z">
+  </path>
+</svg>
+
+          </i>
+        </a>
+      </li>
     
   </ul>
 </nav>
@@ -359,8 +420,7 @@ if (!doNotTrack) {
       <h2 id="背景">背景</h2>
 
 <p>在业务系统开发的过程中，很多情况下会去<code>识别图片中的相关信息</code>，并且把信息录入到系统中。现在希望通过<code>自动化</code>的方式录入，就有了以下的工作。<br />
-在对比了几个OCR软件在中文识别方面的准确率后，决定使用微软的OneNote开发相应的功能。<br />
-</p>
+在对比了几个OCR软件在中文识别方面的准确率后，决定使用微软的OneNote开发相应的功能。</p>
 
 <h2 id="准备工作">准备工作</h2>
 
@@ -383,12 +443,13 @@ if (!doNotTrack) {
 <li>彻底销毁当前的页面（如果不是彻底的话，这个 newfile.one会越来越大）；<br /></li>
 </ol>
 
-<details>
+<p><details>
   <summary style="background-color:#f5f5f5;border:1px solid #ccc;padding:5px;">
-    查看 C# 代码
-    
-  </summary>
-  <div class="highlight"><div class="chroma">
+    查看 C# 代码</p>
+
+<p></summary></p>
+
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="lnt">  1
 </span><span class="lnt">  2
@@ -514,7 +575,7 @@ if (!doNotTrack) {
 <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="k">class</span> <span class="nc">OrcImage</span>
     <span class="p">{</span>
         <span class="k">private</span> <span class="k">static</span> <span class="k">readonly</span> <span class="kt">string</span> <span class="n">tmpPath</span> <span class="p">=</span> <span class="n">AppDomain</span><span class="p">.</span><span class="n">CurrentDomain</span><span class="p">.</span><span class="n">BaseDirectory</span> <span class="p">+</span> <span class="s">&#34;tmpPath/&#34;</span><span class="p">;</span>
-        <span class="k">private</span> <span class="k">static</span> <span class="k">readonly</span> <span class="kt">int</span> <span class="n">waitTime</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">ConfigurationManager</span><span class="p">.</span><span class="n">AppSettings</span><span class="na">[&#34;WaitTime&#34;]</span><span class="p">);</span>
+        <span class="k">private</span> <span class="k">static</span> <span class="k">readonly</span> <span class="kt">int</span> <span class="n">waitTime</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">ConfigurationManager</span><span class="p">.</span><span class="n">AppSettings</span><span class="p">[</span><span class="s">&#34;WaitTime&#34;</span><span class="p">]);</span>
 
         <span class="k">private</span> <span class="n">Tuple</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">&gt;</span> <span class="n">GetBase64</span><span class="p">(</span><span class="kt">string</span> <span class="n">strImgPath</span><span class="p">)</span>
         <span class="p">{</span>
@@ -564,7 +625,7 @@ if (!doNotTrack) {
                     <span class="k">default</span><span class="p">:</span>
                         <span class="k">return</span> <span class="k">new</span> <span class="n">Tuple</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">&gt;(</span><span class="s">&#34;不支持的图片格式。&#34;</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
                 <span class="p">}</span>
-                <span class="kt">byte</span><span class="na">[]</span> <span class="n">buffer</span> <span class="p">=</span> <span class="n">ms</span><span class="p">.</span><span class="n">GetBuffer</span><span class="p">();</span>
+                <span class="kt">byte</span><span class="p">[]</span> <span class="n">buffer</span> <span class="p">=</span> <span class="n">ms</span><span class="p">.</span><span class="n">GetBuffer</span><span class="p">();</span>
                 <span class="k">return</span> <span class="k">new</span> <span class="n">Tuple</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">&gt;(</span><span class="n">Convert</span><span class="p">.</span><span class="n">ToBase64String</span><span class="p">(</span><span class="n">buffer</span><span class="p">),</span> <span class="n">bp</span><span class="p">.</span><span class="n">Width</span><span class="p">,</span> <span class="n">bp</span><span class="p">.</span><span class="n">Height</span><span class="p">);</span>
             <span class="p">}</span>
         <span class="p">}</span>
@@ -629,21 +690,22 @@ if (!doNotTrack) {
 
             <span class="k">return</span> <span class="s">&#34;没有识别&#34;</span><span class="p">;</span>
         <span class="p">}</span>
-    <span class="p">}</span></code></pre></td></tr></table>
+    <span class="p">}</span>
+</code></pre></td></tr></table>
 </div>
 </div>
 
-</details>
-
+<p></details></p>
 
 <hr />
 
-<details>
+<p><details>
   <summary style="background-color:#f5f5f5;border:1px solid #ccc;padding:5px;">
-    XML的格式
-    
-  </summary>
-  <div class="highlight"><div class="chroma">
+    XML的格式</p>
+
+<p></summary></p>
+
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -706,8 +768,7 @@ The representation of an object to be used for identification of objects on a pa
 </div>
 </div>
 
-</details>
-
+<p></details></p>
 
 <p>目前是桌面应用程序是实现了相关功能。预期期望是：任何一个系统通过webservice接口形式就能使用OCR功能。但是改成一个web程序遇到了问题，在网上找了仅有的一点点资料，也没有解决。我了解到，现在使用OneNote的OCR功能的程序也都是用WinForm程序，在程序运行的过程中，会在后台启动OneNote程序。所以我猜测可能是由于这个原因，导致它只能做成桌面程序。</p>
 
@@ -717,12 +778,13 @@ The representation of an object to be used for identification of objects on a pa
       warning
     
   </div>
-  <p>检索 COM 类工厂中 CLSID 为 {D7FAC39E-7FF1-49AA-98CF-A1DDD316337E} 的组件失败，原因是出现以下错误: 80070005 拒绝访问。 (异常来自 HRESULT:0x80070005 (E_ACCESSDENIED))。</p>
+  
+
+<p>检索 COM 类工厂中 CLSID 为 {D7FAC39E-7FF1-49AA-98CF-A1DDD316337E} 的组件失败，原因是出现以下错误: 80070005 拒绝访问。 (异常来自 HRESULT:0x80070005 (E_ACCESSDENIED))。</p>
 
 <p>web中报这个错误，是权限的问题。依照配置Excel，Word这类COM来找，可是发现DCOM中，一直都找不到这个ID的组件。知道的朋友麻烦告知一下，谢谢。</p>
 
-</div>
-
+<p></div></p>
 
 <p>程序效果图如下：识别效果还不错，剩下的就是根据所需要的信息，进行正则表达式的匹配就可以了。<br />
 <img src="/images/2014-2017/20160831-use-onenote-achieve-orc/2.jpg" alt="test image" /></p>
@@ -739,12 +801,15 @@ The representation of an object to be used for identification of objects on a pa
   </p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
-    <span class="item-content">2016-08-31 16:50</span>
+    <span class="item-content">
+      2016-08-31 16:50
+      
+    </span>
   </p>
   
   <p class="copyright-item">
     <span class="item-title">许可协议</span>
-    <span class="item-content">原创文章，如需转载请注明文章作者和出处。谢谢！</span>
+    <span class="item-content">原创文章，如需转载请注明文章作者和出处。<br/><a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">署名 4.0 国际 (CC BY 4.0)</a></span>
   </p>
 </div>
 
@@ -795,8 +860,12 @@ The representation of an object to be used for identification of objects on a pa
 
   
   
+  
+  
 
   
+  
+
   
 
   
@@ -805,6 +874,7 @@ The representation of an object to be used for identification of objects on a pa
       <script src="https://utteranc.es/client.js"
             repo= "MrBenWang/comments-for-my-blog"
             issue-term="pathname"
+            theme="github-light"
             crossorigin="anonymous"
             async>
       </script>
@@ -816,17 +886,17 @@ The representation of an object to be used for identification of objects on a pa
   
 
   
-  
+
     
 
-
+  
 
         </div>
       </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="social-links">
+      <div class="icon-links">
   
   
     <a href="mailto:wzlblair@foxmail.com" rel="me noopener" class="iconfont"
@@ -871,7 +941,7 @@ The representation of an object to be used for identification of objects on a pa
 </svg>
 
   </a>
-  
+   
 </div>
 
 <div class="copyright">
@@ -883,13 +953,10 @@ The representation of an object to be used for identification of objects on a pa
     Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
   </span>
 
-  
-  
-
   <span class="copyright-year">
     &copy;
     
-    2007 -
+      2007 -
     2019
     <span class="heart">
       
@@ -903,10 +970,16 @@ The representation of an object to be used for identification of objects on a pa
 
       </i>
     </span><span class="author">
-      Long
-      
-    </span></span>
+        Long
+        
+      </span></span>
+
+  
+  
+
+  
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -928,7 +1001,13 @@ The representation of an object to be used for identification of objects on a pa
 
 
 
-<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw="></script>
+<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw=" crossorigin="anonymous"></script>
+
+
+
+
+
+
 
 
 
@@ -948,6 +1027,25 @@ The representation of an object to be used for identification of objects on a pa
 
 
 
+
+
+
+  <script>
+    $("#openSearch, #openSearchMobile").click(function(){
+      $(".modal-dialog").addClass("visible");
+    });
+
+    $("#closeSearch").click(function(){
+      $(".modal-dialog").removeClass("visible");
+    });
+
+    $(document).click(function(event) {
+    
+      if (!$(event.target).closest(".modal-content, #openSearch, #openSearchMobile").length) {
+        $("body").find(".modal-dialog").removeClass("visible");
+      }
+    });
+  </script>
 
 
 

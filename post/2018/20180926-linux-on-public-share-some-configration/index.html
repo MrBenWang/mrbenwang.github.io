@@ -35,7 +35,7 @@
 <meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
 
 
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.57.2" />
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2018/20180926-linux-on-public-share-some-configration/" />
@@ -54,7 +54,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.c8c1ff75dee09b44060a6c38f41b9036bac2512ccdb22d7f296cec12dc786375.css" integrity="sha256-yMH/dd7gm0QGCmw49BuQNrrCUSzNsi1/KWzsEtx4Y3U=" media="screen">
+<link rel="stylesheet" href="/sass/jane.min.af20b78e95c84de86b00a0242a4a77bd2601700e1b250edf27537d957ac0041d.css" integrity="sha256-ryC3jpXITehrAKAkKkp3vSYBcA4bJQ7fJ1N9lXrABB0=" media="screen" crossorigin="anonymous">
 
 
 
@@ -67,19 +67,17 @@
 
 后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用lastb命令，着实下了一跳，我的vps每天都有几万次的失败登陆记录。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上所有国家都有来过。
 
-这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。
-" />
+这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mrbenwang.github.io/post/2018/20180926-linux-on-public-share-some-configration/" /><meta property="article:published_time" content="2018-09-26T10:16:00&#43;08:00"/>
-<meta property="article:modified_time" content="2018-09-26T10:16:00&#43;08:00"/>
-
+<meta property="og:url" content="https://mrbenwang.github.io/post/2018/20180926-linux-on-public-share-some-configration/" />
+<meta property="article:published_time" content="2018-09-26T10:16:00+08:00" />
+<meta property="article:modified_time" content="2018-09-26T10:16:00+08:00" />
 <meta itemprop="name" content="*在公网上的Linux，我的一些配置分享">
 <meta itemprop="description" content="去年的时候，有一篇介绍在vultr 上 搭建ss服务器 的文章，由于某些众所周知的原因，被阿里云删除。
 
 后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用lastb命令，着实下了一跳，我的vps每天都有几万次的失败登陆记录。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上所有国家都有来过。
 
-这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。
-">
+这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。">
 
 
 <meta itemprop="datePublished" content="2018-09-26T10:16:00&#43;08:00" />
@@ -95,8 +93,7 @@
 
 后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用lastb命令，着实下了一跳，我的vps每天都有几万次的失败登陆记录。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上所有国家都有来过。
 
-这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。
-"/>
+这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -146,7 +143,7 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">归档</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">全部文章</a>
           
         
       </li><li class="mobile-menu-item">
@@ -167,9 +164,25 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于我</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于</a>
           
         
+      </li>
+    
+
+    
+      <li class="mobile-menu-item">
+        <a id="openSearchMobile" class="mobile-menu-item-link menu-item-search" href="#">
+          <i class="iconfont">
+            <svg version="1.1" viewBox="0 0 1024 1024"
+  xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M973.81454219 973.81454219a91.78207815 91.78207815 0 0 1-129.80999631 0l-161.97482118-161.97482118a425.48527711 425.48527711 0 0 1-230.35931791 68.16531768 428.3346319 428.3346319 0 1 1 428.3346319-428.3346319 425.48527711 425.48527711 0 0 1-68.16531768 230.35931791l162.02961656 161.97482118a91.83687354 91.83687354 0 0 1-0.05479538 129.80999631zM451.67040679 145.69361559a305.97679241 305.97679241 0 1 0 0 611.95358361 305.97679241 305.97679241 0 0 0 0-611.95358361z">
+  </path>
+</svg>
+
+          </i>
+        </a>
       </li>
     
   </ul>
@@ -237,6 +250,36 @@ if (!doNotTrack) {
   
 
   
+    
+<div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div id="closeSearch" title="Close" class="close">X</div>
+      <div class="modal-header">
+        <div class="modal-title">Search</div>
+      </div>
+      <div class="modal-body">
+          <script>
+            (function() {
+              var cx = '015982908853339398897:duxagwzp5jn';
+              var gcse = document.createElement('script');
+              gcse.type = 'text/javascript';
+              gcse.async = true;
+              gcse.src = (document.location.protocol == 'https:' ? 'https:' :
+                  'http:') +
+                '//cse.google.com/cse.js?cx=' + cx;
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(gcse, s);
+            })();
+          </script>
+          <gcse:search></gcse:search>
+      </div>
+    </div>
+</div>
+
+  
+
+  
 
   <header id="header" class="header container">
     <div class="logo-wrapper">
@@ -266,7 +309,7 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">归档</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">全部文章</a>
           
 
         
@@ -299,13 +342,31 @@ if (!doNotTrack) {
         
           
           
-            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于我</a>
+            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于</a>
           
 
         
 
       </li>
     
+
+    
+    
+
+    
+      <li class="menu-item">
+        <a id="openSearch" class="menu-item-link menu-item-search" href="#">
+          <i class="iconfont">
+            <svg version="1.1" viewBox="0 0 1024 1024"
+  xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M973.81454219 973.81454219a91.78207815 91.78207815 0 0 1-129.80999631 0l-161.97482118-161.97482118a425.48527711 425.48527711 0 0 1-230.35931791 68.16531768 428.3346319 428.3346319 0 1 1 428.3346319-428.3346319 425.48527711 425.48527711 0 0 1-68.16531768 230.35931791l162.02961656 161.97482118a91.83687354 91.83687354 0 0 1-0.05479538 129.80999631zM451.67040679 145.69361559a305.97679241 305.97679241 0 1 0 0 611.95358361 305.97679241 305.97679241 0 0 0 0-611.95358361z">
+  </path>
+</svg>
+
+          </i>
+        </a>
+      </li>
     
   </ul>
 </nav>
@@ -375,8 +436,7 @@ if (!doNotTrack) {
 
 <p>后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用<code>lastb</code>命令，着实下了一跳，我的vps每天都有<code>几万次的失败登陆记录</code>。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上<strong>所有国家</strong>都有来过。</p>
 
-<p>这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。<br />
-</p>
+<p>这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。</p>
 
 <h2 id="具体配置">具体配置</h2>
 
@@ -436,16 +496,16 @@ if (!doNotTrack) {
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">yum install fail2ban <span class="c1">#安装
-</span><span class="c1"></span>systemctl <span class="nb">enable</span> fail2ban <span class="c1">#开机自动启动
-</span><span class="c1"></span>systemctl start fail2ban <span class="c1"># 开启服务
-</span><span class="c1"></span>
-<span class="c1">#查看被ban IP，其中sshd为名称，比如上面的[wordpress]
-</span><span class="c1"></span>fail2ban-client status sshd
-<span class="c1">#删除被ban IP
-</span><span class="c1"></span>fail2ban-client <span class="nb">set</span> sshd delignoreip <span class="m">192</span>.168.111.111
-<span class="c1">#查看日志
-</span><span class="c1"></span>tail /var/log/fail2ban.log
+<pre class="chroma"><code class="language-shell" data-lang="shell">yum install fail2ban <span class="c1">#安装</span>
+systemctl <span class="nb">enable</span> fail2ban <span class="c1">#开机自动启动</span>
+systemctl start fail2ban <span class="c1"># 开启服务</span>
+
+<span class="c1">#查看被ban IP，其中sshd为名称，比如上面的[wordpress]</span>
+fail2ban-client status sshd
+<span class="c1">#删除被ban IP</span>
+fail2ban-client <span class="nb">set</span> sshd delignoreip <span class="m">192</span>.168.111.111
+<span class="c1">#查看日志</span>
+tail /var/log/fail2ban.log
 ipset list
 firewall-cmd --direct --get-all-rules</code></pre></td></tr></table>
 </div>
@@ -483,8 +543,8 @@ firewall-cmd --direct --get-all-rules</code></pre></td></tr></table>
 <span class="nv">filter</span>  <span class="o">=</span> sshd
 <span class="nv">port</span>    <span class="o">=</span> <span class="m">8822</span>
 <span class="nv">bantime</span> <span class="o">=</span> -1
-<span class="nv">action</span> <span class="o">=</span> %<span class="o">(</span>banaction<span class="o">)</span>s<span class="o">[</span><span class="nv">name</span><span class="o">=</span>%<span class="o">(</span>__name__<span class="o">)</span>s, <span class="nv">bantime</span><span class="o">=</span><span class="m">0</span>, <span class="nv">port</span><span class="o">=</span><span class="s2">&#34;%(port)s&#34;</span>, <span class="nv">protocol</span><span class="o">=</span><span class="s2">&#34;%(protocol)s&#34;</span>, <span class="nv">chain</span><span class="o">=</span><span class="s2">&#34;%(chain)s&#34;</span><span class="o">]</span>   <span class="c1"># 老版本的bug，新版本已经修复
-</span><span class="c1"></span><span class="nv">logpath</span> <span class="o">=</span> /var/log/secure</code></pre></td></tr></table>
+<span class="nv">action</span> <span class="o">=</span> %<span class="o">(</span>banaction<span class="o">)</span>s<span class="o">[</span><span class="nv">name</span><span class="o">=</span>%<span class="o">(</span>__name__<span class="o">)</span>s, <span class="nv">bantime</span><span class="o">=</span><span class="m">0</span>, <span class="nv">port</span><span class="o">=</span><span class="s2">&#34;%(port)s&#34;</span>, <span class="nv">protocol</span><span class="o">=</span><span class="s2">&#34;%(protocol)s&#34;</span>, <span class="nv">chain</span><span class="o">=</span><span class="s2">&#34;%(chain)s&#34;</span><span class="o">]</span>   <span class="c1"># 老版本的bug，新版本已经修复</span>
+<span class="nv">logpath</span> <span class="o">=</span> /var/log/secure</code></pre></td></tr></table>
 </div>
 </div>
 <h3 id="使用密钥登陆">使用密钥登陆</h3>
@@ -550,8 +610,8 @@ firewall-cmd --direct --get-all-rules</code></pre></td></tr></table>
 <ul>
 <li>把用户加入 wheel 组(wheel)，为了免密码 <code>usermod -aG wheel {用户名}</code><br /></li>
 <li>su 免密码，配置文件<code>/etc/pam.d/su</code>，加上这句话<code>auth sufficient pam_wheel.so trust use_uid</code> ，CentOS7是注释掉的。<br /></li>
-<li>sudo 免密码，配置文件<code>/etc/sudoers</code>，把所在组 wheel 设置<code>%wheel ALL=(ALL) NOPASSWD: ALL</code>,<br /></li>
-</ul>
+
+<li><p>sudo 免密码，配置文件<code>/etc/sudoers</code>，把所在组 wheel 设置<code>%wheel ALL=(ALL) NOPASSWD: ALL</code>,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
@@ -560,12 +620,14 @@ firewall-cmd --direct --get-all-rules</code></pre></td></tr></table>
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"> <span class="c1"># wheel组 sudo不需要密码
-</span><span class="c1"></span>sed -i <span class="s1">&#39;s/^%wheel.*/%wheel ALL=(ALL) NOPASSWD: ALL/g&#39;</span> /etc/sudoers
- <span class="c1"># wheel组 su 不需要密码
-</span><span class="c1"></span>sed -i <span class="s1">&#39;s/^#auth\s\+sufficient\s\+pam_wheel.so\s\+trust\s\+use_uid/auth sufficient pam_wheel.so trust use_uid/g&#39;</span> /etc/pam.d/su</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># wheel组 sudo不需要密码</span>
+sed -i <span class="s1">&#39;s/^%wheel.*/%wheel ALL=(ALL) NOPASSWD: ALL/g&#39;</span> /etc/sudoers
+<span class="c1"># wheel组 su 不需要密码</span>
+sed -i <span class="s1">&#39;s/^#auth\s\+sufficient\s\+pam_wheel.so\s\+trust\s\+use_uid/auth sufficient pam_wheel.so trust use_uid/g&#39;</span> /etc/pam.d/su</code></pre></td></tr></table>
 </div>
-</div>
+</div></li>
+</ul>
+
 <h3 id="防火墙设置">防火墙设置</h3>
 
 <p>一般linux发行版本都是默认开启防火墙的，并且开启了22端口。<br />
@@ -596,8 +658,8 @@ firewall-cmd --reload</code></pre></td></tr></table>
 <ol>
 <li>shell文件在<code>/etc/profile.d/</code>目录下，对所有用户生效，用户登陆执行下面的所有脚本。注意这个目录下的脚本执行<code>顺序</code>是第一个执行的，也就是说 alias 会被后面的覆盖，<br /></li>
 <li>一些登陆后初始化的脚本，环境变量设置，都建议放在这个目录下面<code>/etc/profile.d/</code>，<br /></li>
-<li><code>PS1</code>PS(Prompt Sign): 是指命令提示符，当然调整了一下颜色<code>root@myhost:etc#</code>，<br /></li>
-</ol>
+
+<li><p><code>PS1</code>PS(Prompt Sign): 是指命令提示符，当然调整了一下颜色<code>root@myhost:etc#</code>，</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
@@ -618,7 +680,7 @@ firewall-cmd --reload</code></pre></td></tr></table>
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">    cat &gt; /etc/profile.d/alias.sh <span class="s">&lt;&lt;-EOF
+<pre class="chroma"><code class="language-shell" data-lang="shell">cat &gt; /etc/profile.d/alias.sh <span class="s">&lt;&lt;-EOF
 </span><span class="s">PS1=&#39;\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\\$ &#39;
 </span><span class="s">alias cp=&#39;cp -i&#39;
 </span><span class="s">alias mv=&#39;mv -i&#39;
@@ -633,9 +695,11 @@ firewall-cmd --reload</code></pre></td></tr></table>
 </span><span class="s">alias egrep=&#39;egrep --color=auto&#39;
 </span><span class="s">alias mkcd=&#39;function _mkcd(){ mkdir \$@ &amp;&amp; cd \$@; }; _mkcd&#39;
 </span><span class="s">alias cdl=&#39;function _cdl() { cd \$@ &amp;&amp; pwd; ls -alF; }; _cdl&#39;
-</span><span class="s">    EOF</span></code></pre></td></tr></table>
+</span><span class="s">EOF</span></code></pre></td></tr></table>
 </div>
-</div>
+</div></li>
+</ol>
+
 <h2 id="结语">结语</h2>
 
 <ul>
@@ -655,12 +719,15 @@ firewall-cmd --reload</code></pre></td></tr></table>
   </p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
-    <span class="item-content">2018-09-26 10:16</span>
+    <span class="item-content">
+      2018-09-26 10:16
+      
+    </span>
   </p>
   
   <p class="copyright-item">
     <span class="item-title">许可协议</span>
-    <span class="item-content">原创文章，如需转载请注明文章作者和出处。谢谢！</span>
+    <span class="item-content">原创文章，如需转载请注明文章作者和出处。<br/><a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">署名 4.0 国际 (CC BY 4.0)</a></span>
   </p>
 </div>
 
@@ -712,8 +779,12 @@ firewall-cmd --reload</code></pre></td></tr></table>
 
   
   
+  
+  
 
   
+  
+
   
 
   
@@ -722,6 +793,7 @@ firewall-cmd --reload</code></pre></td></tr></table>
       <script src="https://utteranc.es/client.js"
             repo= "MrBenWang/comments-for-my-blog"
             issue-term="pathname"
+            theme="github-light"
             crossorigin="anonymous"
             async>
       </script>
@@ -733,17 +805,17 @@ firewall-cmd --reload</code></pre></td></tr></table>
   
 
   
-  
+
     
 
-
+  
 
         </div>
       </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="social-links">
+      <div class="icon-links">
   
   
     <a href="mailto:wzlblair@foxmail.com" rel="me noopener" class="iconfont"
@@ -788,7 +860,7 @@ firewall-cmd --reload</code></pre></td></tr></table>
 </svg>
 
   </a>
-  
+   
 </div>
 
 <div class="copyright">
@@ -800,13 +872,10 @@ firewall-cmd --reload</code></pre></td></tr></table>
     Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
   </span>
 
-  
-  
-
   <span class="copyright-year">
     &copy;
     
-    2007 -
+      2007 -
     2019
     <span class="heart">
       
@@ -820,10 +889,16 @@ firewall-cmd --reload</code></pre></td></tr></table>
 
       </i>
     </span><span class="author">
-      Long
-      
-    </span></span>
+        Long
+        
+      </span></span>
+
+  
+  
+
+  
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -845,7 +920,13 @@ firewall-cmd --reload</code></pre></td></tr></table>
 
 
 
-<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw="></script>
+<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw=" crossorigin="anonymous"></script>
+
+
+
+
+
+
 
 
 
@@ -865,6 +946,25 @@ firewall-cmd --reload</code></pre></td></tr></table>
 
 
 
+
+
+
+  <script>
+    $("#openSearch, #openSearchMobile").click(function(){
+      $(".modal-dialog").addClass("visible");
+    });
+
+    $("#closeSearch").click(function(){
+      $(".modal-dialog").removeClass("visible");
+    });
+
+    $(document).click(function(event) {
+    
+      if (!$(event.target).closest(".modal-content, #openSearch, #openSearchMobile").length) {
+        $("body").find(".modal-dialog").removeClass("visible");
+      }
+    });
+  </script>
 
 
 
