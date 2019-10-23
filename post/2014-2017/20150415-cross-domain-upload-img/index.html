@@ -423,14 +423,16 @@ if (!doNotTrack) {
 
 <li><p>后来我想，只需要在条用上传的方法的头部加上，后来使用 chrome 插件 postman ，模拟调用，发现POST可以接受到，POST跨域成功。</p></li>
 
-<li><p>后来发现WebUpload，会先发送一个OPTIONS的请求，百度了一下才发现，HTTP 协议不止 POST 和 GET 。<br />
-<div class="shortcode-notice note">
-<div class="shortcode-notice-title note"></p>
-
-<p>note</p></li>
+<li><p>后来发现WebUpload，会先发送一个OPTIONS的请求，百度了一下才发现，HTTP 协议不止 POST 和 GET 。</p></li>
 </ol>
 
-<p></div></p>
+<div class="shortcode-notice note">
+  <div class="shortcode-notice-title note">
+    
+      note
+    
+  </div>
+  
 
 <p>浏览器在跨域请求前会发个options请求来验证是否跨域，所以后端再处理这个options请求时，要告诉浏览器一些信息。其实就是个header信息。</p>
 
@@ -446,7 +448,9 @@ if (!doNotTrack) {
 
 <ol>
 <li>发现 Webupload 发送的 OPTIONS请求，虽然阻止，但是，返回的状态码是200，也就是说Nginx是配置正确的，赶紧将Nginx配置改回来。<br /></li>
-<li>后来灵光一闪，想起 Express 的路由好像会控制，接收什么协议的访问。然后赶紧尝试看看，成功了很是兴奋。<br />
+<li>后来灵光一闪，想起 Express 的路由好像会控制，接收什么协议的访问。然后赶紧尝试看看，成功了很是兴奋。<br /></li>
+</ol>
+
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
@@ -465,8 +469,7 @@ if (!doNotTrack) {
 <span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/upload&#39;</span><span class="p">,</span><span class="nx">file_ctrl</span><span class="p">.</span><span class="nx">upload</span><span class="p">);</span>
 </code></pre></td></tr></table>
 </div>
-</div></li>
-</ol>
+</div>
 
 <p>最后再放两张图，成功和失败 返回的Response Headers信息，确实不同。 基于这个，那不是所有的跨域问题都可以解决了，像网上说的Jsonp，iframe 完全都可以不用了。嘿嘿<br />
 <img src="/images/2014-2017/20150415-cross-domain-upload-img/2.jpg" alt="http header" /></p>

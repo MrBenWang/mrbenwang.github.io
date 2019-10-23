@@ -6,10 +6,38 @@
     <description>Recent content in 生活随笔 on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 06 Jun 2019 14:20:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 16 Oct 2019 11:11:00 +0800</lastBuildDate>
     
 	<atom:link href="https://mrbenwang.github.io/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>投机者--又爱又恨的 futures</title>
+      <link>https://mrbenwang.github.io/post/2019/20191016-speculator-and-futures/</link>
+      <pubDate>Wed, 16 Oct 2019 11:11:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2019/20191016-speculator-and-futures/</guid>
+      <description>&lt;p&gt;意不意外，惊不惊喜。万万没想到 &lt;code&gt;Futures&lt;/code&gt; 的含义是期货，也就是&lt;code&gt;未来&lt;/code&gt;这个单词的复数，典型的&lt;strong&gt;拿今天“赌”未来&lt;/strong&gt;。还有 &lt;code&gt;long&lt;/code&gt; 代表多头，&lt;code&gt;short&lt;/code&gt; 代表空头。学了十多年的英语，才知道简单的单词，居然有这种含义。&lt;/p&gt;
+
+&lt;div class=&#34;shortcode-notice note&#34;&gt;
+  &lt;div class=&#34;shortcode-notice-title note&#34;&gt;
+    
+      Buy / Sell / Long / Short 這些詞有什麼差別呢?
+    
+  &lt;/div&gt;
+  
+
+&lt;p&gt;&lt;a href=&#34;https://rich01.com/long-shor/&#34;&gt;引用链接&lt;/a&gt;：&lt;br /&gt;
+在18世紀當時的人認為，&lt;strong&gt;放空&lt;/strong&gt; 是種 &lt;code&gt;短期 (Short)&lt;/code&gt; 的炒作，&lt;strong&gt;做多&lt;/strong&gt; 則相對是 &lt;code&gt;長期 (Long)&lt;/code&gt; 的投資。&lt;/p&gt;
+
+&lt;p&gt;Long 雖然意思包含買進。但它是不只是買進這項動作，它還包含了買進之後的方向是&lt;strong&gt;多頭部位&lt;/strong&gt;。它很明確的說明，你現在的狀態是持有多頭部位。&lt;br /&gt;
+Buy 代表買進，但&lt;strong&gt;並不包含任何&lt;/strong&gt;&lt;code&gt;多空看法&lt;/code&gt;，因為買進後你可能持有多頭部位，也可能是買進回補的部位，買完後多空相抵就變空手。(我的理解，比如&lt;code&gt;空平&lt;/code&gt;的买入，只代表当时的操作)&lt;/p&gt;
+
+&lt;p&gt;Short 是賣你沒有的東西，它暗示了一種責任，也代表了執行之的狀態是持有&lt;strong&gt;空頭部位&lt;/strong&gt;。&lt;br /&gt;
+Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;strong&gt;不見得是看空&lt;/strong&gt;，只是變成空手罷了。&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>相遇总是偶然，离别却是必然</title>
@@ -228,15 +256,6 @@
       
       <guid>https://mrbenwang.github.io/post/old_article/01-baidu/192-daliy-2011-12-07/</guid>
       <description>&lt;p&gt;上个礼拜五，公司活动去KTV。市场总监67年的廖哥，读书的时候留学过日本，所有点播的日语歌，当然就是他的了。 不过有一首歌他不唱，说放原音，欣赏，欣赏。 然后就有些奇怪，到底是什么好歌在这里欣赏（之前他唱的歌也挺好听的，也有听过的），播放的MV也是《东京爱情故事》片头的放歌那段。 可惜的是没有原唱，不过看的那段mv 感觉还是很亲切的感觉。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>祸不单行</title>
-      <link>https://mrbenwang.github.io/post/old_article/00-zone/045-huo-bu-dan-xing/</link>
-      <pubDate>Thu, 15 Jul 2010 17:13:00 +0800</pubDate>
-      
-      <guid>https://mrbenwang.github.io/post/old_article/00-zone/045-huo-bu-dan-xing/</guid>
-      <description>正文 昨天晚上睡到肚子疼，半夜睡觉也懒的管了。 到早上，受不了了去厕所蹲一泡，结果拉肚了，也没有注意。 继续喝水，那水也是一个星期前烧的，结果可想</description>
     </item>
     
   </channel>
