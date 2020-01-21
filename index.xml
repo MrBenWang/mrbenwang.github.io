@@ -12,161 +12,6 @@
     
     
     <item>
-      <title>[转]逻辑谬误列表(序言)</title>
-      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/</link>
-      <pubDate>Fri, 07 Dec 2018 14:56:00 +0800</pubDate>
-      
-      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/</guid>
-      
-        <description>&lt;p&gt;我在网上浏览文章的时候，无意间在&lt;code&gt;评论区&lt;/code&gt;发现了，这个非常有价值的系列评论，我不能放置原文链接，见谅。&lt;br /&gt;
-同时，为了保留这份资料，为以后重新学习，实践后再来重学。故此由此系列，我对原评论有结构调整。&lt;code&gt;遗憾：原文没有找到&lt;/code&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;目录&#34;&gt;目录&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword&#34;&gt;【转】逻辑谬误列表(序言)&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-1/&#34;&gt;【转】逻辑谬误列表(1-12)&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-2/&#34;&gt;【转】逻辑谬误列表(13-24)&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-ex/&#34;&gt;【转】逻辑谬误列表(例子)&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;本文的背景&#34;&gt;本文的背景&lt;/h2&gt;
-
-&lt;div class=&#34;shortcode-notice note&#34;&gt;
-  &lt;div class=&#34;shortcode-notice-title note&#34;&gt;
-    
-      什么是逻辑谬误
-    
-  &lt;/div&gt;
-  
-
-&lt;p&gt;　　本文所提到的“逻辑谬误”，也可称为“谬论”或“诡辩”（洋文叫“fallacy”）。这玩意儿主要是指：逻辑推理过程中，出现的推理错误。这种推理错误，可能是无意滴，也可能是推理者有意引入，来误导别人滴。&lt;br /&gt;
-　　在当今世界，由于网络发达，各种信息充斥其中。很多网络上的言论，为了达到说服人的目的，会采用一些诡辩的手法。如果你不晓得如何识别“逻辑谬误”，就可能被蒙蔽、被忽悠、被洗脑。所以，了解相关的知识，是很重要滴！&lt;/p&gt;
-
-&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;原文-序&#34;&gt;[原文] 序&lt;/h2&gt;
-
-&lt;p&gt;本文分为两个部分，中英精简版和中文完整版。中英精简版，只包括了英文的原版和中文逻辑谬误的名称和定义，有的有诠释或注意事项，主要源于英文原版。中文完整版，主要来源于维基百科。如果看了第一部分有理解的不太透彻的条目，可以参见完整版的条目。请善用Ctrl+F的页面内查找功能。&lt;/p&gt;
-
-&lt;p&gt;我为什么要费那么大劲弄这个东西，因为这些东西不仅是那些居心不良的人的有力武器，同时也是许多家长在教育小孩，甚至老师在教育学生时，经常犯的错误。我以前涉猎的也不全面，所以这次真心希望和大家一起好好学习这一内容。&lt;/p&gt;
-
-&lt;p&gt;这个不涉及什么敏感内容，也希望大家可以多多转发。&lt;/p&gt;
-
-&lt;p&gt;英文好的移步 &lt;a href=&#34;https://yourlogicalfallacyis.com/&#34;&gt;這裡&lt;/a&gt;，里面有那个PDF文档，小的大的都有，可以免费下载的。我原先是想先翻译的，但是这个翻译不是一般的难啊，翻译完第一条的时候我就找到了中文维基的关于 &lt;a href=&#34;https://zh.wikipedia.org/wiki/%E8%AC%AC%E8%AA%A4%E5%88%97%E8%A1%A8&#34;&gt;逻辑谬误列表&lt;/a&gt; 所以它有的我就不翻譯了。&lt;/p&gt;
-
-&lt;h3 id=&#34;首先要解釋幾個大概念&#34;&gt;首先要解釋幾個大概念&lt;/h3&gt;
-
-&lt;p&gt;非形式謬誤和形式謬誤&lt;/p&gt;
-
-&lt;h4 id=&#34;非形式谬误-informal-fallacies&#34;&gt;非形式谬误（informal fallacies）&lt;/h4&gt;
-
-&lt;p&gt;意指一个推理犯了论证结构（形式）以外的错误。表现方式，非形式谬误有几种常见的表现方式：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;错误地使用或理解语言（言词谬误）&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;使用了不正确或有争议的事实作为前提（实质谬误）&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;预设了有争议的隐藏前提（实质谬误）&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;其他不合理的思路（可将这些思路形式视为“隐藏前提”，而归于前者）&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;非形式谬误由于以上几种情形，使得论证缺乏合理性或说服力。我们需要检验论据的具体内容，才能确认非形式谬误的存在，这往往需要关于&lt;code&gt;现实&lt;/code&gt;世界的&lt;code&gt;背景知识&lt;/code&gt;与&lt;code&gt;常识&lt;/code&gt;。归纳性谬误皆属非形式谬误；演绎性谬误则是形式谬误。&lt;/p&gt;
-
-&lt;h4 id=&#34;形式谬误-formal-fallacies&#34;&gt;形式谬误（Formal fallacies）&lt;/h4&gt;
-
-&lt;p&gt;是推理形式错误的论证。当一个论证的&lt;code&gt;推理形式有误&lt;/code&gt;时，即使前提为真，也必然无法因此推理出结论为真。我们不需检验论据的具体内容，只要将&lt;strong&gt;推论符号化&lt;/strong&gt;并&lt;strong&gt;加以检验&lt;/strong&gt;，即可确认形式谬误的存在。所有形式谬误皆属于演绎性谬误。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;不当结论&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;不当结论（拉丁语：non sequitur）系指&lt;code&gt;结论&lt;/code&gt;&lt;strong&gt;无法&lt;/strong&gt;从&lt;strong&gt;已建立&lt;/strong&gt;的&lt;code&gt;前提&lt;/code&gt;推论出来。如果一个论证犯了形式谬误，其结论即属不当结论。&lt;/p&gt;
-
-&lt;div class=&#34;shortcode-notice tip&#34;&gt;
-  &lt;div class=&#34;shortcode-notice-title tip&#34;&gt;
-    
-      示例
-    
-  &lt;/div&gt;
-  
-
-&lt;p&gt;x比y大，y比z大；因此z比x大。问题在于：根据前题，x应比z大。“z比x大”背离了上述的对确形式，这就是形式谬误。&lt;br /&gt;
-油条是好吃的，油条是食物；因此食物是好吃的。问题在于：食物并不总是好吃的，这是非形式谬误。（因为油条只是食物一种，并非全部食物都是油条）&lt;/p&gt;
-
-&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;不相干的谬误&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;不相干的谬误（fallacies of relevance）或分散注意力的谬误（fallacies of distraction）是指论证的&lt;code&gt;前提&lt;/code&gt;和&lt;code&gt;结论&lt;/code&gt;&lt;strong&gt;毫无&lt;/strong&gt;&lt;code&gt;逻辑关联&lt;/code&gt;的不当推理方式，这种情况又称不相干的结论（irrelevant conclusion）或制造伪冒理据。&lt;/p&gt;
-
-&lt;p&gt;亦有人将提出与原来的争议主题&lt;code&gt;毫无关联&lt;/code&gt;的主张或论证归类为不相干的谬误，这种情况也称作歪曲论题（ignoratio elenchi）或制造伪冒论题。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;伪冒论题&lt;/strong&gt;和&lt;strong&gt;伪冒理据&lt;/strong&gt;有时没有明确区别，例如&lt;code&gt;&amp;quot;这家伙是既得利益者，当然会主张为富人节税！&amp;quot;&lt;/code&gt;较似伪冒论题，而&lt;code&gt;&amp;quot;这家伙是既得利益者，当然会主张为富人节税！因此不该接受他那件为富人节税的提议。&amp;quot;&lt;/code&gt;则较似伪冒理据。&lt;/p&gt;
-
-&lt;p&gt;有时推理虽乍看不相干，然而在补充一些&lt;strong&gt;预设前提&lt;/strong&gt;后便有关联。&lt;/p&gt;
-
-&lt;div class=&#34;shortcode-notice tip&#34;&gt;
-  &lt;div class=&#34;shortcode-notice-title tip&#34;&gt;
-    
-      示例
-    
-  &lt;/div&gt;
-  
-
-&lt;p&gt;例如：两位又脏又臭的流浪汉在公园批评时政，小明说&amp;rdquo;他们又在胡说八道了&amp;rdquo;。便似不相干。&lt;br /&gt;
-然而，如果小明的推理是：&amp;rdquo;如果有足够的能力能正确批评时政，就不致于落迫到穷困潦倒，而这两个人穷困潦倒，因此他们没有能力正确批评时政，所以他们是在胡说八道&amp;rdquo;便非不相干的谬误（推理是否正确有效是另一回事，比如&lt;code&gt;如果有足够的能力能正确批评时政，就不致于落迫到穷困潦倒&lt;/code&gt;可能是很多人无法接受的前提）。&lt;br /&gt;
-因此，是否不相干，须考虑当事人的思考脉络和未明言的隐藏前提。&lt;/p&gt;
-
-&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
-
-&lt;p&gt;不相干的谬误和不充分的谬误都是前提无法导出结论的现象，两者常合称为推论失效或推不出（Non sequitur）。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;不相干谬误的分类&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&#34;shortcode-notice info&#34;&gt;
-  &lt;div class=&#34;shortcode-notice-title info&#34;&gt;
-    
-      伪冒论题
-    
-  &lt;/div&gt;
-  
-
-&lt;p&gt;转移注意力（红鲱鱼、烟雾弹）：提出&lt;code&gt;非关键争议重点&lt;/code&gt;的言论（通常乍看有关），以&lt;code&gt;转移&lt;/code&gt;他人的&lt;code&gt;注意力&lt;/code&gt;&lt;br /&gt;
-打稻草人：攻击和对方论述&lt;code&gt;无关的论点&lt;/code&gt;（通常乍看有关）&lt;br /&gt;
-我有权发表意见：被他人批评时，主张自己有权利发表意见。然而，是否有&lt;code&gt;发表意见的权利&lt;/code&gt;和意见&lt;code&gt;是否正确可取&lt;/code&gt;（或他人是否可批评）是不相干的。&lt;br /&gt;
-废话谬误：废话谬误的其中一种形式是说出&lt;code&gt;模棱两可&lt;/code&gt;，无论如何&lt;code&gt;总是正确&lt;/code&gt;的语句(算命)，却没有真正回应主题，亦是不相干的谬误。&lt;/p&gt;
-
-&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
-
-&lt;p&gt;在后续有补充说明&lt;/p&gt;
-
-&lt;div class=&#34;shortcode-notice info&#34;&gt;
-  &lt;div class=&#34;shortcode-notice-title info&#34;&gt;
-    
-      伪冒理据
-    
-  &lt;/div&gt;
-  
-
-&lt;p&gt;诉诸起源：攻击论点的起源而&lt;code&gt;非论点本身&lt;/code&gt;&lt;br /&gt;
-假资讯来源：使用不相干、不良、不明、有偏误或伪造的资讯来源支持论点&lt;br /&gt;
-诉诸情感：借由&lt;code&gt;挑起情感&lt;/code&gt;驱使他人支持或反对一个论点&lt;br /&gt;
-······&lt;/p&gt;
-
-&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;片面辩护&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;积非成是：主张因为其他人也做错，因此我也可以做错。&lt;br /&gt;
-不当类比：有些类比推论的类比项，与被类比项毫无关系，即是不相干的谬误。&lt;strong&gt;形式&lt;/strong&gt;：因为X和Y在a、b、c方面相同，所以X和Y在p、q、r方面也必定相同。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
       <title>关于</title>
       <link>https://mrbenwang.github.io/about/</link>
       <pubDate>Tue, 31 Jul 2018 16:00:00 +0800</pubDate>
@@ -437,6 +282,14 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
 &lt;p&gt;12月6日，远月m2009易涨难跌，做空的话还是要做近月主力。我预计的是中美贸易要达成合约了，关税随时可能会取消。原因是，中国2020年要专心处理国内的经济问题，首先要安定外部的环境，越来越多的声音发出，2020越来越像2007年，pong！pong！pong！就要看何时会爆掉了。我一定要在农历年前把股市里的钱拿出来。&lt;/p&gt;
 
 &lt;p&gt;12月10日，昨天加了个期货吧里面的一个人，观察也有点久，提前的预测相对较准。我以为是个人投资者，原来是期货公司的人，你向他请教，他直接让你去一家新的公司开户，我也是醉了，好感度立马将为0，联想到他那篇帖子五六十个回复，我就在想估计有一半都是托吧。最好的投机策略，一定是自己创造的策略，也只是适合。万万没想到今天，m2005的持仓量都突破了300万，太可怕了，即使四五千手的大户，机构企业打下去，也不会溅起一点浪花。。。&lt;/p&gt;
+
+&lt;p&gt;12月20日，我最终还是选着了+0.01手续费的期货公司，本来还是很怀疑他是不是正规的期货公司，网上多方查询，徽商期货还是正规的，但是万万没想到，他们居然可以这么便宜，并且还是免今平的，比之前的中信建投要便宜太多了。之后的一系列操作，让我一直在亏损，我在反思到底是哪里出了问题，最近豆粕一直在小区间波动，而我之前按的策略，很容易就被止损了。上周9~13日我没有太多的心思在盯盘，更多的是在剪辑视频。目前豆粕的持仓量太大了，很难产生大波动，让我的止损策略生效。&lt;/p&gt;
+
+&lt;p&gt;12月23日，真的想好好休息一下了，我现在连续盯盘三个月，每个白市和夜市，连晚上做梦都在梦到走势图，很难一觉到天明，都有些神经衰弱的感觉。真的好累好累。。。。太幸苦了，还赔了钱。为了以后周末可以睡个好觉，我不再做周末单了。。。。&lt;/p&gt;
+
+&lt;p&gt;2020年01月06日，从3日美国突然用无人机刺杀了伊朗高级将军卡西姆·苏莱曼尼。油价暴涨，导致我的空单直接损失3W，本来我心中还抱有一丝幻想的。可是周末又被啪啪啪打脸，有多损失了1w。本来这一万是可以不损失的，我看股吧里面的人的分析，外加自己不肯认输，导致这笔损失。这下可好，才短短3个月，就已经损失了6万，尤其是这两天，死扛(&lt;strong&gt;不设止损&lt;/strong&gt;)硬输掉了4万。我真的是太太太难受了。唯一可以值得安慰的是，大北农今天是第五个涨停板。我决心休息一段时间，再看看有没有另外进场机会，预计的10万资金，现在只剩4万。也只能小打小闹了。  我现在才发现，豆粕是真的温柔，燃油是真的暴力。&lt;/p&gt;
+
+&lt;p&gt;1月8日，今天早上一开盘，燃油直接急拉200点，我的亏损直接到达8万，我在考虑自己还适合做期货，我开始有了放弃的打算了，真的真的把我亏得怀疑了人生。虽然我心里有美伊开战的预期，但是我预计的是要有一次稍大的回调，可是可是，真的是完全超出我的预期。我是真的真的有些放弃的打算了。即使做了止损设置，也还是拉爆200点。。。未盈利，不应死抱着。。燃油这类期货，真的真的不敢再隔夜了。太恐怖了。。。&lt;/p&gt;
 
 &lt;h3 id=&#34;futures-的意义&#34;&gt;futures 的意义&lt;/h3&gt;
 
@@ -5146,6 +4999,165 @@ A：我并不认为孩童应该往大街上乱跑。/B：把小孩关起来，�
 &lt;h2 id=&#34;未完&#34;&gt;未完&lt;/h2&gt;
 
 &lt;p&gt;下一篇 24条常见谬误中英精简版(13-24)&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>[转]逻辑谬误列表(序言)</title>
+      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/</link>
+      <pubDate>Fri, 07 Dec 2018 14:56:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/</guid>
+      
+        <description>&lt;p&gt;我在网上浏览文章的时候，无意间在&lt;code&gt;评论区&lt;/code&gt;发现了，这个非常有价值的系列评论，我不能放置原文链接，见谅。&lt;br /&gt;
+同时，为了保留这份资料，为以后重新学习，实践后再来重学。故此由此系列，我对原评论有结构调整。&lt;code&gt;遗憾：原文没有找到&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;目录&#34;&gt;目录&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword&#34;&gt;【转】逻辑谬误列表(序言)&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-1/&#34;&gt;【转】逻辑谬误列表(1-12)&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-2/&#34;&gt;【转】逻辑谬误列表(13-24)&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-ex/&#34;&gt;【转】逻辑谬误列表(例子)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;本文的背景&#34;&gt;本文的背景&lt;/h2&gt;
+
+&lt;div class=&#34;shortcode-notice note&#34;&gt;
+  &lt;div class=&#34;shortcode-notice-title note&#34;&gt;
+    
+      什么是逻辑谬误
+    
+  &lt;/div&gt;
+  
+
+&lt;p&gt;　　本文所提到的“逻辑谬误”，也可称为“谬论”或“诡辩”（洋文叫“fallacy”）。这玩意儿主要是指：逻辑推理过程中，出现的推理错误。这种推理错误，可能是无意滴，也可能是推理者有意引入，来误导别人滴。&lt;br /&gt;
+　　在当今世界，由于网络发达，各种信息充斥其中。很多网络上的言论，为了达到说服人的目的，会采用一些诡辩的手法。如果你不晓得如何识别“逻辑谬误”，就可能被蒙蔽、被忽悠、被洗脑。所以，了解相关的知识，是很重要滴！&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;原文-序&#34;&gt;[原文] 序&lt;/h2&gt;
+
+&lt;p&gt;本文分为两个部分，中英精简版和中文完整版。中英精简版，只包括了英文的原版和中文逻辑谬误的名称和定义，有的有诠释或注意事项，主要源于英文原版。中文完整版，主要来源于维基百科。如果看了第一部分有理解的不太透彻的条目，可以参见完整版的条目。请善用Ctrl+F的页面内查找功能。&lt;/p&gt;
+
+&lt;p&gt;我为什么要费那么大劲弄这个东西，因为这些东西不仅是那些居心不良的人的有力武器，同时也是许多家长在教育小孩，甚至老师在教育学生时，经常犯的错误。我以前涉猎的也不全面，所以这次真心希望和大家一起好好学习这一内容。&lt;/p&gt;
+
+&lt;p&gt;这个不涉及什么敏感内容，也希望大家可以多多转发。&lt;/p&gt;
+
+&lt;p&gt;英文好的移步 &lt;a href=&#34;https://yourlogicalfallacyis.com/&#34;&gt;這裡&lt;/a&gt;，里面有那个PDF文档，小的大的都有，可以免费下载的。我原先是想先翻译的，但是这个翻译不是一般的难啊，翻译完第一条的时候我就找到了中文维基的关于 &lt;a href=&#34;https://zh.wikipedia.org/wiki/%E8%AC%AC%E8%AA%A4%E5%88%97%E8%A1%A8&#34;&gt;逻辑谬误列表&lt;/a&gt; 所以它有的我就不翻譯了。&lt;/p&gt;
+
+&lt;h3 id=&#34;首先要解釋幾個大概念&#34;&gt;首先要解釋幾個大概念&lt;/h3&gt;
+
+&lt;p&gt;非形式謬誤和形式謬誤&lt;/p&gt;
+
+&lt;h4 id=&#34;非形式谬误-informal-fallacies&#34;&gt;非形式谬误（informal fallacies）&lt;/h4&gt;
+
+&lt;p&gt;意指一个推理犯了论证结构（形式）以外的错误。表现方式，非形式谬误有几种常见的表现方式：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;错误地使用或理解语言（言词谬误）&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;使用了不正确或有争议的事实作为前提（实质谬误）&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;预设了有争议的隐藏前提（实质谬误）&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;其他不合理的思路（可将这些思路形式视为“隐藏前提”，而归于前者）&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;非形式谬误由于以上几种情形，使得论证缺乏合理性或说服力。我们需要检验论据的具体内容，才能确认非形式谬误的存在，这往往需要关于&lt;code&gt;现实&lt;/code&gt;世界的&lt;code&gt;背景知识&lt;/code&gt;与&lt;code&gt;常识&lt;/code&gt;。归纳性谬误皆属非形式谬误；演绎性谬误则是形式谬误。&lt;/p&gt;
+
+&lt;h4 id=&#34;形式谬误-formal-fallacies&#34;&gt;形式谬误（Formal fallacies）&lt;/h4&gt;
+
+&lt;p&gt;是推理形式错误的论证。当一个论证的&lt;code&gt;推理形式有误&lt;/code&gt;时，即使前提为真，也必然无法因此推理出结论为真。我们不需检验论据的具体内容，只要将&lt;strong&gt;推论符号化&lt;/strong&gt;并&lt;strong&gt;加以检验&lt;/strong&gt;，即可确认形式谬误的存在。所有形式谬误皆属于演绎性谬误。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;不当结论&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;不当结论（拉丁语：non sequitur）系指&lt;code&gt;结论&lt;/code&gt;&lt;strong&gt;无法&lt;/strong&gt;从&lt;strong&gt;已建立&lt;/strong&gt;的&lt;code&gt;前提&lt;/code&gt;推论出来。如果一个论证犯了形式谬误，其结论即属不当结论。&lt;/p&gt;
+
+&lt;div class=&#34;shortcode-notice tip&#34;&gt;
+  &lt;div class=&#34;shortcode-notice-title tip&#34;&gt;
+    
+      示例
+    
+  &lt;/div&gt;
+  
+
+&lt;p&gt;x比y大，y比z大；因此z比x大。问题在于：根据前题，x应比z大。“z比x大”背离了上述的对确形式，这就是形式谬误。&lt;br /&gt;
+油条是好吃的，油条是食物；因此食物是好吃的。问题在于：食物并不总是好吃的，这是非形式谬误。（因为油条只是食物一种，并非全部食物都是油条）&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;不相干的谬误&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;不相干的谬误（fallacies of relevance）或分散注意力的谬误（fallacies of distraction）是指论证的&lt;code&gt;前提&lt;/code&gt;和&lt;code&gt;结论&lt;/code&gt;&lt;strong&gt;毫无&lt;/strong&gt;&lt;code&gt;逻辑关联&lt;/code&gt;的不当推理方式，这种情况又称不相干的结论（irrelevant conclusion）或制造伪冒理据。&lt;/p&gt;
+
+&lt;p&gt;亦有人将提出与原来的争议主题&lt;code&gt;毫无关联&lt;/code&gt;的主张或论证归类为不相干的谬误，这种情况也称作歪曲论题（ignoratio elenchi）或制造伪冒论题。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;伪冒论题&lt;/strong&gt;和&lt;strong&gt;伪冒理据&lt;/strong&gt;有时没有明确区别，例如&lt;code&gt;&amp;quot;这家伙是既得利益者，当然会主张为富人节税！&amp;quot;&lt;/code&gt;较似伪冒论题，而&lt;code&gt;&amp;quot;这家伙是既得利益者，当然会主张为富人节税！因此不该接受他那件为富人节税的提议。&amp;quot;&lt;/code&gt;则较似伪冒理据。&lt;/p&gt;
+
+&lt;p&gt;有时推理虽乍看不相干，然而在补充一些&lt;strong&gt;预设前提&lt;/strong&gt;后便有关联。&lt;/p&gt;
+
+&lt;div class=&#34;shortcode-notice tip&#34;&gt;
+  &lt;div class=&#34;shortcode-notice-title tip&#34;&gt;
+    
+      示例
+    
+  &lt;/div&gt;
+  
+
+&lt;p&gt;例如：两位又脏又臭的流浪汉在公园批评时政，小明说&amp;rdquo;他们又在胡说八道了&amp;rdquo;。便似不相干。&lt;br /&gt;
+然而，如果小明的推理是：&amp;rdquo;如果有足够的能力能正确批评时政，就不致于落迫到穷困潦倒，而这两个人穷困潦倒，因此他们没有能力正确批评时政，所以他们是在胡说八道&amp;rdquo;便非不相干的谬误（推理是否正确有效是另一回事，比如&lt;code&gt;如果有足够的能力能正确批评时政，就不致于落迫到穷困潦倒&lt;/code&gt;可能是很多人无法接受的前提）。&lt;br /&gt;
+因此，是否不相干，须考虑当事人的思考脉络和未明言的隐藏前提。&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;不相干的谬误和不充分的谬误都是前提无法导出结论的现象，两者常合称为推论失效或推不出（Non sequitur）。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;不相干谬误的分类&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&#34;shortcode-notice info&#34;&gt;
+  &lt;div class=&#34;shortcode-notice-title info&#34;&gt;
+    
+      伪冒论题
+    
+  &lt;/div&gt;
+  
+
+&lt;p&gt;转移注意力（红鲱鱼、烟雾弹）：提出&lt;code&gt;非关键争议重点&lt;/code&gt;的言论（通常乍看有关），以&lt;code&gt;转移&lt;/code&gt;他人的&lt;code&gt;注意力&lt;/code&gt;&lt;br /&gt;
+打稻草人：攻击和对方论述&lt;code&gt;无关的论点&lt;/code&gt;（通常乍看有关）&lt;br /&gt;
+我有权发表意见：被他人批评时，主张自己有权利发表意见。然而，是否有&lt;code&gt;发表意见的权利&lt;/code&gt;和意见&lt;code&gt;是否正确可取&lt;/code&gt;（或他人是否可批评）是不相干的。&lt;br /&gt;
+废话谬误：废话谬误的其中一种形式是说出&lt;code&gt;模棱两可&lt;/code&gt;，无论如何&lt;code&gt;总是正确&lt;/code&gt;的语句(算命)，却没有真正回应主题，亦是不相干的谬误。&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;在后续有补充说明&lt;/p&gt;
+
+&lt;div class=&#34;shortcode-notice info&#34;&gt;
+  &lt;div class=&#34;shortcode-notice-title info&#34;&gt;
+    
+      伪冒理据
+    
+  &lt;/div&gt;
+  
+
+&lt;p&gt;诉诸起源：攻击论点的起源而&lt;code&gt;非论点本身&lt;/code&gt;&lt;br /&gt;
+假资讯来源：使用不相干、不良、不明、有偏误或伪造的资讯来源支持论点&lt;br /&gt;
+诉诸情感：借由&lt;code&gt;挑起情感&lt;/code&gt;驱使他人支持或反对一个论点&lt;br /&gt;
+······&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;片面辩护&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;积非成是：主张因为其他人也做错，因此我也可以做错。&lt;br /&gt;
+不当类比：有些类比推论的类比项，与被类比项毫无关系，即是不相干的谬误。&lt;strong&gt;形式&lt;/strong&gt;：因为X和Y在a、b、c方面相同，所以X和Y在p、q、r方面也必定相同。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;2019-12-25，取消本文章的置顶，因为自己不会再来重新阅读。本来计划是每个月重温一次&lt;code&gt;逻辑谬误&lt;/code&gt;，结果在这一年中，只重温了两三次。虽然自己不是经常来看，但是在平时的聊天讨论中，会注意到对方的一些逻辑谬误，也是一个不小的收获。把逻辑这一回事情，播种在脑袋中，他自然就会生根发芽。&lt;/p&gt;</description>
       
     </item>
     
