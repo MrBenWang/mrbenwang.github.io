@@ -6,10 +6,19 @@
     <description>Recent content in 工作随笔 on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 20 May 2019 14:20:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 08 Apr 2020 10:07:00 +0800</lastBuildDate>
     
 	<atom:link href="https://mrbenwang.github.io/categories/%E5%B7%A5%E4%BD%9C%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>WPF 本地多语言总结</title>
+      <link>https://mrbenwang.github.io/post/2020/20200408-wpf-multi-language/</link>
+      <pubDate>Wed, 08 Apr 2020 10:07:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2020/20200408-wpf-multi-language/</guid>
+      <description>&lt;p&gt;去年底今年初，由于WPF项目，需要支持日本地区，要求可以切换语言。本篇文章汇总了一下，当时的调研的结果，和项目中所采用的方式。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>*C#执行批处理命令</title>

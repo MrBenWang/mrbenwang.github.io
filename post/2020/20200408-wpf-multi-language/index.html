@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="zh-cn" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>WPF 本地多语言总结 - 风雪夜归人</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Long" />
+  <meta name="description" content="去年底今年初，由于WPF项目，需要支持日本地区，要求可以切换语言。本篇文章汇总了一下，当时的调研的结果，和项目中所采用的方式。
+" />
+
+  <meta name="keywords" content="码农, 逻辑, 自由" />
+
+
+
+<meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
+
+
+<meta name="generator" content="Hugo 0.57.2" />
+
+
+<link rel="canonical" href="https://mrbenwang.github.io/post/2020/20200408-wpf-multi-language/" />
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.af20b78e95c84de86b00a0242a4a77bd2601700e1b250edf27537d957ac0041d.css" integrity="sha256-ryC3jpXITehrAKAkKkp3vSYBcA4bJQ7fJ1N9lXrABB0=" media="screen" crossorigin="anonymous">
+
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="WPF 本地多语言总结" />
+<meta property="og:description" content="去年底今年初，由于WPF项目，需要支持日本地区，要求可以切换语言。本篇文章汇总了一下，当时的调研的结果，和项目中所采用的方式。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mrbenwang.github.io/post/2020/20200408-wpf-multi-language/" />
+<meta property="article:published_time" content="2020-04-08T10:07:00+08:00" />
+<meta property="article:modified_time" content="2020-04-08T10:07:00+08:00" />
+<meta itemprop="name" content="WPF 本地多语言总结">
+<meta itemprop="description" content="去年底今年初，由于WPF项目，需要支持日本地区，要求可以切换语言。本篇文章汇总了一下，当时的调研的结果，和项目中所采用的方式。">
+
+
+<meta itemprop="datePublished" content="2020-04-08T10:07:00&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-08T10:07:00&#43;08:00" />
+<meta itemprop="wordCount" content="2137">
+
+
+
+<meta itemprop="keywords" content="多语言," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="WPF 本地多语言总结"/>
+<meta name="twitter:description" content="去年底今年初，由于WPF项目，需要支持日本地区，要求可以切换语言。本篇文章汇总了一下，当时的调研的结果，和项目中所采用的方式。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-130619472-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">风雪夜归人</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/">主页</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">全部文章</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/tags/">标签</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/categories/">分类</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于</a>
+          
+        
+      </li>
+    
+
+    
+      <li class="mobile-menu-item">
+        <a id="openSearchMobile" class="mobile-menu-item-link menu-item-search" href="#">
+          <i class="iconfont">
+            <svg version="1.1" viewBox="0 0 1024 1024"
+  xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M973.81454219 973.81454219a91.78207815 91.78207815 0 0 1-129.80999631 0l-161.97482118-161.97482118a425.48527711 425.48527711 0 0 1-230.35931791 68.16531768 428.3346319 428.3346319 0 1 1 428.3346319-428.3346319 425.48527711 425.48527711 0 0 1-68.16531768 230.35931791l162.02961656 161.97482118a91.83687354 91.83687354 0 0 1-0.05479538 129.80999631zM451.67040679 145.69361559a305.97679241 305.97679241 0 1 0 0 611.95358361 305.97679241 305.97679241 0 0 0 0-611.95358361z">
+  </path>
+</svg>
+
+          </i>
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+    
+<div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div id="closeSearch" title="Close" class="close">X</div>
+      <div class="modal-header">
+        <div class="modal-title">Search</div>
+      </div>
+      <div class="modal-body">
+          <script>
+            (function() {
+              var cx = '015982908853339398897:duxagwzp5jn';
+              var gcse = document.createElement('script');
+              gcse.type = 'text/javascript';
+              gcse.async = true;
+              gcse.src = (document.location.protocol == 'https:' ? 'https:' :
+                  'http:') +
+                '//cse.google.com/cse.js?cx=' + cx;
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(gcse, s);
+            })();
+          </script>
+          <gcse:search></gcse:search>
+      </div>
+    </div>
+</div>
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      风雪夜归人
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/">主页</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/post/">全部文章</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/tags/">标签</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/categories/">分类</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+      <li class="menu-item">
+        <a id="openSearch" class="menu-item-link menu-item-search" href="#">
+          <i class="iconfont">
+            <svg version="1.1" viewBox="0 0 1024 1024"
+  xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M973.81454219 973.81454219a91.78207815 91.78207815 0 0 1-129.80999631 0l-161.97482118-161.97482118a425.48527711 425.48527711 0 0 1-230.35931791 68.16531768 428.3346319 428.3346319 0 1 1 428.3346319-428.3346319 425.48527711 425.48527711 0 0 1-68.16531768 230.35931791l162.02961656 161.97482118a91.83687354 91.83687354 0 0 1-0.05479538 129.80999631zM451.67040679 145.69361559a305.97679241 305.97679241 0 1 0 0 611.95358361 305.97679241 305.97679241 0 0 0 0-611.95358361z">
+  </path>
+</svg>
+
+          </i>
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">WPF 本地多语言总结</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-04-08" class="post-time">
+          2020-04-08 10:07
+        </time>
+        <div class="post-category">
+            <a href="https://mrbenwang.github.io/categories/%E5%B7%A5%E4%BD%9C%E9%9A%8F%E7%AC%94/"> 工作随笔 </a>
+            
+          </div>
+        <span class="more-meta"> 约 2137 字 </span>
+          <span class="more-meta"> 预计阅读 5 分钟 </span>
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#业务背景">业务背景</a>
+<ul>
+<li><a href="#我的调研">我的调研</a></li>
+<li><a href="#我的实现方法">我的实现方法</a></li>
+<li><a href="#项目中使用的方法">项目中使用的方法</a></li>
+<li><a href="#总结">总结</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>去年底今年初，由于WPF项目，需要支持日本地区，要求可以切换语言。本篇文章汇总了一下，当时的调研的结果，和项目中所采用的方式。</p>
+
+<h1 id="业务背景">业务背景</h1>
+
+<p>当时，软件主要针对的是英语国家。后来因业务需要，增加了日本地区，需要一套可切换的日语操作界面。<br />
+一方面，由于软件早期没有考虑过多语言，改造幅度比较大；另一方面，由于翻译问题，需要日本方面，可以即时修改翻译的内容。总结一下需求：</p>
+
+<ol>
+<li>软件需全面修改，包括前端界面，后端文字，数据库配置项等；</li>
+<li>易扩展，易修改；</li>
+<li>调整翻译内容后，可及时展现在界面上；</li>
+<li>希望使用 Excel 文档，来作为编辑工具；</li>
+</ol>
+
+<h2 id="我的调研">我的调研</h2>
+
+<p>我在网上查找了不少资料，简单实现简单的demo，整体倾向使用，<code>微软推荐的方法</code>。具体查找的资料如下：</p>
+
+<ul>
+<li>stackoverflow: <a href="https://stackoverflow.com/questions/373388/best-way-to-implement-multi-language-globalization-in-large-net-project">Best way to implement multi-language/globalization in large .NET project</a>，这里面提供了不少的方法，首推还是微软官方的方法;</li>
+<li>MSDN: <a href="https://docs.microsoft.com/zh-cn/dotnet/framework/wpf/advanced/wpf-globalization-and-localization-overview?redirectedfrom=MSDN">WPF 全球化和本地化概述</a>，WPF微软官方的实现方法，重点在于UI界面也需要根据多语言调整(比如，某些地区使用习惯是左图右字，某些地区是左字右图);</li>
+<li>MSDN: <a href="https://docs.microsoft.com/zh-cn/windows/uwp/app-resources/localize-strings-ui-manifest">对 UI 和应用包清单中的字符串实施本地化</a>，resw 或 resx编译成dll;</li>
+<li>csdn: <a href="https://blog.csdn.net/lhy2199/article/details/7410694">C# CultureInfo 类之各国语言所对应的的区域性名称</a>，如 ja-JP，zh-CN，en-US;</li>
+<li>github: <a href="https://github.com/tom-englert/ResXResourceManager">ResXResourceManager</a>，超好用的，VS多语言开发插件;</li>
+<li>jb51: <a href="https://www.jb51.net/article/101845.htm">C# Resources资源详解</a>，详细讲解.net中各种资源的使用方式;</li>
+</ul>
+
+<h2 id="我的实现方法">我的实现方法</h2>
+
+<p>参考了上面的所有方法，根据项目的需求，实现一个demo。实现起来其实蛮简单的：</p>
+
+<ol>
+<li><p>创建一个<code>多语言通用类库</code>，这里面只包含多语言的<code>resx</code>文件，resx 可以包含：字符串、图像、音频、文件、其他；<br />
+<img src="/images/2020/20200408-wpf-multi-language/01-language-resources.jpg" alt="多语言通用类库" /></p></li>
+
+<li><p>使用<code>ResXResourceManager</code>，来编写多语言内容，这个插件的功能很强大，有复制粘贴，排序，检索，导入导出excel等；还可以选中代码，快速添加；很多功能有待发现；<br />
+<img src="/images/2020/20200408-wpf-multi-language/02-resx-resource-manager.jpg" alt="resx资源管理插件" /><br />
+<img src="/images/2020/20200408-wpf-multi-language/02-resx-resource-manager2.jpg" alt="resx资源管理插件2" /></p></li>
+
+<li><p>自动生成的cs代码，具有<strong>强类型引用</strong>，不易出错；</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="c1">/// &lt;summary&gt;
+</span><span class="c1">///   硬件自动名称..
+</span><span class="c1">/// &lt;/summary&gt;
+</span><span class="c1"></span><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">HW_Auto_Name</span> <span class="p">{</span>
+<span class="k">get</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">ResourceManager</span><span class="p">.</span><span class="n">GetString</span><span class="p">(</span><span class="s">&#34;HW_Auto_Name&#34;</span><span class="p">,</span> <span class="n">resourceCulture</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 使用方式
+</span><span class="c1"></span><span class="kt">string</span> <span class="n">tip</span> <span class="p">=</span> <span class="n">ResourceText</span><span class="p">.</span><span class="n">HW_Auto_Name</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>在WPF的 xaml 界面使用方式，示例；</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="n">xmlns</span><span class="p">:</span><span class="n">resx</span><span class="p">=</span><span class="s">&#34;clr-namespace:LanguageResources;assembly=LanguageResources&#34;</span>
+
+<span class="n">Content</span><span class="p">=</span><span class="s">&#34;{x:Static resx:ResourceText.HW_Auto_Name}&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>最后通过VS的编译，生成一个语言文件夹<code>ja-JP</code>里面包含一个资源dll<code>LanguageResources.resources.dll</code>;</p></li>
+
+<li><p>如果对翻译内容进行改变，则还额外需要的操作步骤；<br />
+使用Resgen.exe将每个<code>文本</code>或<code>XML资源文件</code>编译为二进制.resources文件。输出是一组文件，这些文件的文件名与.resx或.txt文件相同，但扩展名为.resources。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">Visual Studio <span class="m">2017</span>，在文件路径中找到resgen.exe；  
+%PROGRAMFILES<span class="o">(</span>X86<span class="o">)</span>%<span class="se">\M</span>icrosoft SDKs<span class="se">\W</span>indows<span class="se">\v</span><span class="m">10</span>.0A<span class="se">\b</span>in<span class="se">\N</span>ETFX <span class="m">4</span>.6.2 Tools<span class="se">\r</span>esgen.exe  
+
+//执行resgen命令，生成LanguageResources.ResourceText.ja-JP.resources  
+resgen LanguageResources.ResourceText.ja-JP.resx  
+
+//执行al命令，生成LanguageResources.resources.dll  
+al -target:lib -embed:LanguageResources.ResourceText.ja-JP.resources -culture:ja-JP -out:LanguageResources.resources.dll  </code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+
+<p>至此，所有的操作完全完成。虽然，我的方法使用微软推荐的方法，同时也有相应的辅助工具，提高了开发的效率；但是她<strong>有一个致命的缺点</strong>，是在改变翻译内容后，还需要执行额外的操作。对翻译人员的操作不友好~~。<strong>放弃！！！</strong></p>
+
+<h2 id="项目中使用的方法">项目中使用的方法</h2>
+
+<p>在我的方法被否决以后，心里还是有不甘心。后来项目组，安排另一位同事，开发了个Excel版本的，时隔三个月再来看，他的方法确实比我的要简单，实用。下面我就简单介绍一下：</p>
+
+<ol>
+<li>Excel 文件的读取，使用 NPOI；</li>
+<li>DependencyProperty.RegisterAttached WPF的依赖属性，通过网上查找的 DependencyProperty 资料，简单了解到它是WPF的精华所在；</li>
+<li>在具体使用中，使用两种方式：1、根据Key值来获取翻译内容；2、根据完整英文内容，获取对应的翻译内容；</li>
+</ol>
+
+<p>具体的代码，简化如下：</p>
+
+<p><details>
+  <summary style="background-color:#f5f5f5;border:1px solid #ccc;padding:5px;">
+    LanguageManager</p>
+
+<p></summary></p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="k">public</span> <span class="k">class</span> <span class="nc">LanguageManager</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">bool</span> <span class="n">IsLangOut</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Language</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="k">private</span> <span class="kt">string</span> <span class="n">langFile</span><span class="p">;</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="n">LanguageManager</span> <span class="n">_Instance</span><span class="p">;</span>
+    <span class="k">private</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="n">LanguageObject</span><span class="p">&gt;</span> <span class="n">StrMap</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">static</span> <span class="n">LanguageManager</span> <span class="n">Instance</span>
+    <span class="p">{</span>
+        <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">_Instance</span> <span class="p">==</span> <span class="k">null</span> <span class="p">?</span> <span class="n">_Instance</span> <span class="p">=</span> <span class="k">new</span> <span class="n">LanguageManager</span><span class="p">()</span> <span class="p">:</span> <span class="n">_Instance</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="n">LanguageManager</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">IsLangOut</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+        <span class="n">Language</span> <span class="p">=</span> <span class="s">&#34;en_US&#34;</span><span class="p">;</span>
+        <span class="n">langFile</span> <span class="p">=</span> <span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">AppDomain</span><span class="p">.</span><span class="n">CurrentDomain</span><span class="p">.</span><span class="n">BaseDirectory</span><span class="p">,</span> <span class="s">&#34;logs&#34;</span><span class="p">,</span> <span class="s">&#34;LanguageError.log&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="kt">bool</span> <span class="n">Load</span><span class="p">(</span><span class="n">Func</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="n">LanguageObject</span><span class="p">&gt;&gt;</span> <span class="n">LoadFile</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">StrMap</span> <span class="p">=</span> <span class="n">LoadFile</span><span class="p">?.</span><span class="n">Invoke</span><span class="p">(</span><span class="n">Language</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">StrMap</span> <span class="p">==</span> <span class="k">null</span> <span class="p">||</span> <span class="n">StrMap</span><span class="p">.</span><span class="n">Count</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+        <span class="k">else</span> <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">GetTranslateStr</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="p">||</span> <span class="n">StrMap</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span> <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Empty</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">StrMap</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="n">StrMap</span><span class="p">[</span><span class="n">key</span><span class="p">].</span><span class="n">Trans</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="n">Write2File</span><span class="p">(</span><span class="s">$&#34;no key: [{key}]\n&#34;</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">key</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">TranslateStr</span><span class="p">(</span><span class="kt">string</span> <span class="n">text</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">Language</span> <span class="p">==</span> <span class="s">&#34;en-US&#34;</span> <span class="p">||</span> <span class="n">StrMap</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span> <span class="k">return</span> <span class="n">text</span><span class="p">;</span>
+
+        <span class="kt">var</span> <span class="n">lang</span> <span class="p">=</span> <span class="n">StrMap</span><span class="p">.</span><span class="n">Values</span><span class="p">.</span><span class="n">FirstOrDefault</span><span class="p">(</span><span class="n">p</span> <span class="p">=&gt;</span> <span class="n">p</span><span class="p">.</span><span class="n">English</span><span class="p">.</span><span class="n">Trim</span><span class="p">()</span> <span class="p">==</span> <span class="n">text</span><span class="p">.</span><span class="n">Trim</span><span class="p">());</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">lang</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Write2File</span><span class="p">(</span><span class="s">$&#34;can&#39;t find value: [{text}]\n&#34;</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">text</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+            <span class="k">return</span> <span class="n">lang</span><span class="p">.</span><span class="n">Trans</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="n">Write2File</span><span class="p">(</span><span class="kt">string</span> <span class="n">context</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(!</span><span class="n">IsLangOut</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">File</span><span class="p">.</span><span class="n">AppendAllText</span><span class="p">(</span><span class="n">langFile</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">System</span><span class="p">.</span><span class="n">Text</span><span class="p">.</span><span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+
+<p></details></p>
+
+<p><details>
+  <summary style="background-color:#f5f5f5;border:1px solid #ccc;padding:5px;">
+    DependencyProperty 后端代码</p>
+
+<p></summary></p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="k">public</span> <span class="k">class</span> <span class="nc">LanguageBehavior</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">DependencyProperty</span> <span class="n">KeyProperty</span> <span class="p">=</span> 
+        <span class="n">DependencyProperty</span><span class="p">.</span><span class="n">RegisterAttached</span><span class="p">(</span><span class="s">&#34;Key&#34;</span><span class="p">,</span> 
+            <span class="k">typeof</span><span class="p">(</span><span class="kt">string</span><span class="p">),</span> <span class="k">typeof</span><span class="p">(</span><span class="n">LanguageBehavior</span><span class="p">),</span> 
+            <span class="k">new</span> <span class="n">FrameworkPropertyMetadata</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">Empty</span><span class="p">,</span> <span class="n">OnKeyChanged</span><span class="p">));</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="k">void</span> <span class="n">OnKeyChanged</span><span class="p">(</span><span class="n">DependencyObject</span> <span class="n">sender</span><span class="p">,</span> <span class="n">DependencyPropertyChangedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Update</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">NewValue</span> <span class="k">as</span> <span class="kt">string</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SetKey</span><span class="p">(</span><span class="n">DependencyObject</span> <span class="n">dp</span><span class="p">,</span> <span class="kt">string</span> <span class="k">value</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">dp</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="n">KeyProperty</span><span class="p">,</span> <span class="k">value</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">GetKey</span><span class="p">(</span><span class="n">DependencyObject</span> <span class="n">dp</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">dp</span><span class="p">.</span><span class="n">GetValue</span><span class="p">(</span><span class="n">KeyProperty</span><span class="p">)</span> <span class="k">as</span> <span class="kt">string</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">DependencyProperty</span> <span class="n">ToolTipProperty</span> <span class="p">=</span> 
+        <span class="n">DependencyProperty</span><span class="p">.</span><span class="n">RegisterAttached</span><span class="p">(</span><span class="s">&#34;ToolTip&#34;</span><span class="p">,</span> 
+            <span class="k">typeof</span><span class="p">(</span><span class="kt">string</span><span class="p">),</span> <span class="k">typeof</span><span class="p">(</span><span class="n">LanguageBehavior</span><span class="p">),</span> 
+            <span class="k">new</span> <span class="n">FrameworkPropertyMetadata</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">Empty</span><span class="p">,</span> <span class="n">OnToolTipChanged</span><span class="p">));</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="k">void</span> <span class="n">OnToolTipChanged</span><span class="p">(</span><span class="n">DependencyObject</span> <span class="n">sender</span><span class="p">,</span> <span class="n">DependencyPropertyChangedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">UpdateToolTip</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">NewValue</span> <span class="k">as</span> <span class="kt">string</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SetToolTip</span><span class="p">(</span><span class="n">DependencyObject</span> <span class="n">dp</span><span class="p">,</span> <span class="kt">string</span> <span class="k">value</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">dp</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="n">ToolTipProperty</span><span class="p">,</span> <span class="k">value</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">GetToolTip</span><span class="p">(</span><span class="n">DependencyObject</span> <span class="n">dp</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">dp</span><span class="p">.</span><span class="n">GetValue</span><span class="p">(</span><span class="n">ToolTipProperty</span><span class="p">)</span> <span class="k">as</span> <span class="kt">string</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Update</span><span class="p">(</span><span class="n">DependencyObject</span> <span class="n">sender</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">sender</span> <span class="k">is</span> <span class="n">TabItem</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">sender</span> <span class="k">as</span> <span class="n">TabItem</span><span class="p">).</span><span class="n">Header</span> <span class="p">=</span> <span class="n">LanguageManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">GetTranslateStr</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">sender</span> <span class="k">is</span> <span class="n">Label</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">sender</span> <span class="k">as</span> <span class="n">Label</span><span class="p">).</span><span class="n">Content</span> <span class="p">=</span> <span class="n">LanguageManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">GetTranslateStr</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">sender</span> <span class="k">is</span> <span class="n">ContentControl</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">sender</span> <span class="k">as</span> <span class="n">ContentControl</span><span class="p">).</span><span class="n">Content</span> <span class="p">=</span> <span class="n">LanguageManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">GetTranslateStr</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">sender</span> <span class="k">is</span> <span class="n">TextBlock</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">sender</span> <span class="k">as</span> <span class="n">TextBlock</span><span class="p">).</span><span class="n">Text</span> <span class="p">=</span> <span class="n">LanguageManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">GetTranslateStr</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">sender</span> <span class="k">is</span> <span class="n">Run</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">sender</span> <span class="k">as</span> <span class="n">Run</span><span class="p">).</span><span class="n">Text</span> <span class="p">=</span> <span class="n">LanguageManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">GetTranslateStr</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">sender</span> <span class="k">is</span> <span class="n">GridViewColumn</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">sender</span> <span class="k">as</span> <span class="n">GridViewColumn</span><span class="p">).</span><span class="n">Header</span> <span class="p">=</span> <span class="n">LanguageManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">GetTranslateStr</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="k">static</span> <span class="k">void</span> <span class="n">UpdateToolTip</span><span class="p">(</span><span class="n">DependencyObject</span> <span class="n">sender</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(!(</span><span class="n">sender</span> <span class="k">is</span> <span class="n">FrameworkElement</span><span class="p">))</span> <span class="k">return</span><span class="p">;</span>
+        <span class="p">(</span><span class="n">sender</span> <span class="k">as</span> <span class="n">FrameworkElement</span><span class="p">).</span><span class="n">ToolTip</span> <span class="p">=</span> <span class="n">LanguageManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">GetTranslateStr</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="err">在</span> <span class="n">XAML</span> <span class="err">的使用示例：</span>  
+<span class="p">&lt;</span><span class="n">Button</span> <span class="n">x</span><span class="p">:</span><span class="n">Name</span><span class="p">=</span><span class="s">&#34;btn1&#34;</span> <span class="n">Height</span><span class="p">=</span><span class="s">&#34;40&#34;</span> <span class="n">Lang</span><span class="p">:</span><span class="n">LanguageBehavior</span><span class="p">.</span><span class="n">Key</span><span class="p">=</span><span class="s">&#34;K00259&#34;</span> <span class="p">/&gt;</span>  
+<span class="p">&lt;</span><span class="n">Button</span> <span class="n">x</span><span class="p">:</span><span class="n">Name</span><span class="p">=</span><span class="s">&#34;btn2&#34;</span> <span class="n">Width</span><span class="p">=</span><span class="s">&#34;32&#34;</span> <span class="n">Height</span><span class="p">=</span><span class="s">&#34;32&#34;</span> <span class="n">Lang</span><span class="p">:</span><span class="n">LanguageBehavior</span><span class="p">.</span><span class="n">ToolTip</span><span class="p">=</span><span class="s">&#34;K00189&#34;</span> <span class="p">/&gt;</span>  
+
+<span class="err">在</span> <span class="n">cs</span> <span class="err">的使用示例：</span>  
+<span class="k">this</span><span class="p">.</span><span class="n">textError</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="n">LanguageManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">GetTranslateStr</span><span class="p">(</span><span class="s">&#34;K00204&#34;</span><span class="p">);</span>  
+<span class="k">this</span><span class="p">.</span><span class="n">textError</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="n">LanguageManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">TranslateStr</span><span class="p">(</span><span class="s">&#34;Can not connect server&#34;</span><span class="p">);</span>  
+</code></pre></td></tr></table>
+</div>
+</div>
+
+<p></details></p>
+
+<h2 id="总结">总结</h2>
+
+<p>在项目运行至今，很明显第二种方法的好，测试人员，运维人员，在可以完全不接触代码的情况下。只操作Excel 来实现文件内容的翻译，并且“实时”的反应到软件上。<br />
+而我固执己见的“微软官方推荐方法”，并不适用于项目；好比是纸上谈兵的赵括，真的是越来越为当时的“倔强”，感到羞愧。。。</p>
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Long</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2020-04-08 10:07
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content">原创文章，如需转载请注明文章作者和出处。<br/><a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank">署名 4.0 国际 (CC BY 4.0)</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://mrbenwang.github.io/tags/%E5%A4%9A%E8%AF%AD%E8%A8%80/">多语言</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/2020/20200317-the-market-collapse/">
+            <span class="next-text nav-default">2020全球金融在崩盘，我也同时经历了生死</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "MrBenWang/comments-for-my-blog"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:wzlblair@foxmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/MrBenWang" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://weibo.com/wzlblair" rel="me noopener" class="iconfont"
+      title="weibo"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M385.714286 733.714286q12-19.428571 6.285714-39.428571t-25.714286-28.571429q-19.428571-8-41.714286-0.571429t-34.285714 26.285714q-12.571429 19.428571-7.428571 39.142857t24.571429 28.857143 42.571429 1.428571 35.714286-27.142857zm53.714286-69.142857q4.571429-7.428571 2-15.142857t-10-10.571429q-8-2.857143-16.285714 2.857143t-12.285714 10.571429q-9.714286 17.714286 7.428571 25.714286 8 2.857143 16.571429 2.857143t12.571429-10.571429zm99.428571 61.142857q-25.714286 58.285714-90.285714 85.714286t-128 6.857143q-61.142857-19.428571-84.285714-72.285714t3.714286-107.142857q26.857143-53.142857 86.571429-79.428571t120.285714-10.857143q63.428571 16.571429 90.571429 68.285714t1.428571 108.857143zm178.285714-91.428571q-5.142857-54.857143-50.857143-97.142857t-119.142857-62.285714-156.857143-12q-127.428571 13.142857-211.142857 80.857143t-75.714286 151.142857q5.142857 54.857143 50.857143 97.142857t119.142857 62.285714 156.857143 12q127.428571-13.142857 211.142857-80.857143t75.714286-151.142857zm176 2.285714q0 38.857143-21.142857 79.714286t-62.285714 78.285714-96.285714 67.142857-129.142857 47.428571-154.571429 17.714286-157.142857-19.142857-137.428571-53.142857-98-86.285714-37.142857-114q0-65.714286 39.714286-140t112.857143-147.428571q96.571429-96.571429 195.142857-134.857143t140.857143 4q37.142857 36.571429 11.428571 119.428571-2.285714 8-0.571429 11.428571t5.714286 4 8.285714 2.857143 7.714286-2l3.428571-1.142857q79.428571-33.714286 140.571429-33.714286t87.428571 34.857143q25.714286 36 0 101.714286-1.142857 7.428571-2.571429 11.428571t2.571429 7.142857 6.857143 4.285714 9.714286 3.428571q32.571429 10.285714 58.857143 26.857143t45.714286 46.571429 19.428571 66.571429zm-42.285714-356.571429q24 26.857143 31.142857 62t-3.714286 67.142857q-4.571429 13.142857-16.857143 19.428571t-25.428571 2.285714q-13.142857-4.571429-19.428571-16.857143t-2.285714-25.428571q11.428571-36-13.714286-63.428571t-61.142857-20q-13.714286 2.857143-25.714286-4.571429t-14.285714-21.142857q-2.857143-13.714286 4.571429-25.428571t21.142857-14.571429q34.285714-7.428571 68 3.142857t57.714286 37.428571zm103.428571-93.142857q49.714286 54.857143 64.285714 127.142857t-7.714286 138q-5.142857 15.428571-19.428571 22.857143t-29.714286 2.285714-22.857143-19.428571-2.857143-29.714286q16-46.857143 5.714286-98.285714t-45.714286-90.285714q-35.428571-39.428571-84.571429-54.571429t-98.857143-4.857143q-16 3.428571-29.714286-5.428571t-17.142857-24.857143 5.428571-29.428571 24.857143-16.857143q70.285714-14.857143 139.428571 6.571429t118.857143 76.857143z"></path>
+</svg>
+
+    </a>
+
+
+<a href="https://mrbenwang.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2007 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Long
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    $("#openSearch, #openSearchMobile").click(function(){
+      $(".modal-dialog").addClass("visible");
+    });
+
+    $("#closeSearch").click(function(){
+      $(".modal-dialog").removeClass("visible");
+    });
+
+    $(document).click(function(event) {
+    
+      if (!$(event.target).closest(".modal-content, #openSearch, #openSearchMobile").length) {
+        $("body").find(".modal-dialog").removeClass("visible");
+      }
+    });
+  </script>
+
+
+
+
+  <script src="/js/custom.js"></script>
+
+
+</body>
+</html>

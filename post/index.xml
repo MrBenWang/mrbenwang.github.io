@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 17 Mar 2020 10:51:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 08 Apr 2020 10:07:00 +0800</lastBuildDate>
     
 	<atom:link href="https://mrbenwang.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>WPF 本地多语言总结</title>
+      <link>https://mrbenwang.github.io/post/2020/20200408-wpf-multi-language/</link>
+      <pubDate>Wed, 08 Apr 2020 10:07:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2020/20200408-wpf-multi-language/</guid>
+      <description>&lt;p&gt;去年底今年初，由于WPF项目，需要支持日本地区，要求可以切换语言。本篇文章汇总了一下，当时的调研的结果，和项目中所采用的方式。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>2020全球金融在崩盘，我也同时经历了生死</title>
@@ -320,20 +329,6 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
 &lt;p&gt;卡特隆和她的朋友在文中尝试的最后一件事是彼此对视四分钟，这个过程没有被详细记录（其实可以从两分钟到四分钟不等）。但是卡特隆毫不迟疑地推荐这件事。“两分钟的效果已经很惊人了，”她告诉我，“四分钟真的非常有效。”&lt;/p&gt;
 
 &lt;p&gt;&lt;/div&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>“双十一”越火爆越好？</title>
-      <link>https://mrbenwang.github.io/post/2018/20181129-double-eleven-not-a-good-thing/</link>
-      <pubDate>Thu, 29 Nov 2018 15:30:00 +0800</pubDate>
-      
-      <guid>https://mrbenwang.github.io/post/2018/20181129-double-eleven-not-a-good-thing/</guid>
-      <description>&lt;h1 id=&#34;我的观点&#34;&gt;我的观点&lt;/h1&gt;
-
-&lt;p&gt;个人认为双十一的成长已经到头了，它所产生的副作用，将会至少影响到未来半年的经发展。最主要的原因是，它提前透支的需求越多，对市场的供需平衡越不利，尤其是对未来很长一段时间的需求不振。它的好处则是，年底冲业绩，清仓的目的，但是这个好处越来越小了。&lt;br /&gt;
-以下的内容，其中涉及到的数据，全部来自&lt;code&gt;互联网公开信息&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;打脸的事情来了&lt;/strong&gt;，现在2019年，14小时21分天猫双十一交易额突破2000亿元，突破2018年已经毫无悬念了。在前两天，我还在预测，今年结合大环境不景气，世界金融环境风险越来越大，今年销售额会低于去年的。。。&lt;/p&gt;</description>
     </item>
     
   </channel>
