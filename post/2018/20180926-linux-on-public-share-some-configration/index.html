@@ -35,7 +35,7 @@
 <meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
 
 
-<meta name="generator" content="Hugo 0.57.2" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2018/20180926-linux-on-public-share-some-configration/" />
@@ -64,9 +64,7 @@
 
 <meta property="og:title" content="*在公网上的Linux，我的一些配置分享" />
 <meta property="og:description" content="去年的时候，有一篇介绍在vultr 上 搭建ss服务器 的文章，由于某些众所周知的原因，被阿里云删除。
-
 后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用lastb命令，着实下了一跳，我的vps每天都有几万次的失败登陆记录。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上所有国家都有来过。
-
 这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mrbenwang.github.io/post/2018/20180926-linux-on-public-share-some-configration/" />
@@ -74,25 +72,18 @@
 <meta property="article:modified_time" content="2018-09-26T10:16:00+08:00" />
 <meta itemprop="name" content="*在公网上的Linux，我的一些配置分享">
 <meta itemprop="description" content="去年的时候，有一篇介绍在vultr 上 搭建ss服务器 的文章，由于某些众所周知的原因，被阿里云删除。
-
 后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用lastb命令，着实下了一跳，我的vps每天都有几万次的失败登陆记录。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上所有国家都有来过。
-
 这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。">
-
-
 <meta itemprop="datePublished" content="2018-09-26T10:16:00&#43;08:00" />
 <meta itemprop="dateModified" content="2018-09-26T10:16:00&#43;08:00" />
-<meta itemprop="wordCount" content="2965">
+<meta itemprop="wordCount" content="2969">
 
 
 
-<meta itemprop="keywords" content="安全,linux,vps," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="安全,linux,vps," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="*在公网上的Linux，我的一些配置分享"/>
 <meta name="twitter:description" content="去年的时候，有一篇介绍在vultr 上 搭建ss服务器 的文章，由于某些众所周知的原因，被阿里云删除。
-
 后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用lastb命令，着实下了一跳，我的vps每天都有几万次的失败登陆记录。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上所有国家都有来过。
-
 这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。"/>
 
 <!--[if lte IE 9]>
@@ -390,7 +381,7 @@ if (!doNotTrack) {
             <a href="https://mrbenwang.github.io/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/"> 技术随笔 </a>
             
           </div>
-        <span class="more-meta"> 约 2965 字 </span>
+        <span class="more-meta"> 约 2969 字 </span>
           <span class="more-meta"> 预计阅读 6 分钟 </span>
 
         
@@ -407,25 +398,23 @@ if (!doNotTrack) {
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#具体配置">具体配置</a>
-<ul>
-<li><a href="#安装-denyhosts"><del>安装 denyhosts</del></a></li>
-<li><a href="#fail2ban-代替-denyhosts">Fail2Ban 代替 denyhosts</a></li>
-<li><a href="#使用密钥登陆">使用密钥登陆</a></li>
-<li><a href="#禁用root用户">禁用root用户</a></li>
-<li><a href="#更改-ssh-端口">更改 ssh 端口</a></li>
-<li><a href="#禁用-selinux-security-enhanced-linux">禁用 SELinux(Security-Enhanced Linux)</a></li>
-<li><a href="#su-sudo-免密码">su，sudo 免密码</a></li>
-<li><a href="#防火墙设置">防火墙设置</a></li>
-<li><a href="#禁止ping">禁止Ping</a></li>
-<li><a href="#别名设置">别名设置</a></li>
-</ul></li>
-<li><a href="#结语">结语</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#具体配置">具体配置</a>
+      <ul>
+        <li><a href="#安装-denyhosts">安装 denyhosts</a></li>
+        <li><a href="#fail2ban-代替-denyhosts">Fail2Ban 代替 denyhosts</a></li>
+        <li><a href="#使用密钥登陆">使用密钥登陆</a></li>
+        <li><a href="#禁用root用户">禁用root用户</a></li>
+        <li><a href="#更改-ssh-端口">更改 ssh 端口</a></li>
+        <li><a href="#禁用-selinuxsecurity-enhanced-linux">禁用 SELinux(Security-Enhanced Linux)</a></li>
+        <li><a href="#susudo-免密码">su，sudo 免密码</a></li>
+        <li><a href="#防火墙设置">防火墙设置</a></li>
+        <li><a href="#禁止ping">禁止Ping</a></li>
+        <li><a href="#别名设置">别名设置</a></li>
+      </ul>
+    </li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
 </nav>
   </div>
 </div>
@@ -433,56 +422,45 @@ if (!doNotTrack) {
     
     <div class="post-content">
       <p>去年的时候，有一篇介绍在<a href="https://www.vultr.com/?ref=7136316">vultr</a> 上 <a href="/post/2014-2017/20170329-build-ss-on-vultr-vps/">搭建ss服务器</a> 的文章，由于某些众所周知的原因，被阿里云删除。</p>
-
 <p>后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用<code>lastb</code>命令，着实下了一跳，我的vps每天都有<code>几万次的失败登陆记录</code>。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上<strong>所有国家</strong>都有来过。</p>
-
 <p>这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。</p>
-
 <h2 id="具体配置">具体配置</h2>
-
 <h3 id="安装-denyhosts"><del>安装 denyhosts</del></h3>
-
 <p>denyhosts 是查询了几万次的失败记录后，立即安装的。维基上面的简介</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-text" data-lang="text">DenyHosts是针对SSH服务器的一个基于日志的入侵预防安全工具，是用Python编写的。  
-其通过监测身份验证登录日志中失败的登录尝试，屏蔽这些登录者的IP地址，从而预防对SSH服务器的暴力破解。  </code></pre></td></tr></table>
+其通过监测身份验证登录日志中失败的登录尝试，屏蔽这些登录者的IP地址，从而预防对SSH服务器的暴力破解。  
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>配置文件路径<code>/etc/denyhosts.conf</code>，里面可以配置的项很多，也有详细说明，我只修改了通知的用户。</p>
+</div><p>配置文件路径<code>/etc/denyhosts.conf</code>，里面可以配置的项很多，也有详细说明，我只修改了通知的用户。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">sed -i <span class="s2">&#34;s/root@localhost/{用户名}@localhost/g&#34;</span> /etc/denyhosts.conf  </code></pre></td></tr></table>
+<pre class="chroma"><code class="language-shell" data-lang="shell">sed -i <span class="s2">&#34;s/root@localhost/{用户名}@localhost/g&#34;</span> /etc/denyhosts.conf  
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>效果还是很明显的，扫描从每天从几万降到了一千左右。但是这一千左右的失败登陆也是不能忍的。</p>
-
+</div><p>效果还是很明显的，扫描从每天从几万降到了一千左右。但是这一千左右的失败登陆也是不能忍的。</p>
 <blockquote>
 <p>PS：把失败的记录基本降为0以后，我考虑通过邮件第一时间通知我，有人尝试登陆我的主机。后来再网上在查询，好像是不直接支持的，还需要安装专门发送邮件的postfix，仅仅为了这个发送邮件，好像也没有太大的必要。就放弃了。</p>
 </blockquote>
-
 <h3 id="fail2ban-代替-denyhosts">Fail2Ban 代替 denyhosts</h3>
-
 <p><a href="https://apps.fedoraproject.org/packages/denyhosts">CentOS7 库里面删除了 denyhosts</a></p>
-
 <blockquote>
-<p>Denyhosts is unmaintained upstream and does not support systemd or firewalld. Please use Fail2Ban<br />
+<p>Denyhosts is unmaintained upstream and does not support systemd or firewalld. Please use Fail2Ban<br>
 翻译：Denyhosts 最新版本不支持：systemd 和 firewalld</p>
 </blockquote>
-
-<p><strong>注意：</strong>安装以后并没有真实的运行，我安装了一个礼拜后，登录vps查看lastb，发现里面都有四千多条失败信息。</p>
-
+<p>**注意：**安装以后并没有真实的运行，我安装了一个礼拜后，登录vps查看lastb，发现里面都有四千多条失败信息。</p>
 <p>很简单，命令很简单：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -503,17 +481,17 @@ systemctl start fail2ban <span class="c1"># 开启服务</span>
 <span class="c1">#查看被ban IP，其中sshd为名称，比如上面的[wordpress]</span>
 fail2ban-client status sshd
 <span class="c1">#删除被ban IP</span>
-fail2ban-client <span class="nb">set</span> sshd delignoreip <span class="m">192</span>.168.111.111
+fail2ban-client <span class="nb">set</span> sshd delignoreip 192.168.111.111
 <span class="c1">#查看日志</span>
 tail /var/log/fail2ban.log
 ipset list
-firewall-cmd --direct --get-all-rules</code></pre></td></tr></table>
+firewall-cmd --direct --get-all-rules
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>/ect/fail2ban/jail.local 的配置信息：</p>
+</div><p>/ect/fail2ban/jail.local 的配置信息：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -531,7 +509,7 @@ firewall-cmd --direct --get-all-rules</code></pre></td></tr></table>
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>DEFAULT<span class="o">]</span>
-<span class="nv">ignoreip</span> <span class="o">=</span> <span class="m">127</span>.0.0.1/8
+<span class="nv">ignoreip</span> <span class="o">=</span> 127.0.0.1/8
 <span class="nv">bantime</span>  <span class="o">=</span> -1
 <span class="nv">findtime</span> <span class="o">=</span> <span class="m">3600</span>
 <span class="nv">maxretry</span> <span class="o">=</span> <span class="m">3</span>
@@ -543,126 +521,102 @@ firewall-cmd --direct --get-all-rules</code></pre></td></tr></table>
 <span class="nv">filter</span>  <span class="o">=</span> sshd
 <span class="nv">port</span>    <span class="o">=</span> <span class="m">8822</span>
 <span class="nv">bantime</span> <span class="o">=</span> -1
-<span class="nv">action</span> <span class="o">=</span> %<span class="o">(</span>banaction<span class="o">)</span>s<span class="o">[</span><span class="nv">name</span><span class="o">=</span>%<span class="o">(</span>__name__<span class="o">)</span>s, <span class="nv">bantime</span><span class="o">=</span><span class="m">0</span>, <span class="nv">port</span><span class="o">=</span><span class="s2">&#34;%(port)s&#34;</span>, <span class="nv">protocol</span><span class="o">=</span><span class="s2">&#34;%(protocol)s&#34;</span>, <span class="nv">chain</span><span class="o">=</span><span class="s2">&#34;%(chain)s&#34;</span><span class="o">]</span>   <span class="c1"># 老版本的bug，新版本已经修复</span>
-<span class="nv">logpath</span> <span class="o">=</span> /var/log/secure</code></pre></td></tr></table>
+<span class="nv">action</span> <span class="o">=</span> %<span class="o">(</span>banaction<span class="o">)</span>s<span class="o">[</span><span class="nv">name</span><span class="o">=</span>%<span class="o">(</span>__name__<span class="o">)</span>s, <span class="nv">bantime</span><span class="o">=</span>0, <span class="nv">port</span><span class="o">=</span><span class="s2">&#34;%(port)s&#34;</span>, <span class="nv">protocol</span><span class="o">=</span><span class="s2">&#34;%(protocol)s&#34;</span>, <span class="nv">chain</span><span class="o">=</span><span class="s2">&#34;%(chain)s&#34;</span><span class="o">]</span>   <span class="c1"># 老版本的bug，新版本已经修复</span>
+<span class="nv">logpath</span> <span class="o">=</span> /var/log/secure
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="使用密钥登陆">使用密钥登陆</h3>
-
+</div><h3 id="使用密钥登陆">使用密钥登陆</h3>
 <p><a href="https://zh.wikipedia.org/wiki/RSA%E5%8A%A0%E5%AF%86%E6%BC%94%E7%AE%97%E6%B3%95">维基：RSA非对称加密算法</a> 我也就了解到，是大数的质因数分解，也简单做推算过，目前还是很安全的。有兴趣可以去网上找，<a href="https://weibo.com/tv/v/GfGM6Asg9?fid=1034:b278ef8fda19fe8c5bd3fd1aa30e3ad4">李永乐老师的讲解</a>。</p>
-
 <p>在客户端生成公钥和私钥，然后把公钥上传到服务器，在<code>/home/{你的用户名}/.ssh/authorized_keys</code>文件下追加一条记录。客户端使用私钥登陆。相关的教程网上很多，不做赘述。需要注意：</p>
-
 <ol>
-<li>RSA的版本和SSH版本，现在目前系统都是默认RSA2，SSH2，并且默认禁用低版本的，可以忽略；<br /></li>
-<li>在生成密钥的时候，可以不设置密码，我还是建议可以用一个简单的密码，不用太复杂；<br /></li>
-<li>注意目录(700)和文件(600)的<code>权限</code>；追加的时候注意<code>换行</code>和<code>回车</code>；<br /></li>
-<li>目前和未来几年内这个算法是安全的，<strong>但是量子计算机破解就是一两分钟，甚至一秒钟就搞定</strong>，要有这方面意识。<br /></li>
+<li>RSA的版本和SSH版本，现在目前系统都是默认RSA2，SSH2，并且默认禁用低版本的，可以忽略；</li>
+<li>在生成密钥的时候，可以不设置密码，我还是建议可以用一个简单的密码，不用太复杂；</li>
+<li>注意目录(700)和文件(600)的<code>权限</code>；追加的时候注意<code>换行</code>和<code>回车</code>；</li>
+<li>目前和未来几年内这个算法是安全的，<strong>但是量子计算机破解就是一两分钟，甚至一秒钟就搞定</strong>，要有这方面意识。</li>
 </ol>
-
 <p>这两天，阿提亚爵士声称证明了黎曼猜想。不过看新闻报道，好像是数学家们认为希望不大。如果黎曼猜想被证明了的话，就意味着<code>以素数为基础的所有加密算法</code>都是不安全的。</p>
-
 <p>20190111-注：一定要注意格式。否则就是会报错：<code>Server refused our key</code>。使用windows平台 puttygen.exe 这个软件生成的key，保存的pulic_key 文件格式，不能直接复制到linux里面；使用【load】按钮可以加载存在的private_key文件。。。这个问题折腾了我两天。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-格式为" data-lang="格式为"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-格式为" data-lang="格式为">ssh-rsa asdasdsads+w== rsa-key-20180808  </code></pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">ssh-rsa asdasdsads+w== rsa-key-20180808  
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="禁用root用户">禁用root用户</h3>
-
+</div><h3 id="禁用root用户">禁用root用户</h3>
 <p>这个比较简单：</p>
-
 <ol>
-<li>修改配置文件是在：<code>/etc/ssh/sshd_config</code>，<br /></li>
-<li>搜索<code>PermitRootLogin yes</code>，一般是注释的<code>#PermitRootLogin yes</code>; 去掉注释，改为<code>no</code>就可以了。<br /></li>
-<li>根据个人需要，普通用户是否可以使用密码登陆，<code>PasswordAuthentication</code>；我修改的是<code>yes</code>，我认为我可能会在临时的电脑上用密码登陆。<br /></li>
-<li>重启ssh: <code>systemctl restart sshd</code><br /></li>
+<li>修改配置文件是在：<code>/etc/ssh/sshd_config</code>，</li>
+<li>搜索<code>PermitRootLogin yes</code>，一般是注释的<code>#PermitRootLogin yes</code>; 去掉注释，改为<code>no</code>就可以了。</li>
+<li>根据个人需要，普通用户是否可以使用密码登陆，<code>PasswordAuthentication</code>；我修改的是<code>yes</code>，我认为我可能会在临时的电脑上用密码登陆。</li>
+<li>重启ssh: <code>systemctl restart sshd</code></li>
 </ol>
-
 <h3 id="更改-ssh-端口">更改 ssh 端口</h3>
-
 <p>把系统默认的ssh端口22，改为一个用户自定义的，<code>1024</code>以下是系统保留的，从<code>1024-65535</code>是用户使用的。</p>
-
 <ol>
-<li>修改配置文件是在：<code>/etc/ssh/sshd_config</code>，<br /></li>
-<li>在文件中找到<code>#Port 22</code> 默认是注释掉的，然后去掉注释，改为其他端口号，<br /></li>
-<li><strong>千万一定要注意，记得把自定义的端口，加入到防火墙中，tcp协议</strong>，否则可能面临无法登陆了。<br /></li>
-<li>重启ssh: <code>systemctl restart sshd</code><br /></li>
+<li>修改配置文件是在：<code>/etc/ssh/sshd_config</code>，</li>
+<li>在文件中找到<code>#Port 22</code> 默认是注释掉的，然后去掉注释，改为其他端口号，</li>
+<li><strong>千万一定要注意，记得把自定义的端口，加入到防火墙中，tcp协议</strong>，否则可能面临无法登陆了。</li>
+<li>重启ssh: <code>systemctl restart sshd</code></li>
 </ol>
-
-<h3 id="禁用-selinux-security-enhanced-linux">禁用 SELinux(Security-Enhanced Linux)</h3>
-
+<h3 id="禁用-selinuxsecurity-enhanced-linux">禁用 SELinux(Security-Enhanced Linux)</h3>
 <p>因为这个vps只有我一个人使用，并且也要时不时的折腾折腾，所以为了不必要的困扰，就把这个给禁用了。</p>
-
 <ol>
-<li>修改配置文件是在：<code>/etc/selinux/config</code>，<br /></li>
-<li>把<code>SELINUX=enforcing</code>修改为<code>SELINUX=disabled</code>，永久关闭;<br /></li>
-<li><code>setenforce 0</code> 临时关闭，<br /></li>
+<li>修改配置文件是在：<code>/etc/selinux/config</code>，</li>
+<li>把<code>SELINUX=enforcing</code>修改为<code>SELINUX=disabled</code>，永久关闭;</li>
+<li><code>setenforce 0</code> 临时关闭，</li>
 </ol>
-
-<h3 id="su-sudo-免密码">su，sudo 免密码</h3>
-
+<h3 id="susudo-免密码">su，sudo 免密码</h3>
 <p>我的密码是vps厂商自动生成的，非常复杂。为了避免要在使用root权限时，还要再输入密码。并且既然我的账号都登陆了，就不应该再次输入密码了。</p>
-
 <ul>
-<li>把用户加入 wheel 组(wheel)，为了免密码 <code>usermod -aG wheel {用户名}</code><br /></li>
-<li>su 免密码，配置文件<code>/etc/pam.d/su</code>，加上这句话<code>auth sufficient pam_wheel.so trust use_uid</code> ，CentOS7是注释掉的。<br /></li>
-
-<li><p>sudo 免密码，配置文件<code>/etc/sudoers</code>，把所在组 wheel 设置<code>%wheel ALL=(ALL) NOPASSWD: ALL</code>,</p>
+<li>把用户加入 wheel 组(wheel)，为了免密码 <code>usermod -aG wheel {用户名}</code></li>
+<li>su 免密码，配置文件<code>/etc/pam.d/su</code>，加上这句话<code>auth sufficient pam_wheel.so trust use_uid</code> ，CentOS7是注释掉的。</li>
+<li>sudo 免密码，配置文件<code>/etc/sudoers</code>，把所在组 wheel 设置<code>%wheel ALL=(ALL) NOPASSWD: ALL</code>,</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># wheel组 sudo不需要密码</span>
+<pre class="chroma"><code class="language-shell" data-lang="shell"> <span class="c1"># wheel组 sudo不需要密码</span>
 sed -i <span class="s1">&#39;s/^%wheel.*/%wheel ALL=(ALL) NOPASSWD: ALL/g&#39;</span> /etc/sudoers
-<span class="c1"># wheel组 su 不需要密码</span>
-sed -i <span class="s1">&#39;s/^#auth\s\+sufficient\s\+pam_wheel.so\s\+trust\s\+use_uid/auth sufficient pam_wheel.so trust use_uid/g&#39;</span> /etc/pam.d/su</code></pre></td></tr></table>
+ <span class="c1"># wheel组 su 不需要密码</span>
+sed -i <span class="s1">&#39;s/^#auth\s\+sufficient\s\+pam_wheel.so\s\+trust\s\+use_uid/auth sufficient pam_wheel.so trust use_uid/g&#39;</span> /etc/pam.d/su
+</code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-
-<h3 id="防火墙设置">防火墙设置</h3>
-
-<p>一般linux发行版本都是默认开启防火墙的，并且开启了22端口。<br />
+</div><h3 id="防火墙设置">防火墙设置</h3>
+<p>一般linux发行版本都是默认开启防火墙的，并且开启了22端口。<br>
 使用哪个端口就开哪个，不用了的端口一定要关闭，并且使用了tcp协议，只开tcp协议。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell">firewall-cmd --zone<span class="o">=</span>public --permanent --add-port<span class="o">=</span><span class="si">${</span><span class="nv">my_ssh_port</span><span class="si">}</span>/tcp
-firewall-cmd --reload</code></pre></td></tr></table>
+firewall-cmd --reload
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="禁止ping">禁止Ping</h3>
-
+</div><h3 id="禁止ping">禁止Ping</h3>
 <p>我之前禁用过一段时间，因为网络不太稳定，还需要使用ping命令来看看是网络不通，还是延迟过高。所以就放开了。</p>
-
 <ol>
-<li>禁用ICMP协议。<code>/etc/sysctl.conf</code>，增加<code>net.ipv4.icmp_echo_ignore_all = 1</code>，1禁用，0启用；<br /></li>
-<li>使配置生效<code>sysctl -p</code><br /></li>
+<li>禁用ICMP协议。<code>/etc/sysctl.conf</code>，增加<code>net.ipv4.icmp_echo_ignore_all = 1</code>，1禁用，0启用；</li>
+<li>使配置生效<code>sysctl -p</code></li>
 </ol>
-
 <h3 id="别名设置">别名设置</h3>
-
 <p>为了操作自己的linux 更加方便，可以做很多自定义的命令。好处是很方便，坏处就是换台机器可能就不会玩了。</p>
-
 <ol>
-<li>shell文件在<code>/etc/profile.d/</code>目录下，对所有用户生效，用户登陆执行下面的所有脚本。注意这个目录下的脚本执行<code>顺序</code>是第一个执行的，也就是说 alias 会被后面的覆盖，<br /></li>
-<li>一些登陆后初始化的脚本，环境变量设置，都建议放在这个目录下面<code>/etc/profile.d/</code>，<br /></li>
-
-<li><p><code>PS1</code>PS(Prompt Sign): 是指命令提示符，当然调整了一下颜色<code>root@myhost:etc#</code>，</p>
+<li>shell文件在<code>/etc/profile.d/</code>目录下，对所有用户生效，用户登陆执行下面的所有脚本。注意这个目录下的脚本执行<code>顺序</code>是第一个执行的，也就是说 alias 会被后面的覆盖，</li>
+<li>一些登陆后初始化的脚本，环境变量设置，都建议放在这个目录下面<code>/etc/profile.d/</code>，</li>
+<li><code>PS1</code>PS(Prompt Sign): 是指命令提示符，当然调整了一下颜色<code>root@myhost:etc#</code>，</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -680,7 +634,7 @@ firewall-cmd --reload</code></pre></td></tr></table>
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">cat &gt; /etc/profile.d/alias.sh <span class="s">&lt;&lt;-EOF
+<pre class="chroma"><code class="language-shell" data-lang="shell">    cat &gt; /etc/profile.d/alias.sh <span class="s">&lt;&lt;-EOF
 </span><span class="s">PS1=&#39;\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\\$ &#39;
 </span><span class="s">alias cp=&#39;cp -i&#39;
 </span><span class="s">alias mv=&#39;mv -i&#39;
@@ -695,18 +649,15 @@ firewall-cmd --reload</code></pre></td></tr></table>
 </span><span class="s">alias egrep=&#39;egrep --color=auto&#39;
 </span><span class="s">alias mkcd=&#39;function _mkcd(){ mkdir \$@ &amp;&amp; cd \$@; }; _mkcd&#39;
 </span><span class="s">alias cdl=&#39;function _cdl() { cd \$@ &amp;&amp; pwd; ls -alF; }; _cdl&#39;
-</span><span class="s">EOF</span></code></pre></td></tr></table>
+</span><span class="s">    EOF</span>
+</code></pre></td></tr></table>
 </div>
-</div></li>
-</ol>
-
-<h2 id="结语">结语</h2>
-
+</div><h2 id="结语">结语</h2>
 <ul>
-<li>这些设置大概是半年前做的了，断断续续的；有些遗漏或是不准确的地方欢迎指出；<br /></li>
-<li>再修改配置文件的时候，建议花一些时间看一下里面的<code>注释</code>。绝大部分配置文件里面，注释非常清楚，并且占了文件的大部分内容；<br /></li>
-<li>我把以上的内容，写成了sh脚本。运行过无误，<a href="https://github.com/MrBenWang/MyBackUp/blob/master/vps/0002-install-env-vps.sh">仅供参考</a>；<br /></li>
-<li>一年多的时间博客没有怎么更新，这几天会记录一下这段时间的积累。<br /></li>
+<li>这些设置大概是半年前做的了，断断续续的；有些遗漏或是不准确的地方欢迎指出；</li>
+<li>再修改配置文件的时候，建议花一些时间看一下里面的<code>注释</code>。绝大部分配置文件里面，注释非常清楚，并且占了文件的大部分内容；</li>
+<li>我把以上的内容，写成了sh脚本。运行过无误，<a href="https://github.com/MrBenWang/MyBackUp/blob/master/vps/0002-install-env-vps.sh">仅供参考</a>；</li>
+<li>一年多的时间博客没有怎么更新，这几天会记录一下这段时间的积累。</li>
 </ul>
     </div>
 

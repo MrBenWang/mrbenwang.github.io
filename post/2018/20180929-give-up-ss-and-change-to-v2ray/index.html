@@ -33,7 +33,7 @@
 <meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
 
 
-<meta name="generator" content="Hugo 0.57.2" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2018/20180929-give-up-ss-and-change-to-v2ray/" />
@@ -62,7 +62,6 @@
 
 <meta property="og:title" content="由shadowsocks转为v2ray的体验" />
 <meta property="og:description" content="前言
-
 最近一段时间，总感觉shadowsocks用起来非常的慢，时不时的断网，我就觉得可能不太对劲了。在issues看到有不少人提到，可能已经被人工智能识别，所以非常堪忧。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mrbenwang.github.io/post/2018/20180929-give-up-ss-and-change-to-v2ray/" />
@@ -70,21 +69,16 @@
 <meta property="article:modified_time" content="2019-01-07T15:04:00+08:00" />
 <meta itemprop="name" content="由shadowsocks转为v2ray的体验">
 <meta itemprop="description" content="前言
-
 最近一段时间，总感觉shadowsocks用起来非常的慢，时不时的断网，我就觉得可能不太对劲了。在issues看到有不少人提到，可能已经被人工智能识别，所以非常堪忧。">
-
-
 <meta itemprop="datePublished" content="2018-09-29T15:04:00&#43;08:00" />
 <meta itemprop="dateModified" content="2019-01-07T15:04:00&#43;08:00" />
-<meta itemprop="wordCount" content="1678">
+<meta itemprop="wordCount" content="1385">
 
 
 
-<meta itemprop="keywords" content="ss,vps,v2ray," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="ss,vps,v2ray," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="由shadowsocks转为v2ray的体验"/>
 <meta name="twitter:description" content="前言
-
 最近一段时间，总感觉shadowsocks用起来非常的慢，时不时的断网，我就觉得可能不太对劲了。在issues看到有不少人提到，可能已经被人工智能识别，所以非常堪忧。"/>
 
 <!--[if lte IE 9]>
@@ -382,8 +376,8 @@ if (!doNotTrack) {
             <a href="https://mrbenwang.github.io/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/"> 技术随笔 </a>
             
           </div>
-        <span class="more-meta"> 约 1678 字 </span>
-          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        <span class="more-meta"> 约 1385 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
 
         
         
@@ -399,19 +393,17 @@ if (!doNotTrack) {
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#前言">前言</a></li>
-<li><a href="#实践过程">实践过程</a>
-<ul>
-<li><a href="#改用-go-shadowsocks2">改用 go-shadowsocks2</a></li>
-<li><a href="#v2ray搭建过程">v2ray搭建过程</a></li>
-<li><a href="#windows-android-端的选择">windows，Android 端的选择</a></li>
-</ul></li>
-<li><a href="#体验结果">体验结果</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#实践过程">实践过程</a>
+      <ul>
+        <li><a href="#改用-go-shadowsocks2">改用 go-shadowsocks2</a></li>
+        <li><a href="#v2ray搭建过程">v2ray搭建过程</a></li>
+        <li><a href="#windowsandroid-端的选择">windows，Android 端的选择</a></li>
+      </ul>
+    </li>
+    <li><a href="#体验结果">体验结果</a></li>
+  </ul>
 </nav>
   </div>
 </div>
@@ -419,328 +411,73 @@ if (!doNotTrack) {
     
     <div class="post-content">
       <h2 id="前言">前言</h2>
-
 <p>最近一段时间，总感觉<code>shadowsocks</code>用起来非常的慢，时不时的断网，我就觉得可能不太对劲了。在issues看到有不少人提到，可能已经被人工智能识别，所以非常堪忧。</p>
-
 <p>并且使用ss的android端，在flyme这个辣鸡系统上，不能使用用Kotlin重写的版本，并且<code>老版本4.3.3</code>还一直出现各种奇怪的情况。<a href="https://github.com/shadowsocks/shadowsocks-android/issues/1589">github issues</a></p>
-
 <ul>
-<li>两三年前魅族确实性价比蛮高的，flymeOS体验很好。最近这一年用感觉越来不好了，网上负面报道也偏多，越来越感觉是<code>昨日黄花</code>。<br /></li>
-<li>导致我要坚定得抛弃魅族，是因为一直停留在Android 7.0(最近发布了基于8.0的flyme)。<br /></li>
-<li>我希望用到最新的 Android 9.0 版本，最好是谷歌手机可以接收到最新的推送那种，但是太贵了。国产手机也只剩便宜了。<br /></li>
+<li>两三年前魅族确实性价比蛮高的，flymeOS体验很好。最近这一年用感觉越来不好了，网上负面报道也偏多，越来越感觉是<code>昨日黄花</code>。</li>
+<li>导致我要坚定得抛弃魅族，是因为一直停留在Android 7.0(最近发布了基于8.0的flyme)。</li>
+<li>我希望用到最新的 Android 9.0 版本，最好是谷歌手机可以接收到最新的推送那种，但是太贵了。国产手机也只剩便宜了。</li>
 </ul>
-
-<p><img src="/images/2018/20180929-give-up-ss-and-change-to-v2ray/flyme.jpg" alt="Avoid Flyme devices in the future." /></p>
-
+<p><img src="/images/2018/20180929-give-up-ss-and-change-to-v2ray/flyme.jpg" alt="Avoid Flyme devices in the future."></p>
 <h2 id="实践过程">实践过程</h2>
-
 <h3 id="改用-go-shadowsocks2">改用 go-shadowsocks2</h3>
-
 <p><a href="https://github.com/shadowsocks/go-shadowsocks2">go-shadowsocks2</a> 当时决定改用这个的时候，原因主要是：</p>
-
 <ul>
-<li>使用了 AEAD 加密，比 shadowsocks-go 更加激进，相对来说更加安全；<br /></li>
-<li>go 语言编写的；<br /></li>
-<li>支持原来SS的windows客户端，Android端；<br /></li>
+<li>使用了 AEAD 加密，比 shadowsocks-go 更加激进，相对来说更加安全；</li>
+<li>go 语言编写的；</li>
+<li>支持原来SS的windows客户端，Android端；</li>
 </ul>
-
 <p>不过后来证明，这个并没有多大的提升，还是不稳定，容易断网；并且shadowsocks已经被列为 <strong>重点照顾</strong> 目标了，不管怎么换加密算法也是白搭，不如找一个小众的翻墙梯子。</p>
-
 <h3 id="v2ray搭建过程">v2ray搭建过程</h3>
-
-<p>购买 vps 服务器，可参考：<a href="/post/2014-2017/20170329-build-ss-on-vultr-vps/">《记一次搭建SS服务器，完整的过程》</a>，后半部分 shadowsocks 配置可以不看。<br />
+<p>购买 vps 服务器，可参考：<a href="/post/2014-2017/20170329-build-ss-on-vultr-vps/">《记一次搭建SS服务器，完整的过程》</a>，后半部分 shadowsocks 配置可以不看。<br>
 顺便推荐一下<a href="https://www.vultr.com/?ref=7136316">vultr</a>的个人注册码哈：<a href="https://www.vultr.com/?ref=7136316">https://www.vultr.com/?ref=7136316</a></p>
-
 <p>其实与其说是搭建过程，不如说是配置config的过程，因为官网已经给出了一键安装脚本。</p>
-
 <p>简单看了一下脚本，大部分代码都是为了适配不同的linux发行版本。关键的步骤也就是，下载，解压，安装，初始化配置文件。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">bash &lt;<span class="o">(</span>curl -L -s https://install.direct/go.sh<span class="o">)</span>  </code></pre></td></tr></table>
+<pre class="chroma"><code class="language-shell" data-lang="shell">bash &lt;<span class="o">(</span>curl -L -s https://install.direct/go.sh<span class="o">)</span>  
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>所以说关键就是配置文件了，具体的配置问题<a href="https://www.v2ray.com/chapter_02/01_overview.html">官方文档</a>已经解释的很清楚了，我就简单说一点点：</p>
-
+</div><p>所以说关键就是配置文件了，具体的配置问题<a href="https://www.v2ray.com/chapter_02/01_overview.html">官方文档</a>已经解释的很清楚了，我就简单说一点点：</p>
 <ol>
-<li>我同时配置了<del><code>shadowsocks</code></del>，<code>vmess-kcp</code>，<code>vmess-tcp</code> 三种翻墙方式。因为kcp容易被赛门铁克误杀，所以存在 <strong>tcp</strong> 的方式；<br /></li>
-<li>建议使用<code>vmess</code>，毕竟冷门，同时用 <code>kcp</code> 流量换速度；<br /></li>
-<li><del><code>shadowsocks</code>密码要长长长</del>(<strong>不推荐</strong>)；另外，<code>vmess 的 id</code>就是那个 GUID相当于密码，这些是需要妥善保管的；<br /></li>
-<li>缓存可以根据自身情况设置，建议越大越好，图片可见 <strong>体验结果</strong><br /></li>
+<li>我同时配置了<del><code>shadowsocks</code></del>，<code>vmess-kcp</code>，<code>vmess-tcp</code> 三种翻墙方式。因为kcp容易被赛门铁克误杀，所以存在 <strong>tcp</strong> 的方式；</li>
+<li>建议使用<code>vmess</code>，毕竟冷门，同时用 <code>kcp</code> 流量换速度；</li>
+<li><del><code>shadowsocks</code>密码要长长长</del>(<strong>不推荐</strong>)；另外，<code>vmess 的 id</code>就是那个 GUID相当于密码，这些是需要妥善保管的；</li>
+<li>缓存可以根据自身情况设置，建议越大越好，图片可见 <strong>体验结果</strong></li>
 </ol>
-
 <p><strong>2019-01-07注</strong>:</p>
-
 <ol>
-<li>完全抛弃 <code>shadowsocks</code>，使用人多，容易被罚款100元。<br /></li>
-<li>端口<strong>不要</strong>再用 <code>8080</code> 这一类的端口了，属于常见端口，危险！危险！危险！<br /></li>
-<li>开放 防火墙端口。 如果使用 kcp 的话，防火墙参数选择<strong>udp</strong>: <code>firewall-cmd --zone=public --permanent --add-port=${你的端口}/udp</code>；使用其他的则是<strong>tcp</strong>: <code>firewall-cmd --zone=public --permanent --add-port=${你的端口}/tcp</code>。  设置完成后，别忘了重启：<code>systemctl restart firewalld</code><br /></li>
+<li>完全抛弃 <code>shadowsocks</code>，使用人多，容易被罚款100元。</li>
+<li>端口<strong>不要</strong>再用 <code>8080</code> 这一类的端口了，属于常见端口，危险！危险！危险！</li>
+<li>开放 防火墙端口。 如果使用 kcp 的话，防火墙参数选择<strong>udp</strong>: <code>firewall-cmd --zone=public --permanent --add-port=${你的端口}/udp</code>；使用其他的则是<strong>tcp</strong>: <code>firewall-cmd --zone=public --permanent --add-port=${你的端口}/tcp</code>。  设置完成后，别忘了重启：<code>systemctl restart firewalld</code></li>
 </ol>
-
-<p><details>
-  <summary style="background-color:#f5f5f5;border:1px solid #ccc;padding:5px;">
-    我的config配置</p>
-
-<p></summary></p>
-
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-vba" data-lang="vba"><span class="lnt">  1
-</span><span class="lnt">  2
-</span><span class="lnt">  3
-</span><span class="lnt">  4
-</span><span class="lnt">  5
-</span><span class="lnt">  6
-</span><span class="lnt">  7
-</span><span class="lnt">  8
-</span><span class="lnt">  9
-</span><span class="lnt"> 10
-</span><span class="lnt"> 11
-</span><span class="lnt"> 12
-</span><span class="lnt"> 13
-</span><span class="lnt"> 14
-</span><span class="lnt"> 15
-</span><span class="lnt"> 16
-</span><span class="lnt"> 17
-</span><span class="lnt"> 18
-</span><span class="lnt"> 19
-</span><span class="lnt"> 20
-</span><span class="lnt"> 21
-</span><span class="lnt"> 22
-</span><span class="lnt"> 23
-</span><span class="lnt"> 24
-</span><span class="lnt"> 25
-</span><span class="lnt"> 26
-</span><span class="lnt"> 27
-</span><span class="lnt"> 28
-</span><span class="lnt"> 29
-</span><span class="lnt"> 30
-</span><span class="lnt"> 31
-</span><span class="lnt"> 32
-</span><span class="lnt"> 33
-</span><span class="lnt"> 34
-</span><span class="lnt"> 35
-</span><span class="lnt"> 36
-</span><span class="lnt"> 37
-</span><span class="lnt"> 38
-</span><span class="lnt"> 39
-</span><span class="lnt"> 40
-</span><span class="lnt"> 41
-</span><span class="lnt"> 42
-</span><span class="lnt"> 43
-</span><span class="lnt"> 44
-</span><span class="lnt"> 45
-</span><span class="lnt"> 46
-</span><span class="lnt"> 47
-</span><span class="lnt"> 48
-</span><span class="lnt"> 49
-</span><span class="lnt"> 50
-</span><span class="lnt"> 51
-</span><span class="lnt"> 52
-</span><span class="lnt"> 53
-</span><span class="lnt"> 54
-</span><span class="lnt"> 55
-</span><span class="lnt"> 56
-</span><span class="lnt"> 57
-</span><span class="lnt"> 58
-</span><span class="lnt"> 59
-</span><span class="lnt"> 60
-</span><span class="lnt"> 61
-</span><span class="lnt"> 62
-</span><span class="lnt"> 63
-</span><span class="lnt"> 64
-</span><span class="lnt"> 65
-</span><span class="lnt"> 66
-</span><span class="lnt"> 67
-</span><span class="lnt"> 68
-</span><span class="lnt"> 69
-</span><span class="lnt"> 70
-</span><span class="lnt"> 71
-</span><span class="lnt"> 72
-</span><span class="lnt"> 73
-</span><span class="lnt"> 74
-</span><span class="lnt"> 75
-</span><span class="lnt"> 76
-</span><span class="lnt"> 77
-</span><span class="lnt"> 78
-</span><span class="lnt"> 79
-</span><span class="lnt"> 80
-</span><span class="lnt"> 81
-</span><span class="lnt"> 82
-</span><span class="lnt"> 83
-</span><span class="lnt"> 84
-</span><span class="lnt"> 85
-</span><span class="lnt"> 86
-</span><span class="lnt"> 87
-</span><span class="lnt"> 88
-</span><span class="lnt"> 89
-</span><span class="lnt"> 90
-</span><span class="lnt"> 91
-</span><span class="lnt"> 92
-</span><span class="lnt"> 93
-</span><span class="lnt"> 94
-</span><span class="lnt"> 95
-</span><span class="lnt"> 96
-</span><span class="lnt"> 97
-</span><span class="lnt"> 98
-</span><span class="lnt"> 99
-</span><span class="lnt">100
-</span><span class="lnt">101
-</span><span class="lnt">102
-</span><span class="lnt">103
-</span><span class="lnt">104
-</span><span class="lnt">105
-</span><span class="lnt">106
-</span><span class="lnt">107
-</span><span class="lnt">108
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-vba" data-lang="vba">{
-  &#34;log&#34;: {
-    &#34;access&#34;: &#34;/var/log/v2ray/access.log&#34;,
-    &#34;error&#34;: &#34;/var/log/v2ray/error.log&#34;,
-    &#34;loglevel&#34;: &#34;warning&#34;
-  },
-  &#34;inbound&#34;: {
-    &#34;port&#34;: ~~8080~~,
-    &#34;protocol&#34;: &#34;vmess&#34;,
-    &#34;tag&#34;: &#34;kcpvmess&#34;,
-    &#34;streamSettings&#34;: {
-      &#34;network&#34;: &#34;kcp&#34;
-    },
-    &#34;settings&#34;: {
-      &#34;clients&#34;: [
-        {
-          &#34;id&#34;: &#34;244d5911-88ec-45a2-9850-35551c80048a&#34;,
-          &#34;email&#34;: &#34;kcpvmess@v2ray.com&#34;,
-          &#34;level&#34;: 1,
-          &#34;alterId&#34;: 64
-        }
-      ],
-      &#34;default&#34;: {
-        &#34;level&#34;: 0,
-        &#34;alterId&#34;: 64
-      },
-      &#34;disableInsecureEncryption&#34;: true
-    },
-    &#34;sniffing&#34;: {
-      &#34;enabled&#34;: false,
-      &#34;destOverride&#34;: [
-        &#34;http&#34;,
-        &#34;tls&#34;
-      ]
-    }
-  },
-  &#34;inboundDetour&#34;: [
-    {
-      &#34;port&#34;: ~~8090~~,
-      &#34;protocol&#34;: &#34;vmess&#34;,
-      &#34;tag&#34;: &#34;tcpvmess&#34;,
-      &#34;streamSettings&#34;: {
-        &#34;network&#34;: &#34;tcp&#34;
-      },
-      &#34;settings&#34;: {
-        &#34;clients&#34;: [
-          {
-            &#34;id&#34;: &#34;d8d27272-0e7c-48eb-aa13-bb1a6467de6e&#34;,
-            &#34;email&#34;: &#34;tcpvmess@v2ray.com&#34;,
-            &#34;level&#34;: 1,
-            &#34;alterId&#34;: 64
-          }
-        ],
-        &#34;default&#34;: {
-          &#34;level&#34;: 0,
-          &#34;alterId&#34;: 64
-        },
-        &#34;disableInsecureEncryption&#34;: true
-      },
-      &#34;sniffing&#34;: {
-        &#34;enabled&#34;: false,
-        &#34;destOverride&#34;: [
-          &#34;http&#34;,
-          &#34;tls&#34;
-        ]
-      }
-    }
-  ],
-  &#34;outbound&#34;: {
-    &#34;protocol&#34;: &#34;freedom&#34;,
-    &#34;settings&#34;: {}
-  },
-  &#34;outboundDetour&#34;: [
-    {
-      &#34;protocol&#34;: &#34;blackhole&#34;,
-      &#34;settings&#34;: {},
-      &#34;tag&#34;: &#34;blocked&#34;
-    }
-  ],
-  &#34;routing&#34;: {
-    &#34;strategy&#34;: &#34;rules&#34;,
-    &#34;settings&#34;: {
-      &#34;rules&#34;: [
-        {
-          &#34;type&#34;: &#34;field&#34;,
-          &#34;ip&#34;: [
-            &#34;geoip:private&#34;
-          ],
-          &#34;outboundTag&#34;: &#34;blocked&#34;
-        }
-      ]
-    },
-    &#34;transport&#34;: {
-      &#34;kcpSettings&#34;: {
-        &#34;mtu&#34;: 1350,
-        &#34;tti&#34;: 20,
-        &#34;uplinkCapacity&#34;: 10,
-        &#34;downlinkCapacity&#34;: 10,
-        &#34;congestion&#34;: false,
-        &#34;readBufferSize&#34;: 1,
-        &#34;writeBufferSize&#34;: 1,
-        &#34;header&#34;: {
-          &#34;type&#34;: &#34;none&#34;
-        }
-      }
-    }
-  }
-}</code></pre></td></tr></table>
-</div>
-</div>
-
-<p></details></p>
-
-<h3 id="windows-android-端的选择">windows，Android 端的选择</h3>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="windowsandroid-端的选择">windows，Android 端的选择</h3>
 <ul>
-<li>windows 版本，<a href="https://github.com/2dust/v2rayN">v2rayN</a><br /></li>
+<li>windows 版本，<a href="https://github.com/2dust/v2rayN">v2rayN</a></li>
 </ul>
-
 <blockquote>
 <p>类shadowsocks操作界面，有PAC模式，bug也比较少。</p>
-
 <p>我之前是用的<a href="https://github.com/nobody3u/V2RayGCon">V2RayGCon</a>。操作界面可以慢慢熟悉，关键还是没有我想要的PAC。</p>
 </blockquote>
-
 <ul>
-<li>Android 版本，<a href="https://github.com/2dust/v2rayNG">v2rayNG</a><br /></li>
+<li>Android 版本，<a href="https://github.com/2dust/v2rayNG">v2rayNG</a></li>
 </ul>
-
 <blockquote>
 <p>与上面的windows版本，均出自同一个作者，简单易用。</p>
-
 <p>垃圾的flyme 居然没有出现问题了，谢天谢地。</p>
 </blockquote>
-
 <h2 id="体验结果">体验结果</h2>
-
 <p>非常棒，断网的情况不明显了。并且速度立马上来了，在油管看1080p 也没有太大的压力。</p>
-
 <p>可以从我的使用量就可以看出来是多棒了，并且<code>received</code>和<code>sent</code>折线，不再像shadowsocks那样重合，可见缓存有多重要。</p>
-
-<p><img src="/images/2018/20180929-give-up-ss-and-change-to-v2ray/1.jpg" alt="networkshow" /></p>
-
-<p><img src="/images/2018/20180929-give-up-ss-and-change-to-v2ray/2.jpg" alt="networkshow2" /></p>
+<p><img src="/images/2018/20180929-give-up-ss-and-change-to-v2ray/1.jpg" alt="networkshow"></p>
+<p><img src="/images/2018/20180929-give-up-ss-and-change-to-v2ray/2.jpg" alt="networkshow2"></p>
     </div>
 
     

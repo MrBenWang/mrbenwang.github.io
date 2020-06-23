@@ -34,7 +34,7 @@
 <meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
 
 
-<meta name="generator" content="Hugo 0.57.2" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2014-2017/20170719-process-excel-with-vba/" />
@@ -63,7 +63,6 @@
 
 <meta property="og:title" content="*使用VBA，优化处理Excel表格" />
 <meta property="og:description" content="上周末，XX给我抱怨：因为计算绩效奖金，把2个人的工资发错了，还被扣了500元。问的缘由得知，她每个月要处理十来个excel表格，每次都要手动修改里面的值，如果修改了一处，其他地方也要修改，然后还要多处地方核对。导致光这件事情就要消耗三四天，伤神费力。
-
 我就问她，整个是不是都是机械性重复的工作，如果是的话，完全可以用电脑来代替。然后我就帮她找工具来优化她的工作，减少出错机会。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mrbenwang.github.io/post/2014-2017/20170719-process-excel-with-vba/" />
@@ -71,21 +70,16 @@
 <meta property="article:modified_time" content="2017-07-19T18:00:00+08:00" />
 <meta itemprop="name" content="*使用VBA，优化处理Excel表格">
 <meta itemprop="description" content="上周末，XX给我抱怨：因为计算绩效奖金，把2个人的工资发错了，还被扣了500元。问的缘由得知，她每个月要处理十来个excel表格，每次都要手动修改里面的值，如果修改了一处，其他地方也要修改，然后还要多处地方核对。导致光这件事情就要消耗三四天，伤神费力。
-
 我就问她，整个是不是都是机械性重复的工作，如果是的话，完全可以用电脑来代替。然后我就帮她找工具来优化她的工作，减少出错机会。">
-
-
 <meta itemprop="datePublished" content="2017-07-19T18:00:00&#43;08:00" />
 <meta itemprop="dateModified" content="2017-07-19T18:00:00&#43;08:00" />
-<meta itemprop="wordCount" content="1436">
+<meta itemprop="wordCount" content="1413">
 
 
 
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="*使用VBA，优化处理Excel表格"/>
 <meta name="twitter:description" content="上周末，XX给我抱怨：因为计算绩效奖金，把2个人的工资发错了，还被扣了500元。问的缘由得知，她每个月要处理十来个excel表格，每次都要手动修改里面的值，如果修改了一处，其他地方也要修改，然后还要多处地方核对。导致光这件事情就要消耗三四天，伤神费力。
-
 我就问她，整个是不是都是机械性重复的工作，如果是的话，完全可以用电脑来代替。然后我就帮她找工具来优化她的工作，减少出错机会。"/>
 
 <!--[if lte IE 9]>
@@ -383,7 +377,7 @@ if (!doNotTrack) {
             <a href="https://mrbenwang.github.io/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/"> 技术随笔 </a>
             
           </div>
-        <span class="more-meta"> 约 1436 字 </span>
+        <span class="more-meta"> 约 1413 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
 
         
@@ -400,15 +394,12 @@ if (!doNotTrack) {
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#现状">现状</a></li>
-<li><a href="#两种方案">两种方案</a></li>
-<li><a href="#宏代码">宏代码</a></li>
-<li><a href="#总结">总结</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#现状">现状</a></li>
+    <li><a href="#两种方案">两种方案</a></li>
+    <li><a href="#宏代码">宏代码</a></li>
+    <li><a href="#总结">总结</a></li>
+  </ul>
 </nav>
   </div>
 </div>
@@ -416,210 +407,124 @@ if (!doNotTrack) {
     
     <div class="post-content">
       <p>上周末，XX给我抱怨：因为计算绩效奖金，把2个人的工资发错了，还被扣了500元。问的缘由得知，她每个月要处理十来个excel表格，每次都要手动修改里面的值，如果修改了一处，其他地方也要修改，然后还要多处地方核对。导致光这件事情就要消耗三四天，伤神费力。</p>
-
 <p>我就问她，整个是不是都是<code>机械性重复的工作</code>，如果是的话，完全可以<strong>用电脑来代替</strong>。然后我就帮她找工具来优化她的工作，减少出错机会。</p>
-
 <h2 id="现状">现状</h2>
-
 <ol>
-<li>目前他们公司总共有四五十人；<br /></li>
-<li>需要整理的excel有12份；<br /></li>
-<li>excel间有很多重复数据，同样的数据存在在多分表中；<br /></li>
-<li>excel之间相互引用数据很频繁，杂乱，牵一发而动全身。<br /></li>
+<li>目前他们公司总共有四五十人；</li>
+<li>需要整理的excel有12份；</li>
+<li>excel间有很多重复数据，同样的数据存在在多分表中；</li>
+<li>excel之间相互引用数据很频繁，杂乱，牵一发而动全身。</li>
 </ol>
-
 <h2 id="两种方案">两种方案</h2>
-
 <ol>
-<li><p>使用HRM管理系统，在网上找到三套有源码的软件：</p>
-
+<li>
+<p>使用HRM管理系统，在网上找到三套有源码的软件：</p>
 <ul>
-<li>仅仅在github上面找到一个中文的系统 <a href="https://github.com/dreajay/hrms">hrms</a>(github大量英文系统)。&ndash;需要自己找服务器部署<br /></li>
-<li>悟空HRM，PHP开源，文档也比较详细，中文。试用了一下在线版本，功能无法满足需求，需要二次开发，同步需要服务器部署。<br /></li>
-<li>OrangeHRM，是阿里云市场里面，也需要购买服务器。<br /></li>
-<li><code>总结</code>：现在目前找到的都是web版的系统，都需要在线部署。没有找到桌面版本，可以立即使用的那种。都不太适合目前的情况。<br /></li>
-</ul></li>
-
-<li><p>使用Excel自带的函数和宏，来实现简化实际工作的，<code>最终实现此方案</code>：</p>
-
+<li>仅仅在github上面找到一个中文的系统 <a href="https://github.com/dreajay/hrms">hrms</a>(github大量英文系统)。&ndash;需要自己找服务器部署</li>
+<li>悟空HRM，PHP开源，文档也比较详细，中文。试用了一下在线版本，功能无法满足需求，需要二次开发，同步需要服务器部署。</li>
+<li>OrangeHRM，是阿里云市场里面，也需要购买服务器。</li>
+<li><code>总结</code>：现在目前找到的都是web版的系统，都需要在线部署。没有找到桌面版本，可以立即使用的那种。都不太适合目前的情况。</li>
+</ul>
+</li>
+<li>
+<p>使用Excel自带的函数和宏，来实现简化实际工作的，<code>最终实现此方案</code>：</p>
 <ul>
-<li>重新梳理Excel间的关系，提取出：原始数据、规则(函数计算后的数据)；<br /></li>
-<li>原始数据，抽取出来作为独立的Excel，类似于数据库的概念：<br />
-
+<li>重新梳理Excel间的关系，提取出：原始数据、规则(函数计算后的数据)；</li>
+<li>原始数据，抽取出来作为独立的Excel，类似于数据库的概念：
 <ul>
-<li>稳定数据：不经常变动的数据，如：人员基本信息，固定工资等；<br /></li>
-<li>月数据：每月统计都会发生变化的数据，如：考勤数据，绩效等；<br /></li>
-</ul></li>
-<li>规则，编辑成Excel模板文件(*.xltx)，里面<code>一定不存在</code>原始类的数据：<br />
-
+<li>稳定数据：不经常变动的数据，如：人员基本信息，固定工资等；</li>
+<li>月数据：每月统计都会发生变化的数据，如：考勤数据，绩效等；</li>
+</ul>
+</li>
+<li>规则，编辑成Excel模板文件(*.xltx)，里面<code>一定不存在</code>原始类的数据：
 <ul>
-<li>引用：引用自原始数据，所有引用只能来源原始数据，不能出现引用引用的数据；<br /></li>
-<li>计算公式：使用excel的函数，如：=sum()等；<br /></li>
-</ul></li>
-<li>使用VBA宏，根据原始数据和模板文件，生成不带公式的纯xlsx文件。目的，不依赖其他文件。<br /></li>
-</ul></li>
+<li>引用：引用自原始数据，所有引用只能来源原始数据，不能出现引用引用的数据；</li>
+<li>计算公式：使用excel的函数，如：=sum()等；</li>
+</ul>
+</li>
+<li>使用VBA宏，根据原始数据和模板文件，生成不带公式的纯xlsx文件。目的，不依赖其他文件。</li>
+</ul>
+</li>
 </ol>
-
 <h2 id="宏代码">宏代码</h2>
-
 <p>实现功能（<a href="/files/Excel_Test.rar">下载demo</a>）：</p>
-
 <ol>
-<li>批量读取模板文件，生成xlsx文件；<a href="https://msdn.microsoft.com/VBA/Excel-VBA/articles/xlfileformat-enumeration-excel">官方文档另存的枚举类型</a><br /></li>
-<li>替换掉excel中的公式，只显示值。<br /></li>
+<li>批量读取模板文件，生成xlsx文件；<a href="https://msdn.microsoft.com/VBA/Excel-VBA/articles/xlfileformat-enumeration-excel">官方文档另存的枚举类型</a></li>
+<li>替换掉excel中的公式，只显示值。</li>
 </ol>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>Dim strCurrentFileExt   As String
+Dim strNewFileExt       As String
+Dim objFSO              As Object
+Dim objFolder           As Object
+Dim objFile             As Object
+Dim xlFile              As Workbook
+Dim strNewName          As String
+Dim strXltxFolderPath       As String
+Dim strXlsxFolderPath       As String
 
-<p><details>
-  <summary style="background-color:#f5f5f5;border:1px solid #ccc;padding:5px;">
-    全部宏代码</p>
+Set objFSO = CreateObject(&amp;#34;Scripting.FileSystemObject&amp;#34;)
 
-<p></summary></p>
+strCurrentFileExt = &amp;#34;.xltx&amp;#34;
+strNewFileExt = &amp;#34;.xlsx&amp;#34;
 
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-vba" data-lang="vba"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
-</span><span class="lnt">53
-</span><span class="lnt">54
-</span><span class="lnt">55
-</span><span class="lnt">56
-</span><span class="lnt">57
-</span><span class="lnt">58
-</span><span class="lnt">59
-</span><span class="lnt">60
-</span><span class="lnt">61
-</span><span class="lnt">62
-</span><span class="lnt">63
-</span><span class="lnt">64
-</span><span class="lnt">65
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-vba" data-lang="vba">Sub ChangeFileFormat(xltxFolder, xlsxFolder)
+strXltxFolderPath = ThisWorkbook.Path &amp;amp; &amp;#34;\&amp;#34; &amp;amp; xltxFolder &amp;amp; &amp;#34;\&amp;#34;
+strXlsxFolderPath = ThisWorkbook.Path &amp;amp; &amp;#34;\&amp;#34; &amp;amp; xlsxFolder &amp;amp; &amp;#34;\&amp;#34;
 
-    Dim strCurrentFileExt   As String
-    Dim strNewFileExt       As String
-    Dim objFSO              As Object
-    Dim objFolder           As Object
-    Dim objFile             As Object
-    Dim xlFile              As Workbook
-    Dim strNewName          As String
-    Dim strXltxFolderPath       As String
-    Dim strXlsxFolderPath       As String
+If Not objFSO.FolderExists(strXltxFolderPath) Then   &amp;#39;判断指定文件夹是否存在 
+    MsgBox &amp;#34;【模板文件】文件夹不存在&amp;#34;
+    Exit Sub
+End If
 
-    Set objFSO = CreateObject(&#34;Scripting.FileSystemObject&#34;)
+If Not objFSO.FolderExists(strXlsxFolderPath) Then   &amp;#39;判断指定文件夹是否存在
+    fs.CreateFolder strXlsxFolderPath
+End If
 
-    strCurrentFileExt = &#34;.xltx&#34;
-    strNewFileExt = &#34;.xlsx&#34;
+Set objFolder = objFSO.getfolder(strXltxFolderPath)
+For Each objFile In objFolder.Files &amp;#39;循环所有的模板文件
+    strNewName = objFile.Name
+    If Right(strNewName, Len(strCurrentFileExt)) = strCurrentFileExt Then
+        Application.AskToUpdateLinks = False     &amp;#39;关闭程序询问更新链接提示
+        Application.DisplayAlerts = False
+        ThisWorkbook.UpdateLinks = xlUpdateLinksAlways  &amp;#39;更新链接
 
-    strXltxFolderPath = ThisWorkbook.Path &amp; &#34;\&#34; &amp; xltxFolder &amp; &#34;\&#34;
-    strXlsxFolderPath = ThisWorkbook.Path &amp; &#34;\&#34; &amp; xlsxFolder &amp; &#34;\&#34;
+        Set xlFile = Workbooks.Open(objFile.Path, , True) &amp;#39;读取模板文件
+        For Each sh In xlFile.Sheets  &amp;#39;替换文件中的公式
+           sh.UsedRange.Value = sh.UsedRange.Value
+        Next
 
-    If Not objFSO.FolderExists(strXltxFolderPath) Then   &#39;判断指定文件夹是否存在 
-        MsgBox &#34;【模板文件】文件夹不存在&#34;
-        Exit Sub
+        strNewName = Replace(strNewName, strCurrentFileExt, strNewFileExt) &amp;#39;替换文件名为新的文件名
+        Select Case strNewFileExt
+        Case &amp;#34;.xlsx&amp;#34;
+            xlFile.SaveAs strXlsxFolderPath &amp;amp; strNewName, XlFileFormat.xlOpenXMLWorkbook &amp;#39;保存为不带宏的excel
+        Case &amp;#34;.xlsm&amp;#34;
+            xlFile.SaveAs strXlsxFolderPath &amp;amp; strNewName, XlFileFormat.xlOpenXMLWorkbookMacroEnabled &amp;#39;保存为带宏的excel
+        End Select
+        xlFile.Close
+        Application.AskToUpdateLinks = True
+        Application.DisplayAlerts = True
     End If
-
-    If Not objFSO.FolderExists(strXlsxFolderPath) Then   &#39;判断指定文件夹是否存在
-        fs.CreateFolder strXlsxFolderPath
-    End If
-
-    Set objFolder = objFSO.getfolder(strXltxFolderPath)
-    For Each objFile In objFolder.Files &#39;循环所有的模板文件
-        strNewName = objFile.Name
-        If Right(strNewName, Len(strCurrentFileExt)) = strCurrentFileExt Then
-            Application.AskToUpdateLinks = False     &#39;关闭程序询问更新链接提示
-            Application.DisplayAlerts = False
-            ThisWorkbook.UpdateLinks = xlUpdateLinksAlways  &#39;更新链接
-
-            Set xlFile = Workbooks.Open(objFile.Path, , True) &#39;读取模板文件
-            For Each sh In xlFile.Sheets  &#39;替换文件中的公式
-               sh.UsedRange.Value = sh.UsedRange.Value
-            Next
-
-            strNewName = Replace(strNewName, strCurrentFileExt, strNewFileExt) &#39;替换文件名为新的文件名
-            Select Case strNewFileExt
-            Case &#34;.xlsx&#34;
-                xlFile.SaveAs strXlsxFolderPath &amp; strNewName, XlFileFormat.xlOpenXMLWorkbook &#39;保存为不带宏的excel
-            Case &#34;.xlsm&#34;
-                xlFile.SaveAs strXlsxFolderPath &amp; strNewName, XlFileFormat.xlOpenXMLWorkbookMacroEnabled &#39;保存为带宏的excel
-            End Select
-            xlFile.Close
-            Application.AskToUpdateLinks = True
-            Application.DisplayAlerts = True
-        End If
-    Next objFile
-
-ClearMemory:
-    strCurrentFileExt = vbNullString
-    strNewFileExt = vbNullString
-    Set objFSO = Nothing
-    Set objFolder = Nothing
-    Set objFile = Nothing
-    Set xlFile = Nothing
-    strNewName = vbNullString
-    strFolderPath = vbNullString
-End Sub</code></pre></td></tr></table>
-</div>
-</div>
-
-<p></details></p>
-
+Next objFile
+</code></pre>
+<p>ClearMemory:
+strCurrentFileExt = vbNullString
+strNewFileExt = vbNullString
+Set objFSO = Nothing
+Set objFolder = Nothing
+Set objFile = Nothing
+Set xlFile = Nothing
+strNewName = vbNullString
+strFolderPath = vbNullString
+End Sub<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h2 id="总结">总结</h2>
-
 <ul>
-<li>在这个过程中，考虑的时候，使用到了：模块，数据唯一性，避免交叉引用，这些开发中的经验。<br /></li>
-<li>其实我觉得，整个过程中，VBA的编写占据了我最多的时间。查资料，找文档。（百度就是个大坑！！！）<br /></li>
-<li>不熟悉Excel函数导致，当我写完一个宏的时候，发现VLOOKUP已经早就实现这个功能了。<br /></li>
+<li>在这个过程中，考虑的时候，使用到了：模块，数据唯一性，避免交叉引用，这些开发中的经验。</li>
+<li>其实我觉得，整个过程中，VBA的编写占据了我最多的时间。查资料，找文档。（百度就是个大坑！！！）</li>
+<li>不熟悉Excel函数导致，当我写完一个宏的时候，发现VLOOKUP已经早就实现这个功能了。</li>
 </ul>
     </div>
 

@@ -34,7 +34,7 @@
 <meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
 
 
-<meta name="generator" content="Hugo 0.57.2" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2018/20180927-hugo-plus-github-build-blog/" />
@@ -63,7 +63,6 @@
 
 <meta property="og:title" content="*Hugo &#43; github 搭建个人博客" />
 <meta property="og:description" content="很早以前就有想法，搭建一个个人的博客。没有实现的原因：一方面个人的服务器不太安全，并且掉线，欠费等等，维护起来麻烦，另一方面，文章编辑发布起来也不方便。
-
 后来了解到 github 提供了博客的功能，也一直没有实践。也鉴于上次文章被删，我也就开始实践了起来，有一个备份总好于无。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mrbenwang.github.io/post/2018/20180927-hugo-plus-github-build-blog/" />
@@ -71,21 +70,16 @@
 <meta property="article:modified_time" content="2018-09-27T15:13:00+08:00" />
 <meta itemprop="name" content="*Hugo &#43; github 搭建个人博客">
 <meta itemprop="description" content="很早以前就有想法，搭建一个个人的博客。没有实现的原因：一方面个人的服务器不太安全，并且掉线，欠费等等，维护起来麻烦，另一方面，文章编辑发布起来也不方便。
-
 后来了解到 github 提供了博客的功能，也一直没有实践。也鉴于上次文章被删，我也就开始实践了起来，有一个备份总好于无。">
-
-
 <meta itemprop="datePublished" content="2018-09-27T15:13:00&#43;08:00" />
 <meta itemprop="dateModified" content="2018-09-27T15:13:00&#43;08:00" />
 <meta itemprop="wordCount" content="2111">
 
 
 
-<meta itemprop="keywords" content="github," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="github," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="*Hugo &#43; github 搭建个人博客"/>
 <meta name="twitter:description" content="很早以前就有想法，搭建一个个人的博客。没有实现的原因：一方面个人的服务器不太安全，并且掉线，欠费等等，维护起来麻烦，另一方面，文章编辑发布起来也不方便。
-
 后来了解到 github 提供了博客的功能，也一直没有实践。也鉴于上次文章被删，我也就开始实践了起来，有一个备份总好于无。"/>
 
 <!--[if lte IE 9]>
@@ -400,21 +394,19 @@ if (!doNotTrack) {
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#hugo-搭建过程">HUGO 搭建过程</a>
-<ul>
-<li><a href="#选择什么程序生成">选择什么程序生成</a></li>
-<li><a href="#选择hugo主题">选择HUGO主题</a></li>
-<li><a href="#hugo生成静态站点">Hugo生成静态站点</a></li>
-<li><a href="#自定义的-js-和-css">自定义的 js 和 css</a></li>
-<li><a href="#github-发布">github 发布</a></li>
-<li><a href="#个人的小建议">个人的小建议</a></li>
-</ul></li>
-<li><a href="#结语">结语</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#hugo-搭建过程">HUGO 搭建过程</a>
+      <ul>
+        <li><a href="#选择什么程序生成">选择什么程序生成</a></li>
+        <li><a href="#选择hugo主题">选择HUGO主题</a></li>
+        <li><a href="#hugo生成静态站点">Hugo生成静态站点</a></li>
+        <li><a href="#自定义的-js-和-css">自定义的 js 和 css</a></li>
+        <li><a href="#github-发布">github 发布</a></li>
+        <li><a href="#个人的小建议">个人的小建议</a></li>
+      </ul>
+    </li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
 </nav>
   </div>
 </div>
@@ -422,57 +414,41 @@ if (!doNotTrack) {
     
     <div class="post-content">
       <p>很早以前就有想法，搭建一个个人的博客。没有实现的原因：一方面个人的服务器<code>不太安全</code>，并且掉线，欠费等等，维护起来麻烦，另一方面，文章编辑发布起来也<code>不方便</code>。</p>
-
 <p>后来了解到 github 提供了博客的功能，也一直没有实践。也鉴于上次文章被删，我也就开始实践了起来，<code>有一个备份总好于无</code>。</p>
-
 <h2 id="hugo-搭建过程">HUGO 搭建过程</h2>
-
 <h3 id="选择什么程序生成">选择什么程序生成</h3>
-
 <p>这个是我第一个纠结的地方，我当时把选择集中在三个选项里面：<code>Jekyll</code>，<code>Hexo</code>，<code>Hugo</code>。当然是一定要支持<code>markdown</code>。</p>
-
 <p>针对选择谁这个问题，我也是在网上查了大量的文章：</p>
-
 <ul>
-<li><a href="https://github.com/jekyll/jekyll">Jekyll</a> 由<code>Ruby</code>语言，三个里面最悠久，网上有关的问题，解决办法也比较多。官网主题较多；个人主机搭建的话，这个还是比较好，插件比较多。<br /></li>
-<li><a href="https://github.com/hexojs/hexo">Hexo</a> 用<code>Nodejs</code>生成的。Hexo有一个相对较大的社区，但大多数是非英语人士（来自中国）。<br /></li>
-<li><a href="https://github.com/gohugoio/hugo">Hugo</a> 用<code>Go</code>构建的静态站点生成器。它被宣传为“世界上最快的网站构建框架”。属于后起之秀，主题较少。<br /></li>
+<li><a href="https://github.com/jekyll/jekyll">Jekyll</a> 由<code>Ruby</code>语言，三个里面最悠久，网上有关的问题，解决办法也比较多。官网主题较多；个人主机搭建的话，这个还是比较好，插件比较多。</li>
+<li><a href="https://github.com/hexojs/hexo">Hexo</a> 用<code>Nodejs</code>生成的。Hexo有一个相对较大的社区，但大多数是非英语人士（来自中国）。</li>
+<li><a href="https://github.com/gohugoio/hugo">Hugo</a> 用<code>Go</code>构建的静态站点生成器。它被宣传为“世界上最快的网站构建框架”。属于后起之秀，主题较少。</li>
 </ul>
-
-<p><img src="/images/2018/20180927-hugo-plus-github-build-blog/1.jpg" alt="Jekyll-Hexo-Hugo对比" /></p>
-
+<p><img src="/images/2018/20180927-hugo-plus-github-build-blog/1.jpg" alt="Jekyll-Hexo-Hugo对比"></p>
 <p>当时，我纠结了半天。最终决定使用<code>Hugo</code>,主要原因有下：</p>
-
 <ol>
-<li>GO语言是最新的语言；<br /></li>
-<li>hugo 是最新的生成器，功能方面也肯定集成了之前其他生成器的优点；<br /></li>
-<li>不用安装，windows下需要一个<code>exe</code>程序，就可以生成静态文件了。这个是我选择他的最关键原因。<br /></li>
+<li>GO语言是最新的语言；</li>
+<li>hugo 是最新的生成器，功能方面也肯定集成了之前其他生成器的优点；</li>
+<li>不用安装，windows下需要一个<code>exe</code>程序，就可以生成静态文件了。这个是我选择他的最关键原因。</li>
 </ol>
-
 <h3 id="选择hugo主题">选择HUGO主题</h3>
-
 <ul>
-<li>只要上面的程序确定了，选择主题相对就比较轻松了。可是选择主题，有个人主观审美在里面，总会有这样那样的不太满意的地方。<br /></li>
-<li>我当时在官网上，看了很多主题，都不是特别喜欢，没有一眼就看上的那种。中文官网上更少，估计三十个主题都没有。<br /></li>
-<li>心里盘算着，实在不能偷懒，就拿一个改改算了。<br /></li>
+<li>只要上面的程序确定了，选择主题相对就比较轻松了。可是选择主题，有个人主观审美在里面，总会有这样那样的不太满意的地方。</li>
+<li>我当时在官网上，看了很多主题，都不是特别喜欢，没有一眼就看上的那种。中文官网上更少，估计三十个主题都没有。</li>
+<li>心里盘算着，实在不能偷懒，就拿一个改改算了。</li>
 </ul>
-
 <p>最终，我也记不清当时是怎么搜到这个 <a href="https://github.com/MrBenWang/hugo-theme-jane">hugo-theme-jane</a> 主题的，印象中好像是一通乱搜。。。</p>
-
 <h3 id="hugo生成静态站点">Hugo生成静态站点</h3>
-
 <p>其实这方面网上的文章很多，我这里就不做全面介绍了。推荐参考 <a href="http://www.gohugo.org/">中文官方文档</a></p>
-
 <ul>
-<li>建议使用<a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97">git submodule clone</a>下载主题，好处就是<strong>修改子模块之后只对子模块的版本库产生影响，对父项目的版本库不会产生任何影响</strong>；<br /></li>
-<li>修改<code>config.toml</code>文件。相当于该站点的hugo配置文件，涉及到博客标题，分页，作者声明等等；<br /></li>
-<li><code>shortcodes</code>自定义标签，新增<code>themes/jane/layouts/shortcodes/expand.html</code>，类似于博客园的<code>代码折叠</code>标签。<br /></li>
+<li>建议使用<a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97">git submodule clone</a>下载主题，好处就是<strong>修改子模块之后只对子模块的版本库产生影响，对父项目的版本库不会产生任何影响</strong>；</li>
+<li>修改<code>config.toml</code>文件。相当于该站点的hugo配置文件，涉及到博客标题，分页，作者声明等等；</li>
+<li><code>shortcodes</code>自定义标签，新增<code>themes/jane/layouts/shortcodes/expand.html</code>，类似于博客园的<code>代码折叠</code>标签。</li>
 </ul>
-
 <p><strong>注意：</strong> details 和 summary 是HTML 5 中的新标签。IE，Firefox都不支持</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -485,86 +461,82 @@ if (!doNotTrack) {
         {{ with .Get 0}}{{.}}{{else}}click to expand{{ end }}
     <span class="p">&lt;/</span><span class="nt">summary</span><span class="p">&gt;</span>
     {{.Inner}}
-<span class="p">&lt;/</span><span class="nt">details</span><span class="p">&gt;</span></code></pre></td></tr></table>
+<span class="p">&lt;/</span><span class="nt">details</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>在文章编辑中使用<a href="https://github.com/MrBenWang/mrbenwang.github.io-hugo/blob/master/content/post/process-excel-with-vba.md">参考</a>， <a href="https://mrbenwang.github.io/post/process-excel-with-vba/">效果</a> <strong>下面第二个字符，反斜杠\为了不变成折叠效果</strong></p>
+</div><p>在文章编辑中使用<a href="https://github.com/MrBenWang/mrbenwang.github.io-hugo/blob/master/content/post/process-excel-with-vba.md">参考</a>， <a href="https://mrbenwang.github.io/post/process-excel-with-vba/">效果</a> <strong>下面第二个字符，反斜杠\为了不变成折叠效果</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-html" data-lang="html">{\{% expand &#34;hugo代码折叠代码&#34; %}}
 中间为被折叠的代码
-{\{% /expand %}}</code></pre></td></tr></table>
+{\{% /expand %}}
+</code></pre></td></tr></table>
 </div>
-</div>
-<ul>
-<li><p>因为主题 <code>jane</code> 是由 nodejs 生成的，如果改了主题的话，需要用node重新生成一下。</p>
+</div><ul>
+<li>因为主题 <code>jane</code> 是由 nodejs 生成的，如果改了主题的话，需要用node重新生成一下。</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-text" data-lang="text">我偷懒直接手动修改node生成后的文件，
 themes/jane/static/dist/jane.min.css
-themes/jane/static/dist/jane.min.css.map</code></pre></td></tr></table>
+themes/jane/static/dist/jane.min.css.map
+</code></pre></td></tr></table>
 </div>
-</div></li>
-
-<li><p>图片的路径在<code>static/images</code>下面，在文章中使用路径，不包含static，例如<code>![show 404 page](/images/testjpg.jpg)</code>；</p></li>
-
-<li><p>使用 hugo.exe 生成的静态文件，在<code>public</code>目录下，建议不要修改；需要修改的话，改模板文件。</p></li>
+</div><ul>
+<li>图片的路径在<code>static/images</code>下面，在文章中使用路径，不包含static，例如<code>![show 404 page](/images/testjpg.jpg)</code>；</li>
+<li>使用 hugo.exe 生成的静态文件，在<code>public</code>目录下，建议不要修改；需要修改的话，改模板文件。</li>
 </ul>
-
 <h3 id="自定义的-js-和-css">自定义的 js 和 css</h3>
-
 <p><strong>强烈建议</strong>把一些自定义的功能，或者样式。按照这样的方式修改，不要去改themes</p>
-
 <p>在配置文件<code>config.toml</code>中，填写上这两个配置</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-config" data-lang="config"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-config" data-lang="config"># Link custom CSS and JS assets
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># Link custom CSS and JS assets
 #   (relative to /static/css and /static/js respectively)
 customCSS = []        # if [&#39;custom.css&#39;], load &#39;/static/css/custom.css&#39; file
-customJS = []         # if [&#39;custom.js&#39;], load &#39;/static/js/custom.js&#39; file</code></pre></td></tr></table>
+customJS = []         # if [&#39;custom.js&#39;], load &#39;/static/js/custom.js&#39; file
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><strong>注意</strong>，这个是对全站点生效的，要加上必要的<code>选择器</code>。</p>
-
+</div><p><strong>注意</strong>，这个是对全站点生效的，要加上必要的<code>选择器</code>。</p>
 <h3 id="github-发布">github 发布</h3>
-
 <ul>
-<li>github上面只有两条规则，仓库<code>{账号名称}.github.io</code> 和一个根目录下的 <code>index.html</code> 文件<br /></li>
-
-<li><p>在我的github上面创建了三个仓库，</p>
+<li>github上面只有两条规则，仓库<code>{账号名称}.github.io</code> 和一个根目录下的 <code>index.html</code> 文件</li>
+<li>在我的github上面创建了三个仓库，</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-text" data-lang="text">hugo-theme-jane ：是直接fork的主题，有修改需求；强烈建议把修改放到/static/css/目录下；
 mrbenwang.github.io-hugo ：这个是有关于 hugo 的仓库；
-mrbenwang.github.io ：最终的展示静态页面，是最重要的。github 的博客主要是从这里面来读取的。</code></pre></td></tr></table>
+mrbenwang.github.io ：最终的展示静态页面，是最重要的。github 的博客主要是从这里面来读取的。
+</code></pre></td></tr></table>
 </div>
-</div></li>
-
-<li><p>使用 git submodule 命令：我把 <code>public</code> 和 <code>themes/jane</code> 都分别做了不同的git目标；<code>.gitmodules</code>文件内容如下</p>
+</div><ul>
+<li>使用 git submodule 命令：我把 <code>public</code> 和 <code>themes/jane</code> 都分别做了不同的git目标；<code>.gitmodules</code>文件内容如下</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-config" data-lang="config"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -572,44 +544,41 @@ mrbenwang.github.io ：最终的展示静态页面，是最重要的。github �
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-config" data-lang="config">[submodule &#34;public&#34;]
-path = public
-url = https://github.com/MrBenWang/mrbenwang.github.io.git
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[submodule &#34;public&#34;]
+    path = public
+    url = https://github.com/MrBenWang/mrbenwang.github.io.git
 [submodule &#34;themes/jane&#34;]
-path = themes/jane
-url = https://github.com/MrBenWang/hugo-theme-jane.git</code></pre></td></tr></table>
+    path = themes/jane
+    url = https://github.com/MrBenWang/hugo-theme-jane.git
+</code></pre></td></tr></table>
 </div>
-</div></li>
-
-<li><p>public 或 themes/jane 提交前，一定要记得先<code>git checkout master</code>。<a href="https://blog.devtang.com/2013/05/08/git-submodule-issues/">参考链接</a></p></li>
+</div><ul>
+<li>public 或 themes/jane 提交前，一定要记得先<code>git checkout master</code>。<a href="https://blog.devtang.com/2013/05/08/git-submodule-issues/">参考链接</a></li>
 </ul>
-
 <blockquote>
 <p>这里的坑在于，默认 git submodule update 并不会将 submodule 切到任何 branch，所以，默认下 submodule 的 HEAD 是处于游离状态的 (‘detached HEAD’ state)。所以在修改前，记得一定要用 git checkout master 将当前的 submodule 分支切换到 master，然后才能做修改和提交。</p>
 </blockquote>
-
 <p>如果你不慎忘记切换到 master 分支，又做了提交，可以用 cherry-pick 命令挽救。具体做法如下：</p>
-
 <ol>
-<li>用 git checkout master 将 HEAD 从游离状态切换到 master 分支 , 这时候，git 会报 Warning 说有一个提交没有在 branch 上，记住这个提交的 change-id（假如 change-id 为 aaaa)<br /></li>
-<li>用 git cherry-pick aaaa 来将刚刚的提交作用在 master 分支上<br /></li>
-<li>用 git push 将更新提交到远程版本库中<br /></li>
+<li>用 git checkout master 将 HEAD 从游离状态切换到 master 分支 , 这时候，git 会报 Warning 说有一个提交没有在 branch 上，记住这个提交的 change-id（假如 change-id 为 aaaa)</li>
+<li>用 git cherry-pick aaaa 来将刚刚的提交作用在 master 分支上</li>
+<li>用 git push 将更新提交到远程版本库中</li>
 </ol>
-
 <h3 id="个人的小建议">个人的小建议</h3>
-
 <ol>
-<li>文章的命名最好是以日期开头，方便<strong>排序</strong>和后期<strong>查找</strong>。如：<code>20180927-hugo-plus-github-build-blog</code>;(PS:最初我使用的是四位数字来做前缀，发现没有任何含义，并且如果需要往中间插入，影响会很大)<br /></li>
-
-<li><p>文章按照，以<code>年为单位</code>来<strong>分目录放置</strong>，文章的路径变为<code>post/2018/20180927-hugo-plus-github-build-blog/</code>,如下图：<br />
-<img src="/images/2018/20180927-hugo-plus-github-build-blog/2.jpg" alt="articles by catalogue" /></p></li>
-
-<li><p>图片的放置方式，也最好按照文章的分类方法，方便<strong>排序</strong>和后期<strong>查找</strong>。如下图：
-<img src="/images/2018/20180927-hugo-plus-github-build-blog/3.jpg" alt="images by catalogue" /></p></li>
+<li>
+<p>文章的命名最好是以日期开头，方便<strong>排序</strong>和后期<strong>查找</strong>。如：<code>20180927-hugo-plus-github-build-blog</code>;(PS:最初我使用的是四位数字来做前缀，发现没有任何含义，并且如果需要往中间插入，影响会很大)</p>
+</li>
+<li>
+<p>文章按照，以<code>年为单位</code>来<strong>分目录放置</strong>，文章的路径变为<code>post/2018/20180927-hugo-plus-github-build-blog/</code>,如下图：<br>
+<img src="/images/2018/20180927-hugo-plus-github-build-blog/2.jpg" alt="articles by catalogue"></p>
+</li>
+<li>
+<p>图片的放置方式，也最好按照文章的分类方法，方便<strong>排序</strong>和后期<strong>查找</strong>。如下图：
+<img src="/images/2018/20180927-hugo-plus-github-build-blog/3.jpg" alt="images by catalogue"></p>
+</li>
 </ol>
-
 <h2 id="结语">结语</h2>
-
 <p>搭建这个时间，有一些久了，记忆有些模糊，中间过程有些遗漏和错误，欢迎指出。</p>
     </div>
 

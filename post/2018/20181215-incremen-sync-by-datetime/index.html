@@ -34,7 +34,7 @@
 <meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
 
 
-<meta name="generator" content="Hugo 0.57.2" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2018/20181215-incremen-sync-by-datetime/" />
@@ -71,16 +71,13 @@
 <meta itemprop="name" content="*根据时间戳，增量同步数据的解决办法">
 <meta itemprop="description" content="最近在工作中遇到一个比较棘手的问题，客户端从服务端同步数据的问题。
 思考这个解决的方法还是花费了不少的精力。">
-
-
 <meta itemprop="datePublished" content="2018-12-15T15:20:00&#43;08:00" />
 <meta itemprop="dateModified" content="2018-12-15T15:20:00&#43;08:00" />
-<meta itemprop="wordCount" content="4501">
+<meta itemprop="wordCount" content="4072">
 
 
 
-<meta itemprop="keywords" content="增量同步," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="增量同步," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="*根据时间戳，增量同步数据的解决办法"/>
 <meta name="twitter:description" content="最近在工作中遇到一个比较棘手的问题，客户端从服务端同步数据的问题。
 思考这个解决的方法还是花费了不少的精力。"/>
@@ -380,7 +377,7 @@ if (!doNotTrack) {
             <a href="https://mrbenwang.github.io/categories/%E5%B7%A5%E4%BD%9C%E9%9A%8F%E7%AC%94/"> 工作随笔 </a>
             
           </div>
-        <span class="more-meta"> 约 4501 字 </span>
+        <span class="more-meta"> 约 4072 字 </span>
           <span class="more-meta"> 预计阅读 9 分钟 </span>
 
         
@@ -397,56 +394,37 @@ if (!doNotTrack) {
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li><a href="#前言">前言</a>
-<ul>
-<li><a href="#模拟场景">模拟场景</a></li>
-<li><a href="#解决思路">解决思路</a>
-<ul>
-<li><a href="#生成新的唯一标识"><del>生成新的唯一标识</del></a></li>
-<li><a href="#数据库表修改-不推荐">数据库表修改(不推荐)</a>
-<ul>
-<li><a href="#修改数据内容">修改数据内容</a></li>
-<li><a href="#增加字段">增加字段</a></li>
-</ul></li>
-<li><a href="#我的解决方法">我的解决方法</a>
-<ul>
-<li><a href="#分页提取数据的可能情况">分页提取数据的可能情况</a></li>
-<li><a href="#情景2部分情况-提取的起始点">情景2部分情况，提取的起始点</a></li>
-<li><a href="#完整的分页过程">完整的分页过程</a></li>
-<li><a href="#代码实例">代码实例</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#经验总结">经验总结</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#模拟场景">模拟场景</a></li>
+    <li><a href="#解决思路">解决思路</a>
+      <ul>
+        <li><a href="#生成新的唯一标识">生成新的唯一标识</a></li>
+        <li><a href="#数据库表修改不推荐">数据库表修改(不推荐)</a></li>
+        <li><a href="#我的解决方法">我的解决方法</a></li>
+      </ul>
+    </li>
+    <li><a href="#经验总结">经验总结</a></li>
+  </ul>
 </nav>
   </div>
 </div>
 
     
     <div class="post-content">
-      <p>最近在工作中遇到一个比较棘手的问题，客户端从服务端同步数据的问题。<br />
+      <p>最近在工作中遇到一个比较棘手的问题，客户端从服务端同步数据的问题。<br>
 思考这个解决的方法还是花费了不少的精力。</p>
-
 <h1 id="前言">前言</h1>
-
-<p>最近在工作中遇到一个比较棘手的问题，客户端从服务端同步数据的问题。<br />
-背景简介：客户端有N个，客户端上的同步时间，<code>各不相同</code>。同步的时候，是一次获取10条数据，多批次获取。即分页获取。<br />
+<p>最近在工作中遇到一个比较棘手的问题，客户端从服务端同步数据的问题。<br>
+背景简介：客户端有N个，客户端上的同步时间，<code>各不相同</code>。同步的时候，是一次获取10条数据，多批次获取。即分页获取。<br>
 在代码中存在两种同步的方式：</p>
-
 <ol>
 <li>全量同步。同步过程是从服务端拉取全部的数据；依赖具有<code>唯一约束</code>的<code>ID</code>来实现同步。只适用于数据量小的表，浪费网络流量。</li>
 <li>增量同步。从服务器拉取<code>大于</code>客户端<code>最新时间</code>的数据；依赖于<code>时间戳</code>，问题时间戳<code>不唯一</code>存在相同时间点下面多条数据，会出现数据遗漏，也会重复拉取数据，浪费网络流量。</li>
 </ol>
-
 <p>本文的所使用到的解决办法，就是结合了<strong>唯一ID</strong>和<strong>时间戳</strong>，两个入参来做增量同步。本文也只做逻辑层面的说明。</p>
-
 <h2 id="模拟场景">模拟场景</h2>
-
-<p>表结构：ID 具有唯一约束， Name 姓名， UpdateTime 更新时间；现在问题的关键是ID为3，4，这两条时间点相同的数据。<br />
+<p>表结构：ID 具有唯一约束， Name 姓名， UpdateTime 更新时间；现在问题的关键是ID为3，4，这两条时间点相同的数据。<br>
 假如一次只能同步一条数据，如何同步完ID 2后，再同步 ID 3。</p>
-
 <table>
 <thead>
 <tr>
@@ -455,32 +433,27 @@ if (!doNotTrack) {
 <th>UpdateTime</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>1</td>
 <td>张三</td>
 <td>2018-11-10</td>
 </tr>
-
 <tr>
 <td>2</td>
 <td>李四</td>
 <td><strong>2018-12-10</strong></td>
 </tr>
-
 <tr>
 <td>3</td>
 <td>王五</td>
 <td><strong>2018-12-10</strong></td>
 </tr>
-
 <tr>
 <td>4</td>
 <td>赵六</td>
 <td>2018-11-20</td>
 </tr>
-
 <tr>
 <td>5</td>
 <td>金七</td>
@@ -488,637 +461,302 @@ if (!doNotTrack) {
 </tr>
 </tbody>
 </table>
-
 <h2 id="解决思路">解决思路</h2>
-
 <h3 id="生成新的唯一标识"><del>生成新的唯一标识</del></h3>
-
-<p>通过 UpdateTime 和 ID 这两种数据，通过某种运算，生成新的数。而这个<code>新的数</code>具备<strong>可排序</strong>和<strong>唯一</strong>；同时还要携带有<code>ID</code>和<code>UpdateTime</code>的信息。<br />
+<p>通过 UpdateTime 和 ID 这两种数据，通过某种运算，生成新的数。而这个<code>新的数</code>具备<strong>可排序</strong>和<strong>唯一</strong>；同时还要携带有<code>ID</code>和<code>UpdateTime</code>的信息。<br>
 简单表述就是，具有一个函数f：  <strong>f(可排序A，可排序唯一B) = 可排序唯一C</strong> 。 C 的唯一解是 A和B。<a href="https://zh.wikipedia.org/wiki/RSA%E5%8A%A0%E5%AF%86%E6%BC%94%E7%AE%97%E6%B3%95">RSA加密算法</a></p>
-
 <p>我想出了一个方法，也是生活中比较常用的方法：</p>
-
 <ol>
 <li>先把 UpdateTime 转变成数字。如： 字符串 2018-12-10 -&gt; 数字 20181210;</li>
 <li>然后 UpdateTime 乘以权重，这个<code>权重</code>必须大于<code>ID</code>的可能最大值。如： 20181210 * 100 = 2018121000，Max(ID)&lt;999</li>
 <li>然后再把第二部的结果，加上唯一键<code>ID</code>。如： 2018121000 + 3 = 2018121003。</li>
 </ol>
-
-<p>这个时候，<strong>2018121003</strong> 这个数，既包含了<code>UpdateTime</code>和<code>ID</code>的信息，又具有<strong>可排序</strong>和<strong>唯一性</strong>。用它作为增量更新的判断点，是再好不过的了。<br />
+<p>这个时候，<strong>2018121003</strong> 这个数，既包含了<code>UpdateTime</code>和<code>ID</code>的信息，又具有<strong>可排序</strong>和<strong>唯一性</strong>。用它作为增量更新的判断点，是再好不过的了。<br>
 但是它具有很大的缺点：数字太大了，时间转化成数字，目前还是用的是<strong>天</strong>级别，如果换成<strong>毫秒</strong>级别呢。还有ID可能的最大值也够大了，如果是<strong>int64</strong>那就更没得搞了。</p>
-
-<p>这个方法理论上可行，实际中不可用基本不可行，除非找到一种非常好的函数f；<br />
+<p>这个方法理论上可行，实际中不可用基本不可行，除非找到一种非常好的函数f；<br>
 <em>PS: 我的直觉告诉我：  极可能存在这种函数，既满足我的需要，又可以克服数字很大这个问题。只是我目前不知道。</em></p>
-
-<h3 id="数据库表修改-不推荐">数据库表修改(不推荐)</h3>
-
+<h3 id="数据库表修改不推荐">数据库表修改(不推荐)</h3>
 <h4 id="修改数据内容">修改数据内容</h4>
-
 <p>修改数据内容，使 <code>UpdateTime</code> 数据值唯一。缺点也比较明显：</p>
-
 <ol>
 <li>脚本操作数据的情况下，或者直接sql更新。可能会，造成时间不唯一；</li>
 <li>只是适用在数据量小，系统操作频率小的情况下。因为毫秒级别的时间，在绝大多数软件系统中，可以认为是唯一；</li>
 <li>尤其是老旧项目，历史遗留数据如何处理。</li>
 </ol>
-
 <h4 id="增加字段">增加字段</h4>
-
-<p>还有一种办法，就是在数据库中，增加一个新的字段，专门用来同步数据的时候使用。<br />
-比方说，增加字段 <code>SyncData</code> int 类型。如果 UpdateTime 发生了改变，就把它更新为 <code>SyncData = Max(SyncData) + 1</code>;<br />
+<p>还有一种办法，就是在数据库中，增加一个新的字段，专门用来同步数据的时候使用。<br>
+比方说，增加字段 <code>SyncData</code> int 类型。如果 UpdateTime 发生了改变，就把它更新为 <code>SyncData = Max(SyncData) + 1</code>;<br>
 也就是说， <code>SyncData</code> 这个字段的最大值<strong>一定是</strong>最新的数据，<code>SyncData</code>的降序就是 更新时间的降序。<code>SyncData</code>是<code>更新时间顺序</code>的<strong>充分不必要条件</strong>。</p>
-
 <p>总的来说，这种办法是比较好的，但缺点也比较明显：</p>
-
 <ol>
 <li>需要修改表结构，并且额外维护这个字段；</li>
 <li>新增或者更新的时候，会先锁表，找出这个表的最大值，再更新，资源浪费明显。</li>
 <li>如果表的数据量比较大，或者更新比较频繁时候。时间消耗较大。</li>
 </ol>
-
 <h3 id="我的解决方法">我的解决方法</h3>
-
 <h4 id="分页提取数据的可能情况">分页提取数据的可能情况</h4>
-
-<p>首先，先来分析一下，一次提取10条数据，提取的数据，存在的可能情况。再次说明<strong>前提</strong>，先时间倒序，再ID倒序。<code>Order By UpdateTime DESC, ID DESC</code><br />
+<p>首先，先来分析一下，一次提取10条数据，提取的数据，存在的可能情况。再次说明<strong>前提</strong>，先时间倒序，再ID倒序。<code>Order By UpdateTime DESC, ID DESC</code><br>
 可能情况如下图，可以简化为三种：</p>
-
 <ol>
 <li>情景1。当前获取的数据中包含了，<strong>所有</strong>相同时间点的数据；图1，图5</li>
 <li>情景2。当前获取的数据中包含了，<strong>部分</strong>相同时间点的数据；图2，图3，图4，图6，图7</li>
 <li>情景3。当前获取的数据中包含了，<strong>没有</strong>相同时间点的数据；图···</li>
 </ol>
-
-<p>其中<code>情景1</code>和<code>情景3</code>，可以把查询条件变为：<code>WHERE UpdateTime &gt; sync_time LIMIT 10</code><br />
-但是<code>情景2</code>的情况不能使用大于<code>&gt;</code>这个条件。假如使用了大于<code>&gt;</code>这个条件，<code>情景2</code>就会变成<code>情景1</code>或<code>情景3</code>或<code>图3</code>这种情况。不是包含<strong>部分</strong>了，需要额外特别处理。<br />
-注：图3的<code>结束点 ]</code>不重要，下面情景5有解释。<br />
-<img src="/images/2018/20181215-incremen-sync-by-datetime/sync-data-function.jpg" alt="同步数据的可能性" /></p>
-
-<h4 id="情景2部分情况-提取的起始点">情景2部分情况，提取的起始点</h4>
-
-<p>提取的起始点：也就是说图中<code>[</code><strong>左中括号</strong>的位置，需要准确定位这个位置。<br />
+<p>其中<code>情景1</code>和<code>情景3</code>，可以把查询条件变为：<code>WHERE UpdateTime &gt; sync_time LIMIT 10</code><br>
+但是<code>情景2</code>的情况不能使用大于<code>&gt;</code>这个条件。假如使用了大于<code>&gt;</code>这个条件，<code>情景2</code>就会变成<code>情景1</code>或<code>情景3</code>或<code>图3</code>这种情况。不是包含<strong>部分</strong>了，需要额外特别处理。<br>
+注：图3的<code>结束点 ]</code>不重要，下面情景5有解释。<br>
+<img src="/images/2018/20181215-incremen-sync-by-datetime/sync-data-function.jpg" alt="同步数据的可能性"></p>
+<h4 id="情景2部分情况提取的起始点">情景2部分情况，提取的起始点</h4>
+<p>提取的起始点：也就是说图中<code>[</code><strong>左中括号</strong>的位置，需要准确定位这个位置。<br>
 至于结束点：图中<code>]</code><strong>右中括号</strong>的位置是在哪里。这个就不重要了，因为下一次的分页提取的<code>起始点</code>，就是<strong>上一次的结束点</strong>。只需要关注起始点就足够了。</p>
-
 <p>而根据起始点，又可以把<code>情景2</code>，再做一次简化：</p>
-
 <ol>
 <li>情景4。起始点<strong>在</strong>相同时间点集合内的；图2，图4，图6，图7</li>
 <li>情景5。起始点<strong>不在</strong>相同时间点集合内的；图3，</li>
 </ol>
-
-<p>针对<code>情景4</code>。这个时候，时间戳<code>sync_time</code>一个入参就不够了，还额外需要<strong>唯一键</strong>ID来准确定位。可以把查询写作：<code>WHERE UpdateTime = sync_time AND ID &gt; sync_id LIMIT 10</code>。<br />
+<p>针对<code>情景4</code>。这个时候，时间戳<code>sync_time</code>一个入参就不够了，还额外需要<strong>唯一键</strong>ID来准确定位。可以把查询写作：<code>WHERE UpdateTime = sync_time AND ID &gt; sync_id LIMIT 10</code>。<br>
 如果查询的行数 <strong>等于</strong> 10，则是图4；<strong>小于</strong> 10，则是图2，图6，图7的情况。</p>
-
 <p>针对<code>情景5</code>。依旧可以使用：<code>WHERE UpdateTime &gt; sync_time LIMIT 10</code></p>
-
 <h4 id="完整的分页过程">完整的分页过程</h4>
-
-<p>完整的分页过程的步骤：<br />
-一、先用起始点来过滤：<code>WHERE UpdateTime = sync_time AND ID &gt; sync_id LIMIT 10</code>，查询结果行数N。如果 <code>N=10</code>是<strong>图4</strong>的情况，则结束，并且直接返回结果。如果 <code>0&lt;= N &lt;10</code> ，则进行第二步，其中<code>N=0</code>是<strong>图1</strong>，<strong>图3</strong>，<strong>图5</strong>，<strong>图···</strong>的情况；</p>
-
+<p>完整的分页过程的步骤：<br>
+一、先用起始点来过滤：<code>WHERE UpdateTime = sync_time AND ID &gt; sync_id LIMIT 10</code>，查询结果行数N。如果 <code>N=10</code>是<strong>图4</strong>的情况，则结束，并且直接返回结果。如果 <code>0&lt;= N &lt;10</code> ，则进行第二步，其中<code>N=0</code>是<strong>图1</strong>，<strong>图3</strong>，<strong>图5</strong>，**图···**的情况；</p>
 <p>二、再用时间戳查询：<code>WHERE UpdateTime &gt; sync_time LIMIT 10-N</code>，查询结果行数 M ，<code>0&lt;= M &lt;=10-N</code>；这个阶段，是否同一个时间点都不重要了。只需要<code>按着顺序</code>取<strong>已排序</strong>的数据就可以了；</p>
-
 <p>三、把一和二的结果集合并，一并返回。</p>
-
 <p>四、重复步骤一二三，直到，分页获取的最后一条数据的<code>ID</code>，是服务端数据库中最新的ID；(防止存在，恰好这十条是所需要获取的最后十条)。</p>
-
 <p>服务端中最新ID获取：<code>Select Id From myTable Order by UpdateTime desc,ID desc Limit 1</code>;</p>
-
 <h4 id="代码实例">代码实例</h4>
-
-<p>以下是已经使用了半年的代码，做了简化，换行的处理，方便阅读。本文重点描述在服务端，<strong>可以只看服务端的代码</strong>。<br />
+<p>以下是已经使用了半年的代码，做了简化，换行的处理，方便阅读。本文重点描述在服务端，<strong>可以只看服务端的代码</strong>。<br>
 以下代码使用 <code>C#</code>，<code>Linq</code>来编写，如果没有学过这类语言，通过<strong>方法的英文名称</strong>也能大概猜出意思，另外，<strong>注释写的比较详细</strong>，不再额外解释。</p>
-
-<p><details>
-  <summary style="background-color:#f5f5f5;border:1px solid #ccc;padding:5px;">
-    服务端的代码</p>
-
-<p></summary></p>
-
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="k">public</span> <span class="kt">long</span> <span class="n">GetDeviceLatestID</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="kt">long</span> <span class="n">latestID</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
-    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Entities</span><span class="p">())</span>
-    <span class="p">{</span>
-        <span class="c1">// 倒序取 最新的ID
-</span><span class="c1"></span>        <span class="kt">var</span> <span class="n">_tmp</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">OrderByDescending</span><span class="p">(</span><span class="n">m</span> <span class="p">=&gt;</span> <span class="n">m</span><span class="p">.</span><span class="n">update_date</span><span class="p">).</span>
-                <span class="n">ThenByDescending</span><span class="p">(</span><span class="n">n</span> <span class="p">=&gt;</span> <span class="n">n</span><span class="p">.</span><span class="n">id</span><span class="p">).</span><span class="n">FirstOrDefault</span><span class="p">();</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">_tmp</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">latestID</span> <span class="p">=</span> <span class="n">_tmp</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">latestID</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c1">/// &lt;summary&gt;
-</span><span class="c1">/// 分批同步 获取Device 数据
-</span><span class="c1">/// &lt;/summary&gt;
-</span><span class="c1">/// &lt;param name=&#34;startDataVersion&#34;&gt;开始的时间版本&lt;/param&gt;
-</span><span class="c1">/// &lt;param name=&#34;startID&#34;&gt;开始的唯一标识ID&lt;/param&gt;
-</span><span class="c1">/// &lt;param name=&#34;dataCount&#34;&gt;本次同步的数量&lt;/param&gt;
-</span><span class="c1"></span><span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">DeviceModel</span><span class="p">&gt;</span> <span class="n">GetDevices</span><span class="p">(</span><span class="n">DateTime</span> <span class="n">startDataVersion</span><span class="p">,</span> <span class="kt">long</span> <span class="n">startID</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dataCount</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">List</span><span class="p">&lt;</span><span class="n">DeviceModel</span><span class="p">&gt;</span> <span class="n">resultList</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
-
-    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Entities</span><span class="p">())</span>
-    <span class="p">{</span>
-        <span class="c1">// 关键：先确定时间点，然后再顺序取 dataCount 个。
-</span><span class="c1"></span>        <span class="c1">// 先顺序排序，需要保留 deleted 信息，同步时候移除表关系
-</span><span class="c1"></span>        <span class="kt">var</span> <span class="n">_tmpQry</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">modules</span><span class="p">.</span><span class="n">OrderBy</span><span class="p">(</span><span class="n">m</span> <span class="p">=&gt;</span> <span class="n">m</span><span class="p">.</span><span class="n">update_date</span><span class="p">).</span><span class="n">ThenBy</span><span class="p">(</span><span class="n">m</span> <span class="p">=&gt;</span> <span class="n">m</span><span class="p">.</span><span class="n">id</span><span class="p">);</span>
-        <span class="c1">// 先取 同一个时间点的 数据
-</span><span class="c1"></span>        <span class="kt">var</span> <span class="n">_tmpList</span> <span class="p">=</span> <span class="n">_tmpQry</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">m</span> <span class="p">=&gt;</span> <span class="n">m</span><span class="p">.</span><span class="n">update_date</span> <span class="p">==</span> <span class="n">startDataVersion</span> <span class="p">&amp;&amp;</span> <span class="n">m</span><span class="p">.</span><span class="n">id</span> <span class="p">&gt;</span> <span class="n">startID</span><span class="p">).</span>
-            <span class="n">Take</span><span class="p">(</span><span class="n">dataCount</span><span class="p">).</span><span class="n">ToList</span><span class="p">();</span>
-        <span class="c1">// 如果不足 dataCount 条数据，再顺序取够 dataCount 条；
-</span><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">_tmpList</span><span class="p">.</span><span class="n">Count</span> <span class="p">&lt;</span> <span class="n">dataCount</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">var</span> <span class="n">_tmpList2</span> <span class="p">=</span> <span class="n">_tmpQry</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">m</span> <span class="p">=&gt;</span> <span class="n">m</span><span class="p">.</span><span class="n">update_date</span> <span class="p">&gt;</span> <span class="n">startDataVersion</span><span class="p">).</span>
-                <span class="n">Take</span><span class="p">(</span><span class="n">dataCount</span> <span class="p">-</span> <span class="n">_tmpList</span><span class="p">.</span><span class="n">Count</span><span class="p">).</span><span class="n">ToList</span><span class="p">();</span>
-            <span class="n">_tmpList</span><span class="p">.</span><span class="n">AddRange</span><span class="p">(</span><span class="n">_tmpList2</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="n">resultList</span> <span class="p">=</span> <span class="n">_tmpList</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">m</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="n">DeviceModel</span><span class="p">()</span>
-        <span class="p">{</span>
-            <span class="n">DeviceID</span> <span class="p">=</span> <span class="n">m</span><span class="p">.</span><span class="n">id</span><span class="p">,</span>
-            <span class="n">CreateDateTime</span> <span class="p">=</span> <span class="n">m</span><span class="p">.</span><span class="n">create_date</span><span class="p">,</span>
-            <span class="n">ModifyDateTime</span> <span class="p">=</span> <span class="n">m</span><span class="p">.</span><span class="n">update_date</span><span class="p">,</span>
-            <span class="n">Name</span> <span class="p">=</span> <span class="n">m</span><span class="p">.</span><span class="n">name</span>
-        <span class="p">}).</span><span class="n">ToList</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">resultList</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-
-<p></details></p>
-
-<hr />
-
-<p><details>
-  <summary style="background-color:#f5f5f5;border:1px solid #ccc;padding:5px;">
-    客户端的代码</p>
-
-<p></summary></p>
-
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
-</span><span class="lnt">53
-</span><span class="lnt">54
-</span><span class="lnt">55
-</span><span class="lnt">56
-</span><span class="lnt">57
-</span><span class="lnt">58
-</span><span class="lnt">59
-</span><span class="lnt">60
-</span><span class="lnt">61
-</span><span class="lnt">62
-</span><span class="lnt">63
-</span><span class="lnt">64
-</span><span class="lnt">65
-</span><span class="lnt">66
-</span><span class="lnt">67
-</span><span class="lnt">68
-</span><span class="lnt">69
-</span><span class="lnt">70
-</span><span class="lnt">71
-</span><span class="lnt">72
-</span><span class="lnt">73
-</span><span class="lnt">74
-</span><span class="lnt">75
-</span><span class="lnt">76
-</span><span class="lnt">77
-</span><span class="lnt">78
-</span><span class="lnt">79
-</span><span class="lnt">80
-</span><span class="lnt">81
-</span><span class="lnt">82
-</span><span class="lnt">83
-</span><span class="lnt">84
-</span><span class="lnt">85
-</span><span class="lnt">86
-</span><span class="lnt">87
-</span><span class="lnt">88
-</span><span class="lnt">89
-</span><span class="lnt">90
-</span><span class="lnt">91
-</span><span class="lnt">92
-</span><span class="lnt">93
-</span><span class="lnt">94
-</span><span class="lnt">95
-</span><span class="lnt">96
-</span><span class="lnt">97
-</span><span class="lnt">98
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="k">public</span> <span class="kt">bool</span> <span class="n">SyncDevices</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">DateTime</span> <span class="n">newDataVersion</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
-    <span class="c1">// 从本地库，读取 最近修改时间 ，最大的 ID，
-</span><span class="c1"></span>    <span class="kt">var</span> <span class="n">_syncControlData</span> <span class="p">=</span> <span class="n">m_Storage</span><span class="p">.</span><span class="n">GetDevicesNewestLastID</span><span class="p">();</span>
-    <span class="n">ServerModel</span><span class="p">.</span><span class="n">DeviceModel</span><span class="p">[]</span> <span class="n">serverDevices</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
-
-    <span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="c1">// 通过 WCF 接口获取：服务端最新的ID 和 分批获取增量数据
-</span><span class="c1"></span>        <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ServerModel</span><span class="p">.</span><span class="n">ResourceClient</span><span class="p">())</span>
-        <span class="p">{</span>
-            <span class="n">_syncControlData</span><span class="p">.</span><span class="n">FinishLatestID</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">GetDeviceLatestID</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
-            <span class="n">serverDevices</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">GetDevices</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="n">_syncControlData</span><span class="p">.</span><span class="n">CurrentHandlingTime</span><span class="p">,</span>
-                <span class="n">_syncControlData</span><span class="p">.</span><span class="n">CurrentHandlingID</span><span class="p">,</span> <span class="m">50</span><span class="p">);</span>
-        <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">serverDevices</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">serverDevices</span><span class="p">.</span><span class="n">Length</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="k">return</span> <span class="k">true</span><span class="p">;</span> <span class="c1">// 本次为获取到最新数据，无需同步操作。
-</span><span class="c1"></span>        <span class="p">}</span>
-
-        <span class="c1">// 在本地库中查找，从服务器拉取的新设备。
-</span><span class="c1"></span>        <span class="kt">var</span> <span class="n">serverDeviceIDList</span> <span class="p">=</span> <span class="n">serverDevices</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">m</span> <span class="p">=&gt;</span> <span class="n">m</span><span class="p">.</span><span class="n">RecordID</span><span class="p">).</span>
-            <span class="n">Distinct</span><span class="p">().</span><span class="n">ToList</span><span class="p">();</span>
-        <span class="kt">var</span> <span class="n">localDevices</span> <span class="p">=</span> <span class="n">m_Storage</span><span class="p">.</span><span class="n">GetDevices</span><span class="p">(</span><span class="n">serverDeviceIDList</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">localDevices</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="k">continue</span><span class="p">;</span>
-        <span class="p">}</span>
-
-        <span class="c1">// 如果本地库存在则更新，不存在则新增
-</span><span class="c1"></span>        <span class="c1">// 预存同步参数，以便失败后，回滚操作
-</span><span class="c1"></span>        <span class="n">_syncControlData</span><span class="p">.</span><span class="n">SavePrevBatchIDForRollBack</span><span class="p">();</span>
-        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">_single</span> <span class="k">in</span> <span class="n">serverDevices</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">_syncControlData</span><span class="p">.</span><span class="n">SetCurrentHandlingData</span><span class="p">(</span><span class="n">_single</span><span class="p">.</span><span class="n">ModifyDateTime</span><span class="p">,</span>
-                <span class="n">_single</span><span class="p">.</span><span class="n">RecordID</span><span class="p">);</span>
-            <span class="kt">var</span> <span class="n">model</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DeviceModel</span><span class="p">()</span>
-            <span class="p">{</span>
-                <span class="n">DataVersion</span> <span class="p">=</span> <span class="n">newDataVersion</span><span class="p">,</span>  <span class="c1">// 同步的时间
-</span><span class="c1"></span>                <span class="n">ID</span> <span class="p">=</span> <span class="n">_single</span><span class="p">.</span><span class="n">RecordID</span><span class="p">,</span> <span class="c1">// 系统id，无意义
-</span><span class="c1"></span>                <span class="n">DeviceID</span> <span class="p">=</span> <span class="n">_single</span><span class="p">.</span><span class="n">DeviceID</span><span class="p">,</span>
-                <span class="n">Name</span> <span class="p">=</span> <span class="n">_single</span><span class="p">.</span><span class="n">Name</span><span class="p">,</span>
-                <span class="n">CreateDateTime</span> <span class="p">=</span> <span class="n">_single</span><span class="p">.</span><span class="n">CreateDateTime</span><span class="p">,</span>
-                <span class="n">ModifyDateTime</span> <span class="p">=</span> <span class="n">_single</span><span class="p">.</span><span class="n">ModifyDateTime</span>
-            <span class="p">};</span>
-
-            <span class="k">if</span> <span class="p">(</span><span class="n">localDevices</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="n">_single</span><span class="p">.</span><span class="n">RecordID</span><span class="p">))</span>
-            <span class="p">{</span>
-                <span class="c1">// 修改时先移除，然后统一 add
-</span><span class="c1"></span>                <span class="n">localDevices</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">_single</span><span class="p">.</span><span class="n">RecordID</span><span class="p">);</span> 
-                <span class="n">model</span><span class="p">.</span><span class="n">DataModitifyStatus</span> <span class="p">=</span> <span class="n">_single</span><span class="p">.</span><span class="n">Deleted</span> <span class="p">?</span> 
-                    <span class="n">DataModitifyStatus</span><span class="p">.</span><span class="n">Delete</span> <span class="p">:</span> <span class="n">DataModitifyStatus</span><span class="p">.</span><span class="n">Modityfy</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="k">else</span>
-            <span class="p">{</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">_single</span><span class="p">.</span><span class="n">Deleted</span><span class="p">)</span>
-                <span class="p">{</span>
-                    <span class="c1">// 本地数据库不存在该数据，并且是服务端已删除的数据。则不需要执行数据库操作
-</span><span class="c1"></span>                    <span class="k">continue</span><span class="p">;</span>
-                <span class="p">}</span>
-                <span class="n">model</span><span class="p">.</span><span class="n">DataModitifyStatus</span> <span class="p">=</span> <span class="n">DataModitifyStatus</span><span class="p">.</span><span class="n">Add</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="n">localDevices</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span> <span class="n">model</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="kt">var</span> <span class="n">addOrUpdateExecuteResult</span> <span class="p">=</span> <span class="n">m_Storage</span><span class="p">.</span><span class="n">AddOrUpdateDevices</span><span class="p">(</span><span class="n">localDevices</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">addOrUpdateExecuteResult</span> <span class="p">!=</span> <span class="n">ExecuteResult</span><span class="p">.</span><span class="n">Success</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">_syncControlData</span><span class="p">.</span><span class="n">RollBackPrevBatchID</span><span class="p">();</span>  <span class="c1">// 插入数据库失败，回滚
-</span><span class="c1"></span>            <span class="k">continue</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">_syncControlData</span><span class="p">.</span><span class="n">IsFinished</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="k">return</span> <span class="k">true</span><span class="p">;</span>  <span class="c1">// 本次同步操作完成后，恰好同步到最新数据，则结束
-</span><span class="c1"></span>        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="k">public</span> <span class="n">SyncControlModel</span> <span class="n">GetDevicesNewestLastID</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Entities</span><span class="p">())</span>
-    <span class="p">{</span>
-        <span class="kt">var</span> <span class="n">_newestData</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">devices</span><span class="p">.</span><span class="n">OrderByDescending</span><span class="p">(</span><span class="n">m</span> <span class="p">=&gt;</span> <span class="n">m</span><span class="p">.</span><span class="n">server_modify_datetime</span><span class="p">).</span>
-            <span class="n">ThenByDescending</span><span class="p">(</span><span class="n">n</span> <span class="p">=&gt;</span> <span class="n">n</span><span class="p">.</span><span class="n">id</span><span class="p">).</span><span class="n">FirstOrDefault</span><span class="p">();</span>
-        <span class="kt">var</span> <span class="n">_ret</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SyncControlModel</span><span class="p">();</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">_newestData</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">_ret</span><span class="p">.</span><span class="n">NewestID</span> <span class="p">=</span> <span class="n">_newestData</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
-            <span class="n">_ret</span><span class="p">.</span><span class="n">NewestDateTime</span> <span class="p">=</span> <span class="n">_newestData</span><span class="p">.</span><span class="n">server_modify_datetime</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">_ret</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-
-<p></details></p>
-
-<hr />
-
-<p><details>
-  <summary style="background-color:#f5f5f5;border:1px solid #ccc;padding:5px;">
-    客户端的代码(同步数据的控制类)</p>
-
-<p></summary></p>
-
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
-</span><span class="lnt">53
-</span><span class="lnt">54
-</span><span class="lnt">55
-</span><span class="lnt">56
-</span><span class="lnt">57
-</span><span class="lnt">58
-</span><span class="lnt">59
-</span><span class="lnt">60
-</span><span class="lnt">61
-</span><span class="lnt">62
-</span><span class="lnt">63
-</span><span class="lnt">64
-</span><span class="lnt">65
-</span><span class="lnt">66
-</span><span class="lnt">67
-</span><span class="lnt">68
-</span><span class="lnt">69
-</span><span class="lnt">70
-</span><span class="lnt">71
-</span><span class="lnt">72
-</span><span class="lnt">73
-</span><span class="lnt">74
-</span><span class="lnt">75
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="c1">/// &lt;summary&gt;
-</span><span class="c1">/// 本地库中最新的标记 特征，差异化更新时候使用
-</span><span class="c1">/// &lt;/summary&gt;
-</span><span class="c1"></span><span class="k">public</span> <span class="k">class</span> <span class="nc">SyncControlModel</span>
-<span class="p">{</span>
-    <span class="c1">/// &lt;summary&gt;
-</span><span class="c1"></span>    <span class="c1">/// 同个时间点下，最大的ID
-</span><span class="c1"></span>    <span class="c1">/// &lt;/summary&gt;
-</span><span class="c1"></span>    <span class="k">public</span> <span class="kt">long</span> <span class="n">NewestID</span>
-    <span class="p">{</span>
-        <span class="k">set</span> <span class="p">{</span> <span class="n">CurrentHandlingID</span> <span class="p">=</span> <span class="k">value</span><span class="p">;</span> <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="c1">/// &lt;summary&gt;
-</span><span class="c1"></span>    <span class="c1">/// 最新时间
-</span><span class="c1"></span>    <span class="c1">/// &lt;/summary&gt;
-</span><span class="c1"></span>    <span class="k">public</span> <span class="n">DateTime</span> <span class="n">NewestDateTime</span>
-    <span class="p">{</span>
-        <span class="k">set</span> <span class="p">{</span> <span class="n">CurrentHandlingTime</span> <span class="p">=</span> <span class="k">value</span><span class="p">;</span> <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="c1">/// &lt;summary&gt;
-</span><span class="c1"></span>    <span class="c1">/// 上一批次，处理的 最后一个ID。上一批次最后处理的ID，用来判断是否更新完成
-</span><span class="c1"></span>    <span class="c1">/// &lt;/summary&gt;
-</span><span class="c1"></span>    <span class="k">public</span> <span class="kt">long</span> <span class="n">PrevBatchLastHandlingID</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">private</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-
-    <span class="c1">/// &lt;summary&gt;
-</span><span class="c1"></span>    <span class="c1">/// 同步结束ID，即终止ID
-</span><span class="c1"></span>    <span class="c1">/// &lt;/summary&gt;
-</span><span class="c1"></span>    <span class="k">public</span> <span class="kt">long</span> <span class="n">FinishLatestID</span> <span class="p">{</span> <span class="k">private</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-
-    <span class="c1">/// &lt;summary&gt;
-</span><span class="c1"></span>    <span class="c1">/// 当前处理的 ID 唯一标识
-</span><span class="c1"></span>    <span class="c1">/// &lt;/summary&gt;
-</span><span class="c1"></span>    <span class="k">public</span> <span class="kt">long</span> <span class="n">CurrentHandlingID</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">private</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-
-    <span class="c1">/// &lt;summary&gt;
-</span><span class="c1"></span>    <span class="c1">/// 当前处理的 时间戳
-</span><span class="c1"></span>    <span class="c1">/// &lt;/summary&gt;
-</span><span class="c1"></span>    <span class="k">public</span> <span class="n">DateTime</span> <span class="n">CurrentHandlingTime</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">private</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-
-    <span class="c1">/// &lt;summary&gt;
-</span><span class="c1"></span>    <span class="c1">/// 结束标志
-</span><span class="c1"></span>    <span class="c1">/// &lt;/summary&gt;
-</span><span class="c1"></span>    <span class="k">public</span> <span class="kt">bool</span> <span class="n">IsFinished</span>
-    <span class="p">{</span>
-        <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">FinishLatestID</span> <span class="p">==</span> <span class="n">CurrentHandlingID</span><span class="p">;</span> <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="c1">/// &lt;summary&gt;
-</span><span class="c1"></span>    <span class="c1">/// 保存上一批次的值，用于回滚
-</span><span class="c1"></span>    <span class="c1">/// &lt;/summary&gt;
-</span><span class="c1"></span>    <span class="k">public</span> <span class="k">void</span> <span class="n">SavePrevBatchIDForRollBack</span><span class="p">()</span>
-    <span class="p">{</span>
-        <span class="n">PrevBatchLastHandlingID</span> <span class="p">=</span> <span class="n">CurrentHandlingID</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="c1">/// &lt;summary&gt;
-</span><span class="c1"></span>    <span class="c1">/// 批次号回滚
-</span><span class="c1"></span>    <span class="c1">/// &lt;/summary&gt;
-</span><span class="c1"></span>    <span class="k">public</span> <span class="k">void</span> <span class="n">RollBackPrevBatchID</span><span class="p">()</span>
-    <span class="p">{</span>
-        <span class="n">CurrentHandlingID</span> <span class="p">=</span> <span class="n">PrevBatchLastHandlingID</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="c1">/// &lt;summary&gt;
-</span><span class="c1"></span>    <span class="c1">/// 设置当前的 处理数据，时间戳 和 ID
-</span><span class="c1"></span>    <span class="c1">/// &lt;/summary&gt;
-</span><span class="c1"></span>    <span class="c1">/// &lt;param name=&#34;_currentId&#34;&gt;&lt;/param&gt;
-</span><span class="c1"></span>    <span class="k">public</span> <span class="k">void</span> <span class="n">SetCurrentHandlingData</span><span class="p">(</span><span class="n">DateTime</span> <span class="n">_currentDateTime</span><span class="p">,</span> <span class="kt">long</span> <span class="n">_currentId</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">CurrentHandlingTime</span> <span class="p">=</span> <span class="n">_currentDateTime</span><span class="p">;</span>
-        <span class="n">CurrentHandlingID</span> <span class="p">=</span> <span class="n">_currentId</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-
-<p></details></p>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted -->/// &lt;summary&gt;
+<!-- raw HTML omitted --><!-- raw HTML omitted -->/// 分批同步 获取Device 数据
+<!-- raw HTML omitted --><!-- raw HTML omitted -->/// &lt;/summary&gt;
+<!-- raw HTML omitted --><!-- raw HTML omitted -->/// &lt;param name=&quot;startDataVersion&quot;&gt;开始的时间版本&lt;/param&gt;
+<!-- raw HTML omitted --><!-- raw HTML omitted -->/// &lt;param name=&quot;startID&quot;&gt;开始的唯一标识ID&lt;/param&gt;
+<!-- raw HTML omitted --><!-- raw HTML omitted -->/// &lt;param name=&quot;dataCount&quot;&gt;本次同步的数量&lt;/param&gt;
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->public<!-- raw HTML omitted --> <!-- raw HTML omitted -->List<!-- raw HTML omitted --><!-- raw HTML omitted -->&lt;<!-- raw HTML omitted --><!-- raw HTML omitted -->DeviceModel<!-- raw HTML omitted --><!-- raw HTML omitted -->&gt;<!-- raw HTML omitted --> <!-- raw HTML omitted -->GetDevices<!-- raw HTML omitted --><!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->DateTime<!-- raw HTML omitted --> <!-- raw HTML omitted -->startDataVersion<!-- raw HTML omitted --><!-- raw HTML omitted -->,<!-- raw HTML omitted --> <!-- raw HTML omitted -->long<!-- raw HTML omitted --> <!-- raw HTML omitted -->startID<!-- raw HTML omitted --><!-- raw HTML omitted -->,<!-- raw HTML omitted --> <!-- raw HTML omitted -->int<!-- raw HTML omitted --> <!-- raw HTML omitted -->dataCount<!-- raw HTML omitted --><!-- raw HTML omitted -->)<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->List<!-- raw HTML omitted --><!-- raw HTML omitted -->&lt;<!-- raw HTML omitted --><!-- raw HTML omitted -->DeviceModel<!-- raw HTML omitted --><!-- raw HTML omitted -->&gt;<!-- raw HTML omitted --> <!-- raw HTML omitted -->resultList<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->null<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted --></p>
+<pre><code>&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Entities&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 关键：先确定时间点，然后再顺序取 dataCount 个。
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->        <!-- raw HTML omitted -->// 先顺序排序，需要保留 deleted 信息，同步时候移除表关系
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->        <!-- raw HTML omitted -->var<!-- raw HTML omitted --> <!-- raw HTML omitted -->_tmpQry<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->context<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->modules<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->OrderBy<!-- raw HTML omitted --><!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->m<!-- raw HTML omitted --> <!-- raw HTML omitted -->=&gt;<!-- raw HTML omitted --> <!-- raw HTML omitted -->m<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->update_date<!-- raw HTML omitted --><!-- raw HTML omitted -->).<!-- raw HTML omitted --><!-- raw HTML omitted -->ThenBy<!-- raw HTML omitted --><!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->m<!-- raw HTML omitted --> <!-- raw HTML omitted -->=&gt;<!-- raw HTML omitted --> <!-- raw HTML omitted -->m<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->id<!-- raw HTML omitted --><!-- raw HTML omitted -->);<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->// 先取 同一个时间点的 数据
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->        <!-- raw HTML omitted -->var<!-- raw HTML omitted --> <!-- raw HTML omitted -->_tmpList<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->_tmpQry<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->Where<!-- raw HTML omitted --><!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->m<!-- raw HTML omitted --> <!-- raw HTML omitted -->=&gt;<!-- raw HTML omitted --> <!-- raw HTML omitted -->m<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->update_date<!-- raw HTML omitted --> <!-- raw HTML omitted -->==<!-- raw HTML omitted --> <!-- raw HTML omitted -->startDataVersion<!-- raw HTML omitted --> <!-- raw HTML omitted -->&amp;&amp;<!-- raw HTML omitted --> <!-- raw HTML omitted -->m<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->id<!-- raw HTML omitted --> <!-- raw HTML omitted -->&gt;<!-- raw HTML omitted --> <!-- raw HTML omitted -->startID<!-- raw HTML omitted --><!-- raw HTML omitted -->).<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->Take<!-- raw HTML omitted --><!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->dataCount<!-- raw HTML omitted --><!-- raw HTML omitted -->).<!-- raw HTML omitted --><!-- raw HTML omitted -->ToList<!-- raw HTML omitted --><!-- raw HTML omitted -->();<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->// 如果不足 dataCount 条数据，再顺序取够 dataCount 条；
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->        <!-- raw HTML omitted -->if<!-- raw HTML omitted --> <!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->_tmpList<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->Count<!-- raw HTML omitted --> <!-- raw HTML omitted -->&lt;<!-- raw HTML omitted --> <!-- raw HTML omitted -->dataCount<!-- raw HTML omitted --><!-- raw HTML omitted -->)<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->var<!-- raw HTML omitted --> <!-- raw HTML omitted -->_tmpList2<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->_tmpQry<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->Where<!-- raw HTML omitted --><!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->m<!-- raw HTML omitted --> <!-- raw HTML omitted -->=&gt;<!-- raw HTML omitted --> <!-- raw HTML omitted -->m<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->update_date<!-- raw HTML omitted --> <!-- raw HTML omitted -->&gt;<!-- raw HTML omitted --> <!-- raw HTML omitted -->startDataVersion<!-- raw HTML omitted --><!-- raw HTML omitted -->).<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->Take<!-- raw HTML omitted --><!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->dataCount<!-- raw HTML omitted --> <!-- raw HTML omitted -->-<!-- raw HTML omitted --> <!-- raw HTML omitted -->_tmpList<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->Count<!-- raw HTML omitted --><!-- raw HTML omitted -->).<!-- raw HTML omitted --><!-- raw HTML omitted -->ToList<!-- raw HTML omitted --><!-- raw HTML omitted -->();<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->_tmpList<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->AddRange<!-- raw HTML omitted --><!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->_tmpList2<!-- raw HTML omitted --><!-- raw HTML omitted -->);<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted --></p>
+<pre><code>    &lt;span class=&quot;n&quot;&gt;resultList&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_tmpList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DeviceModel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;DeviceID&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;CreateDateTime&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;create_date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;ModifyDateTime&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;update_date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ToList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+</code></pre>
+<p><!-- raw HTML omitted -->}<!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<hr>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 通过 WCF 接口获取：服务端最新的ID 和 分批获取增量数据
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->        <!-- raw HTML omitted -->using<!-- raw HTML omitted --> <!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->var<!-- raw HTML omitted --> <!-- raw HTML omitted -->client<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->new<!-- raw HTML omitted --> <!-- raw HTML omitted -->ServerModel<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->ResourceClient<!-- raw HTML omitted --><!-- raw HTML omitted -->())<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->_syncControlData<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->FinishLatestID<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->client<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->GetDeviceLatestID<!-- raw HTML omitted --><!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->0<!-- raw HTML omitted --><!-- raw HTML omitted -->);<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->serverDevices<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->client<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->GetDevices<!-- raw HTML omitted --><!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->0<!-- raw HTML omitted --><!-- raw HTML omitted -->,<!-- raw HTML omitted --> <!-- raw HTML omitted -->_syncControlData<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->CurrentHandlingTime<!-- raw HTML omitted --><!-- raw HTML omitted -->,<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->_syncControlData<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->CurrentHandlingID<!-- raw HTML omitted --><!-- raw HTML omitted -->,<!-- raw HTML omitted --> <!-- raw HTML omitted -->50<!-- raw HTML omitted --><!-- raw HTML omitted -->);<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->if<!-- raw HTML omitted --> <!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->serverDevices<!-- raw HTML omitted --> <!-- raw HTML omitted -->==<!-- raw HTML omitted --> <!-- raw HTML omitted -->null<!-- raw HTML omitted --><!-- raw HTML omitted -->)<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->return<!-- raw HTML omitted --> <!-- raw HTML omitted -->false<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->if<!-- raw HTML omitted --> <!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->serverDevices<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->Length<!-- raw HTML omitted --> <!-- raw HTML omitted -->==<!-- raw HTML omitted --> <!-- raw HTML omitted -->0<!-- raw HTML omitted --><!-- raw HTML omitted -->)<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->return<!-- raw HTML omitted --> <!-- raw HTML omitted -->true<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted --> <!-- raw HTML omitted -->// 本次为获取到最新数据，无需同步操作。
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->        <!-- raw HTML omitted -->}<!-- raw HTML omitted --></p>
+<pre><code>    &lt;span class=&quot;c1&quot;&gt;// 在本地库中查找，从服务器拉取的新设备。
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->        <!-- raw HTML omitted -->var<!-- raw HTML omitted --> <!-- raw HTML omitted -->serverDeviceIDList<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->serverDevices<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->Select<!-- raw HTML omitted --><!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->m<!-- raw HTML omitted --> <!-- raw HTML omitted -->=&gt;<!-- raw HTML omitted --> <!-- raw HTML omitted -->m<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->RecordID<!-- raw HTML omitted --><!-- raw HTML omitted -->).<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->Distinct<!-- raw HTML omitted --><!-- raw HTML omitted -->().<!-- raw HTML omitted --><!-- raw HTML omitted -->ToList<!-- raw HTML omitted --><!-- raw HTML omitted -->();<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->var<!-- raw HTML omitted --> <!-- raw HTML omitted -->localDevices<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->m_Storage<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->GetDevices<!-- raw HTML omitted --><!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->serverDeviceIDList<!-- raw HTML omitted --><!-- raw HTML omitted -->);<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->if<!-- raw HTML omitted --> <!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->localDevices<!-- raw HTML omitted --> <!-- raw HTML omitted -->==<!-- raw HTML omitted --> <!-- raw HTML omitted -->null<!-- raw HTML omitted --><!-- raw HTML omitted -->)<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->continue<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted --></p>
+<pre><code>    &lt;span class=&quot;c1&quot;&gt;// 如果本地库存在则更新，不存在则新增
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->        <!-- raw HTML omitted -->// 预存同步参数，以便失败后，回滚操作
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->        <!-- raw HTML omitted -->_syncControlData<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->SavePrevBatchIDForRollBack<!-- raw HTML omitted --><!-- raw HTML omitted -->();<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->foreach<!-- raw HTML omitted --> <!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->var<!-- raw HTML omitted --> <!-- raw HTML omitted -->_single<!-- raw HTML omitted --> <!-- raw HTML omitted -->in<!-- raw HTML omitted --> <!-- raw HTML omitted -->serverDevices<!-- raw HTML omitted --><!-- raw HTML omitted -->)<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->_syncControlData<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->SetCurrentHandlingData<!-- raw HTML omitted --><!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->_single<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->ModifyDateTime<!-- raw HTML omitted --><!-- raw HTML omitted -->,<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->_single<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->RecordID<!-- raw HTML omitted --><!-- raw HTML omitted -->);<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->var<!-- raw HTML omitted --> <!-- raw HTML omitted -->model<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->new<!-- raw HTML omitted --> <!-- raw HTML omitted -->DeviceModel<!-- raw HTML omitted --><!-- raw HTML omitted -->()<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->DataVersion<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->newDataVersion<!-- raw HTML omitted --><!-- raw HTML omitted -->,<!-- raw HTML omitted -->  <!-- raw HTML omitted -->// 同步的时间
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->                <!-- raw HTML omitted -->ID<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->_single<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->RecordID<!-- raw HTML omitted --><!-- raw HTML omitted -->,<!-- raw HTML omitted --> <!-- raw HTML omitted -->// 系统id，无意义
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->                <!-- raw HTML omitted -->DeviceID<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->_single<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->DeviceID<!-- raw HTML omitted --><!-- raw HTML omitted -->,<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->Name<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->_single<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->Name<!-- raw HTML omitted --><!-- raw HTML omitted -->,<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->CreateDateTime<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->_single<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->CreateDateTime<!-- raw HTML omitted --><!-- raw HTML omitted -->,<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->ModifyDateTime<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->_single<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->ModifyDateTime<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->};<!-- raw HTML omitted --></p>
+<pre><code>        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;localDevices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ContainsKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_single&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RecordID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// 修改时先移除，然后统一 add
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->                <!-- raw HTML omitted -->localDevices<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->Remove<!-- raw HTML omitted --><!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->_single<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->RecordID<!-- raw HTML omitted --><!-- raw HTML omitted -->);<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->model<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->DataModitifyStatus<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->_single<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->Deleted<!-- raw HTML omitted --> <!-- raw HTML omitted -->?<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->DataModitifyStatus<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->Delete<!-- raw HTML omitted --> <!-- raw HTML omitted -->:<!-- raw HTML omitted --> <!-- raw HTML omitted -->DataModitifyStatus<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->Modityfy<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->else<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->if<!-- raw HTML omitted --> <!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->_single<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->Deleted<!-- raw HTML omitted --><!-- raw HTML omitted -->)<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->// 本地数据库不存在该数据，并且是服务端已删除的数据。则不需要执行数据库操作
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->                    <!-- raw HTML omitted -->continue<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->model<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->DataModitifyStatus<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->DataModitifyStatus<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->Add<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->localDevices<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->Add<!-- raw HTML omitted --><!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->model<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->ID<!-- raw HTML omitted --><!-- raw HTML omitted -->,<!-- raw HTML omitted --> <!-- raw HTML omitted -->model<!-- raw HTML omitted --><!-- raw HTML omitted -->);<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted --></p>
+<pre><code>    &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;addOrUpdateExecuteResult&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m_Storage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AddOrUpdateDevices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;localDevices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;addOrUpdateExecuteResult&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ExecuteResult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;_syncControlData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RollBackPrevBatchID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 插入数据库失败，回滚
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->            <!-- raw HTML omitted -->continue<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->if<!-- raw HTML omitted --> <!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->_syncControlData<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->IsFinished<!-- raw HTML omitted --><!-- raw HTML omitted -->)<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->return<!-- raw HTML omitted --> <!-- raw HTML omitted -->true<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted -->  <!-- raw HTML omitted -->// 本次同步操作完成后，恰好同步到最新数据，则结束
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->        <!-- raw HTML omitted -->}<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->public<!-- raw HTML omitted --> <!-- raw HTML omitted -->SyncControlModel<!-- raw HTML omitted --> <!-- raw HTML omitted -->GetDevicesNewestLastID<!-- raw HTML omitted --><!-- raw HTML omitted -->()<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->using<!-- raw HTML omitted --> <!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->var<!-- raw HTML omitted --> <!-- raw HTML omitted -->context<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->new<!-- raw HTML omitted --> <!-- raw HTML omitted -->Entities<!-- raw HTML omitted --><!-- raw HTML omitted -->())<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->var<!-- raw HTML omitted --> <!-- raw HTML omitted -->_newestData<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->context<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->devices<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->OrderByDescending<!-- raw HTML omitted --><!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->m<!-- raw HTML omitted --> <!-- raw HTML omitted -->=&gt;<!-- raw HTML omitted --> <!-- raw HTML omitted -->m<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->server_modify_datetime<!-- raw HTML omitted --><!-- raw HTML omitted -->).<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->ThenByDescending<!-- raw HTML omitted --><!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->n<!-- raw HTML omitted --> <!-- raw HTML omitted -->=&gt;<!-- raw HTML omitted --> <!-- raw HTML omitted -->n<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->id<!-- raw HTML omitted --><!-- raw HTML omitted -->).<!-- raw HTML omitted --><!-- raw HTML omitted -->FirstOrDefault<!-- raw HTML omitted --><!-- raw HTML omitted -->();<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->var<!-- raw HTML omitted --> <!-- raw HTML omitted -->_ret<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->new<!-- raw HTML omitted --> <!-- raw HTML omitted -->SyncControlModel<!-- raw HTML omitted --><!-- raw HTML omitted -->();<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->if<!-- raw HTML omitted --> <!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->_newestData<!-- raw HTML omitted --> <!-- raw HTML omitted -->!=<!-- raw HTML omitted --> <!-- raw HTML omitted -->null<!-- raw HTML omitted --><!-- raw HTML omitted -->)<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->_ret<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->NewestID<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->_newestData<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->id<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->_ret<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->NewestDateTime<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->_newestData<!-- raw HTML omitted --><!-- raw HTML omitted -->.<!-- raw HTML omitted --><!-- raw HTML omitted -->server_modify_datetime<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->return<!-- raw HTML omitted --> <!-- raw HTML omitted -->_ret<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<hr>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre><code>&lt;span class=&quot;c1&quot;&gt;/// &amp;lt;summary&amp;gt;
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// 最新时间
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// &lt;/summary&gt;
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->public<!-- raw HTML omitted --> <!-- raw HTML omitted -->DateTime<!-- raw HTML omitted --> <!-- raw HTML omitted -->NewestDateTime<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->set<!-- raw HTML omitted --> <!-- raw HTML omitted -->{<!-- raw HTML omitted --> <!-- raw HTML omitted -->CurrentHandlingTime<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->value<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted --> <!-- raw HTML omitted -->}<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted --></p>
+<pre><code>&lt;span class=&quot;c1&quot;&gt;/// &amp;lt;summary&amp;gt;
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// 上一批次，处理的 最后一个ID。上一批次最后处理的ID，用来判断是否更新完成
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// &lt;/summary&gt;
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->public<!-- raw HTML omitted --> <!-- raw HTML omitted -->long<!-- raw HTML omitted --> <!-- raw HTML omitted -->PrevBatchLastHandlingID<!-- raw HTML omitted --> <!-- raw HTML omitted -->{<!-- raw HTML omitted --> <!-- raw HTML omitted -->get<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted --> <!-- raw HTML omitted -->private<!-- raw HTML omitted --> <!-- raw HTML omitted -->set<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted --> <!-- raw HTML omitted -->}<!-- raw HTML omitted --></p>
+<pre><code>&lt;span class=&quot;c1&quot;&gt;/// &amp;lt;summary&amp;gt;
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// 同步结束ID，即终止ID
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// &lt;/summary&gt;
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->public<!-- raw HTML omitted --> <!-- raw HTML omitted -->long<!-- raw HTML omitted --> <!-- raw HTML omitted -->FinishLatestID<!-- raw HTML omitted --> <!-- raw HTML omitted -->{<!-- raw HTML omitted --> <!-- raw HTML omitted -->private<!-- raw HTML omitted --> <!-- raw HTML omitted -->get<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted --> <!-- raw HTML omitted -->set<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted --> <!-- raw HTML omitted -->}<!-- raw HTML omitted --></p>
+<pre><code>&lt;span class=&quot;c1&quot;&gt;/// &amp;lt;summary&amp;gt;
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// 当前处理的 ID 唯一标识
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// &lt;/summary&gt;
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->public<!-- raw HTML omitted --> <!-- raw HTML omitted -->long<!-- raw HTML omitted --> <!-- raw HTML omitted -->CurrentHandlingID<!-- raw HTML omitted --> <!-- raw HTML omitted -->{<!-- raw HTML omitted --> <!-- raw HTML omitted -->get<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted --> <!-- raw HTML omitted -->private<!-- raw HTML omitted --> <!-- raw HTML omitted -->set<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted --> <!-- raw HTML omitted -->}<!-- raw HTML omitted --></p>
+<pre><code>&lt;span class=&quot;c1&quot;&gt;/// &amp;lt;summary&amp;gt;
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// 当前处理的 时间戳
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// &lt;/summary&gt;
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->public<!-- raw HTML omitted --> <!-- raw HTML omitted -->DateTime<!-- raw HTML omitted --> <!-- raw HTML omitted -->CurrentHandlingTime<!-- raw HTML omitted --> <!-- raw HTML omitted -->{<!-- raw HTML omitted --> <!-- raw HTML omitted -->get<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted --> <!-- raw HTML omitted -->private<!-- raw HTML omitted --> <!-- raw HTML omitted -->set<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted --> <!-- raw HTML omitted -->}<!-- raw HTML omitted --></p>
+<pre><code>&lt;span class=&quot;c1&quot;&gt;/// &amp;lt;summary&amp;gt;
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// 结束标志
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// &lt;/summary&gt;
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->public<!-- raw HTML omitted --> <!-- raw HTML omitted -->bool<!-- raw HTML omitted --> <!-- raw HTML omitted -->IsFinished<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->get<!-- raw HTML omitted --> <!-- raw HTML omitted -->{<!-- raw HTML omitted --> <!-- raw HTML omitted -->return<!-- raw HTML omitted --> <!-- raw HTML omitted -->FinishLatestID<!-- raw HTML omitted --> <!-- raw HTML omitted -->==<!-- raw HTML omitted --> <!-- raw HTML omitted -->CurrentHandlingID<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted --> <!-- raw HTML omitted -->}<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted --></p>
+<pre><code>&lt;span class=&quot;c1&quot;&gt;/// &amp;lt;summary&amp;gt;
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// 保存上一批次的值，用于回滚
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// &lt;/summary&gt;
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->public<!-- raw HTML omitted --> <!-- raw HTML omitted -->void<!-- raw HTML omitted --> <!-- raw HTML omitted -->SavePrevBatchIDForRollBack<!-- raw HTML omitted --><!-- raw HTML omitted -->()<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->PrevBatchLastHandlingID<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->CurrentHandlingID<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted --></p>
+<pre><code>&lt;span class=&quot;c1&quot;&gt;/// &amp;lt;summary&amp;gt;
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// 批次号回滚
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// &lt;/summary&gt;
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->public<!-- raw HTML omitted --> <!-- raw HTML omitted -->void<!-- raw HTML omitted --> <!-- raw HTML omitted -->RollBackPrevBatchID<!-- raw HTML omitted --><!-- raw HTML omitted -->()<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->CurrentHandlingID<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->PrevBatchLastHandlingID<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted --></p>
+<pre><code>&lt;span class=&quot;c1&quot;&gt;/// &amp;lt;summary&amp;gt;
+</code></pre>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// 设置当前的 处理数据，时间戳 和 ID
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// &lt;/summary&gt;
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->/// &lt;param name=&quot;_currentId&quot;&gt;&lt;/param&gt;
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->    <!-- raw HTML omitted -->public<!-- raw HTML omitted --> <!-- raw HTML omitted -->void<!-- raw HTML omitted --> <!-- raw HTML omitted -->SetCurrentHandlingData<!-- raw HTML omitted --><!-- raw HTML omitted -->(<!-- raw HTML omitted --><!-- raw HTML omitted -->DateTime<!-- raw HTML omitted --> <!-- raw HTML omitted -->_currentDateTime<!-- raw HTML omitted --><!-- raw HTML omitted -->,<!-- raw HTML omitted --> <!-- raw HTML omitted -->long<!-- raw HTML omitted --> <!-- raw HTML omitted -->_currentId<!-- raw HTML omitted --><!-- raw HTML omitted -->)<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->CurrentHandlingTime<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->_currentDateTime<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->CurrentHandlingID<!-- raw HTML omitted --> <!-- raw HTML omitted -->=<!-- raw HTML omitted --> <!-- raw HTML omitted -->_currentId<!-- raw HTML omitted --><!-- raw HTML omitted -->;<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->}<!-- raw HTML omitted -->
+<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h2 id="经验总结">经验总结</h2>
-
 <p>寻找<strong>关键信息</strong>，以及具有<strong>指标意义</strong>的数据，或者<strong>数据的组合</strong>。</p>
-
 <ul>
 <li>最开始，我只执着于 UpdateTime 这个数据，甚至提出去数据库中，修改历史数据，再把 UpdateTime 加上唯一约束(以前也没有听说过在 UpdateTime 这个字段上面加唯一约束)。并且这种办法，局限性有很强，不可以通用。</li>
 <li>主键ID唯一，但是它不具有时间属性。只适用于全部更新。</li>
 <li>把他们两个结合起来，才算是打开了新的思路。</li>
 </ul>
-
 <p><strong>拆分</strong>问题，<strong>简化</strong>问题</p>
-
 <ul>
 <li>把 UpdateTime 和 ID 组合使用时。妄图在一个sql里面来实现。发现无论怎么改，都会存在逻辑上面的问题；</li>
 <li>没有拆分化简的时候，如果用存储过程来写的话，会非常非常复杂；</li>
 <li>直到，我在脑袋里面，模拟出来可能的情况后。也就是上面的图片<code>同步数据的可能性</code>，慢慢归类，简化后；才发现。问题没有那么难，仅仅是<strong>起始点</strong>这一个小小的问题。</li>
 </ul>
-
 <p>使用<strong>逻辑分析</strong>和<strong>哲学归纳</strong></p>
-
 <ul>
 <li>在分析数据的意义和性质的时候，偶然间使用到了归纳的方法；也就是<code>唯一</code>和<code>可排序</code>；跳出了具体字段，使用场景的框架束缚，而去考虑这两种性质怎么结合的问题；</li>
 <li>在逻辑分析的时候，先用排列组合，算出多少种可能性；在脑中勾画出图形，把性质相同的可能性合并化简；</li>
 <li>在化简的过程中，不要仅仅着眼于查询的对象，也要去化简<code>查询的方法</code>；有点绕，打个比方，既要优化最终产品，也要去优化制作工艺；</li>
 </ul>
-
 <p>最后，我认为我最近的逻辑分析能力，好像有比较大的提升。</p>
-
 <ul>
 <li>直接得益于，常见的24种逻辑谬误的了解，<a href="/post/2018/20181207-logical-fallacy-list-foreword/">【转】逻辑谬误列表(序言)</a>，在平常的生活中，说话做事，也就有了逻辑方面的意识；</li>
 <li>间接可能得益于台大哲学系苑举正，苑老师讲话的视频。其实我很早以前，高中时候就喜欢哲学，《哲学的基本原理》这么枯燥的书，我居然认认真真仔仔细细的边读边想的看了三四遍。只是那时好多完全不懂，好多似懂非懂。十多年后虽然什么都不记得了，但是好像又懂了。。。感觉太玄了。。。</li>

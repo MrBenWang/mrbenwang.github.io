@@ -33,7 +33,7 @@
 <meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
 
 
-<meta name="generator" content="Hugo 0.57.2" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2018/20180930-domain-registration-share/" />
@@ -62,7 +62,6 @@
 
 <meta property="og:title" content="*域名注册经历的一些分享" />
 <meta property="og:description" content="前言
-
 一次偶然机会，看了一下新建一个VPS实例的价格，发现最低价的配置，没有ip4了(所幸我的还是ip4)，只能使用ipv6。2001:0db8:85a3:08d3:1319:8a2e:0370:7344 这样的ip地址，又长又难记忆。如果有个域名那不就简单记忆了嘛。
 " />
 <meta property="og:type" content="article" />
@@ -71,22 +70,17 @@
 <meta property="article:modified_time" content="2018-09-30T09:04:00+08:00" />
 <meta itemprop="name" content="*域名注册经历的一些分享">
 <meta itemprop="description" content="前言
-
 一次偶然机会，看了一下新建一个VPS实例的价格，发现最低价的配置，没有ip4了(所幸我的还是ip4)，只能使用ipv6。2001:0db8:85a3:08d3:1319:8a2e:0370:7344 这样的ip地址，又长又难记忆。如果有个域名那不就简单记忆了嘛。
 ">
-
-
 <meta itemprop="datePublished" content="2018-09-30T09:04:00&#43;08:00" />
 <meta itemprop="dateModified" content="2018-09-30T09:04:00&#43;08:00" />
 <meta itemprop="wordCount" content="1772">
 
 
 
-<meta itemprop="keywords" content="vps," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="vps," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="*域名注册经历的一些分享"/>
 <meta name="twitter:description" content="前言
-
 一次偶然机会，看了一下新建一个VPS实例的价格，发现最低价的配置，没有ip4了(所幸我的还是ip4)，只能使用ipv6。2001:0db8:85a3:08d3:1319:8a2e:0370:7344 这样的ip地址，又长又难记忆。如果有个域名那不就简单记忆了嘛。
 "/>
 
@@ -402,27 +396,23 @@ if (!doNotTrack) {
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#前言">前言</a></li>
-<li><a href="#顶级域名的选择">顶级域名的选择</a>
-<ul>
-<li><a href="#app">.app</a></li>
-<li><a href="#国外域名商的其他顶级域名">国外域名商的其他顶级域名</a></li>
-<li><a href="#国内域名商">国内域名商</a></li>
-</ul></li>
-<li><a href="#选择免费的域名">选择免费的域名</a></li>
-<li><a href="#在-freenom-申请注册">在 freenom 申请注册</a>
-<ul>
-<li><a href="#域名绑定ip-也就是dns服务配置了">域名绑定IP，也就是DNS服务配置了</a>
-<ul>
-<li><a href="#域名跳转">域名跳转</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#结语">结语</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#顶级域名的选择">顶级域名的选择</a>
+      <ul>
+        <li><a href="#app">.app</a></li>
+        <li><a href="#国外域名商的其他顶级域名">国外域名商的其他顶级域名</a></li>
+        <li><a href="#国内域名商">国内域名商</a></li>
+      </ul>
+    </li>
+    <li><a href="#选择免费的域名">选择免费的域名</a></li>
+    <li><a href="#在-freenom-申请注册">在 freenom 申请注册</a>
+      <ul>
+        <li><a href="#域名绑定ip也就是dns服务配置了">域名绑定IP，也就是DNS服务配置了</a></li>
+      </ul>
+    </li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
 </nav>
   </div>
 </div>
@@ -430,115 +420,83 @@ if (!doNotTrack) {
     
     <div class="post-content">
       <h2 id="前言">前言</h2>
-
-<p>一次偶然机会，看了一下新建一个<a href="https://www.vultr.com/?ref=7136316">VPS实例</a>的价格，发现最低价的配置，没有<code>ip4</code>了(所幸我的还是ip4)，只能使用<code>ipv6</code>。<code>2001:0db8:85a3:08d3:1319:8a2e:0370:7344</code> 这样的ip地址，又长又难记忆。如果有个域名那不就简单记忆了嘛。<br />
-<img src="/images/2018/20180930-domain-registration-share/ipv6_only.jpg" alt="ipv6_only" /></p>
-
+<p>一次偶然机会，看了一下新建一个<a href="https://www.vultr.com/?ref=7136316">VPS实例</a>的价格，发现最低价的配置，没有<code>ip4</code>了(所幸我的还是ip4)，只能使用<code>ipv6</code>。<code>2001:0db8:85a3:08d3:1319:8a2e:0370:7344</code> 这样的ip地址，又长又难记忆。如果有个域名那不就简单记忆了嘛。<br>
+<img src="/images/2018/20180930-domain-registration-share/ipv6_only.jpg" alt="ipv6_only"></p>
 <h2 id="顶级域名的选择">顶级域名的选择</h2>
-
 <p>根据我个人的需求，主要有三点：</p>
-
 <ol>
-<li>方便好记，<code>.com</code>，<code>.cn</code>这一类的顶级域名，常见的很，可是太贵了，简直没有必要；<br /></li>
-<li>我中意的二级域名没有被注册，懒得跟别人争；<br /></li>
-<li>价格便宜，最好是免费的。<br /></li>
+<li>方便好记，<code>.com</code>，<code>.cn</code>这一类的顶级域名，常见的很，可是太贵了，简直没有必要；</li>
+<li>我中意的二级域名没有被注册，懒得跟别人争；</li>
+<li>价格便宜，最好是免费的。</li>
 </ol>
-
 <h3 id="app">.app</h3>
-
 <p>首先是想到，<code>.app</code> 这个顶级域名，今年5月份谷歌才正式启用。一方面全新，我中意的二级域名没有被注册，另一方面赶时髦。</p>
-
 <p>去 <a href="https://get.app/">get.app</a> 看到下面的几个域名商，我都去看了一下，发现还是<code>google domains</code>的最便宜。汇率换算后，RMB大概需要 97￥，其他的都是100+￥，最贵的都有130+￥每年。不过有几个域名商，<code>第一年</code>都很便宜 10$ 左右，第一年后还是恢复原价。</p>
-
-<p>当时，我已经在填订单了，因为支付问题，以及账单邮寄问题，放弃了。<br />
-<img src="/images/2018/20180930-domain-registration-share/domains-store.jpg" alt="domains-store" /></p>
-
+<p>当时，我已经在填订单了，因为支付问题，以及账单邮寄问题，放弃了。<br>
+<img src="/images/2018/20180930-domain-registration-share/domains-store.jpg" alt="domains-store"></p>
 <h3 id="国外域名商的其他顶级域名">国外域名商的其他顶级域名</h3>
-
 <p>我在三个的域名商(<code>godaddy</code>，<code>name</code>，<code>freenom</code>)查询了我希望的二级域名，也顺便看了下不同的顶级域名的价格。发现规律：</p>
-
 <ul>
-<li>他们都是第一年优惠幅度很大；<br /></li>
-<li>续约就恢复原价格；<br /></li>
-<li>没有一次性购买三五年的优惠。<br /></li>
+<li>他们都是第一年优惠幅度很大；</li>
+<li>续约就恢复原价格；</li>
+<li>没有一次性购买三五年的优惠。</li>
 </ul>
-
 <h3 id="国内域名商">国内域名商</h3>
-
 <p>只看了两家 <a href="https://wanwang.aliyun.com/">阿里云</a> 和 <a href="https://buy.cloud.tencent.com/domain">腾讯云</a>。还是阿里(前身万网)的顶级域名多一些，腾讯都没有总共只有不到20个顶级域名。优点如下：</p>
-
 <ol>
-<li>顶级域名可以<code>使用中文</code>，不过总感觉中文域名low的一笔，价格也贵的离谱。<br /></li>
-<li>可以注册<code>cn</code>，<code>com.cn</code>等中国地域的域名，个人没有必要；<br /></li>
-<li>便宜，真心便宜，比如<code>.live</code>这个10年一次性340元RMB。<br /></li>
+<li>顶级域名可以<code>使用中文</code>，不过总感觉中文域名low的一笔，价格也贵的离谱。</li>
+<li>可以注册<code>cn</code>，<code>com.cn</code>等中国地域的域名，个人没有必要；</li>
+<li>便宜，真心便宜，比如<code>.live</code>这个10年一次性340元RMB。</li>
 </ol>
-
 <h2 id="选择免费的域名">选择免费的域名</h2>
-
 <p>一开始，我抱着<code>便宜没好货，好货不便宜</code>的想法，就没有考虑免费的域名。但是比对了种种之后，免费可能是我最好的选择：</p>
-
 <ul>
-<li>国外域名商，价格贵，不划算；部分域名商支付存在障碍；<br /></li>
-<li>国内域名商，需要填写一大堆的注册信息，隐私风险；<br /></li>
-<li>免费的域名，最长免费一年，一星期前需要自己去续期；有很多的钓鱼网站，名声可能不好，不过自己用倒无所谓。<br /></li>
+<li>国外域名商，价格贵，不划算；部分域名商支付存在障碍；</li>
+<li>国内域名商，需要填写一大堆的注册信息，隐私风险；</li>
+<li>免费的域名，最长免费一年，一星期前需要自己去续期；有很多的钓鱼网站，名声可能不好，不过自己用倒无所谓。</li>
 </ul>
-
 <p>我是在<code>freenom</code>看到有五个免费的：<code>.tk</code>，<code>.ml</code>，<code>.ga</code>，<code>.cf</code>，<code>.gq</code>；简单了解了一下，这些都是极小国家的顶级域名，比如<code>托克劳</code>，<code>马里</code>这完全都没有听说过的国家。</p>
-
 <blockquote>
 <p>他们的首要目标是提高在世界上的知名度以及与大型企业建立良好的关系。</p>
 </blockquote>
-
 <h2 id="在-freenom-申请注册">在 freenom 申请注册</h2>
-
 <p>在<code>freenom</code>申请账号，注册域名都超级的简单。账号我是<code>一键登陆</code>，类似于qq和微博那种。注册域名什么都不用填，直接下一步就搞定。</p>
-
 <p>在配置界面也很简单，需要配置的地方一般只有两个：一个是域名绑定IP，另外一种就是域名跳转。</p>
-
-<h3 id="域名绑定ip-也就是dns服务配置了">域名绑定IP，也就是DNS服务配置了</h3>
-
+<h3 id="域名绑定ip也就是dns服务配置了">域名绑定IP，也就是DNS服务配置了</h3>
 <ul>
-<li><p>name：就是三级域名了；例：<code>{name}.mytest.com</code>；建议配置 name=<code>空</code>和name=<code>WWW</code>两种情况；</p>
+<li>name：就是三级域名了；例：<code>{name}.mytest.com</code>；建议配置 name=<code>空</code>和name=<code>WWW</code>两种情况；</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell">ping www.mytest.com <span class="c1">#没有配置WWW，这个ping不通</span>
-ping mytest.com <span class="c1">#没有配置空，这个也ping不通</span></code></pre></td></tr></table>
+ping mytest.com <span class="c1">#没有配置空，这个也ping不通</span>
+</code></pre></td></tr></table>
 </div>
-</div></li>
-
-<li><p>type：域名服务器记录类型列表；A 表示<code>IP 地址记录</code>，AAAA 表示<code>IPv6 IP 地址记录</code>，<a href="https://zh.wikipedia.org/wiki/%E5%9F%9F%E5%90%8D%E4%BC%BA%E6%9C%8D%E5%99%A8%E8%A8%98%E9%8C%84%E9%A1%9E%E5%9E%8B%E5%88%97%E8%A1%A8">详细参考</a>；一个域名可以有多个类型；</p></li>
-
-<li><p>TTL(Time To Live)：域名解析记录在DNS服务器上缓存时间，单位秒。</p>
-
+</div><ul>
+<li>type：域名服务器记录类型列表；A 表示<code>IP 地址记录</code>，AAAA 表示<code>IPv6 IP 地址记录</code>，<a href="https://zh.wikipedia.org/wiki/%E5%9F%9F%E5%90%8D%E4%BC%BA%E6%9C%8D%E5%99%A8%E8%A8%98%E9%8C%84%E9%A1%9E%E5%9E%8B%E5%88%97%E8%A1%A8">详细参考</a>；一个域名可以有多个类型；</li>
+<li>TTL(Time To Live)：域名解析记录在DNS服务器上缓存时间，单位秒。
 <ul>
-<li>设置过小缓存时间短，频繁要去DNS服务器请求解析。<br /></li>
-<li>设置过大，就可能改了IP地址，但是用户的缓存未到期，可能<code>要等很长时间</code>才能生效。<br /></li>
-</ul></li>
+<li>设置过小缓存时间短，频繁要去DNS服务器请求解析。</li>
+<li>设置过大，就可能改了IP地址，但是用户的缓存未到期，可能<code>要等很长时间</code>才能生效。</li>
 </ul>
-
-<p><img src="/images/2018/20180930-domain-registration-share/domains-bind-ip.jpg" alt="domains-bind-ip" /></p>
-
+</li>
+</ul>
+<p><img src="/images/2018/20180930-domain-registration-share/domains-bind-ip.jpg" alt="domains-bind-ip"></p>
 <h4 id="域名跳转">域名跳转</h4>
-
 <ul>
-<li>Frame (cloaking) (default) ：即通过一个<code>iframe框架</code>来实现转发。翻译过来就叫<code>URL隐藏转发</code>，所有URL Redirect也叫显示转发。A URL转到B之后，<code>浏览器地址栏</code>显示的还是A的域名，重定向的域名B被搜索引擎收录不好。<br /></li>
-<li>Redirect (HTTP 301 forwarding)：<code>直接转发</code>或<code>显示转发</code>，也就是你访问域名后，通过<code>http 301</code>码转向后显示的域名，也就是你从A URL转到B之后，<code>浏览器地址栏</code>显示的是B的域名。<br /></li>
+<li>Frame (cloaking) (default) ：即通过一个<code>iframe框架</code>来实现转发。翻译过来就叫<code>URL隐藏转发</code>，所有URL Redirect也叫显示转发。A URL转到B之后，<code>浏览器地址栏</code>显示的还是A的域名，重定向的域名B被搜索引擎收录不好。</li>
+<li>Redirect (HTTP 301 forwarding)：<code>直接转发</code>或<code>显示转发</code>，也就是你访问域名后，通过<code>http 301</code>码转向后显示的域名，也就是你从A URL转到B之后，<code>浏览器地址栏</code>显示的是B的域名。</li>
 </ul>
-
 <blockquote>
 <p>301 Move Permanently 是HTTP协议中的一个状态码（Status Code）。可以简单地理解为该资源已经被永久改变了位置，通常会发送HTTP Location来重定向到正确的新位置。</p>
-
 <p>返回301请求码进行跳转被Google认为是将网站地址由 HTTP 迁移到 HTTPS 的最佳方法。</p>
 </blockquote>
-
 <h2 id="结语">结语</h2>
-
 <p>免费的域名跳转还是有问题的，有时候发现无法跳转，有时候出现<code>429 Too Many Requests</code>，将就一下，不影响使用。</p>
-
 <p>总的来说感觉不错，满足了我的需求。另外，我在一些域名查询的网站上，也没有查出来我的域名。</p>
     </div>
 

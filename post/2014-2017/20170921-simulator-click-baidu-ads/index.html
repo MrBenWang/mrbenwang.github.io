@@ -33,7 +33,7 @@
 <meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
 
 
-<meta name="generator" content="Hugo 0.57.2" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2014-2017/20170921-simulator-click-baidu-ads/" />
@@ -62,7 +62,6 @@
 
 <meta property="og:title" content="*记一次【模拟点击】，WinForm小软件开发过程" />
 <meta property="og:description" content="前言
-
 年初四月份的时候，有朋友找到我，说想开发一个模拟点击的软件。最终软件做完后，发现效果不理想。唯一开发的我是认为最好是放弃了，做运营的他，坚持这个没问题，说是改变合作方式。最终也是不了了之了。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mrbenwang.github.io/post/2014-2017/20170921-simulator-click-baidu-ads/" />
@@ -70,21 +69,16 @@
 <meta property="article:modified_time" content="2017-09-21T22:08:00+08:00" />
 <meta itemprop="name" content="*记一次【模拟点击】，WinForm小软件开发过程">
 <meta itemprop="description" content="前言
-
 年初四月份的时候，有朋友找到我，说想开发一个模拟点击的软件。最终软件做完后，发现效果不理想。唯一开发的我是认为最好是放弃了，做运营的他，坚持这个没问题，说是改变合作方式。最终也是不了了之了。">
-
-
 <meta itemprop="datePublished" content="2017-09-21T22:08:00&#43;08:00" />
 <meta itemprop="dateModified" content="2017-09-21T22:08:00&#43;08:00" />
 <meta itemprop="wordCount" content="2703">
 
 
 
-<meta itemprop="keywords" content="winform,安全," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="winform,安全," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="*记一次【模拟点击】，WinForm小软件开发过程"/>
 <meta name="twitter:description" content="前言
-
 年初四月份的时候，有朋友找到我，说想开发一个模拟点击的软件。最终软件做完后，发现效果不理想。唯一开发的我是认为最好是放弃了，做运营的他，坚持这个没问题，说是改变合作方式。最终也是不了了之了。"/>
 
 <!--[if lte IE 9]>
@@ -399,15 +393,12 @@ if (!doNotTrack) {
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#前言">前言</a></li>
-<li><a href="#实现思路-使用控件">实现思路&amp;使用控件</a></li>
-<li><a href="#小小的记录">小小的记录</a></li>
-<li><a href="#总结">总结</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#实现思路使用控件">实现思路&amp;使用控件</a></li>
+    <li><a href="#小小的记录">小小的记录</a></li>
+    <li><a href="#总结">总结</a></li>
+  </ul>
 </nav>
   </div>
 </div>
@@ -415,87 +406,80 @@ if (!doNotTrack) {
     
     <div class="post-content">
       <h2 id="前言">前言</h2>
-
 <p>年初四月份的时候，有朋友找到我，说想开发一个模拟点击的软件。最终软件做完后，发现效果不理想。唯一开发的我是认为<code>最好是放弃</code>了，做运营的他，<code>坚持</code>这个没问题，说是改变合作方式。最终也是不了了之了。</p>
-
 <p>不过，在这中间经历了一次重写，三次核心方法的变更，无数次的查资料，找解决办法至凌晨。中间穿插了无数次的讨论修改，修改讨论。虽然功能很简单，但是也花费了三个月的心血。心想，还是想好好总结一下。最后的软件界面如下：</p>
-
-<p><img src="/images/2014-2017/20170921-simulator-click-baidu-ads/1.jpg" alt="main form" /></p>
-
-<p><img src="/images/2014-2017/20170921-simulator-click-baidu-ads/2.jpg" alt="account &amp; interval form" /></p>
-
-<h2 id="实现思路-使用控件">实现思路&amp;使用控件</h2>
-
+<p><img src="/images/2014-2017/20170921-simulator-click-baidu-ads/1.jpg" alt="main form"></p>
+<p><img src="/images/2014-2017/20170921-simulator-click-baidu-ads/2.jpg" alt="account & interval form"></p>
+<h2 id="实现思路使用控件">实现思路&amp;使用控件</h2>
 <p>首先，在内置浏览器里面打开网页，通过Javascript 获取需要的点击的坐标位置；计算网页中的坐标，在屏幕中的坐标位置；通过模拟鼠标的操作(滚动滑轮，移动，点击)；以及随机的二次点击。最后再清除缓存，更换IP，更换分辨率，以及User-Agent。来达到欺骗网站，认为是不同的人来点击的目的。</p>
-
 <p>使用的具体方法，如下：</p>
-
 <ol>
-<li>内置浏览器，<a href="https://github.com/cefsharp/CefSharp">CefSharp</a> 49.0 为了兼容.NET 4.0，大部分Win7可以直接使用;<br /></li>
-<li>鼠标，键盘模拟输入，<a href="https://github.com/michaelnoonan/inputsimulator">InputSimulator</a> , 最早之前是直接调用Windows API的，没有这个好用；<br /></li>
+<li>内置浏览器，<a href="https://github.com/cefsharp/CefSharp">CefSharp</a> 49.0 为了兼容.NET 4.0，大部分Win7可以直接使用;</li>
+<li>鼠标，键盘模拟输入，<a href="https://github.com/michaelnoonan/inputsimulator">InputSimulator</a> , 最早之前是直接调用Windows API的，没有这个好用；</li>
 <li>切换IP，两种ADSL切换 和 IP精灵软件(ADSL 这个目前没有使用的,DotRas.dll)；</li>
-<li>切换分辨率，是直接拿Github上面代码直接用。<a href="https://github.com/timmui/ScreenResolutionChanger">ScreenResolutionChanger</a>;<br /></li>
-<li>License 使用 <a href="https://github.com/EasyHelper/EasyLicense">EasyLicense</a>;<br /></li>
-<li>本地数据库SQLite；<br /></li>
-<li>代码混淆 .NET Reactor；<br /></li>
+<li>切换分辨率，是直接拿Github上面代码直接用。<a href="https://github.com/timmui/ScreenResolutionChanger">ScreenResolutionChanger</a>;</li>
+<li>License 使用 <a href="https://github.com/EasyHelper/EasyLicense">EasyLicense</a>;</li>
+<li>本地数据库SQLite；</li>
+<li>代码混淆 .NET Reactor；</li>
 </ol>
-
-<p>作为前端的浏览器能够收集到的数据有这些：<a href="http://blog.codinglabs.org/articles/how-web-analytics-data-collection-system-work.html">网站统计中的数据收集原理及实现</a><br />
-<img src="/images/2014-2017/20170921-simulator-click-baidu-ads/3.jpg" alt="browser collect" /></p>
-
+<p>作为前端的浏览器能够收集到的数据有这些：<a href="http://blog.codinglabs.org/articles/how-web-analytics-data-collection-system-work.html">网站统计中的数据收集原理及实现</a><br>
+<img src="/images/2014-2017/20170921-simulator-click-baidu-ads/3.jpg" alt="browser collect"></p>
 <h2 id="小小的记录">小小的记录</h2>
-
 <ul>
-<li><p><strong>杀毒软件的坑</strong>：使用模拟输入的时候，一直提示 User Interface Privilege Isolation(用户界面特权隔离) 的问题，权限不够。试了关闭Windows的UAC，用超级管理员启动，给软件加数字证书，放到C盘系统目录等等。各种方法都试了就是无法模拟操作。实在没办法了，然后在猪八戒上面发布任务，放上Demo。万万没想到，一个大学生给我解决了，是因为360等杀毒软件导致的。。。。</p></li>
-
-<li><p><strong>IP精灵DLL版本的坑</strong>：最开始用的他们官网提供的dll，发现他们那个dll基本用不起来，好像是许久不更新了。另外，状态编码也会随意改变，也不发更新通知。造成也结果就是，明明以前好好的，怎么今天就突然用不起来了。</p></li>
-
-<li><p><strong>ADSL测试的坑</strong>：代码写好后无法测试，或者测试起来很麻烦。现在这年代用ADSL拨号上网的越来越少了，同样想测试也麻烦。好不容易找了个远程的ADSL主机，结果一测试就断网，尴尬。。。</p></li>
-
-<li><p><strong>获取网络时间</strong>：为了避免用户直接修改系统时间，来达到突破License 。获取到 大门户网站 http header 中的 date 来检验本地时间是否准确。在这中间，我发现大陆封杀了好多的时间同步的网站，只有一两个能用，又极度不稳定，并且中科院的又用不起。坑货！！</p></li>
-
-<li><p><strong>SQLite小巧玲珑</strong>：之前第一个版本用 纯文本来存放配置文件，记录日志信息。极度不方便，容易出现数组越界这样的bug。后来采用sqlite后，才发现了开发的美好。sqlite拥有完整的sql那一套东西，并且体积又小，不用安装，非常适合做本地少量信息的存储。</p></li>
-
-<li><p><strong>屏幕分辨率</strong>：最开始是手动实现windows api 来获取列表，改变分辨率的，bug又多又不完善。某天灵光一闪，在github上面找了一下真还有这个代码，省了不少事情。另外，我还发现wiki上面写的，显示分辨率列表 总共只有那么几十个，可见分辨率的大小，不是随意写的。但是通过windows api 获取到的列表 就一大堆有几百个。我分析，是因为分辨率，色深，赫兹。这三个参数排列组合导致的。</p></li>
-
-<li><p><strong>Cefsharp文档的重要性</strong>：清除缓存，清除cookie，Storage。设置弹出方式，重写http header，执行javascript等等。一系列的内置浏览器的操作，都是看github上面的wiki，以及google看英文文档（baidu就是坑爹货，同样的文章，转来转去；一般第一页80%广告，前三页都是同样的内容，剩下的风马牛不相及）。没有别人帮助，只有硬着头皮翻译一点看一点，然后写代码试。如果找不到实现方法，也要去看看为什么不能实现。记录一些，我认为比较重要的地方：</p>
-
+<li>
+<p><strong>杀毒软件的坑</strong>：使用模拟输入的时候，一直提示 User Interface Privilege Isolation(用户界面特权隔离) 的问题，权限不够。试了关闭Windows的UAC，用超级管理员启动，给软件加数字证书，放到C盘系统目录等等。各种方法都试了就是无法模拟操作。实在没办法了，然后在猪八戒上面发布任务，放上Demo。万万没想到，一个大学生给我解决了，是因为360等杀毒软件导致的。。。。</p>
+</li>
+<li>
+<p><strong>IP精灵DLL版本的坑</strong>：最开始用的他们官网提供的dll，发现他们那个dll基本用不起来，好像是许久不更新了。另外，状态编码也会随意改变，也不发更新通知。造成也结果就是，明明以前好好的，怎么今天就突然用不起来了。</p>
+</li>
+<li>
+<p><strong>ADSL测试的坑</strong>：代码写好后无法测试，或者测试起来很麻烦。现在这年代用ADSL拨号上网的越来越少了，同样想测试也麻烦。好不容易找了个远程的ADSL主机，结果一测试就断网，尴尬。。。</p>
+</li>
+<li>
+<p><strong>获取网络时间</strong>：为了避免用户直接修改系统时间，来达到突破License 。获取到 大门户网站 http header 中的 date 来检验本地时间是否准确。在这中间，我发现大陆封杀了好多的时间同步的网站，只有一两个能用，又极度不稳定，并且中科院的又用不起。坑货！！</p>
+</li>
+<li>
+<p><strong>SQLite小巧玲珑</strong>：之前第一个版本用 纯文本来存放配置文件，记录日志信息。极度不方便，容易出现数组越界这样的bug。后来采用sqlite后，才发现了开发的美好。sqlite拥有完整的sql那一套东西，并且体积又小，不用安装，非常适合做本地少量信息的存储。</p>
+</li>
+<li>
+<p><strong>屏幕分辨率</strong>：最开始是手动实现windows api 来获取列表，改变分辨率的，bug又多又不完善。某天灵光一闪，在github上面找了一下真还有这个代码，省了不少事情。另外，我还发现wiki上面写的，显示分辨率列表 总共只有那么几十个，可见分辨率的大小，不是随意写的。但是通过windows api 获取到的列表 就一大堆有几百个。我分析，是因为分辨率，色深，赫兹。这三个参数排列组合导致的。</p>
+</li>
+<li>
+<p><strong>Cefsharp文档的重要性</strong>：清除缓存，清除cookie，Storage。设置弹出方式，重写http header，执行javascript等等。一系列的内置浏览器的操作，都是看github上面的wiki，以及google看英文文档（baidu就是坑爹货，同样的文章，转来转去；一般第一页80%广告，前三页都是同样的内容，剩下的风马牛不相及）。没有别人帮助，只有硬着头皮翻译一点看一点，然后写代码试。如果找不到实现方法，也要去看看为什么不能实现。记录一些，我认为比较重要的地方：</p>
 <ol>
-<li>ILifeSpanHandler  控制Cefsharp弹出的窗口 事件。(DoClose，OnAfterCreated，OnBeforeClose，OnBeforePopup)<br /></li>
-<li>IRequestHandler 控制Cefsharp发送请求的事件，太多了不一一列举。<br /></li>
-<li>Cef.Initialize 只能初始化一次，如果想彻底清除缓存，必须关闭宿主程序。 如果在主程序内，调用Cef.Shutdown 后再次初始化会报错的。49.0版本有这个问题，后续的版本修复了这个问题。<br /></li>
-<li>执行 js 的时候，要注意锁的问题，使用 Monitor 更加精细的控制。<br /></li>
-<li>重新翻译了github上部分Cefsharp文档。<br /></li>
-</ol></li>
-
-<li><p><strong>WinForm开发</strong>：第一次写winform程序，认为是小程序，各种粗制滥造。尤其是到后期，主窗体代码到达一两千行，逻辑调用混乱，真心看不下去了，修改起来的很费劲。干脆重新写吧。重新设计文档目录，窗体拆分，代码分类，左搞右搞，总算勉强能看，但是今天又把代码翻出来看了看，总感觉什么地方不对，又说不出是哪里不对。。。</p>
-
+<li>ILifeSpanHandler  控制Cefsharp弹出的窗口 事件。(DoClose，OnAfterCreated，OnBeforeClose，OnBeforePopup)</li>
+<li>IRequestHandler 控制Cefsharp发送请求的事件，太多了不一一列举。</li>
+<li>Cef.Initialize 只能初始化一次，如果想彻底清除缓存，必须关闭宿主程序。 如果在主程序内，调用Cef.Shutdown 后再次初始化会报错的。49.0版本有这个问题，后续的版本修复了这个问题。</li>
+<li>执行 js 的时候，要注意锁的问题，使用 Monitor 更加精细的控制。</li>
+<li>重新翻译了github上部分Cefsharp文档。</li>
+</ol>
+</li>
+<li>
+<p><strong>WinForm开发</strong>：第一次写winform程序，认为是小程序，各种粗制滥造。尤其是到后期，主窗体代码到达一两千行，逻辑调用混乱，真心看不下去了，修改起来的很费劲。干脆重新写吧。重新设计文档目录，窗体拆分，代码分类，左搞右搞，总算勉强能看，但是今天又把代码翻出来看了看，总感觉什么地方不对，又说不出是哪里不对。。。</p>
 <ol>
-<li>线程的重要性，写惯了web，极少情况考虑线程的问题。但是在桌面程序里面，线程是非常重要的问题，尤其是非主线程操作UI界面的时候。<br /></li>
-<li>事件的运用，同样，在桌面程序里面，事件使用起来非常舒服。以前对代理，事件也仅仅知道概念。实践之后，才知道这个是多么优秀的设计。<br /></li>
-<li>VS 所见即所得的窗体设计界面，由于 Cefsharp 运行时加载控件的，也就是开发时设计界面打不开。这也算一点小麻烦。<br /></li>
-<li>通过句柄的操作。 主要获得主界面句柄，获取按钮句柄，然后SendMessage，来触发按钮事件。还有就是，win7 之前和之后的SendMessage 大有不同，要注意。<br /></li>
-</ol></li>
-
-<li><p><strong>辅助进程启动</strong>：由于Cef必须完全关掉宿主进程，才可以彻底清除缓存。所以，当时就采用了，辅助进程来重启主进程。这个比较简单，涉及到Process的一些操作，为了方便易用，同时还设计了热键功能。</p></li>
-
-<li><p><strong>License 注册</strong>：这个比较简单，参照demo。我获取的是本机的CPU序列号，主板序列号，硬盘的ID(为什么不是序列号，因为硬盘市场参差不齐，还有的厂家不存在序列号)。为了防止被猜到，我随便加了点料(当时的真实感受)。最后MD5加密，提取哈希值。如下图：</p></li>
+<li>线程的重要性，写惯了web，极少情况考虑线程的问题。但是在桌面程序里面，线程是非常重要的问题，尤其是非主线程操作UI界面的时候。</li>
+<li>事件的运用，同样，在桌面程序里面，事件使用起来非常舒服。以前对代理，事件也仅仅知道概念。实践之后，才知道这个是多么优秀的设计。</li>
+<li>VS 所见即所得的窗体设计界面，由于 Cefsharp 运行时加载控件的，也就是开发时设计界面打不开。这也算一点小麻烦。</li>
+<li>通过句柄的操作。 主要获得主界面句柄，获取按钮句柄，然后SendMessage，来触发按钮事件。还有就是，win7 之前和之后的SendMessage 大有不同，要注意。</li>
+</ol>
+</li>
+<li>
+<p><strong>辅助进程启动</strong>：由于Cef必须完全关掉宿主进程，才可以彻底清除缓存。所以，当时就采用了，辅助进程来重启主进程。这个比较简单，涉及到Process的一些操作，为了方便易用，同时还设计了热键功能。</p>
+</li>
+<li>
+<p><strong>License 注册</strong>：这个比较简单，参照demo。我获取的是本机的CPU序列号，主板序列号，硬盘的ID(为什么不是序列号，因为硬盘市场参差不齐，还有的厂家不存在序列号)。为了防止被猜到，我随便加了点料(当时的真实感受)。最后MD5加密，提取哈希值。如下图：</p>
+</li>
 </ul>
-
-<p><img src="/images/2014-2017/20170921-simulator-click-baidu-ads/4.jpg" alt="license code" /></p>
-
+<p><img src="/images/2014-2017/20170921-simulator-click-baidu-ads/4.jpg" alt="license code"></p>
 <p><a href="https://github.com/MrBenWang/bind-refactor">github源码地址</a></p>
-
-<hr />
-
+<hr>
 <h2 id="总结">总结</h2>
-
 <ol>
-<li>经过这么一折腾，深深得感觉到，程序员主要作用是在组装代码的：把不相干的代码有机的拼装在一起，组成一个可以使用的软件。<br /></li>
-<li>善于利用google，github，stack overflow，基本能解决99%的技术问题。<br /></li>
-<li>英语非常非常重要，百度非常非常坑。<br /></li>
-<li>实在头疼脑热的时候，不舒服的时候，不如去休息。<br /></li>
-<li>需求的确认，这是非常重要的事情。<br /></li>
+<li>经过这么一折腾，深深得感觉到，程序员主要作用是在组装代码的：把不相干的代码有机的拼装在一起，组成一个可以使用的软件。</li>
+<li>善于利用google，github，stack overflow，基本能解决99%的技术问题。</li>
+<li>英语非常非常重要，百度非常非常坑。</li>
+<li>实在头疼脑热的时候，不舒服的时候，不如去休息。</li>
+<li>需求的确认，这是非常重要的事情。</li>
 </ol>
     </div>
 

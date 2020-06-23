@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>设计原则 on 风雪夜归人</title>
@@ -18,11 +18,11 @@
       
       <guid>https://mrbenwang.github.io/post/2014-2017/20140923-design-principle-note/</guid>
       <description>&lt;ol&gt;
-&lt;li&gt;找到系统中变化的部分，将变化的部分同其它稳定的部分隔开。&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;面向接口编程，而不要面向实现编程。&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;优先使用对象组合，而非类继承。&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;软件实体应当对扩展开放，对修改关闭。&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;继承必须确保超类所拥有的性质在子类中仍然成立。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;找到系统中变化的部分，将变化的部分同其它稳定的部分隔开。&lt;/li&gt;
+&lt;li&gt;面向接口编程，而不要面向实现编程。&lt;/li&gt;
+&lt;li&gt;优先使用对象组合，而非类继承。&lt;/li&gt;
+&lt;li&gt;软件实体应当对扩展开放，对修改关闭。&lt;/li&gt;
+&lt;li&gt;继承必须确保超类所拥有的性质在子类中仍然成立。&lt;/li&gt;
 &lt;/ol&gt;</description>
     </item>
     

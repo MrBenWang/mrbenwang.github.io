@@ -23,12 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Long" />
-  <meta name="description" content=" 找到系统中变化的部分，将变化的部分同其它稳定的部分隔开。
- 面向接口编程，而不要面向实现编程。
- 优先使用对象组合，而非类继承。
- 软件实体应当对扩展开放，对修改关闭。
- 继承必须确保超类所拥有的性质在子类中仍然成立。
- " />
+  <meta name="description" content=" 找到系统中变化的部分，将变化的部分同其它稳定的部分隔开。 面向接口编程，而不要面向实现编程。 优先使用对象组合，而非类继承。 软件实体应当对扩展开放，对修改关闭。 继承必须确保超类所拥有的性质在子类中仍然成立。 " />
 
   <meta name="keywords" content="码农, 逻辑, 自由" />
 
@@ -37,7 +32,7 @@
 <meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
 
 
-<meta name="generator" content="Hugo 0.57.2" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2014-2017/20140923-design-principle-note/" />
@@ -84,16 +79,13 @@
 软件实体应当对扩展开放，对修改关闭。
 继承必须确保超类所拥有的性质在子类中仍然成立。
 ">
-
-
 <meta itemprop="datePublished" content="2014-09-23T16:59:00&#43;08:00" />
 <meta itemprop="dateModified" content="2014-09-23T16:59:00&#43;08:00" />
-<meta itemprop="wordCount" content="1032">
+<meta itemprop="wordCount" content="1040">
 
 
 
-<meta itemprop="keywords" content="设计原则," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="设计原则," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="*设计原则记录"/>
 <meta name="twitter:description" content="
 找到系统中变化的部分，将变化的部分同其它稳定的部分隔开。
@@ -398,7 +390,7 @@ if (!doNotTrack) {
             <a href="https://mrbenwang.github.io/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/"> 技术随笔 </a>
             
           </div>
-        <span class="more-meta"> 约 1032 字 </span>
+        <span class="more-meta"> 约 1040 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
 
         
@@ -414,32 +406,36 @@ if (!doNotTrack) {
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
     
     <div class="post-content">
       <ol>
-<li>找到系统中变化的部分，将变化的部分同其它稳定的部分隔开。<br /></li>
-<li>面向接口编程，而不要面向实现编程。<br /></li>
-<li>优先使用对象组合，而非类继承。<br /></li>
-<li>软件实体应当对扩展开放，对修改关闭。<br /></li>
-<li>继承必须确保超类所拥有的性质在子类中仍然成立。<br /></li>
+<li>找到系统中变化的部分，将变化的部分同其它稳定的部分隔开。</li>
+<li>面向接口编程，而不要面向实现编程。</li>
+<li>优先使用对象组合，而非类继承。</li>
+<li>软件实体应当对扩展开放，对修改关闭。</li>
+<li>继承必须确保超类所拥有的性质在子类中仍然成立。</li>
 </ol>
-
 <p>以下内容均来自互联网：</p>
-
 <ol>
-<li><p><strong>Identify the aspects of your application that vary and separate them from what stays the same.(找到系统中变化的部分，将变化的部分同其它稳定的部分隔开。)</strong>换句话说就是：“找到变化并且把它封装起来，稍后你就可以在不影响其它部分的情况下修改或扩展被封装的变化部分。” 尽管这个概念很简单，但是它几乎是所有设计模式的基础，所有模式都提供了使系统里变化的部分独立于其它部分的方法。</p></li>
-
-<li><p><strong>Program to an interface, not an implementation.（面向接口编程，而不要面向实现编程。）</strong>“接口”这个词已经被赋予太多的含义，搞的大家一说点儿屁事就满嘴往外蹦“接口”。那么它到底是什么意思呢？我们这里说的接口是一个抽象的概念，不局限于语言层面的接口(例如C#里的interface)。一个接口也可以是一个抽象类，或者一个基类也可以看作是一种接口的表现形式，因为基类变量可以用来引用其子类。要点在于，我们在面向接口编程的时候，可以使用多态，那么实际运行的代码只依赖于具体的接口(interface,抽象类，基类)，而不管这些接口提供的功能是如何实现的，也就是说，接口将系统的不同部分隔离开来，同时又将它们连接在一起。</p></li>
-
-<li><p><strong>Favor composition over inheritance.（优先使用对象组合，而非类继承）</strong>关于组合和继承，我们只要这样来理解即可：组合是一种“HAS-A”关系，而继承是一种“IS-A”关系。很明显“HAS-A”要比“IS-A”更灵活一些。也就是说在创建系统的时候，我们应该优先使用对象组合，因为它不仅可以给你提供更多灵活性和扩展性，而且还使你可以在运行时改变行为(组合不同的对象)，这简直是酷毙了！但是也不是说继承就是不能用，只是说应该把继承应用在相对更稳定，几乎没有变化的地方，例如前面的Duck类里的Swim()方法，因为可以肯定所有鸭子一定都会游泳，所以就没有必要给这个行为提供基于Strategy模式的实现方式，因为那样做除了是程序更复杂以外，没有什么意义。</p></li>
-
-<li><p><strong>Software entities should be open for extension,but closed for modification（软件实体应当对扩展开放，对修改关闭）</strong>具体是策略模式。</p></li>
-
-<li><p><strong>Inheritance should ensure that any property proved about supertype objects also holds for subtype objects.（继承必须确保超类所拥有的性质在子类中仍然成立）</strong>也就是说，当一个子类的实例应该能够替换任何其超类（父类）的实例时，它们之间才具有is-A关系。</p></li>
+<li>
+<p>**Identify the aspects of your application that vary and separate them from what stays the same.(找到系统中变化的部分，将变化的部分同其它稳定的部分隔开。)**换句话说就是：“找到变化并且把它封装起来，稍后你就可以在不影响其它部分的情况下修改或扩展被封装的变化部分。” 尽管这个概念很简单，但是它几乎是所有设计模式的基础，所有模式都提供了使系统里变化的部分独立于其它部分的方法。</p>
+</li>
+<li>
+<p><strong>Program to an interface, not an implementation.（面向接口编程，而不要面向实现编程。）</strong>“接口”这个词已经被赋予太多的含义，搞的大家一说点儿屁事就满嘴往外蹦“接口”。那么它到底是什么意思呢？我们这里说的接口是一个抽象的概念，不局限于语言层面的接口(例如C#里的interface)。一个接口也可以是一个抽象类，或者一个基类也可以看作是一种接口的表现形式，因为基类变量可以用来引用其子类。要点在于，我们在面向接口编程的时候，可以使用多态，那么实际运行的代码只依赖于具体的接口(interface,抽象类，基类)，而不管这些接口提供的功能是如何实现的，也就是说，接口将系统的不同部分隔离开来，同时又将它们连接在一起。</p>
+</li>
+<li>
+<p>**Favor composition over inheritance.（优先使用对象组合，而非类继承）**关于组合和继承，我们只要这样来理解即可：组合是一种“HAS-A”关系，而继承是一种“IS-A”关系。很明显“HAS-A”要比“IS-A”更灵活一些。也就是说在创建系统的时候，我们应该优先使用对象组合，因为它不仅可以给你提供更多灵活性和扩展性，而且还使你可以在运行时改变行为(组合不同的对象)，这简直是酷毙了！但是也不是说继承就是不能用，只是说应该把继承应用在相对更稳定，几乎没有变化的地方，例如前面的Duck类里的Swim()方法，因为可以肯定所有鸭子一定都会游泳，所以就没有必要给这个行为提供基于Strategy模式的实现方式，因为那样做除了是程序更复杂以外，没有什么意义。</p>
+</li>
+<li>
+<p>**Software entities should be open for extension,but closed for modification（软件实体应当对扩展开放，对修改关闭）**具体是策略模式。</p>
+</li>
+<li>
+<p>**Inheritance should ensure that any property proved about supertype objects also holds for subtype objects.（继承必须确保超类所拥有的性质在子类中仍然成立）**也就是说，当一个子类的实例应该能够替换任何其超类（父类）的实例时，它们之间才具有is-A关系。</p>
+</li>
 </ol>
     </div>
 

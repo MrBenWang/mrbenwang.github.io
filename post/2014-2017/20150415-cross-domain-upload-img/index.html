@@ -33,7 +33,7 @@
 <meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
 
 
-<meta name="generator" content="Hugo 0.57.2" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2014-2017/20150415-cross-domain-upload-img/" />
@@ -68,16 +68,13 @@
 <meta property="article:modified_time" content="2015-04-15T11:39:00+08:00" />
 <meta itemprop="name" content="*跨域上传图片的尝试过程，最终成功了。哈哈">
 <meta itemprop="description" content="关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。">
-
-
 <meta itemprop="datePublished" content="2015-04-15T11:39:00&#43;08:00" />
 <meta itemprop="dateModified" content="2015-04-15T11:39:00&#43;08:00" />
 <meta itemprop="wordCount" content="1551">
 
 
 
-<meta itemprop="keywords" content="跨域," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="跨域," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="*跨域上传图片的尝试过程，最终成功了。哈哈"/>
 <meta name="twitter:description" content="关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。"/>
 
@@ -392,68 +389,55 @@ if (!doNotTrack) {
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
     
     <div class="post-content">
       <p>关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。</p>
-
 <p>首先，项目是一个ERP，针对的是公司的一个小型电商的网站。项目经理让我搭建一个图片服务器， 当时也是为了完（尝）成（尝）任（新）务（鲜），用的都是当时从没接触过的。通过百度就选择了 Nginx + Nodejs + express + ImageMagick 来实现的。 当时还简单看了一下淘宝的TFS（Taobao FileSystem）太高大上了，因为预估网站图片不会非常多，就用系统自带的文件系统。  Nodejs也是边学边写，可是调试express  这种MVC的时候，就不管用了。。。试了很久也不行。。。   就采用边看api 边打印出来调试。总算可以上传，下载浏览图片了。</p>
-
 <p>后来移至到项目中才发现，跨域是个很大的问题。图片服务器，提供一个接口。当时想了两套解决方案：</p>
-
 <ol>
-<li>先上传到项目中，然后再编写一个windows服务，来定时把上传的图片传到图片服务器中；<br /></li>
-<li>在图片服务器上写一个页面，然后通过iframe嵌套在项目中。<br /></li>
+<li>先上传到项目中，然后再编写一个windows服务，来定时把上传的图片传到图片服务器中；</li>
+<li>在图片服务器上写一个页面，然后通过iframe嵌套在项目中。</li>
 </ol>
-
 <p>第二个解决方案直接被项目经理否决了，我也觉得写那么多东西不太好，也不想写这么多东西，只想一步到位。然后就花了一天的时间，查资料，实验。 当时可选的上传的控件有三个，原先项目里面的ajaxSubmit，领导推荐的 plupload，我自己查到百度的 webupload。 最后我当然选择使用我自己查到的了。 根据官方给出的api，demo来尝试写。  看到 demo里面写的是 server地址是以 http开头的，不是项目中的相对路径。就以为是天然可以跨域，后来找到 github上面 issues里面，提到这个没有采用jquery file upload 的form post的形式，但是不采用这个可以实现文件修改的，也就实现上传前压缩，和分块上传这些功能的。</p>
-
-<hr />
-
+<hr>
 <p>然后为了跨域我做了这些尝试：</p>
-
 <ol>
-<li><p>修改 nginx 的代理，<code>失败</code>。</p></li>
-
-<li><p>修改 nodejs 的 express 里 app.js ，在 response 的消息头部加上下面这段代码， <code>失败</code>。<br />
-<img src="/images/2014-2017/20150415-cross-domain-upload-img/1.jpg" alt="http header" /></p></li>
-
-<li><p>后来我想，只需要在条用上传的方法的头部加上，后来使用 chrome 插件 postman ，模拟调用，发现POST可以接受到，POST跨域成功。</p></li>
-
-<li><p>后来发现WebUpload，会先发送一个OPTIONS的请求，百度了一下才发现，HTTP 协议不止 POST 和 GET 。</p></li>
+<li>
+<p>修改 nginx 的代理，<code>失败</code>。</p>
+</li>
+<li>
+<p>修改 nodejs 的 express 里 app.js ，在 response 的消息头部加上下面这段代码， <code>失败</code>。<br>
+<img src="/images/2014-2017/20150415-cross-domain-upload-img/1.jpg" alt="http header"></p>
+</li>
+<li>
+<p>后来我想，只需要在条用上传的方法的头部加上，后来使用 chrome 插件 postman ，模拟调用，发现POST可以接受到，POST跨域成功。</p>
+</li>
+<li>
+<p>后来发现WebUpload，会先发送一个OPTIONS的请求，百度了一下才发现，HTTP 协议不止 POST 和 GET 。</p>
+</li>
 </ol>
-
-<div class="shortcode-notice note">
-  <div class="shortcode-notice-title note">
-    
-      note
-    
-  </div>
-  
-
+<!-- raw HTML omitted -->
+<pre><code>  note
+</code></pre>
+<!-- raw HTML omitted -->
 <p>浏览器在跨域请求前会发个options请求来验证是否跨域，所以后端再处理这个options请求时，要告诉浏览器一些信息。其实就是个header信息。</p>
-
 <p>TTP 请求方法并不是只有 GET 和 POST ，只是最常用的。据RFC2616标准（现行的HTTP/1.1）得知，通常有以下8种方法：OPTIONS、GET、HEAD、POST、PUT、DELETE、TRACE 和CONNECT。</p>
-
 <p>OPTIONS 方法是用于请求获得由 Request-URI标识的资源在请求/响应的通信过程中可以使用的功能选项。通过这个方法，客户端可以在采取具体资源请求之前，决定对该资源采取何种必要措施，或者了解服务器的性能。</p>
-
-<p>OPTIONS请求方法的主要用途有两个：<br />
-1、获取服务器支持的HTTP请求方法；也是黑客经常使用的方法。<br />
+<p>OPTIONS请求方法的主要用途有两个：<br>
+1、获取服务器支持的HTTP请求方法；也是黑客经常使用的方法。<br>
 2、用来检查服务器的性能。例如：AJAX进行跨域请求时的预检，需要向另外一个域名的资源发送一个HTTP OPTIONS请求头，用以判断实际发送的请求是否安全。</p>
-
-<p></div></p>
-
-<ol>
-<li>发现 Webupload 发送的 OPTIONS请求，虽然阻止，但是，返回的状态码是200，也就是说Nginx是配置正确的，赶紧将Nginx配置改回来。<br /></li>
-<li>后来灵光一闪，想起 Express 的路由好像会控制，接收什么协议的访问。然后赶紧尝试看看，成功了很是兴奋。<br /></li>
+<!-- raw HTML omitted -->
+<ol start="5">
+<li>发现 Webupload 发送的 OPTIONS请求，虽然阻止，但是，返回的状态码是200，也就是说Nginx是配置正确的，赶紧将Nginx配置改回来。</li>
+<li>后来灵光一闪，想起 Express 的路由好像会控制，接收什么协议的访问。然后赶紧尝试看看，成功了很是兴奋。</li>
 </ol>
-
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -470,11 +454,9 @@ if (!doNotTrack) {
 </code></pre></td></tr></table>
 </div>
 </div>
-
-<p>最后再放两张图，成功和失败 返回的Response Headers信息，确实不同。 基于这个，那不是所有的跨域问题都可以解决了，像网上说的Jsonp，iframe 完全都可以不用了。嘿嘿<br />
-<img src="/images/2014-2017/20150415-cross-domain-upload-img/2.jpg" alt="http header" /></p>
-
-<p><img src="/images/2014-2017/20150415-cross-domain-upload-img/3.jpg" alt="http header" /></p>
+<p>最后再放两张图，成功和失败 返回的Response Headers信息，确实不同。 基于这个，那不是所有的跨域问题都可以解决了，像网上说的Jsonp，iframe 完全都可以不用了。嘿嘿<br>
+<img src="/images/2014-2017/20150415-cross-domain-upload-img/2.jpg" alt="http header"></p>
+<p><img src="/images/2014-2017/20150415-cross-domain-upload-img/3.jpg" alt="http header"></p>
     </div>
 
     

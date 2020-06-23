@@ -34,7 +34,7 @@
 <meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
 
 
-<meta name="generator" content="Hugo 0.57.2" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2014-2017/20170329-build-ss-on-vultr-vps/" />
@@ -63,9 +63,7 @@
 
 <meta property="og:title" content="记一次搭建SS服务器，完整的过程。" />
 <meta property="og:description" content="前言
-
 这几天为了登录外网查询资料，谷歌经常抽风，国外的博客也打不开，都要整崩溃了。我以前（直到昨天以前）都是使用修改hosts来访问外网的，用的是 老D（https://laod.cn/hosts） 无偿分享的hosts。
-
 直到昨天我终于受不了了，听闻前同事使用的是VULTR 来搭建SS服务器，价格也非常便宜，比买vpn划算多了，还安全，还多了一台服务器。然后就下定决心，一劳永逸的解决上网问题。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mrbenwang.github.io/post/2014-2017/20170329-build-ss-on-vultr-vps/" />
@@ -73,25 +71,18 @@
 <meta property="article:modified_time" content="2017-03-29T12:04:00+08:00" />
 <meta itemprop="name" content="记一次搭建SS服务器，完整的过程。">
 <meta itemprop="description" content="前言
-
 这几天为了登录外网查询资料，谷歌经常抽风，国外的博客也打不开，都要整崩溃了。我以前（直到昨天以前）都是使用修改hosts来访问外网的，用的是 老D（https://laod.cn/hosts） 无偿分享的hosts。
-
 直到昨天我终于受不了了，听闻前同事使用的是VULTR 来搭建SS服务器，价格也非常便宜，比买vpn划算多了，还安全，还多了一台服务器。然后就下定决心，一劳永逸的解决上网问题。">
-
-
 <meta itemprop="datePublished" content="2017-03-29T12:04:00&#43;08:00" />
 <meta itemprop="dateModified" content="2017-03-29T12:04:00&#43;08:00" />
 <meta itemprop="wordCount" content="1577">
 
 
 
-<meta itemprop="keywords" content="ss,vps," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="ss,vps," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="记一次搭建SS服务器，完整的过程。"/>
 <meta name="twitter:description" content="前言
-
 这几天为了登录外网查询资料，谷歌经常抽风，国外的博客也打不开，都要整崩溃了。我以前（直到昨天以前）都是使用修改hosts来访问外网的，用的是 老D（https://laod.cn/hosts） 无偿分享的hosts。
-
 直到昨天我终于受不了了，听闻前同事使用的是VULTR 来搭建SS服务器，价格也非常便宜，比买vpn划算多了，还安全，还多了一台服务器。然后就下定决心，一劳永逸的解决上网问题。"/>
 
 <!--[if lte IE 9]>
@@ -406,18 +397,16 @@ if (!doNotTrack) {
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#前言">前言</a></li>
-<li><a href="#vultr-vps">vultr VPS</a></li>
-<li><a href="#安装centos-配置shadowsocks">安装CentOS 配置shadowsocks</a></li>
-<li><a href="#客户端连接">客户端连接</a>
-<ul>
-<li><a href="#补充-bbr-算法">补充 BBR 算法</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#vultr-vps">vultr VPS</a></li>
+    <li><a href="#安装centos-配置shadowsocks">安装CentOS 配置shadowsocks</a></li>
+    <li><a href="#客户端连接">客户端连接</a>
+      <ul>
+        <li><a href="#补充-bbr-算法">补充 BBR 算法</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
@@ -425,39 +414,26 @@ if (!doNotTrack) {
     
     <div class="post-content">
       <h2 id="前言">前言</h2>
-
 <p>这几天为了登录外网查询资料，谷歌经常抽风，国外的博客也打不开，都要整崩溃了。我以前（直到昨天以前）都是使用<code>修改hosts</code>来访问外网的，用的是 <a href="https://laod.cn/hosts">老D（https://laod.cn/hosts）</a> 无偿分享的hosts。</p>
-
 <p>直到昨天我终于受不了了，听闻前同事使用的是VULTR 来搭建SS服务器，价格也非常便宜，比买vpn划算多了，还安全，还多了一台服务器。然后就下定决心，一劳永逸的解决上网问题。</p>
-
 <h2 id="vultr-vps">vultr VPS</h2>
-
-<p>大致浏览了一下他们的vps的价格，比国内的真的便宜的太多太多了。 然后在网上又大致的了解了一下其他的vps性价比，还是vultr 性价比比较高。<br />
-鉴于个人使用，也没用额外需求。500G的流量应该够用了，就选择了最便宜的。<br />
-<img src="/images/2014-2017/20170329-build-ss-on-vultr-vps/1.png" alt="vps price" /></p>
-
+<p>大致浏览了一下他们的vps的价格，比国内的真的便宜的太多太多了。 然后在网上又大致的了解了一下其他的vps性价比，还是vultr 性价比比较高。<br>
+鉴于个人使用，也没用额外需求。500G的流量应该够用了，就选择了最便宜的。<br>
+<img src="/images/2014-2017/20170329-build-ss-on-vultr-vps/1.png" alt="vps price"></p>
 <p><code>支付方式：信用卡，PayPal，比特币。</code></p>
-
 <p>因为是天朝大陆，天朝信用卡或许可能不一定能在国外使用，如果去其他网站购物也不方便。比特币，这么值钱的东西怎么舍得拿来花。</p>
-
 <p>所以就选择了PayPal，地位相当于国外支付宝。毕竟也是大牌子，值得信任。在没有vpn的情况下打开非常慢，需要耐心。下面就根据他们的提示一步一步的注册，绑定银行卡就行了。</p>
-
-<p>还有一点要注意，结算方式是美元$。当时我打电话给建行客服，想问一问关于双币信用卡的问题。然后我听了20分钟的音乐彩铃，“客服忙”就强行给我挂断了。没有办法，急性子的我，只好先试试看了。幸运的是，我一次就成功了。是按照当天的汇率兑换的，幸好没有那么麻烦，白紧张了。<br />
+<p>还有一点要注意，结算方式是美元$。当时我打电话给建行客服，想问一问关于双币信用卡的问题。然后我听了20分钟的音乐彩铃，“客服忙”就强行给我挂断了。没有办法，急性子的我，只好先试试看了。幸运的是，我一次就成功了。是按照当天的汇率兑换的，幸好没有那么麻烦，白紧张了。<br>
 <strong>题外话：我记得2008年前后几年，中国大部分银行卡面上都有visa和银联的标识，我昨天才突然意识到现在卡面上只剩银联了。</strong></p>
-
 <p>顺便推广一下个人注册码，哈哈：<a href="https://www.vultr.com/?ref=7136316">https://www.vultr.com/?ref=7136316</a></p>
-
 <h2 id="安装centos-配置shadowsocks">安装CentOS 配置shadowsocks</h2>
-
 <p>安装CentOS 没有什么好说的了，要注意就是他们是没有图形界面的。vultr自己提供的View Console 一点都不好用，还是使用SecureCRT。这个链接系统没有什么好说的，还有一点，因为是国外服务器，ping可能是比较高，不太稳定。 要耐心多连几次就好了。当时连不上，我还以为我的SecureCRT配置出现什么问题了。</p>
-
-<p>安装配置 shadowsocks：参考：<a href="http://morning.work/page/2015-12/install-shadowsocks-on-centos-7.html">http://morning.work/page/2015-12/install-shadowsocks-on-centos-7.html</a><br />
-shadowsocks 帮助文档：<a href="https://github.com/shadowsocks/shadowsocks/wiki">https://github.com/shadowsocks/shadowsocks/wiki</a></p>
-
-<p>我的配置 <code>vi /etc/shadowsocks.json</code><br />
+<p>安装配置 shadowsocks：参考：http://morning.work/page/2015-12/install-shadowsocks-on-centos-7.html<br>
+shadowsocks 帮助文档：https://github.com/shadowsocks/shadowsocks/wiki</p>
+<p>我的配置 <code>vi /etc/shadowsocks.json</code><br>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -483,11 +459,10 @@ shadowsocks 帮助文档：<a href="https://github.com/shadowsocks/shadowsocks/w
 <span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div></p>
-
-<p>查看服务是否启用成功：<code>systemctl status shadowsocks -l</code><br />
+<p>查看服务是否启用成功：<code>systemctl status shadowsocks -l</code><br>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -503,48 +478,39 @@ shadowsocks 帮助文档：<a href="https://github.com/shadowsocks/shadowsocks/w
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell">● shadowsocks.service - Shadowsocks
    Loaded: loaded <span class="o">(</span>/etc/systemd/system/shadowsocks.service<span class="p">;</span> enabled<span class="p">;</span> vendor preset: disabled<span class="o">)</span>
-   Active: active <span class="o">(</span>running<span class="o">)</span> since Wed <span class="m">2017</span>-03-29 <span class="m">0144</span> UTC<span class="p">;</span> 4s ago
+   Active: active <span class="o">(</span>running<span class="o">)</span> since Wed 2017-03-29 01:54:44 UTC<span class="p">;</span> 4s ago
  Main PID: <span class="m">9365</span> <span class="o">(</span>ssserver<span class="o">)</span>
    CGroup: /system.slice/shadowsocks.service
            └—9365 /usr/bin/python /usr/bin/ssserver -c /etc/shadowsocks.json
 
-Mar <span class="m">29</span> <span class="m">0144</span> yezipi systemd<span class="o">[</span><span class="m">1</span><span class="o">]</span>: Started Shadowsocks.
-Mar <span class="m">29</span> <span class="m">0144</span> yezipi systemd<span class="o">[</span><span class="m">1</span><span class="o">]</span>: Starting Shadowsocks...
-Mar <span class="m">29</span> <span class="m">0144</span> yezipi ssserver<span class="o">[</span><span class="m">9365</span><span class="o">]</span>: INFO: loading config from /etc/shadowsocks.json
-Mar <span class="m">29</span> <span class="m">0144</span> yezipi ssserver<span class="o">[</span><span class="m">9365</span><span class="o">]</span>: <span class="m">2017</span>-03-29 <span class="m">0144</span> INFO     loading libcrypto from libcrypto.so.10
-Mar <span class="m">29</span> <span class="m">0144</span> yezipi ssserver<span class="o">[</span><span class="m">9365</span><span class="o">]</span>: <span class="m">2017</span>-03-29 <span class="m">0144</span> INFO     starting server at <span class="m">0</span>.0.0.0:8080</code></pre></td></tr></table>
+Mar <span class="m">29</span> 01:54:44 yezipi systemd<span class="o">[</span>1<span class="o">]</span>: Started Shadowsocks.
+Mar <span class="m">29</span> 01:54:44 yezipi systemd<span class="o">[</span>1<span class="o">]</span>: Starting Shadowsocks...
+Mar <span class="m">29</span> 01:54:44 yezipi ssserver<span class="o">[</span>9365<span class="o">]</span>: INFO: loading config from /etc/shadowsocks.json
+Mar <span class="m">29</span> 01:54:44 yezipi ssserver<span class="o">[</span>9365<span class="o">]</span>: 2017-03-29 01:54:44 INFO     loading libcrypto from libcrypto.so.10
+Mar <span class="m">29</span> 01:54:44 yezipi ssserver<span class="o">[</span>9365<span class="o">]</span>: 2017-03-29 01:54:44 INFO     starting server at 0.0.0.0:8080</code></pre></td></tr></table>
 </div>
 </div></p>
-
-<p>最后的最后，开启CentOS端口： 我当时只注意到vulrt的防火墙，忘记打开CentOS的防火墙端口了。让我又折腾了两个小时。。。<br />
+<p>最后的最后，开启CentOS端口： 我当时只注意到vulrt的防火墙，忘记打开CentOS的防火墙端口了。让我又折腾了两个小时。。。<br>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">firewall-cmd --zone<span class="o">=</span>public --add-port<span class="o">=</span><span class="m">8080</span>/tcp --permanent
-firewall-cmd --zone<span class="o">=</span>public --add-port<span class="o">=</span><span class="m">8081</span>/tcp --permanent
+<pre class="chroma"><code class="language-shell" data-lang="shell">firewall-cmd --zone<span class="o">=</span>public --add-port<span class="o">=</span>8080/tcp --permanent
+firewall-cmd --zone<span class="o">=</span>public --add-port<span class="o">=</span>8081/tcp --permanent
 firewall-cmd --reload</code></pre></td></tr></table>
 </div>
 </div></p>
-
 <h2 id="客户端连接">客户端连接</h2>
-
 <p>客户端连接我目前只用到 windows 和 Android的: <a href="http://www.iyingsuo.com/windows-shadowsocks-tutorials.html">windows</a>: 上面有各个release版本，支持不同的.NET FrameWork</p>
-
 <p><a href="https://github.com/shadowsocks/shadowsocks-windows/releases">shadowsocks-windows</a>  目前github上面的最近版本，支持.NET Framework 4.6.2 。由于本地装的是4.5，不想麻烦，就没有在上面下载。</p>
-
 <p>Android： <a href="https://github.com/shadowsocks/shadowsocks-android/releases">shadowsocks-android</a>   安卓直接下载最新的安装就行了。</p>
-
-<p>安装软件后，配置客户端都比较简单。Android 没有找到运行日志，查找原因比较麻烦。<br />
+<p>安装软件后，配置客户端都比较简单。Android 没有找到运行日志，查找原因比较麻烦。<br>
 我在测试的时候，用的是windows版本的，通过日志调通了。然后就愉快的上网玩耍了。</p>
-
-<hr />
-
+<hr>
 <h3 id="补充-bbr-算法">补充 BBR 算法</h3>
-
 <p>建议使用谷歌黑科技 BBR 算法，提升ss服务器上传速率的。BBR 目的是要尽量跑满带宽, 并且尽量不要有排队的情况。需要升级到<code>Linux kernel 4.9+</code>的内核。</p>
     </div>
 

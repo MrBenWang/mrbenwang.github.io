@@ -33,7 +33,7 @@
 <meta name="google-site-verification" content="hqw-Lg4woniVGx2b2LZ25xQDQsh_da1VWm_nhza2aZg" />
 
 
-<meta name="generator" content="Hugo 0.57.2" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2019/20190520-csharp-exectue-bat/" />
@@ -62,7 +62,6 @@
 
 <meta property="og:title" content="*C#执行批处理命令" />
 <meta property="og:description" content="背景
-
 前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mrbenwang.github.io/post/2019/20190520-csharp-exectue-bat/" />
@@ -70,21 +69,16 @@
 <meta property="article:modified_time" content="2019-05-20T16:40:00+08:00" />
 <meta itemprop="name" content="*C#执行批处理命令">
 <meta itemprop="description" content="背景
-
 前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。">
-
-
 <meta itemprop="datePublished" content="2019-05-20T14:20:00&#43;08:00" />
 <meta itemprop="dateModified" content="2019-05-20T16:40:00&#43;08:00" />
-<meta itemprop="wordCount" content="1800">
+<meta itemprop="wordCount" content="1797">
 
 
 
-<meta itemprop="keywords" content="批处理命令," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="批处理命令," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="*C#执行批处理命令"/>
 <meta name="twitter:description" content="背景
-
 前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。"/>
 
 <!--[if lte IE 9]>
@@ -382,7 +376,7 @@ if (!doNotTrack) {
             <a href="https://mrbenwang.github.io/categories/%E5%B7%A5%E4%BD%9C%E9%9A%8F%E7%AC%94/"> 工作随笔 </a>
             
           </div>
-        <span class="more-meta"> 约 1800 字 </span>
+        <span class="more-meta"> 约 1797 字 </span>
           <span class="more-meta"> 预计阅读 4 分钟 </span>
 
         
@@ -399,14 +393,11 @@ if (!doNotTrack) {
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li><a href="#背景">背景</a>
-<ul>
-<li><a href="#直接调用bat文件">直接调用bat文件</a></li>
-<li><a href="#用-cmd-exe-逐行执行命令">用 cmd.exe 逐行执行命令</a></li>
-<li><a href="#解析命令-执行命令">解析命令，执行命令</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#直接调用bat文件">直接调用bat文件</a></li>
+    <li><a href="#用-cmdexe-逐行执行命令">用 cmd.exe 逐行执行命令</a></li>
+    <li><a href="#解析命令执行命令">解析命令，执行命令</a></li>
+  </ul>
 </nav>
   </div>
 </div>
@@ -414,15 +405,12 @@ if (!doNotTrack) {
     
     <div class="post-content">
       <h1 id="背景">背景</h1>
-
 <p>前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。</p>
-
 <h2 id="直接调用bat文件">直接调用bat文件</h2>
-
-<p>我最开始想到的这个方法，最简单，不需要考虑bat的变量，脚本命令等如<code>@ECHO OFF</code>，相当于双击执行了这个脚本文件。但是存在一个问题就是，无法展示执行进度，所以放弃了。<br />
+<p>我最开始想到的这个方法，最简单，不需要考虑bat的变量，脚本命令等如<code>@ECHO OFF</code>，相当于双击执行了这个脚本文件。但是存在一个问题就是，无法展示执行进度，所以放弃了。<br>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -443,33 +431,25 @@ if (!doNotTrack) {
 </code></pre></td></tr></table>
 </div>
 </div></p>
-
-<h2 id="用-cmd-exe-逐行执行命令">用 cmd.exe 逐行执行命令</h2>
-
-<p>相当于打开了一个cmd.exe的窗口，然后在这个窗体里，一行一行的输入进去命令执行。如下图：<br />
-<img src="/images/2019/20190520-csharp-exectue-bat/cmd-exec-script.jpg" alt="cmd执行命令" /></p>
-
+<h2 id="用-cmdexe-逐行执行命令">用 cmd.exe 逐行执行命令</h2>
+<p>相当于打开了一个cmd.exe的窗口，然后在这个窗体里，一行一行的输入进去命令执行。如下图：<br>
+<img src="/images/2019/20190520-csharp-exectue-bat/cmd-exec-script.jpg" alt="cmd执行命令"></p>
 <p>这样有的好处就是，bat文件不用大修改：</p>
-
 <ul>
 <li>里面的临时变量，不用重新替换赋值；如上图的哪个<code>Bslot_images_path</code>变量，在脚本文件中大量使用；</li>
 <li>不用删除 windows 命令，如<code>ping -n 6 127.0.0.1</code>这个命令；</li>
 </ul>
-
 <p>缺点有三点：</p>
-
 <ul>
 <li>批处理的特殊变量无法识别。如<code>%~dp0</code><strong>只可以用在批处理文件中</strong>，它是由它所在的批处理文件的目录位置决定的，是批处理文件所在的盘符:+路径。</li>
 <li>超时设置的问题，如果设置超时，只是针对整个批处理文件，但是每个批处理文件<strong>大小不一</strong>，并且命令预期执行时长也<strong>不尽相同</strong>。我想到的最好的办法就是，<strong>针对每条不同的命令，设置不同的超时时长</strong>。如果不设置超时，则会出现假死想象，下图。</li>
 <li>执行结果的获取，无法做到实时的获取每条命令的返回结果，并做出判断。只能在退出后<code>&amp;exit</code>，才能获取。否则执行<code>p.StandardOutput.ReadToEnd();</code>会出现假死状况。<strong>waiting for any device</strong>等情况，只能ctrl+c强制退出。</li>
 </ul>
-
-<p><img src="/images/2019/20190520-csharp-exectue-bat/cmd-waiting-for.jpg" alt="cmd假死情况" /></p>
-
-<p>下面是网上找的一个简单的演示版本，关键就是循环输入处，无法实时的获得执行的结果；另外就是超时时间问题。<br />
+<p><img src="/images/2019/20190520-csharp-exectue-bat/cmd-waiting-for.jpg" alt="cmd假死情况"></p>
+<p>下面是网上找的一个简单的演示版本，关键就是循环输入处，无法实时的获得执行的结果；另外就是超时时间问题。<br>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -520,32 +500,25 @@ if (!doNotTrack) {
 </code></pre></td></tr></table>
 </div>
 </div></p>
-
-<h2 id="解析命令-执行命令">解析命令，执行命令</h2>
-
+<h2 id="解析命令执行命令">解析命令，执行命令</h2>
 <p>这个咋一看起来和<code>用 cmd.exe 逐行执行命令</code>很像，这个不同点就是 把<strong>每个命令的exe文件单独拿出来执行</strong>，而不是使用<code>cmd.exe</code>来执行。并且可以给每一条命令，设置一个单独的超时时间。</p>
-
 <p>需要注意的点，重新编辑 bat 批处理文件：</p>
-
 <ul>
-<li><strong>删去</strong><code>批处理独有的命令</code>，原因为无法变成exe执行(如：&rdquo;@SET BASEPATH=%~dp0&rdquo;,&ldquo;@ECHO OFF&rdquo;等)；</li>
-<li><strong>删去</strong><code>windows系统命令</code>，原因为<code>工作目录</code>非系统PATH，无法找到系统exe(如：&rdquo;ping -n 6 127.0.0.1&rdquo;，&rdquo;cd A_Debug&rdquo;等)；</li>
-<li><strong>替换</strong>临时变量为<code>具体值</code>，目的是为了，变成可以单独一条拿出来执行的命令(如：&rdquo;fastboot flash boot0 &ldquo;A_Debug/boot0.img&rdquo; &ldquo;)；</li>
-<li><strong>删除</strong><code>空白行</code>以及<code>等待用户操作</code>的命令(如：&rdquo;pause &gt; nul&rdquo;)</li>
+<li><strong>删去</strong><code>批处理独有的命令</code>，原因为无法变成exe执行(如：&quot;@SET BASEPATH=%~dp0&rdquo;,&quot;@ECHO OFF&quot;等)；</li>
+<li><strong>删去</strong><code>windows系统命令</code>，原因为<code>工作目录</code>非系统PATH，无法找到系统exe(如：&ldquo;ping -n 6 127.0.0.1&rdquo;，&ldquo;cd A_Debug&quot;等)；</li>
+<li><strong>替换</strong>临时变量为<code>具体值</code>，目的是为了，变成可以单独一条拿出来执行的命令(如：&ldquo;fastboot flash boot0 &ldquo;A_Debug/boot0.img&rdquo; &ldquo;)；</li>
+<li><strong>删除</strong><code>空白行</code>以及<code>等待用户操作</code>的命令(如：&ldquo;pause &gt; nul&rdquo;)</li>
 </ul>
-
 <p>命令需要拆分：<code>exe执行程序</code>，<code>参数</code>，<code>超时时长</code>三部分；如：“fastboot flash boot0 &ldquo;A_Debug/boot0.img&rdquo; ” 拆分为：</p>
-
 <ul>
 <li>exe执行程序“fastboot”；</li>
 <li>参数“flash boot0 &ldquo;A_Debug/boot0.img&rdquo;”；</li>
-<li>超时时长“60000”。<br /></li>
+<li>超时时长“60000”。</li>
 </ul>
-
-<p>然后把拆分后的参数，传入执行，具体执行命令的代码如下。<br />
+<p>然后把拆分后的参数，传入执行，具体执行命令的代码如下。<br>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4

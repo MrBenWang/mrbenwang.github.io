@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>github on 风雪夜归人</title>
@@ -18,7 +18,6 @@
       
       <guid>https://mrbenwang.github.io/post/2018/20180927-hugo-plus-github-build-blog/</guid>
       <description>&lt;p&gt;很早以前就有想法，搭建一个个人的博客。没有实现的原因：一方面个人的服务器&lt;code&gt;不太安全&lt;/code&gt;，并且掉线，欠费等等，维护起来麻烦，另一方面，文章编辑发布起来也&lt;code&gt;不方便&lt;/code&gt;。&lt;/p&gt;
-
 &lt;p&gt;后来了解到 github 提供了博客的功能，也一直没有实践。也鉴于上次文章被删，我也就开始实践了起来，&lt;code&gt;有一个备份总好于无&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
