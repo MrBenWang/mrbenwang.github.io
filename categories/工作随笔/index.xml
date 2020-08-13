@@ -6,10 +6,20 @@
     <description>Recent content in 工作随笔 on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 22 Jun 2020 10:07:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2020 11:11:00 +0800</lastBuildDate>
     
 	<atom:link href="https://mrbenwang.github.io/categories/%E5%B7%A5%E4%BD%9C%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>旧 WCF 项目迁移到 asp.net core &#43; gRPC 的尝试</title>
+      <link>https://mrbenwang.github.io/post/2020/20200813-wcf-to-aspnetcore-grpc/</link>
+      <pubDate>Thu, 13 Aug 2020 11:11:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2020/20200813-wcf-to-aspnetcore-grpc/</guid>
+      <description>&lt;p&gt;一个月前，公司的运行WCF的windows服务器down掉了，由于 AWS 没有通知，没有能&lt;strong&gt;第一时间&lt;/strong&gt;发现问题。&lt;br&gt;
+所以，客户提出将WCF服务由C#改为JAVA，在Linux上面运行；一方面，AWS对Linux有较多的监控措施，另一方面，假如出现问题，可以设置自动重启等服务。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>*重构下载功能模块</title>

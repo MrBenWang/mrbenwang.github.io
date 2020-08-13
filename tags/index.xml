@@ -6,10 +6,28 @@
     <description>Recent content in Tags on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 22 Jun 2020 10:07:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2020 11:11:00 +0800</lastBuildDate>
     
 	<atom:link href="https://mrbenwang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>gRPC</title>
+      <link>https://mrbenwang.github.io/tags/grpc/</link>
+      <pubDate>Thu, 13 Aug 2020 11:11:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/tags/grpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>net core</title>
+      <link>https://mrbenwang.github.io/tags/net-core/</link>
+      <pubDate>Thu, 13 Aug 2020 11:11:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/tags/net-core/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>重构</title>
@@ -170,24 +188,6 @@
       <pubDate>Wed, 07 Nov 2018 09:33:00 +0800</pubDate>
       
       <guid>https://mrbenwang.github.io/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vps</title>
-      <link>https://mrbenwang.github.io/tags/vps/</link>
-      <pubDate>Sun, 30 Sep 2018 09:04:00 +0800</pubDate>
-      
-      <guid>https://mrbenwang.github.io/tags/vps/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ss</title>
-      <link>https://mrbenwang.github.io/tags/ss/</link>
-      <pubDate>Sat, 29 Sep 2018 15:04:00 +0800</pubDate>
-      
-      <guid>https://mrbenwang.github.io/tags/ss/</guid>
       <description></description>
     </item>
     

@@ -6,10 +6,20 @@
     <description>Recent content in Posts on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 22 Jun 2020 10:07:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2020 11:11:00 +0800</lastBuildDate>
     
 	<atom:link href="https://mrbenwang.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>旧 WCF 项目迁移到 asp.net core &#43; gRPC 的尝试</title>
+      <link>https://mrbenwang.github.io/post/2020/20200813-wcf-to-aspnetcore-grpc/</link>
+      <pubDate>Thu, 13 Aug 2020 11:11:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2020/20200813-wcf-to-aspnetcore-grpc/</guid>
+      <description>&lt;p&gt;一个月前，公司的运行WCF的windows服务器down掉了，由于 AWS 没有通知，没有能&lt;strong&gt;第一时间&lt;/strong&gt;发现问题。&lt;br&gt;
+所以，客户提出将WCF服务由C#改为JAVA，在Linux上面运行；一方面，AWS对Linux有较多的监控措施，另一方面，假如出现问题，可以设置自动重启等服务。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>*重构下载功能模块</title>
@@ -262,16 +272,6 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
 &lt;li&gt;诉诸权威（英语：Appeal to Authority）&lt;/li&gt;
 &lt;li&gt;诉诸自然（英语：appeal to nature）&lt;/li&gt;
 &lt;/ol&gt;</description>
-    </item>
-    
-    <item>
-      <title>[转]逻辑谬误列表(序言)</title>
-      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/</link>
-      <pubDate>Fri, 07 Dec 2018 14:56:00 +0800</pubDate>
-      
-      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/</guid>
-      <description>&lt;p&gt;我在网上浏览文章的时候，无意间在&lt;code&gt;评论区&lt;/code&gt;发现了，这个非常有价值的系列评论，我不能放置原文链接，见谅。&lt;br&gt;
-同时，为了保留这份资料，为以后重新学习，实践后再来重学。故此由此系列，我对原评论有结构调整。&lt;code&gt;遗憾：原文没有找到&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
