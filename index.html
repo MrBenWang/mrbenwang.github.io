@@ -63,7 +63,7 @@
 <meta property="og:description" content="不妄图通过努力改变命运，而是为了追求真理和美。" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://mrbenwang.github.io/" />
-<meta property="og:updated_time" content="2020-08-13T11:11:00+08:00" />
+<meta property="og:updated_time" content="2020-08-14T23:46:00+08:00" />
 <meta itemprop="name" content="风雪夜归人">
 <meta itemprop="description" content="不妄图通过努力改变命运，而是为了追求真理和美。">
 <meta name="twitter:card" content="summary"/>
@@ -364,7 +364,46 @@ if (!doNotTrack) {
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/2020/20200813-wcf-to-aspnetcore-grpc/">旧 WCF 项目迁移到 asp.net core &#43; gRPC 的尝试</a>
+      <a class="post-link" href="/post/2020/20200814-wcf-to-aspnetcore-webapi/">*旧 WCF 项目成功迁移到 asp.net core web api</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-08-14" class="post-time">
+        2020-08-14 11:11
+      </time>
+      <div class="post-category">
+          <a href="https://mrbenwang.github.io/categories/%E5%B7%A5%E4%BD%9C%E9%9A%8F%E7%AC%94/"> 工作随笔 </a>
+          
+        </div>
+      <span class="more-meta"> 约 3980 字 </span>
+      <span class="more-meta"> 预计阅读 8 分钟 </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <h1 id="背景">背景</h1>
+<p>接上一篇，放弃了 asp.net core + gRPC 的方案后，我灵光一闪，为什么不用 web api 呢？不也是 asp.net core 的吗？虽然 RESTful 不是强约束，客户端写起来也麻烦，但还是可以满足基本需求，<strong>避免大幅修改</strong><code>旧有的业务逻辑代码</code>。</p>
+<p>在网上找到相当多的文章，比较 gRPC 和 RESTful 的优缺点，结论都是 <code>gRPC</code> 推荐用作<strong>内部系统间调用</strong>， <code>RESTful</code> 推荐用作<strong>对外开放接口</strong>。<br>
+选择 <code>RESTful</code> 另一个最重要的原因是，<code>gRPC</code> 的底层框架需要HTTP2，而 win7 不支持HTTP2，有相当一部分用户在 win7 上。上篇有人推荐 <code>grpc web</code> ，由于项目是 <strong>WPF 桌面客户端</strong>，这种 web 方式可能就更不适合了。</p>
+    </div>
+    <div class="read-more">
+      <a href="/post/2020/20200814-wcf-to-aspnetcore-webapi/" class="read-more-link">阅读全文</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/2020/20200813-wcf-to-aspnetcore-grpc/">*旧 WCF 项目迁移到 asp.net core &#43; gRPC 的尝试</a>
     </h1>
     
     <div class="post-meta">
@@ -375,7 +414,7 @@ if (!doNotTrack) {
           <a href="https://mrbenwang.github.io/categories/%E5%B7%A5%E4%BD%9C%E9%9A%8F%E7%AC%94/"> 工作随笔 </a>
           
         </div>
-      <span class="more-meta"> 约 3926 字 </span>
+      <span class="more-meta"> 约 3981 字 </span>
       <span class="more-meta"> 预计阅读 8 分钟 </span>
       
       
@@ -705,43 +744,6 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位<strong>
     </div>
     <div class="read-more">
       <a href="/post/2019/20190606-meeting-and-parting/" class="read-more-link">阅读全文</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/2019/20190520-csharp-exectue-bat/">*C#执行批处理命令</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-05-20" class="post-time">
-        2019-05-20 14:20
-      </time>
-      <div class="post-category">
-          <a href="https://mrbenwang.github.io/categories/%E5%B7%A5%E4%BD%9C%E9%9A%8F%E7%AC%94/"> 工作随笔 </a>
-          
-        </div>
-      <span class="more-meta"> 约 1797 字 </span>
-      <span class="more-meta"> 预计阅读 4 分钟 </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      <h1 id="背景">背景</h1>
-<p>前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。</p>
-    </div>
-    <div class="read-more">
-      <a href="/post/2019/20190520-csharp-exectue-bat/" class="read-more-link">阅读全文</a>
     </div>
     
   </div>

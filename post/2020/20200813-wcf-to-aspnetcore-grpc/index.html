@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>旧 WCF 项目迁移到 asp.net core &#43; gRPC 的尝试 - 风雪夜归人</title>
+  <title>*旧 WCF 项目迁移到 asp.net core &#43; gRPC 的尝试 - 风雪夜归人</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -61,25 +61,25 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="旧 WCF 项目迁移到 asp.net core &#43; gRPC 的尝试" />
+<meta property="og:title" content="*旧 WCF 项目迁移到 asp.net core &#43; gRPC 的尝试" />
 <meta property="og:description" content="一个月前，公司的运行WCF的windows服务器down掉了，由于 AWS 没有通知，没有能第一时间发现问题。
 所以，客户提出将WCF服务由C#改为JAVA，在Linux上面运行；一方面，AWS对Linux有较多的监控措施，另一方面，假如出现问题，可以设置自动重启等服务。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mrbenwang.github.io/post/2020/20200813-wcf-to-aspnetcore-grpc/" />
 <meta property="article:published_time" content="2020-08-13T11:11:00+08:00" />
-<meta property="article:modified_time" content="2020-08-13T11:11:00+08:00" />
-<meta itemprop="name" content="旧 WCF 项目迁移到 asp.net core &#43; gRPC 的尝试">
+<meta property="article:modified_time" content="2020-08-13T19:11:00+08:00" />
+<meta itemprop="name" content="*旧 WCF 项目迁移到 asp.net core &#43; gRPC 的尝试">
 <meta itemprop="description" content="一个月前，公司的运行WCF的windows服务器down掉了，由于 AWS 没有通知，没有能第一时间发现问题。
 所以，客户提出将WCF服务由C#改为JAVA，在Linux上面运行；一方面，AWS对Linux有较多的监控措施，另一方面，假如出现问题，可以设置自动重启等服务。">
 <meta itemprop="datePublished" content="2020-08-13T11:11:00+08:00" />
-<meta itemprop="dateModified" content="2020-08-13T11:11:00+08:00" />
-<meta itemprop="wordCount" content="3926">
+<meta itemprop="dateModified" content="2020-08-13T19:11:00+08:00" />
+<meta itemprop="wordCount" content="3981">
 
 
 
 <meta itemprop="keywords" content="net core,gRPC," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="旧 WCF 项目迁移到 asp.net core &#43; gRPC 的尝试"/>
+<meta name="twitter:title" content="*旧 WCF 项目迁移到 asp.net core &#43; gRPC 的尝试"/>
 <meta name="twitter:description" content="一个月前，公司的运行WCF的windows服务器down掉了，由于 AWS 没有通知，没有能第一时间发现问题。
 所以，客户提出将WCF服务由C#改为JAVA，在Linux上面运行；一方面，AWS对Linux有较多的监控措施，另一方面，假如出现问题，可以设置自动重启等服务。"/>
 
@@ -368,7 +368,7 @@ if (!doNotTrack) {
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">旧 WCF 项目迁移到 asp.net core &#43; gRPC 的尝试</h1>
+      <h1 class="post-title">*旧 WCF 项目迁移到 asp.net core &#43; gRPC 的尝试</h1>
       
       <div class="post-meta">
         <time datetime="2020-08-13" class="post-time">
@@ -378,7 +378,7 @@ if (!doNotTrack) {
             <a href="https://mrbenwang.github.io/categories/%E5%B7%A5%E4%BD%9C%E9%9A%8F%E7%AC%94/"> 工作随笔 </a>
             
           </div>
-        <span class="more-meta"> 约 3926 字 </span>
+        <span class="more-meta"> 约 3981 字 </span>
           <span class="more-meta"> 预计阅读 8 分钟 </span>
 
         
@@ -578,7 +578,7 @@ EF当然是 <code>Database First</code> 了，生成EF代码需要在<code>Packa
 <p>我的命令： <code>Scaffold-DbContext -Connection &quot;server=10.50.40.50;port=3306;user=myuser;password=123456;database=dbname&quot; -Provider MySql.Data.EntityFrameworkCore -OutputDir &quot;EFModel&quot; -ContextDir &quot;Context&quot; -Project &quot;DataAccess&quot; -Context &quot;BaseEntities&quot; -UseDatabaseNames -Force</code></p>
 <p>其他建议：</p>
 <ul>
-<li>Library类库最好是 <code>netstandard</code> 方便移植；</li>
+<li>Library类库最好是 <code>Net Standard</code> 方便移植；</li>
 <li>新建一个类来继承<code>BaseEntities</code>，覆盖 <code>OnConfiguring</code> 方法，可配置的数据库连接字符串；</li>
 </ul>
 <div class="highlight"><div class="chroma">
@@ -643,7 +643,7 @@ EF当然是 <code>Database First</code> 了，生成EF代码需要在<code>Packa
 <td class="lntd">
 <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="k">void</span> <span class="n">ConfigureServices</span><span class="p">(</span><span class="n">IServiceCollection</span> <span class="n">services</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="kt">string</span> <span class="n">_dbString</span> <span class="p">=</span> <span class="n">Configuration</span><span class="p">.</span><span class="n">GetConnectionString</span><span class="p">(</span><span class="s">&#34;LstDatabase&#34;</span><span class="p">);</span>
+    <span class="kt">string</span> <span class="n">_dbString</span> <span class="p">=</span> <span class="n">Configuration</span><span class="p">.</span><span class="n">GetConnectionString</span><span class="p">(</span><span class="s">&#34;MyDatabase&#34;</span><span class="p">);</span>
     <span class="n">services</span><span class="p">.</span><span class="n">AddDbContext</span><span class="p">&lt;</span><span class="n">DataAccess</span><span class="p">.</span><span class="n">Context</span><span class="p">.</span><span class="n">Entities</span><span class="p">&gt;(</span>
         <span class="n">options</span> <span class="p">=&gt;</span> <span class="n">options</span><span class="p">.</span><span class="n">UseLazyLoadingProxies</span><span class="p">().</span><span class="n">UseMySQL</span><span class="p">(</span><span class="n">_dbString</span><span class="p">));</span>
     <span class="n">services</span><span class="p">.</span><span class="n">AddGrpc</span><span class="p">();</span>
@@ -651,7 +651,7 @@ EF当然是 <code>Database First</code> 了，生成EF代码需要在<code>Packa
 </code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>数据库链接字符串有多种存放的方式，有更加安全的方式；而我采用简单方式存放在 <code>appsettings.json</code>；</li>
+<li>数据库链接字符串有多种存放的方式，有更加安全的方式<a href="https://docs.microsoft.com/zh-cn/aspnet/core/security/app-secrets?view=aspnetcore-3.1&amp;tabs=windows#environment-variables">《ASP.NET Core 中的开发中安全存储应用机密》</a>；而我采用简单方式，存放在 <code>appsettings.json</code>；</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -673,7 +673,7 @@ EF当然是 <code>Database First</code> 了，生成EF代码需要在<code>Packa
 <td class="lntd">
 <pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
     <span class="nt">&#34;ConnectionStrings&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&#34;LstDatabase&#34;</span><span class="p">:</span> <span class="s2">&#34;server=127.0.0.1;port=3306;user=myuser;password=123456;database=dbname&#34;</span>
+        <span class="nt">&#34;MyDatabase&#34;</span><span class="p">:</span> <span class="s2">&#34;server=127.0.0.1;port=3306;user=myuser;password=123456;database=dbname&#34;</span>
     <span class="p">},</span>
     <span class="nt">&#34;log4net&#34;</span><span class="p">:</span> <span class="s2">&#34;log4net.config&#34;</span><span class="p">,</span>
     <span class="nt">&#34;Logging&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -762,7 +762,7 @@ EF当然是 <code>Database First</code> 了，生成EF代码需要在<code>Packa
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>经过测试发现，net core <strong>不支持 http 的访问</strong>； net framework 的原生版本，只能访问 http 端口 5000 ，<strong>不能访问 https 端口 5001</strong> ，不能用 http 或者 https 这样的前缀(如: <code>http://10.50.40.237:5000</code>)，<strong>localhost这种域名也无法解析</strong>。</p>
+</div><p>经过测试发现，net core 的gRPC桌面程序 <strong>不支持 http 的访问</strong>； net framework 的桌面程序使用gRPC原生版本，只能访问 http 端口 5000 ，<strong>不能访问 https 端口 5001</strong> ，不能用 http 或者 https 这样的前缀(如: <code>http://10.50.40.237:5000</code>)，<strong>localhost这种域名也无法解析</strong>。</p>
 <table>
 <thead>
 <tr>
@@ -775,14 +775,14 @@ EF当然是 <code>Database First</code> 了，生成EF代码需要在<code>Packa
 </thead>
 <tbody>
 <tr>
-<td>net core</td>
+<td>net core gRPC客户端</td>
 <td>x</td>
 <td>√</td>
 <td>√</td>
 <td>√</td>
 </tr>
 <tr>
-<td>framework</td>
+<td>net core gRPC客户端</td>
 <td>√</td>
 <td>x</td>
 <td>x</td>
@@ -796,7 +796,7 @@ EF当然是 <code>Database First</code> 了，生成EF代码需要在<code>Packa
 </blockquote>
 <h2 id="总结">总结</h2>
 <p>这次WCF升级到 asp.net core + gRPC，迁移到 Linux 的部分，方案虽然可以运行。但是要<strong>放弃 win7 用户是不太可能的</strong>，只好放弃 gRPC这种方案。</p>
-<p>幸运的是，放弃 gPRC 的那一刻，我突然意识到，<strong>为什么不用 web api</strong> ，REST Full 的方式也满足，逻辑部分的代码尽量不变。下一篇介绍，WCF 迁移到 asp.net core web api ，到目前为止，这个方案是我最为满意的。</p>
+<p>幸运的是，放弃 gPRC 的那一刻，我突然意识到，<strong>为什么不用 web api</strong> ， RESTful 的方式也满足，逻辑部分的代码尽量不变。下一篇介绍，WCF 迁移到 asp.net core web api ，到目前为止，这个方案是我最为满意的。</p>
     </div>
 
     
@@ -809,7 +809,7 @@ EF当然是 <code>Database First</code> 了，生成EF代码需要在<code>Packa
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-      2020-08-13 11:11
+      2020-08-13 19:11
       
     </span>
   </p>
@@ -834,6 +834,19 @@ EF当然是 <code>Database First</code> 了，生成EF代码需要在<code>Packa
       
       <nav class="post-nav">
         
+          <a class="prev" href="/post/2020/20200814-wcf-to-aspnetcore-webapi/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">*旧 WCF 项目成功迁移到 asp.net core web api</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
         
           <a class="next" href="/post/2020/20200622-restructure-download/">
             <span class="next-text nav-default">*重构下载功能模块</span>

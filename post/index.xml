@@ -6,13 +6,25 @@
     <description>Recent content in Posts on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 13 Aug 2020 11:11:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2020 11:11:00 +0800</lastBuildDate>
     
 	<atom:link href="https://mrbenwang.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>旧 WCF 项目迁移到 asp.net core &#43; gRPC 的尝试</title>
+      <title>*旧 WCF 项目成功迁移到 asp.net core web api</title>
+      <link>https://mrbenwang.github.io/post/2020/20200814-wcf-to-aspnetcore-webapi/</link>
+      <pubDate>Fri, 14 Aug 2020 11:11:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2020/20200814-wcf-to-aspnetcore-webapi/</guid>
+      <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
+&lt;p&gt;接上一篇，放弃了 asp.net core + gRPC 的方案后，我灵光一闪，为什么不用 web api 呢？不也是 asp.net core 的吗？虽然 RESTful 不是强约束，客户端写起来也麻烦，但还是可以满足基本需求，&lt;strong&gt;避免大幅修改&lt;/strong&gt;&lt;code&gt;旧有的业务逻辑代码&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;在网上找到相当多的文章，比较 gRPC 和 RESTful 的优缺点，结论都是 &lt;code&gt;gRPC&lt;/code&gt; 推荐用作&lt;strong&gt;内部系统间调用&lt;/strong&gt;， &lt;code&gt;RESTful&lt;/code&gt; 推荐用作&lt;strong&gt;对外开放接口&lt;/strong&gt;。&lt;br&gt;
+选择 &lt;code&gt;RESTful&lt;/code&gt; 另一个最重要的原因是，&lt;code&gt;gRPC&lt;/code&gt; 的底层框架需要HTTP2，而 win7 不支持HTTP2，有相当一部分用户在 win7 上。上篇有人推荐 &lt;code&gt;grpc web&lt;/code&gt; ，由于项目是 &lt;strong&gt;WPF 桌面客户端&lt;/strong&gt;，这种 web 方式可能就更不适合了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>*旧 WCF 项目迁移到 asp.net core &#43; gRPC 的尝试</title>
       <link>https://mrbenwang.github.io/post/2020/20200813-wcf-to-aspnetcore-grpc/</link>
       <pubDate>Thu, 13 Aug 2020 11:11:00 +0800</pubDate>
       
@@ -250,28 +262,6 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
 22.歧义谬误（Ambiguity）&lt;br&gt;
 23.起源谬误（genetic fallacy）&lt;br&gt;
 24.诉诸中庸（英语：argument to moderation）&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>[转]逻辑谬误列表(1-12)</title>
-      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-1/</link>
-      <pubDate>Fri, 07 Dec 2018 15:56:00 +0800</pubDate>
-      
-      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-1/</guid>
-      <description>&lt;ol&gt;
-&lt;li&gt;稻草人论证（Strawman）&lt;/li&gt;
-&lt;li&gt;滑坡谬误（Slippery slope）&lt;/li&gt;
-&lt;li&gt;片面辩护（special pleading）&lt;/li&gt;
-&lt;li&gt;赌徒谬误（The Gambler＇s Fallacy）&lt;/li&gt;
-&lt;li&gt;假两难（推理、论证）（False dilemma）&lt;/li&gt;
-&lt;li&gt;因果谬误（Causal Fallacy）&lt;/li&gt;
-&lt;li&gt;诉诸人身谬误（英语：ad hominem fallacy）&lt;/li&gt;
-&lt;li&gt;既定观点问题（英语：loaded question）&lt;/li&gt;
-&lt;li&gt;诉诸群众（拉丁语：Argumentum ad populum）&lt;/li&gt;
-&lt;li&gt;窃取论点（英语：begging the question）&lt;/li&gt;
-&lt;li&gt;诉诸权威（英语：Appeal to Authority）&lt;/li&gt;
-&lt;li&gt;诉诸自然（英语：appeal to nature）&lt;/li&gt;
-&lt;/ol&gt;</description>
     </item>
     
   </channel>
