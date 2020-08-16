@@ -19,16 +19,22 @@
       <guid>https://mrbenwang.github.io/post/2020/20200317-the-market-collapse/</guid>
       <description>&lt;p&gt;崩盘！！！崩盘！！！崩盘！！！&lt;br&gt;
 近一周的金融市场，可以用血流成河来形容了。美国三大股指，历史上总共四次熔断，这八天就三次了。&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;pre&gt;&lt;code&gt;  活久见
-&lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;3月8日，巴菲特：我活了89岁，只见过一次美股熔断。&lt;br&gt;
-3月9日，巴菲特：我活了89岁，只见过两次美股熔断。&lt;br&gt;
-3月12日，巴菲特：我活了89岁，只见过三次美股熔断。&lt;br&gt;
-3月16日，巴菲特：我太年轻了……&lt;br&gt;
-补充，3月19日，美股第五次熔断，说实话已经麻木了。。。&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;</description>
+&lt;div class=&#34;shortcode-notice note&#34;&gt;
+  &lt;div class=&#34;shortcode-notice-title note&#34;&gt;
+    
+      活久见
+    
+  &lt;/div&gt;
+  &lt;p&gt;
+
+3月8日，巴菲特：我活了89岁，只见过一次美股熔断。  
+3月9日，巴菲特：我活了89岁，只见过两次美股熔断。  
+3月12日，巴菲特：我活了89岁，只见过三次美股熔断。  
+3月16日，巴菲特：我太年轻了……  
+补充，3月19日，美股第五次熔断，说实话已经麻木了。。。  
+
+&lt;/p&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -48,17 +54,23 @@
       
       <guid>https://mrbenwang.github.io/post/2019/20191016-speculator-and-futures/</guid>
       <description>&lt;p&gt;意不意外，惊不惊喜。万万没想到 &lt;code&gt;Futures&lt;/code&gt; 的含义是期货，也就是&lt;code&gt;未来&lt;/code&gt;这个单词的复数，典型的&lt;strong&gt;拿今天“赌”未来&lt;/strong&gt;。还有 &lt;code&gt;long&lt;/code&gt; 代表多头，&lt;code&gt;short&lt;/code&gt; 代表空头。学了十多年的英语，才知道简单的单词，居然有这种含义。&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;pre&gt;&lt;code&gt;  Buy / Sell / Long / Short 這些詞有什麼差別呢?
-&lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;a href=&#34;https://rich01.com/long-shor/&#34;&gt;引用链接&lt;/a&gt;：&lt;br&gt;
-在18世紀當時的人認為，&lt;strong&gt;放空&lt;/strong&gt; 是種 &lt;code&gt;短期 (Short)&lt;/code&gt; 的炒作，&lt;strong&gt;做多&lt;/strong&gt; 則相對是 &lt;code&gt;長期 (Long)&lt;/code&gt; 的投資。&lt;/p&gt;
-&lt;p&gt;Long 雖然意思包含買進。但它是不只是買進這項動作，它還包含了買進之後的方向是&lt;strong&gt;多頭部位&lt;/strong&gt;。它很明確的說明，你現在的狀態是持有多頭部位。&lt;br&gt;
-Buy 代表買進，但&lt;strong&gt;並不包含任何&lt;/strong&gt;&lt;code&gt;多空看法&lt;/code&gt;，因為買進後你可能持有多頭部位，也可能是買進回補的部位，買完後多空相抵就變空手。(我的理解，比如&lt;code&gt;空平&lt;/code&gt;的买入，只代表当时的操作)&lt;/p&gt;
-&lt;p&gt;Short 是賣你沒有的東西，它暗示了一種責任，也代表了執行之的狀態是持有&lt;strong&gt;空頭部位&lt;/strong&gt;。&lt;br&gt;
-Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;strong&gt;不見得是看空&lt;/strong&gt;，只是變成空手罷了。&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;</description>
+&lt;div class=&#34;shortcode-notice note&#34;&gt;
+  &lt;div class=&#34;shortcode-notice-title note&#34;&gt;
+    
+      Buy / Sell / Long / Short 這些詞有什麼差別呢?
+    
+  &lt;/div&gt;
+  &lt;p&gt;
+[引用链接](https://rich01.com/long-shor/)：  
+在18世紀當時的人認為，**放空** 是種 `短期 (Short)` 的炒作，**做多** 則相對是 `長期 (Long)` 的投資。  
+
+Long 雖然意思包含買進。但它是不只是買進這項動作，它還包含了買進之後的方向是**多頭部位**。它很明確的說明，你現在的狀態是持有多頭部位。  
+Buy 代表買進，但**並不包含任何**`多空看法`，因為買進後你可能持有多頭部位，也可能是買進回補的部位，買完後多空相抵就變空手。(我的理解，比如`空平`的买入，只代表当时的操作)  
+
+Short 是賣你沒有的東西，它暗示了一種責任，也代表了執行之的狀態是持有**空頭部位**。  
+Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位**不見得是看空**，只是變成空手罷了。  
+&lt;/p&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -67,7 +79,7 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
       <pubDate>Thu, 06 Jun 2019 14:20:00 +0800</pubDate>
       
       <guid>https://mrbenwang.github.io/post/2019/20190606-meeting-and-parting/</guid>
-      <description>&lt;h1 id=&#34;序言&#34;&gt;序言&lt;/h1&gt;
+      <description>&lt;h2 id=&#34;序言&#34;&gt;序言&lt;/h2&gt;
 &lt;p&gt;很久没有以一篇文章的方式，抒发自己的情感了，大都是朋友圈的只言片语。这两年写的最多的就是技术方面，或者是偏理性的文章。上周在医院住院期间，不用考虑工作，不用考虑吃穿，也不用强制完成当日的目标。脑子也就空闲了出来，也就发现了身边的美景和那久违的感动。&lt;/p&gt;</description>
     </item>
     
@@ -77,7 +89,7 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
       <pubDate>Tue, 14 May 2019 16:20:00 +0800</pubDate>
       
       <guid>https://mrbenwang.github.io/post/2019/20190514-reshape-healthy-life/</guid>
-      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;从去年开始，我开始&lt;strong&gt;有意识的改变&lt;/strong&gt;自己的&lt;code&gt;生活状况&lt;/code&gt;。尤其是从上个月开始，起初我在 YouTube 上面，只是看健身方面的内容，关于健身姿势啦，细节啦，要点啦，饮食啦之类的内容。后来 YouTube 又给我推送了，关于&lt;code&gt;驼背伸脖子&lt;/code&gt;，&lt;code&gt;骨骼健康&lt;/code&gt;，&lt;code&gt;脊柱健康&lt;/code&gt;的东西。就&lt;strong&gt;意识到&lt;/strong&gt;健康的重要，开始去重塑自己的体态，纠正伴随我二十多年的不健康姿势。&lt;/p&gt;
 &lt;p&gt;首先感谢，那些分享视频的 YouTuber 。我回想起小学，初中时候，被很多人说起过自己的驼背，像个&lt;code&gt;小老头&lt;/code&gt;，当时完全没有当回事。工作后虽然意识到问题了，但仍然不知道怎么去改变。现在&lt;strong&gt;这些科学的知识改变了我&lt;/strong&gt;，虽然它迟到了，但还不晚。&lt;/p&gt;
 &lt;p&gt;本篇文章主要讲日常生活习惯，改变还是需要靠平时，健康还是要靠自己。顽张れ！&lt;/p&gt;</description>
@@ -89,7 +101,7 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
       <pubDate>Fri, 05 Apr 2019 20:20:00 +0800</pubDate>
       
       <guid>https://mrbenwang.github.io/post/2019/20190404-what-person-do-i-become/</guid>
-      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;时间过的好快啊，上次在&lt;code&gt;行动&lt;/code&gt;和&lt;code&gt;意识&lt;/code&gt;上面&lt;strong&gt;改变自己&lt;/strong&gt;，是四五年前(2014-2015)。那个时候的我，变得勇于尝试很多从未接触过的事物，比如敷面膜，烫发，经验分享，参加社交活动。其中，有些成为了我的生活习惯，有些则不适合我被抛弃。&lt;/p&gt;
 &lt;p&gt;自从骨折以后，尤其是去年植骨手术后。我的&lt;code&gt;心态&lt;/code&gt;和&lt;code&gt;观念想法&lt;/code&gt;，发生了很大的变化。起初，我并没有意识到我的改变，它慢慢的累积，累积；直到年初，在油管上看到文睿讲&lt;code&gt;《人与人比，最终要看福分》&lt;/code&gt;这期视频里，突然意识到，我的内心发生了很多的变化。&lt;/p&gt;
 &lt;p&gt;当时我还有给他留言，表达我内心的困惑。他只是让我内心要平和，同时也要看到他人的优点，这一类鸡汤话，&lt;strong&gt;并没有彻底解决我的疑问&lt;/strong&gt;。这次，我就尝试自己来理性的分析，解释&lt;code&gt;合理化自己&lt;/code&gt;。&lt;/p&gt;</description>
@@ -101,7 +113,7 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
       <pubDate>Tue, 02 Apr 2019 22:20:00 +0800</pubDate>
       
       <guid>https://mrbenwang.github.io/post/2019/20190403-my-economic-learning/</guid>
-      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;从去年开始，&lt;strong&gt;有意识&lt;/strong&gt;的&lt;code&gt;记录&lt;/code&gt;和&lt;code&gt;收集&lt;/code&gt;，从各类财经视频中学习到的经济学小知识。毕竟不是系统的学习，当时只是为了更好的了解和解释，当时的一些经济现象。在这里，就简单的做一个学习小结。&lt;br&gt;
 在此，再此特别感谢&lt;code&gt;世光&lt;/code&gt;和&lt;code&gt;金钱爆&lt;/code&gt;节目组，所作的知识普及。&lt;/p&gt;</description>
     </item>
@@ -113,7 +125,7 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
       
       <guid>https://mrbenwang.github.io/post/2019/20190121-backup-infomation/</guid>
       <description>&lt;p&gt;刚刚，我用了三个小时的时间，清空了自己的新浪微博。仅仅保留第一条和最后一条。&lt;/p&gt;
-&lt;h1 id=&#34;引言&#34;&gt;引言&lt;/h1&gt;
+&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
 &lt;p&gt;我在年前的时候，已经完成了大陆局域网的所有网络个人信息的备份。2018年中断断续续的备份了，百度网盘，qq空间，百度贴吧，新浪微博，等等。&lt;/p&gt;
 &lt;p&gt;我发现我这个20多年的老网虫(1998年第一次上网，网吧还叫&lt;code&gt;网络培训中心&lt;/code&gt;)，大陆的上网好多我的足迹，太久远的没办法找到。还能够找寻到的都一一做了备份。&lt;/p&gt;
 &lt;p&gt;现在，终于开始了清理。我受&lt;code&gt;社会工程学&lt;/code&gt;的启发，为了保护自己的人身安全，为了保护自己的个人隐私。我决定，开始逐步删除掉，我留下的痕迹。虽然他们可能还有额外的备份。&lt;/p&gt;</description>

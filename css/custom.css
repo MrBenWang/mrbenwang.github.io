@@ -7,20 +7,76 @@
 .post .post-content code
 {
     padding: 5px 7px;
-
 }
 
+/* 阅读全文 的文字下划线 */
 .post .post-content .read-more .read-more-link{
     border-bottom:0px;
 }
 
+/* `内字体的美观` */
 .post .post-content code,.post .post-content pre {
     font-family: source sans pro,helvetica neue,Arial,sans-serif;
 }
 
+/* 已移除计算器，暂无用处 */
 #busuanzi_value_site_uv,#busuanzi_value_site_pv {
     padding: 5px 7px;
     background: #f8f5ec;
     border-radius: 4px;
     color: #0366d6;
 }
+
+/* markdown 小标题计数器 */
+#content .post-content h1, .post-content h2, .post-content h3, .post-content h4 {
+    border-radius: 6px 6px 6px 6px;
+    color: #043a73;
+    margin: 15px 0px !important;
+    padding: 5px 0px 5px 20px;
+}
+
+#content .post-content h1::before, .post-content h2::before, .post-content h3::before, .post-content h4::before{
+    color: #c7254e;
+    margin-right: 10px;
+}
+
+.post-content h2{
+    font-size: 18px;
+    counter-increment: h2num;
+}
+.post-content h2::before{
+    /* content: counter(h1num)"."counter(h2num); */
+    content: counter(h2num);
+    margin-left: 20px;
+}
+.post-content h3{
+    font-size: 16px;
+    counter-increment: h3num;
+}
+.post-content h3::before{
+    content: counter(h2num)"."counter(h3num);
+    margin-left: 40px;
+}
+.post-content h4{
+    font-size: 14px;
+    counter-increment: h4num;
+}
+.post-content h4::before{
+    content: counter(h2num)"."counter(h3num)"."counter(h4num);
+    margin-left: 60px;
+}
+
+#TableOfContents ul {
+    counter-reset: linum;
+    list-style-type: none;
+}
+
+#TableOfContents li:before {
+    counter-increment: linum;
+    content: counters(linum, ".", decimal);
+    margin-right: 10px;
+}
+
+/* .post .post-toc .post-toc-content ul li>a {
+    color: #139;
+} */

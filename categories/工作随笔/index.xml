@@ -17,7 +17,7 @@
       <pubDate>Fri, 14 Aug 2020 11:11:00 +0800</pubDate>
       
       <guid>https://mrbenwang.github.io/post/2020/20200814-wcf-to-aspnetcore-webapi/</guid>
-      <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;接上一篇，放弃了 asp.net core + gRPC 的方案后，我灵光一闪，为什么不用 web api 呢？不也是 asp.net core 的吗？虽然 RESTful 不是强约束，客户端写起来也麻烦，但还是可以满足基本需求，&lt;strong&gt;避免大幅修改&lt;/strong&gt;&lt;code&gt;旧有的业务逻辑代码&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;在网上找到相当多的文章，比较 gRPC 和 RESTful 的优缺点，结论都是 &lt;code&gt;gRPC&lt;/code&gt; 推荐用作&lt;strong&gt;内部系统间调用&lt;/strong&gt;， &lt;code&gt;RESTful&lt;/code&gt; 推荐用作&lt;strong&gt;对外开放接口&lt;/strong&gt;。&lt;br&gt;
 选择 &lt;code&gt;RESTful&lt;/code&gt; 另一个最重要的原因是，&lt;code&gt;gRPC&lt;/code&gt; 的底层框架需要HTTP2，而 win7 不支持HTTP2，有相当一部分用户在 win7 上。上篇有人推荐 &lt;code&gt;grpc web&lt;/code&gt; ，由于项目是 &lt;strong&gt;WPF 桌面客户端&lt;/strong&gt;，这种 web 方式可能就更不适合了。&lt;/p&gt;</description>
@@ -39,7 +39,7 @@
       <pubDate>Mon, 22 Jun 2020 10:07:00 +0800</pubDate>
       
       <guid>https://mrbenwang.github.io/post/2020/20200622-restructure-download/</guid>
-      <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;最近项目新上线的版本中，出现了很多涉及&lt;code&gt;下载相关&lt;/code&gt;的bug；经过艰难的代码调试排查，可还是没有准确定位问题。主要还是由于代码年久，经过多代人的修修补补，到处都是&lt;code&gt;“坏味道”的代码&lt;/code&gt;。跟项目经理沟通过后，同意重构这部分的代码。下面就简单记录一下重构的过程。&lt;/p&gt;</description>
     </item>
     
@@ -58,7 +58,7 @@
       <pubDate>Mon, 20 May 2019 14:20:00 +0800</pubDate>
       
       <guid>https://mrbenwang.github.io/post/2019/20190520-csharp-exectue-bat/</guid>
-      <description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。&lt;/p&gt;</description>
     </item>
     
