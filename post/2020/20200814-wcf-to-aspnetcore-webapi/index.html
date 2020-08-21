@@ -78,7 +78,7 @@
 选择 RESTful 另一个最重要的原因是，gRPC 的底层框架需要HTTP2，而 win7 不支持HTTP2，有相当一部分用户在 win7 上。上篇有人推荐 grpc web ，由于项目是 WPF 桌面客户端，这种 web 方式可能就更不适合了。">
 <meta itemprop="datePublished" content="2020-08-14T11:11:00+08:00" />
 <meta itemprop="dateModified" content="2020-08-14T23:46:00+08:00" />
-<meta itemprop="wordCount" content="3980">
+<meta itemprop="wordCount" content="5488">
 
 
 
@@ -385,8 +385,8 @@ if (!doNotTrack) {
             <a href="https://mrbenwang.github.io/categories/%E5%B7%A5%E4%BD%9C%E9%9A%8F%E7%AC%94/"> 工作随笔 </a>
             
           </div>
-        <span class="more-meta"> 约 3980 字 </span>
-          <span class="more-meta"> 预计阅读 8 分钟 </span>
+        <span class="more-meta"> 约 5488 字 </span>
+          <span class="more-meta"> 预计阅读 11 分钟 </span>
 
         
         
@@ -404,12 +404,20 @@ if (!doNotTrack) {
     <nav id="TableOfContents">
   <ul>
     <li><a href="#背景">背景</a></li>
-    <li><a href="#entity-framework-core">Entity Framework Core</a></li>
+    <li><a href="#entity-framework-core">Entity Framework Core</a>
+      <ul>
+        <li><a href="#基础安装和配置">基础安装和配置</a></li>
+        <li><a href="#ef6-to-ef-core-31">EF6 to EF Core 3.1</a></li>
+        <li><a href="#其他问题">其他问题</a></li>
+      </ul>
+    </li>
     <li><a href="#服务端-aspnet-core-web-api">服务端 asp.net core web api</a>
       <ul>
         <li><a href="#启动类-startup">启动类 StartUp</a></li>
         <li><a href="#路由-和-controller">路由 和 Controller</a></li>
         <li><a href="#nswag">Nswag</a></li>
+        <li><a href="#上传文件">上传文件</a></li>
+        <li><a href="#全局异常捕获">全局异常捕获</a></li>
       </ul>
     </li>
     <li><a href="#客户端-webapiclient">客户端 WebApiClient</a>
@@ -423,7 +431,13 @@ if (!doNotTrack) {
         <li><a href="#自动化脚本">自动化脚本</a></li>
       </ul>
     </li>
-    <li><a href="#其他的改动">其他的改动</a></li>
+    <li><a href="#其他的改动">其他的改动</a>
+      <ul>
+        <li><a href="#log4net">log4net</a></li>
+        <li><a href="#framework-40-的-md5-方法废弃">Framework 4.0 的 md5 方法废弃</a></li>
+        <li><a href="#datetimeoffset-和-datetime">DateTimeOffset 和 DateTime</a></li>
+      </ul>
+    </li>
     <li><a href="#总结">总结</a></li>
   </ul>
 </nav>
@@ -437,8 +451,9 @@ if (!doNotTrack) {
 <p>在网上找到相当多的文章，比较 gRPC 和 RESTful 的优缺点，结论都是 <code>gRPC</code> 推荐用作<strong>内部系统间调用</strong>， <code>RESTful</code> 推荐用作<strong>对外开放接口</strong>。<br>
 选择 <code>RESTful</code> 另一个最重要的原因是，<code>gRPC</code> 的底层框架需要HTTP2，而 win7 不支持HTTP2，有相当一部分用户在 win7 上。上篇有人推荐 <code>grpc web</code> ，由于项目是 <strong>WPF 桌面客户端</strong>，这种 web 方式可能就更不适合了。</p>
 <h2 id="entity-framework-core">Entity Framework Core</h2>
+<h3 id="基础安装和配置">基础安装和配置</h3>
 <blockquote>
-<p>这部分基本与上一篇的内容一致，为了保证单篇文章的独立性。把这部分内容完全 copy 过来🙄🙄🙄。</p>
+<p>这部分基本与上一篇的前半部分内容一致，为了保证单篇文章的独立性。把这部分内容完全 copy 过来🙄🙄🙄。</p>
 </blockquote>
 <p>旧的WCF项目，数据库访问使用的是 Entity Framework + Linq + MySql。需要安装的 Nuget 包：</p>
 <ul>
@@ -566,7 +581,135 @@ EF当然是 <code>Database First</code> 了，生成EF代码需要在<code>Packa
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="服务端-aspnet-core-web-api">服务端 asp.net core web api</h2>
+</div><h3 id="ef6-to-ef-core-31">EF6 to EF Core 3.1</h3>
+<p>从 Entity Framework 6 迁移到 Entity Framework Core 3.1 的调整：</p>
+<ol>
+<li>
+<p>提示错误：<code>“Set operations over different store types are currently unsupported”</code>。Union 的使用改变，需要添加 <code>AsEnumerable()</code>，在 EF5.0 会修复这个问题 <a href="https://github.com/dotnet/efcore/issues/18091#issuecomment-536069419">issues</a>；<code>AsEnumerable()</code> 操作的是 将 <strong>Linq to Sql</strong> 切换为 <strong>Linq to Objects</strong> 可以支持 L2O 的所有操作；</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="kt">var</span> <span class="n">query</span> <span class="p">=</span> <span class="p">(</span><span class="k">from</span> <span class="n">a</span> <span class="k">in</span> <span class="n">context</span><span class="p">.</span><span class="n">km_folder</span>
+            <span class="k">select</span> <span class="k">new</span> <span class="n">FolderFileModel</span><span class="p">()</span>
+            <span class="p">{</span>
+                <span class="n">Id</span> <span class="p">=</span> <span class="n">a</span><span class="p">.</span><span class="n">id</span><span class="p">,</span>
+                <span class="n">Name</span> <span class="p">=</span> <span class="n">a</span><span class="p">.</span><span class="n">folder_name</span>
+            <span class="p">}).</span><span class="n">AsEnumerable</span><span class="p">().</span>
+            <span class="n">Union</span><span class="p">(</span><span class="k">from</span> <span class="n">a</span> <span class="k">in</span> <span class="n">context</span><span class="p">.</span><span class="n">km_fileinfo</span>
+                <span class="k">select</span> <span class="k">new</span> <span class="n">FolderFileModel</span><span class="p">()</span>
+                <span class="p">{</span>
+                    <span class="n">Id</span> <span class="p">=</span> <span class="n">a</span><span class="p">.</span><span class="n">id</span><span class="p">,</span>
+                    <span class="n">Name</span> <span class="p">=</span> <span class="n">a</span><span class="p">.</span><span class="n">file_name</span>
+                <span class="p">}).</span><span class="n">AsEnumerable</span><span class="p">();</span>
+
+<span class="c1">// Linq to Sql 切换为 Linq to Objects ， 可以执行 外部方法
+</span><span class="c1"></span><span class="kt">var</span> <span class="n">query2</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">Observations</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">o</span> <span class="p">=&gt;</span> <span class="n">o</span><span class="p">.</span><span class="n">Id</span><span class="p">).</span><span class="n">AsEnumerable</span><span class="p">().</span><span class="n">Select</span><span class="p">(</span><span class="n">x</span> <span class="p">=&gt;</span> <span class="n">MySuperSmartMethod</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>直接执行 sql 语句的方式发生改变， sql查询结果 与 model 里面的字段要一一对应，如果不需要的字段可以添加 <code>[NotMapped]</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="c1">// EF 6
+</span><span class="c1"></span><span class="n">context</span><span class="p">.</span><span class="n">Database</span><span class="p">.</span><span class="n">SqlQuery</span><span class="p">&lt;</span><span class="n">FolderFileModel</span><span class="p">&gt;(</span><span class="n">sql</span><span class="p">,</span> <span class="n">techArgs</span><span class="p">);</span>
+
+<span class="c1">// EF core
+</span><span class="c1"></span>
+<span class="c1">/// &lt;summary&gt;
+</span><span class="c1">/// 为了兼容执行sql的方法，参考写法
+</span><span class="c1">/// https://stackoverflow.com/a/50452479/6667125
+</span><span class="c1">/// &lt;/summary&gt;
+</span><span class="c1"></span><span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">BaseEntities</span> <span class="p">:</span> <span class="n">DbContext</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">virtual</span> <span class="n">DbSet</span><span class="p">&lt;</span><span class="n">FolderFileModel</span><span class="p">&gt;</span> <span class="n">FolderFileModels</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="k">partial</span> <span class="k">void</span> <span class="n">OnModelCreatingPartial</span><span class="p">(</span><span class="n">ModelBuilder</span> <span class="n">modelBuilder</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">modelBuilder</span><span class="p">.</span><span class="n">Entity</span><span class="p">&lt;</span><span class="n">FolderFileModel</span><span class="p">&gt;().</span><span class="n">HasNoKey</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">FolderFileModel</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">long?</span> <span class="n">Id</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+<span class="na">
+</span><span class="na">    [NotMapped]</span>
+    <span class="k">public</span> <span class="kt">bool</span> <span class="n">IsSelected</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 执行方法
+</span><span class="c1"></span><span class="n">context</span><span class="p">.</span><span class="n">FolderFileModels</span><span class="p">.</span><span class="n">FromSqlRaw</span><span class="p">(</span><span class="s">&#34;SQL SCRIPT&#34;</span><span class="p">,</span> <span class="n">techArgs</span><span class="p">).</span><span class="n">ToList</span><span class="p">();</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h3 id="其他问题">其他问题</h3>
+<p>出现问题：<code>指定的架构无效。错误: CLR 类型到 EDM 类型的映射不明确，因为多个 CLR 类型与 EDM 类型“user”匹配。</code></p>
+<p>DbContext 的 MetadataWorkSpace 一旦生成会缓存起来。也就是说，在同一个应用程序域里面，一旦用dbcontext操作过数据库，它会自动读取类所在 assembly 里面的所有类，并尝试匹配数据库模型，然后将匹配结果保存起来(保存到上面的MetaOCSpace中)。当下次操作数据库时，返回数据对应类类所在其它assembly里面的类与当前已匹配数据库模型发生冲突时，便会报错。（这段话是网上抄的）</p>
+<div class="shortcode-notice note">
+  <div class="shortcode-notice-title note">
+    
+    在ASP.NET MVC5高级编程（第5版）中第70页作者写到
+    
+  </div>
+  <p>
+实体框架的另一种（默认的）策略是延迟加载策略。使用延迟建在策略，EF在LINQ查询中只加载主要对象（专辑）的数据，而不填充Genre和Artist属性。  
+var albums=db.Albums;  
+延迟加载根据需要来加载相关数据，也就是说，只有当Album的Genre或Artist需要属性时，EF才会公国向数据库发送一个个额外的查询来加载这些数据。延迟加载策略会强制框架未列表中每一个专辑向数据库发送一个额外的查询。  
+</p>
+</div>
+<p>我的理解是，懒加载通过反射来查找实体对象，而该程序集中，存在多个同名的类型，即使改类型在<strong>不同命名空间</strong>下也会报错。只要将相同的类型名称，改为不一样即可。</p>
+<h2 id="服务端-aspnet-core-web-api">服务端 asp.net core web api</h2>
 <p>这部分可是水还是有点深了。由于最近几年主要以 WPF 桌面软件开发为主，很少了解 asp.net core 。这次算是恶补了一下，下面是个人总结，<strong>一切以官方文档为准</strong>。</p>
 <h3 id="启动类-startup">启动类 StartUp</h3>
 <p>启动类 <code>StartUp.cs</code> ，在这里面主要是<strong>注册服务</strong>(Swagger、mvc等)，<strong>注册中间件</strong>(身份认证、全局异常捕获等)，以及<strong>不同环境的切换</strong>(Development、Production)。下面是我的 StartUp 类，有几点经验总结：</p>
@@ -675,7 +818,7 @@ EF当然是 <code>Database First</code> 了，生成EF代码需要在<code>Packa
         <span class="n">app</span><span class="p">.</span><span class="n">UseSwaggerUi3</span><span class="p">();</span>
     <span class="p">}</span>
 
-    <span class="c1">//app.UseCustomExceptionMiddleware(); // 全局异常中间件
+    <span class="n">app</span><span class="p">.</span><span class="n">UseCustomExceptionMiddleware</span><span class="p">();</span> <span class="c1">// 全局异常中间件
 </span><span class="c1"></span>    <span class="n">app</span><span class="p">.</span><span class="n">UseRouting</span><span class="p">();</span>
     <span class="n">app</span><span class="p">.</span><span class="n">UseAuthorization</span><span class="p">();</span>
     <span class="n">app</span><span class="p">.</span><span class="n">UseEndpoints</span><span class="p">(</span><span class="n">endpoints</span> <span class="p">=&gt;</span>
@@ -730,7 +873,130 @@ EF当然是 <code>Database First</code> 了，生成EF代码需要在<code>Packa
 <p>Nswag 使用起来也非常简单，参考我的 <a href="#%E5%90%AF%E5%8A%A8%E7%B1%BB-startup">启动类 StartUp</a> 中的写法。如果想要把代码中的注释也体现在 Swagger 文档中，需要执行一些额外的操作。<br>
 在 csproj 文件中增加 <code>&lt;GenerateDocumentationFile&gt;true&lt;/GenerateDocumentationFile&gt;</code>，另外，最好在 <code>/Project/PropertyGroup/NoWarn</code> 中增加 1591，否则你会得到一大堆的 warning : <strong># CS1591: Missing XML comment for publicly visible type or member</strong>. 原因是项目中<strong>存在没有注释的方法，属性或类</strong>。</p>
 <p><img src="/images/2020/20200814-wcf-to-aspnetcore-webapi/02-vs-swagger.jpg" alt="vs-swagger"></p>
-<h2 id="客户端-webapiclient">客户端 WebApiClient</h2>
+<p>注：用 swaggerUI 来测试的话，可能会出现两个问题：</p>
+<ol>
+<li>如果用 nginx 转发的话，会需要 跨域 CORS 的支持；</li>
+<li>实际使用本地网络发送过去的，比如，在 10.40.50.237 上面搭建的 webapi，而 swaggerUI 发送地址 <code>http://localhost:5000/api/xxx</code>。</li>
+</ol>
+<h3 id="上传文件">上传文件</h3>
+<p>这里的方法只适合小文件，如果需要大文件上传，需要用到 steam ，多文件上传参数改为 <code>List&lt;IFormFile&gt;</code> 即可。 <code>DisableRequestSizeLimit</code> 取消上传限制。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="na">[HttpPost, DisableRequestSizeLimit]</span>
+<span class="k">public</span> <span class="kt">bool</span> <span class="n">SendStream</span><span class="p">(</span><span class="n">IFormFile</span> <span class="n">_file</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">var</span> <span class="n">_newFileName</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">UploadFileManagementBLL</span><span class="p">.</span><span class="n">Singleton</span><span class="p">.</span><span class="n">StoragePath</span><span class="p">,</span> <span class="n">_file</span><span class="p">.</span><span class="n">FileName</span><span class="p">);</span>
+    <span class="k">using</span> <span class="p">(</span><span class="n">FileStream</span> <span class="n">fs</span> <span class="p">=</span> <span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">File</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">_newFileName</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="n">_file</span><span class="p">.</span><span class="n">CopyTo</span><span class="p">(</span><span class="n">fs</span><span class="p">);</span>
+        <span class="n">fs</span><span class="p">.</span><span class="n">Flush</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="全局异常捕获">全局异常捕获</h3>
+<p>用到自定义中间件，而 asp.net core 提供的 <code>UseExceptionHandler</code> <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/error-handling?view=aspnetcore-3.1#exception-handler-page">《Handle errors in ASP.NET Core》</a> 我觉得不太好用。<br>
+日志唯一ID： <code>TraceIdentifier</code>，方便日后跟踪日志； <code>UseCustomExceptionMiddleware</code> 在 startup.cs 中一定要放在第一位，中间件的顺序是有非常重要的影响的 <a href="https://docs.microsoft.com/zh-cn/aspnet/core/fundamentals/middleware/?view=aspnetcore-3.1#middleware-order">《中间件顺序》</a>。</p>
+<p><img src="/images/2020/20200814-wcf-to-aspnetcore-webapi/03-middleware-pipeline.svg" alt="官方的图片"></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="k">class</span> <span class="nc">CustomExceptionMiddleware</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">RequestDelegate</span> <span class="n">_next</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="n">CustomExceptionMiddleware</span><span class="p">(</span><span class="n">RequestDelegate</span> <span class="n">next</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">_next</span> <span class="p">=</span> <span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span> <span class="n">Invoke</span><span class="p">(</span><span class="n">HttpContext</span> <span class="n">context</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">try</span>
+        <span class="p">{</span>
+            <span class="k">await</span> <span class="n">_next</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">await</span> <span class="n">HandleExceptionAsync</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">ex</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="n">Task</span> <span class="n">HandleExceptionAsync</span><span class="p">(</span><span class="n">HttpContext</span> <span class="n">context</span><span class="p">,</span> <span class="n">Exception</span> <span class="n">ex</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Common</span><span class="p">.</span><span class="n">WebApiLogger</span><span class="p">.</span><span class="n">Singleton</span><span class="p">.</span><span class="n">LogMaker</span><span class="p">.</span><span class="n">LogInfo</span><span class="p">(</span><span class="s">$&#34;Unhandled exception UID:[{context.TraceIdentifier}] Message:[{ex}]&#34;</span><span class="p">);</span>
+
+        <span class="kt">string</span> <span class="n">_retString</span> <span class="p">=</span> <span class="s">$&#34;Error! Please contact the administrator.ErrorId:[{context.TraceIdentifier}] Exception:[{ex.Message}].&#34;</span><span class="p">;</span>
+        <span class="n">context</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">StatusCode</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">HttpStatusCode</span><span class="p">.</span><span class="n">InternalServerError</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">context</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">WriteAsync</span><span class="p">(</span><span class="n">_retString</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">static</span> <span class="k">class</span> <span class="nc">CustomExceptionMiddlewareExtensions</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="n">IApplicationBuilder</span> <span class="n">UseCustomExceptionMiddleware</span><span class="p">(</span><span class="k">this</span> <span class="n">IApplicationBuilder</span> <span class="n">builder</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">builder</span><span class="p">.</span><span class="n">UseMiddleware</span><span class="p">&lt;</span><span class="n">CustomExceptionMiddleware</span><span class="p">&gt;();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="客户端-webapiclient">客户端 WebApiClient</h2>
 <p>在网上寻找有没有现成的 RESTful 的 C# 工具，发现了<a href="https://github.com/dotnetcore/WebApiClient">WebApiClient</a>，看了一下样例，确实非常简单，非常省事儿，只需要写个简单的 Interface 接口类，就可以了，关键是它还<strong>支持各种奇奇怪怪的 HTTP 接口</strong>。<br>
 PS: 最开始读 README.md 时候，总是一脸懵逼，一直把它当成 server 端的工具😓。直到开始写客户端的时候，才真正看懂了他的文档。</p>
 <h3 id="webapiclienttool">WebApiClient.Tool</h3>
@@ -788,6 +1054,55 @@ WebApiClient 提供的是一个异步的接口，由于旧项目升级，避免�
 <p>根据文档<a href="https://docs.microsoft.com/zh-cn/dotnet/core/install/linux-ubuntu#2004-">《在 Linux 上安装 .NET Core》</a> 和 <a href="https://docs.microsoft.com/zh-cn/aspnet/core/host-and-deploy/linux-nginx?view=aspnetcore-3.1#install-nginx">《安装 Nginx》</a> 指引，安装 <code>aspnetcore-runtime-3.1</code> 和 <code>nginx</code>；</p>
 </li>
 <li>
+<p>配置 Nginx ，这部分我用的比较简单，只用到转发功能，未来可能在这一层<strong>增加 SSL</strong> ；另外 <code>try_files $uri $uri/ =404</code> 这一句需要注释掉才行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">&gt; sudo nano /etc/nginx/sites-available/default
+
+server <span class="o">{</span>
+    listen <span class="m">80</span> default_server<span class="p">;</span>
+    listen <span class="o">[</span>::<span class="o">]</span>:80 default_server<span class="p">;</span>
+
+    root /var/www/html<span class="p">;</span>
+    index index.html index.htm index.nginx-debian.html<span class="p">;</span>
+    server_name _<span class="p">;</span>
+    location / <span class="o">{</span>
+            <span class="c1"># First attempt to serve request as file, then</span>
+            <span class="c1"># as directory, then fall back to displaying a 404.</span>
+            <span class="c1"># try_files $uri $uri/ =404;</span>
+            proxy_pass http://localhost:5000<span class="p">;</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+
+&gt; sudo nginx -t    <span class="c1"># 验证配置文件的语法</span>
+&gt; sudo nginx -s reload
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
 <p>创建 Linux 的 web api 的服务文件，并启动。我的示例，<code>--urls</code>这个是非常实用的参数，可多端口；<strong>重点注意</strong> <code>ASPNETCORE_ENVIRONMENT</code> 在配置<strong>是生产环境，还是开发环境</strong>；</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -841,55 +1156,6 @@ WebApiClient 提供的是一个异步的接口，由于旧项目升级，避免�
 &gt; sudo systemctl <span class="nb">enable</span> kestrel-mywebapi.service
 &gt; sudo systemctl restart kestrel-mywebapi.service
 &gt; sudo systemctl status kestrel-mywebapi.service
-</code></pre></td></tr></table>
-</div>
-</div></li>
-<li>
-<p>配置 Nginx ，这部分我用的比较简单，只用到转发功能，未来可能在这一层<strong>增加 SSL</strong> ；另外 <code>try_files $uri $uri/ =404</code> 这一句需要注释掉才行</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">&gt; sudo nano /etc/nginx/sites-available/default
-
-server <span class="o">{</span>
-    listen <span class="m">80</span> default_server<span class="p">;</span>
-    listen <span class="o">[</span>::<span class="o">]</span>:80 default_server<span class="p">;</span>
-
-    root /var/www/html<span class="p">;</span>
-    index index.html index.htm index.nginx-debian.html<span class="p">;</span>
-    server_name _<span class="p">;</span>
-    location / <span class="o">{</span>
-            <span class="c1"># First attempt to serve request as file, then</span>
-            <span class="c1"># as directory, then fall back to displaying a 404.</span>
-            <span class="c1"># try_files $uri $uri/ =404;</span>
-            proxy_pass http://localhost:5000<span class="p">;</span>
-    <span class="o">}</span>
-
-<span class="o">}</span>
-
-&gt; sudo nginx -t    <span class="c1"># 验证配置文件的语法</span>
-&gt; sudo nginx -s reload
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -967,6 +1233,7 @@ put <span class="s2">&#34;D:\Projects\lst\01-LstWebApi\LenovoSmartToolWebApi\bin
 </div>
 </div><p>另外，用一个 WinForm 的测试小程序，尝试了 <code>self-contained = true</code> 这种发布方式，不需要客户端安装 net core 就能运行，发现编译后从 1M+ 大幅增加到 150M+ ，妥妥的吓坏了。即使使用了 <code>PublishTrimmed=true</code> <a href="https://docs.microsoft.com/zh-cn/dotnet/core/deploying/trim-self-contained">《剪裁独立部署和可执行文件》</a>，大小也有 100M+，果断放弃。</p>
 <h2 id="其他的改动">其他的改动</h2>
+<h3 id="log4net">log4net</h3>
 <p>log4net 由 <code>1.2.13.0</code> 升级到 <code>2.0.8</code>后，初始化配置文件方法新增一个参数<code>ILoggerRepository</code>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -985,6 +1252,7 @@ put <span class="s2">&#34;D:\Projects\lst\01-LstWebApi\LenovoSmartToolWebApi\bin
 </code></pre></td></tr></table>
 </div>
 </div><p>部署到 Ubuntu 后，发现 log4net 报错。需要把 <code>log4net.Appender.ColoredConsoleAppender</code> 替换为 <code>log4net.Appender.ManagedColoredConsoleAppender</code>。是由于<strong>不同的 Appender 支持的 Framework 不同</strong>， ColoredConsoleAppender 支持 NET Framework 1.0~4.0 ， ManagedColoredConsoleAppender 支持 NET Framework 2.0+ 。详见：<a href="https://logging.apache.org/log4net/release/framework-support.html">《Apache log4net™ Supported Frameworks》</a></p>
+<h3 id="framework-40-的-md5-方法废弃">Framework 4.0 的 md5 方法废弃</h3>
 <p>MD5 摘要也出现问题，需要更改。原因是 HashPasswordForStoringInConfigFile 在 net core 中已经不可用了，该方法在 framework 4.5 中也提示为废弃的方法。修改为下面新的 MD5 方法即可。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1003,6 +1271,11 @@ put <span class="s2">&#34;D:\Projects\lst\01-LstWebApi\LenovoSmartToolWebApi\bin
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">GetOldMD5</span><span class="p">(</span><span class="kt">string</span> <span class="n">str</span><span class="p">)</span>
@@ -1013,12 +1286,53 @@ put <span class="s2">&#34;D:\Projects\lst\01-LstWebApi\LenovoSmartToolWebApi\bin
 
 <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">GetNewMD5</span><span class="p">(</span><span class="kt">string</span> <span class="n">str</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="n">MD5CryptoServiceProvider</span> <span class="n">_MD5Provider</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MD5CryptoServiceProvider</span><span class="p">();</span>
-    <span class="kt">byte</span><span class="p">[]</span> <span class="n">bytes</span> <span class="p">=</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">Default</span><span class="p">.</span><span class="n">GetBytes</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
-    <span class="kt">byte</span><span class="p">[]</span> <span class="n">encoded</span> <span class="p">=</span> <span class="n">_MD5Provider</span><span class="p">.</span><span class="n">ComputeHash</span><span class="p">(</span><span class="n">bytes</span><span class="p">);</span>
+    <span class="k">using</span> <span class="p">(</span><span class="n">MD5</span> <span class="n">md5</span> <span class="p">=</span> <span class="n">MD5</span><span class="p">.</span><span class="n">Create</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="kt">byte</span><span class="p">[]</span> <span class="n">retVal</span> <span class="p">=</span> <span class="n">md5</span><span class="p">.</span><span class="n">ComputeHash</span><span class="p">(</span><span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">.</span><span class="n">GetBytes</span><span class="p">(</span><span class="n">str</span><span class="p">));</span>
+        <span class="n">StringBuilder</span> <span class="n">_sb</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">retVal</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+        <span class="p">{</span>
+            <span class="n">_sb</span><span class="p">.</span><span class="n">Append</span><span class="p">(</span><span class="n">retVal</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">ToString</span><span class="p">(</span><span class="s">&#34;x2&#34;</span><span class="p">));</span>
+        <span class="p">}</span>
 
-    <span class="n">result</span> <span class="p">=</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">ASCII</span><span class="p">.</span><span class="n">GetString</span><span class="p">(</span><span class="n">encoded</span><span class="p">).</span><span class="n">ToLower</span><span class="p">();</span>
-    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">_sb</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="datetimeoffset-和-datetime">DateTimeOffset 和 DateTime</h3>
+<p>以前从来没有考虑过 UTC 时间，这次深深的上了一课， WebApi 中所有传递的时间全部是 UTC 时间。 <code>DateTime.MinValue</code> 转化为 UTC 时间后，可能会出现小于 <code>0001\01\01 00:00:00</code>的时间。需要额外处理一下。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="n">RequestPartialContent</span><span class="p">(</span><span class="kt">long</span> <span class="n">_userId</span><span class="p">,</span> <span class="n">DateTime</span> <span class="n">_newDataTime</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Uid</span> <span class="p">=</span> <span class="n">_userId</span><span class="p">;</span>
+
+    <span class="c1">// 转化为 utc 时间后，可能会小于 MinValue
+</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="n">_newDataTime</span><span class="p">.</span><span class="n">ToUniversalTime</span><span class="p">()</span> <span class="p">&lt;=</span> <span class="n">DateTimeOffset</span><span class="p">.</span><span class="n">MinValue</span><span class="p">.</span><span class="n">UtcDateTime</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">StartDateVersion</span> <span class="p">=</span> <span class="n">DateTimeOffset</span><span class="p">.</span><span class="n">MinValue</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">StartDateVersion</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DateTimeOffset</span><span class="p">(</span><span class="n">_newDataTime</span><span class="p">);</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
