@@ -49,7 +49,7 @@
       <pubDate>Sun, 03 May 2009 22:22:00 +0800</pubDate>
       
       <guid>https://mrbenwang.github.io/post/old_article/00-zone/029-back-to-begining/</guid>
-      <description>&lt;h1 id=&#34;正文&#34;&gt;正文&lt;/h1&gt;
+      <description>&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
 &lt;p&gt;这一重负几乎重如一个世界，我却担起了.原以为能一直担着走到头，&lt;br&gt;
 而我承担是根据我的心愿，而不是凭力量，&lt;br&gt;
 是根据我的意志，而不是凭能力，&lt;br&gt;
@@ -64,7 +64,7 @@
       <pubDate>Tue, 09 Dec 2008 19:06:00 +0800</pubDate>
       
       <guid>https://mrbenwang.github.io/post/old_article/00-zone/018-thanksgiving/</guid>
-      <description>&lt;h1 id=&#34;正文&#34;&gt;正文&lt;/h1&gt;
+      <description>&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
 &lt;p&gt;感谢太阳 他给予的光亮 让我看得见方向&lt;br&gt;
 感谢坚实的土地 他让我有路可走&lt;br&gt;
 感谢春天 她带来生命的希望&lt;br&gt;
@@ -106,10 +106,28 @@
       <pubDate>Fri, 31 Aug 2007 09:54:00 +0800</pubDate>
       
       <guid>https://mrbenwang.github.io/post/old_article/01-baidu/118-chun-jiang-hua-yue-ye/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;pre&gt;&lt;code&gt;  春江花夜月
-&lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;</description>
+      <description>&lt;div class=&#34;shortcode-notice note&#34;&gt;
+  &lt;div class=&#34;shortcode-notice-title note&#34;&gt;春江花夜月
+    &lt;/div&gt;
+  &lt;div class=&#34;notice-content&#34;&gt;春江潮水连海平，海上明月共潮生。&lt;br&gt;
+滟滟随波千万里，何处春江无月明！&lt;br&gt;
+江流宛转绕芳甸，月照花林皆似霰。&lt;br&gt;
+空里流霜不觉飞，汀上白沙看不见。&lt;br&gt;
+江天一色无纤尘，皎皎空中孤月轮。&lt;br&gt;
+江畔何人初见月？江月何年初照人？&lt;br&gt;
+人生代代无穷已，江月年年只相似。&lt;br&gt;
+不知江月待何人，但见长江送流水。&lt;br&gt;
+白云一片去悠悠，青枫浦上不胜愁。&lt;br&gt;
+谁家今夜扁舟子？何处相思明月楼？&lt;br&gt;
+可怜楼上月徘徊，应照离人妆镜台。&lt;br&gt;
+玉户帘中卷不去，捣衣砧上拂还来。&lt;br&gt;
+此时相望不相闻，愿逐月华流照君。&lt;br&gt;
+鸿雁长飞光不度，鱼龙潜跃水成文。&lt;br&gt;
+昨夜闲潭梦落花，可怜春半不还家。&lt;br&gt;
+江水流春去欲尽，江潭落月复西斜。&lt;br&gt;
+斜月沉沉藏海雾，碣石潇湘无限路。&lt;br&gt;
+不知乘月几人归，落月摇情满江树。&lt;/div&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -118,15 +136,19 @@
       <pubDate>Tue, 28 Aug 2007 08:54:00 +0800</pubDate>
       
       <guid>https://mrbenwang.github.io/post/old_article/01-baidu/117-song-bie/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;pre&gt;&lt;code&gt;  送别
-&lt;/code&gt;&lt;/pre&gt;
-&lt;!-- raw HTML omitted --&gt;
+      <description>&lt;div class=&#34;shortcode-notice note&#34;&gt;
+  &lt;div class=&#34;shortcode-notice-title note&#34;&gt;送别
+    &lt;/div&gt;
+  &lt;div class=&#34;notice-content&#34;&gt;&lt;p&gt;长亭外,古道边,芳草碧连天&lt;br&gt;
+晚风拂柳笛声残,夕阳山外山&lt;br&gt;
+天之涯,地之角,知交半零落&lt;br&gt;
+人生难得是欢聚,唯有别离多&lt;/p&gt;
 &lt;p&gt;长亭外,古道边,芳草碧连天&lt;br&gt;
 问君此去几时还,来时莫徘徊&lt;br&gt;
 天之涯,地之角,知交半零落&lt;br&gt;
 一壶浊洒尽余欢,今宵别梦寒&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;</description>
+&lt;/div&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>

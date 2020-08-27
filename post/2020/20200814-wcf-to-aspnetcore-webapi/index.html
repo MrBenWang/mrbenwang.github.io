@@ -28,7 +28,7 @@
 选择 RESTful 另一个最重要的原因是，gRPC 的底层框架需要HTTP2，而 win7 不支持HTTP2，有相当一部分用户在 win7 上。上篇有人推荐 grpc web ，由于项目是 WPF 桌面客户端，这种 web 方式可能就更不适合了。
 " />
 
-  <meta name="keywords" content="码农, 逻辑, 自由" />
+  <meta name="keywords" content="个人博客, 有趣, 编程, 生活" />
 
 
 
@@ -39,6 +39,8 @@
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2020/20200814-wcf-to-aspnetcore-webapi/" />
+
+
 
 
 
@@ -54,7 +56,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.af20b78e95c84de86b00a0242a4a77bd2601700e1b250edf27537d957ac0041d.css" integrity="sha256-ryC3jpXITehrAKAkKkp3vSYBcA4bJQ7fJ1N9lXrABB0=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css" integrity="sha256-s6iBPAbm14W&#43;uiK/gmThdPoss6OWsi&#43;bok4sAMGKr38=" media="screen" crossorigin="anonymous">
 
 
 
@@ -161,6 +163,35 @@ if (!doNotTrack) {
           
             <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于</a>
           
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://mrbenwang.github.io/">
+              逻辑谬误
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/">[转]逻辑谬误列表(序言)</a>
+              </li>
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-1/">[转]逻辑谬误列表(1-12)</a>
+              </li>
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-2/">[转]逻辑谬误列表(13-24)</a>
+              </li>
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-ex/">[转]逻辑谬误列表(例子)</a>
+              </li>
+            
+          </ul>
         
       </li>
     
@@ -339,6 +370,34 @@ if (!doNotTrack) {
           
             <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于</a>
           
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://mrbenwang.github.io/">逻辑谬误</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/">[转]逻辑谬误列表(序言)</a>
+              </li>
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-1/">[转]逻辑谬误列表(1-12)</a>
+              </li>
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-2/">[转]逻辑谬误列表(13-24)</a>
+              </li>
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-ex/">[转]逻辑谬误列表(例子)</a>
+              </li>
+            
+          </ul>
 
         
 
@@ -697,18 +756,12 @@ EF当然是 <code>Database First</code> 了，生成EF代码需要在<code>Packa
 <p>出现问题：<code>指定的架构无效。错误: CLR 类型到 EDM 类型的映射不明确，因为多个 CLR 类型与 EDM 类型“user”匹配。</code></p>
 <p>DbContext 的 MetadataWorkSpace 一旦生成会缓存起来。也就是说，在同一个应用程序域里面，一旦用dbcontext操作过数据库，它会自动读取类所在 assembly 里面的所有类，并尝试匹配数据库模型，然后将匹配结果保存起来(保存到上面的MetaOCSpace中)。当下次操作数据库时，返回数据对应类类所在其它assembly里面的类与当前已匹配数据库模型发生冲突时，便会报错。（这段话是网上抄的）</p>
 <div class="shortcode-notice note">
-  <div class="shortcode-notice-title note">
-    
-      在ASP.NET MVC5高级编程（第5版）中第70页作者写到
-    
-  </div>
-  <p>
-实体框架的另一种（默认的）策略是延迟加载策略。使用延迟建在策略，EF在LINQ查询中只加载主要对象（专辑）的数据，而不填充Genre和Artist属性。  
-var albums=db.Albums;  
-延迟加载根据需要来加载相关数据，也就是说，只有当Album的Genre或Artist需要属性时，EF才会公国向数据库发送一个个额外的查询来加载这些数据。延迟加载策略会强制框架未列表中每一个专辑向数据库发送一个额外的查询。  
-</p>
+  <div class="shortcode-notice-title note">在ASP.NET MVC5高级编程（第5版）中第70页作者写到
+    </div>
+  <div class="notice-content">实体框架的另一种（默认的）策略是延迟加载策略。使用延迟建在策略，EF在LINQ查询中只加载主要对象（专辑）的数据，而不填充Genre和Artist属性。<br>
+var albums=db.Albums;<br>
+延迟加载根据需要来加载相关数据，也就是说，只有当Album的Genre或Artist需要属性时，EF才会公国向数据库发送一个个额外的查询来加载这些数据。延迟加载策略会强制框架未列表中每一个专辑向数据库发送一个额外的查询。</div>
 </div>
-
 <p>我的理解是，懒加载通过反射来查找实体对象，而该程序集中，存在多个同名的类型，即使改类型在<strong>不同命名空间</strong>下也会报错。只要将相同的类型名称，改为不一样即可。</p>
 <h2 id="服务端-aspnet-core-web-api">服务端 asp.net core web api</h2>
 <p>这部分可是水还是有点深了。由于最近几年主要以 WPF 桌面软件开发为主，很少了解 asp.net core 。这次算是恶补了一下，下面是个人总结，<strong>一切以官方文档为准</strong>。</p>
@@ -1497,6 +1550,17 @@ put <span class="s2">&#34;D:\Projects\lst\01-LstWebApi\LenovoSmartToolWebApi\bin
 
     </a>
   
+    <a href="https://www.instagram.com/mrbenwang/" rel="me noopener" class="iconfont"
+      title="instagram"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M853.333333 277.333333C853.333333 289.28 843.946667 298.666667 832 298.666667L746.666667 298.666667C734.72 298.666667 725.333333 289.28 725.333333 277.333333L725.333333 192C725.333333 180.053333 734.72 170.666667 746.666667 170.666667L832 170.666667C843.946667 170.666667 853.333333 180.053333 853.333333 192M192 853.333333C180.053333 853.333333 170.666667 843.946667 170.666667 832L170.666667 469.333333 259.84 469.333333C257.28 482.986667 256 497.493333 256 512 256 653.226667 370.773333 768 512 768 653.226667 768 768 653.226667 768 512 768 497.493333 766.293333 482.986667 764.16 469.333333L853.333333 469.333333 853.333333 832C853.333333 843.946667 843.946667 853.333333 832 853.333333M512 341.333333C606.293333 341.333333 682.666667 417.706667 682.666667 512 682.666667 606.293333 606.293333 682.666667 512 682.666667 417.706667 682.666667 341.333333 606.293333 341.333333 512 341.333333 417.706667 417.706667 341.333333 512 341.333333M853.333333 85.333333 170.666667 85.333333C123.306667 85.333333 85.333333 123.306667 85.333333 170.666667L85.333333 853.333333C85.333333 900.266667 123.733333 938.666667 170.666667 938.666667L853.333333 938.666667C900.266667 938.666667 938.666667 900.266667 938.666667 853.333333L938.666667 170.666667C938.666667 123.306667 900.266667 85.333333 853.333333 85.333333Z"></path>
+</svg>
+
+    </a>
+  
     <a href="https://space.bilibili.com/344871908" rel="me noopener" class="iconfont"
       title="bilibili"  target="_blank"
       >
@@ -1588,7 +1652,16 @@ put <span class="s2">&#34;D:\Projects\lst\01-LstWebApi\LenovoSmartToolWebApi\bin
 
 
 
-
+<script id="baidu_analytics">
+  var _hmt = _hmt || [];
+  (function() {
+    if (window.location.hostname === 'localhost') return;
+    var hm = document.createElement("script"); hm.async = true;
+    hm.src = "https://hm.baidu.com/hm.js?aa3ed9f94f89c971ad305e8796039253";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
 
 
 

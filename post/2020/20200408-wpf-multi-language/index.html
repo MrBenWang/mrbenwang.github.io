@@ -26,7 +26,7 @@
   <meta name="description" content="去年底今年初，由于WPF项目，需要支持日本地区，要求可以切换语言。本篇文章汇总了一下，当时的调研的结果，和项目中所采用的方式。
 " />
 
-  <meta name="keywords" content="码农, 逻辑, 自由" />
+  <meta name="keywords" content="个人博客, 有趣, 编程, 生活" />
 
 
 
@@ -37,6 +37,8 @@
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2020/20200408-wpf-multi-language/" />
+
+
 
 
 
@@ -52,7 +54,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.af20b78e95c84de86b00a0242a4a77bd2601700e1b250edf27537d957ac0041d.css" integrity="sha256-ryC3jpXITehrAKAkKkp3vSYBcA4bJQ7fJ1N9lXrABB0=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css" integrity="sha256-s6iBPAbm14W&#43;uiK/gmThdPoss6OWsi&#43;bok4sAMGKr38=" media="screen" crossorigin="anonymous">
 
 
 
@@ -70,7 +72,7 @@
 <meta itemprop="description" content="去年底今年初，由于WPF项目，需要支持日本地区，要求可以切换语言。本篇文章汇总了一下，当时的调研的结果，和项目中所采用的方式。">
 <meta itemprop="datePublished" content="2020-04-08T10:07:00+08:00" />
 <meta itemprop="dateModified" content="2020-04-08T10:07:00+08:00" />
-<meta itemprop="wordCount" content="2005">
+<meta itemprop="wordCount" content="2144">
 
 
 
@@ -150,6 +152,35 @@ if (!doNotTrack) {
           
             <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于</a>
           
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://mrbenwang.github.io/">
+              逻辑谬误
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/">[转]逻辑谬误列表(序言)</a>
+              </li>
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-1/">[转]逻辑谬误列表(1-12)</a>
+              </li>
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-2/">[转]逻辑谬误列表(13-24)</a>
+              </li>
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-ex/">[转]逻辑谬误列表(例子)</a>
+              </li>
+            
+          </ul>
         
       </li>
     
@@ -333,6 +364,34 @@ if (!doNotTrack) {
 
       </li>
     
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://mrbenwang.github.io/">逻辑谬误</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/">[转]逻辑谬误列表(序言)</a>
+              </li>
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-1/">[转]逻辑谬误列表(1-12)</a>
+              </li>
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-2/">[转]逻辑谬误列表(13-24)</a>
+              </li>
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-ex/">[转]逻辑谬误列表(例子)</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
 
     
     
@@ -374,7 +433,7 @@ if (!doNotTrack) {
             <a href="https://mrbenwang.github.io/categories/%E5%B7%A5%E4%BD%9C%E9%9A%8F%E7%AC%94/"> 工作随笔 </a>
             
           </div>
-        <span class="more-meta"> 约 2005 字 </span>
+        <span class="more-meta"> 约 2144 字 </span>
           <span class="more-meta"> 预计阅读 5 分钟 </span>
 
         
@@ -528,74 +587,137 @@ al -target:lib -embed:LanguageResources.ResourceText.ja-JP.resources -culture:ja
     LanguageManager
     
   </summary>
-  
+  <div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cs" data-lang="cs"><span class="k">public</span> <span class="k">class</span> <span class="nc">LanguageManager</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">bool</span> <span class="n">IsLangOut</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Language</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
 
-```cs
-public class LanguageManager
-{
-    public bool IsLangOut { get; set; }
-    public string Language { get; set; }
+    <span class="k">private</span> <span class="kt">string</span> <span class="n">langFile</span><span class="p">;</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="n">LanguageManager</span> <span class="n">_Instance</span><span class="p">;</span>
+    <span class="k">private</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="n">LanguageObject</span><span class="p">&gt;</span> <span class="n">StrMap</span><span class="p">;</span>
 
-    private string langFile;
-    private static LanguageManager _Instance;
-    private Dictionary<string, LanguageObject> StrMap;
+    <span class="k">public</span> <span class="k">static</span> <span class="n">LanguageManager</span> <span class="n">Instance</span>
+    <span class="p">{</span>
+        <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">_Instance</span> <span class="p">==</span> <span class="k">null</span> <span class="p">?</span> <span class="n">_Instance</span> <span class="p">=</span> <span class="k">new</span> <span class="n">LanguageManager</span><span class="p">()</span> <span class="p">:</span> <span class="n">_Instance</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">}</span>
 
-    public static LanguageManager Instance
-    {
-        get { return _Instance == null ? _Instance = new LanguageManager() : _Instance; }
-    }
+    <span class="k">private</span> <span class="n">LanguageManager</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">IsLangOut</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+        <span class="n">Language</span> <span class="p">=</span> <span class="s">&#34;en_US&#34;</span><span class="p">;</span>
+        <span class="n">langFile</span> <span class="p">=</span> <span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">AppDomain</span><span class="p">.</span><span class="n">CurrentDomain</span><span class="p">.</span><span class="n">BaseDirectory</span><span class="p">,</span> <span class="s">&#34;logs&#34;</span><span class="p">,</span> <span class="s">&#34;LanguageError.log&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    private LanguageManager()
-    {
-        IsLangOut = false;
-        Language = "en_US";
-        langFile = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logs", "LanguageError.log");
-    }
+    <span class="k">public</span> <span class="kt">bool</span> <span class="n">Load</span><span class="p">(</span><span class="n">Func</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="n">LanguageObject</span><span class="p">&gt;&gt;</span> <span class="n">LoadFile</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">StrMap</span> <span class="p">=</span> <span class="n">LoadFile</span><span class="p">?.</span><span class="n">Invoke</span><span class="p">(</span><span class="n">Language</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">StrMap</span> <span class="p">==</span> <span class="k">null</span> <span class="p">||</span> <span class="n">StrMap</span><span class="p">.</span><span class="n">Count</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+        <span class="k">else</span> <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    public bool Load(Func<string, Dictionary<string, LanguageObject>> LoadFile)
-    {
-        StrMap = LoadFile?.Invoke(Language);
-        if (StrMap == null || StrMap.Count == 0) return false;
-        else return true;
-    }
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">GetTranslateStr</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="p">||</span> <span class="n">StrMap</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span> <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Empty</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">StrMap</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="n">StrMap</span><span class="p">[</span><span class="n">key</span><span class="p">].</span><span class="n">Trans</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="n">Write2File</span><span class="p">(</span><span class="s">$&#34;no key: [{key}]\n&#34;</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">key</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
-    public string GetTranslateStr(string key)
-    {
-        if (string.IsNullOrEmpty(key) || StrMap == null) return string.Empty;
-        if (StrMap.ContainsKey(key))
-        {
-            return StrMap[key].Trans;
-        }
-        else
-        {
-            Write2File($"no key: [{key}]\n");
-            return key;
-        }
-    }
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">TranslateStr</span><span class="p">(</span><span class="kt">string</span> <span class="n">text</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">Language</span> <span class="p">==</span> <span class="s">&#34;en-US&#34;</span> <span class="p">||</span> <span class="n">StrMap</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span> <span class="k">return</span> <span class="n">text</span><span class="p">;</span>
 
-    public string TranslateStr(string text)
-    {
-        if (Language == "en-US" || StrMap == null) return text;
+        <span class="kt">var</span> <span class="n">lang</span> <span class="p">=</span> <span class="n">StrMap</span><span class="p">.</span><span class="n">Values</span><span class="p">.</span><span class="n">FirstOrDefault</span><span class="p">(</span><span class="n">p</span> <span class="p">=&gt;</span> <span class="n">p</span><span class="p">.</span><span class="n">English</span><span class="p">.</span><span class="n">Trim</span><span class="p">()</span> <span class="p">==</span> <span class="n">text</span><span class="p">.</span><span class="n">Trim</span><span class="p">());</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">lang</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Write2File</span><span class="p">(</span><span class="s">$&#34;can&#39;t find value: [{text}]\n&#34;</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">text</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+            <span class="k">return</span> <span class="n">lang</span><span class="p">.</span><span class="n">Trans</span><span class="p">;</span>
+    <span class="p">}</span>
 
-        var lang = StrMap.Values.FirstOrDefault(p => p.English.Trim() == text.Trim());
-        if (lang == null)
-        {
-            Write2File($"can't find value: [{text}]\n");
-            return text;
-        }
-        else
-            return lang.Trans;
-    }
-
-    public void Write2File(string context)
-    {
-        if (!IsLangOut) return;
-        System.IO.File.AppendAllText(langFile, context, System.Text.Encoding.UTF8);
-    }
-}
-```
-
-
+    <span class="k">public</span> <span class="k">void</span> <span class="n">Write2File</span><span class="p">(</span><span class="kt">string</span> <span class="n">context</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(!</span><span class="n">IsLangOut</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">File</span><span class="p">.</span><span class="n">AppendAllText</span><span class="p">(</span><span class="n">langFile</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">System</span><span class="p">.</span><span class="n">Text</span><span class="p">.</span><span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
 </details>
 
 <details>
@@ -603,78 +725,145 @@ public class LanguageManager
     DependencyProperty 后端代码
     
   </summary>
-  
+  <div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cs" data-lang="cs"><span class="k">public</span> <span class="k">class</span> <span class="nc">LanguageBehavior</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">DependencyProperty</span> <span class="n">KeyProperty</span> <span class="p">=</span>
+        <span class="n">DependencyProperty</span><span class="p">.</span><span class="n">RegisterAttached</span><span class="p">(</span><span class="s">&#34;Key&#34;</span><span class="p">,</span>
+            <span class="k">typeof</span><span class="p">(</span><span class="kt">string</span><span class="p">),</span> <span class="k">typeof</span><span class="p">(</span><span class="n">LanguageBehavior</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">FrameworkPropertyMetadata</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">Empty</span><span class="p">,</span> <span class="n">OnKeyChanged</span><span class="p">));</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="k">void</span> <span class="n">OnKeyChanged</span><span class="p">(</span><span class="n">DependencyObject</span> <span class="n">sender</span><span class="p">,</span> <span class="n">DependencyPropertyChangedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Update</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">NewValue</span> <span class="k">as</span> <span class="kt">string</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SetKey</span><span class="p">(</span><span class="n">DependencyObject</span> <span class="n">dp</span><span class="p">,</span> <span class="kt">string</span> <span class="k">value</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">dp</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="n">KeyProperty</span><span class="p">,</span> <span class="k">value</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">GetKey</span><span class="p">(</span><span class="n">DependencyObject</span> <span class="n">dp</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">dp</span><span class="p">.</span><span class="n">GetValue</span><span class="p">(</span><span class="n">KeyProperty</span><span class="p">)</span> <span class="k">as</span> <span class="kt">string</span><span class="p">;</span>
+    <span class="p">}</span>
 
-```cs
-public class LanguageBehavior
-{
-    public static readonly DependencyProperty KeyProperty =
-        DependencyProperty.RegisterAttached("Key",
-            typeof(string), typeof(LanguageBehavior),
-            new FrameworkPropertyMetadata(string.Empty, OnKeyChanged));
-    private static void OnKeyChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
-    {
-        Update(sender, e.NewValue as string);
-    }
-    public static void SetKey(DependencyObject dp, string value)
-    {
-        dp.SetValue(KeyProperty, value);
-    }
-    public static string GetKey(DependencyObject dp)
-    {
-        return dp.GetValue(KeyProperty) as string;
-    }
+    <span class="k">public</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">DependencyProperty</span> <span class="n">ToolTipProperty</span> <span class="p">=</span>
+        <span class="n">DependencyProperty</span><span class="p">.</span><span class="n">RegisterAttached</span><span class="p">(</span><span class="s">&#34;ToolTip&#34;</span><span class="p">,</span>
+            <span class="k">typeof</span><span class="p">(</span><span class="kt">string</span><span class="p">),</span> <span class="k">typeof</span><span class="p">(</span><span class="n">LanguageBehavior</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">FrameworkPropertyMetadata</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">Empty</span><span class="p">,</span> <span class="n">OnToolTipChanged</span><span class="p">));</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="k">void</span> <span class="n">OnToolTipChanged</span><span class="p">(</span><span class="n">DependencyObject</span> <span class="n">sender</span><span class="p">,</span> <span class="n">DependencyPropertyChangedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">UpdateToolTip</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">NewValue</span> <span class="k">as</span> <span class="kt">string</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SetToolTip</span><span class="p">(</span><span class="n">DependencyObject</span> <span class="n">dp</span><span class="p">,</span> <span class="kt">string</span> <span class="k">value</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">dp</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="n">ToolTipProperty</span><span class="p">,</span> <span class="k">value</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">GetToolTip</span><span class="p">(</span><span class="n">DependencyObject</span> <span class="n">dp</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">dp</span><span class="p">.</span><span class="n">GetValue</span><span class="p">(</span><span class="n">ToolTipProperty</span><span class="p">)</span> <span class="k">as</span> <span class="kt">string</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    public static readonly DependencyProperty ToolTipProperty =
-        DependencyProperty.RegisterAttached("ToolTip",
-            typeof(string), typeof(LanguageBehavior),
-            new FrameworkPropertyMetadata(string.Empty, OnToolTipChanged));
-    private static void OnToolTipChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
-    {
-        UpdateToolTip(sender, e.NewValue as string);
-    }
-    public static void SetToolTip(DependencyObject dp, string value)
-    {
-        dp.SetValue(ToolTipProperty, value);
-    }
-    public static string GetToolTip(DependencyObject dp)
-    {
-        return dp.GetValue(ToolTipProperty) as string;
-    }
+    <span class="k">private</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Update</span><span class="p">(</span><span class="n">DependencyObject</span> <span class="n">sender</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">sender</span> <span class="k">is</span> <span class="n">TabItem</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">sender</span> <span class="k">as</span> <span class="n">TabItem</span><span class="p">).</span><span class="n">Header</span> <span class="p">=</span> <span class="n">LanguageManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">GetTranslateStr</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">sender</span> <span class="k">is</span> <span class="n">Label</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">sender</span> <span class="k">as</span> <span class="n">Label</span><span class="p">).</span><span class="n">Content</span> <span class="p">=</span> <span class="n">LanguageManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">GetTranslateStr</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">sender</span> <span class="k">is</span> <span class="n">ContentControl</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">sender</span> <span class="k">as</span> <span class="n">ContentControl</span><span class="p">).</span><span class="n">Content</span> <span class="p">=</span> <span class="n">LanguageManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">GetTranslateStr</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">sender</span> <span class="k">is</span> <span class="n">TextBlock</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">sender</span> <span class="k">as</span> <span class="n">TextBlock</span><span class="p">).</span><span class="n">Text</span> <span class="p">=</span> <span class="n">LanguageManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">GetTranslateStr</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">sender</span> <span class="k">is</span> <span class="n">Run</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">sender</span> <span class="k">as</span> <span class="n">Run</span><span class="p">).</span><span class="n">Text</span> <span class="p">=</span> <span class="n">LanguageManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">GetTranslateStr</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">sender</span> <span class="k">is</span> <span class="n">GridViewColumn</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">sender</span> <span class="k">as</span> <span class="n">GridViewColumn</span><span class="p">).</span><span class="n">Header</span> <span class="p">=</span> <span class="n">LanguageManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">GetTranslateStr</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    private static void Update(DependencyObject sender, string key)
-    {
-        if (sender is TabItem)
-            (sender as TabItem).Header = LanguageManager.Instance.GetTranslateStr(key);
-        else if (sender is Label)
-            (sender as Label).Content = LanguageManager.Instance.GetTranslateStr(key);
-        else if (sender is ContentControl)
-            (sender as ContentControl).Content = LanguageManager.Instance.GetTranslateStr(key);
-        else if (sender is TextBlock)
-            (sender as TextBlock).Text = LanguageManager.Instance.GetTranslateStr(key);
-        else if (sender is Run)
-            (sender as Run).Text = LanguageManager.Instance.GetTranslateStr(key);
-        else if (sender is GridViewColumn)
-            (sender as GridViewColumn).Header = LanguageManager.Instance.GetTranslateStr(key);
-    }
+    <span class="k">private</span> <span class="k">static</span> <span class="k">void</span> <span class="n">UpdateToolTip</span><span class="p">(</span><span class="n">DependencyObject</span> <span class="n">sender</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(!(</span><span class="n">sender</span> <span class="k">is</span> <span class="n">FrameworkElement</span><span class="p">))</span> <span class="k">return</span><span class="p">;</span>
+        <span class="p">(</span><span class="n">sender</span> <span class="k">as</span> <span class="n">FrameworkElement</span><span class="p">).</span><span class="n">ToolTip</span> <span class="p">=</span> <span class="n">LanguageManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">GetTranslateStr</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 
-    private static void UpdateToolTip(DependencyObject sender, string key)
-    {
-        if (!(sender is FrameworkElement)) return;
-        (sender as FrameworkElement).ToolTip = LanguageManager.Instance.GetTranslateStr(key);
-    }
-}
+<span class="c1">// 在 XAML 的使用示例：  
+</span><span class="c1"></span><span class="p">&lt;</span><span class="n">Button</span> <span class="n">x</span><span class="p">:</span><span class="n">Name</span><span class="p">=</span><span class="s">&#34;btn1&#34;</span> <span class="n">Height</span><span class="p">=</span><span class="s">&#34;40&#34;</span> <span class="n">Lang</span><span class="p">:</span><span class="n">LanguageBehavior</span><span class="p">.</span><span class="n">Key</span><span class="p">=</span><span class="s">&#34;K00259&#34;</span> <span class="p">/&gt;</span>  
+<span class="p">&lt;</span><span class="n">Button</span> <span class="n">x</span><span class="p">:</span><span class="n">Name</span><span class="p">=</span><span class="s">&#34;btn2&#34;</span> <span class="n">Width</span><span class="p">=</span><span class="s">&#34;32&#34;</span> <span class="n">Height</span><span class="p">=</span><span class="s">&#34;32&#34;</span> <span class="n">Lang</span><span class="p">:</span><span class="n">LanguageBehavior</span><span class="p">.</span><span class="n">ToolTip</span><span class="p">=</span><span class="s">&#34;K00189&#34;</span> <span class="p">/&gt;</span>  
 
-// 在 XAML 的使用示例：  
-<Button x:Name="btn1" Height="40" Lang:LanguageBehavior.Key="K00259" />  
-<Button x:Name="btn2" Width="32" Height="32" Lang:LanguageBehavior.ToolTip="K00189" />  
-
-// 在 cs 的使用示例：  
-this.textError.Text = LanguageManager.Instance.GetTranslateStr("K00204");  
-this.textError.Text = LanguageManager.Instance.TranslateStr("Can not connect server");  
-```
-
-
+<span class="c1">// 在 cs 的使用示例：  
+</span><span class="c1"></span><span class="k">this</span><span class="p">.</span><span class="n">textError</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="n">LanguageManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">GetTranslateStr</span><span class="p">(</span><span class="s">&#34;K00204&#34;</span><span class="p">);</span>  
+<span class="k">this</span><span class="p">.</span><span class="n">textError</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="n">LanguageManager</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">TranslateStr</span><span class="p">(</span><span class="s">&#34;Can not connect server&#34;</span><span class="p">);</span>  
+</code></pre></td></tr></table>
+</div>
+</div>
 </details>
 
 <h2 id="总结">总结</h2>
@@ -831,6 +1020,17 @@ this.textError.Text = LanguageManager.Instance.TranslateStr("Can not connect ser
 
     </a>
   
+    <a href="https://www.instagram.com/mrbenwang/" rel="me noopener" class="iconfont"
+      title="instagram"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M853.333333 277.333333C853.333333 289.28 843.946667 298.666667 832 298.666667L746.666667 298.666667C734.72 298.666667 725.333333 289.28 725.333333 277.333333L725.333333 192C725.333333 180.053333 734.72 170.666667 746.666667 170.666667L832 170.666667C843.946667 170.666667 853.333333 180.053333 853.333333 192M192 853.333333C180.053333 853.333333 170.666667 843.946667 170.666667 832L170.666667 469.333333 259.84 469.333333C257.28 482.986667 256 497.493333 256 512 256 653.226667 370.773333 768 512 768 653.226667 768 768 653.226667 768 512 768 497.493333 766.293333 482.986667 764.16 469.333333L853.333333 469.333333 853.333333 832C853.333333 843.946667 843.946667 853.333333 832 853.333333M512 341.333333C606.293333 341.333333 682.666667 417.706667 682.666667 512 682.666667 606.293333 606.293333 682.666667 512 682.666667 417.706667 682.666667 341.333333 606.293333 341.333333 512 341.333333 417.706667 417.706667 341.333333 512 341.333333M853.333333 85.333333 170.666667 85.333333C123.306667 85.333333 85.333333 123.306667 85.333333 170.666667L85.333333 853.333333C85.333333 900.266667 123.733333 938.666667 170.666667 938.666667L853.333333 938.666667C900.266667 938.666667 938.666667 900.266667 938.666667 853.333333L938.666667 170.666667C938.666667 123.306667 900.266667 85.333333 853.333333 85.333333Z"></path>
+</svg>
+
+    </a>
+  
     <a href="https://space.bilibili.com/344871908" rel="me noopener" class="iconfont"
       title="bilibili"  target="_blank"
       >
@@ -922,7 +1122,16 @@ this.textError.Text = LanguageManager.Instance.TranslateStr("Can not connect ser
 
 
 
-
+<script id="baidu_analytics">
+  var _hmt = _hmt || [];
+  (function() {
+    if (window.location.hostname === 'localhost') return;
+    var hm = document.createElement("script"); hm.async = true;
+    hm.src = "https://hm.baidu.com/hm.js?aa3ed9f94f89c971ad305e8796039253";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
 
 
 

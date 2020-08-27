@@ -72,20 +72,13 @@
       <description>&lt;p&gt;崩盘！！！崩盘！！！崩盘！！！&lt;br&gt;
 近一周的金融市场，可以用血流成河来形容了。美国三大股指，历史上总共四次熔断，这八天就三次了。&lt;/p&gt;
 &lt;div class=&#34;shortcode-notice note&#34;&gt;
-  &lt;div class=&#34;shortcode-notice-title note&#34;&gt;
-    
-      活久见
-    
-  &lt;/div&gt;
-  &lt;p&gt;
-
-3月8日，巴菲特：我活了89岁，只见过一次美股熔断。  
-3月9日，巴菲特：我活了89岁，只见过两次美股熔断。  
-3月12日，巴菲特：我活了89岁，只见过三次美股熔断。  
-3月16日，巴菲特：我太年轻了……  
-补充，3月19日，美股第五次熔断，说实话已经麻木了。。。  
-
-&lt;/p&gt;
+  &lt;div class=&#34;shortcode-notice-title note&#34;&gt;活久见
+    &lt;/div&gt;
+  &lt;div class=&#34;notice-content&#34;&gt;3月8日，巴菲特：我活了89岁，只见过一次美股熔断。&lt;br&gt;
+3月9日，巴菲特：我活了89岁，只见过两次美股熔断。&lt;br&gt;
+3月12日，巴菲特：我活了89岁，只见过三次美股熔断。&lt;br&gt;
+3月16日，巴菲特：我太年轻了……&lt;br&gt;
+补充，3月19日，美股第五次熔断，说实话已经麻木了。。。&lt;/div&gt;
 &lt;/div&gt;</description>
     </item>
     
@@ -107,21 +100,15 @@
       <guid>https://mrbenwang.github.io/post/2019/20191016-speculator-and-futures/</guid>
       <description>&lt;p&gt;意不意外，惊不惊喜。万万没想到 &lt;code&gt;Futures&lt;/code&gt; 的含义是期货，也就是&lt;code&gt;未来&lt;/code&gt;这个单词的复数，典型的&lt;strong&gt;拿今天“赌”未来&lt;/strong&gt;。还有 &lt;code&gt;long&lt;/code&gt; 代表多头，&lt;code&gt;short&lt;/code&gt; 代表空头。学了十多年的英语，才知道简单的单词，居然有这种含义。&lt;/p&gt;
 &lt;div class=&#34;shortcode-notice note&#34;&gt;
-  &lt;div class=&#34;shortcode-notice-title note&#34;&gt;
-    
-      Buy / Sell / Long / Short 這些詞有什麼差別呢?
-    
-  &lt;/div&gt;
-  &lt;p&gt;
-[引用链接](https://rich01.com/long-shor/)：  
-在18世紀當時的人認為，**放空** 是種 `短期 (Short)` 的炒作，**做多** 則相對是 `長期 (Long)` 的投資。  
-
-Long 雖然意思包含買進。但它是不只是買進這項動作，它還包含了買進之後的方向是**多頭部位**。它很明確的說明，你現在的狀態是持有多頭部位。  
-Buy 代表買進，但**並不包含任何**`多空看法`，因為買進後你可能持有多頭部位，也可能是買進回補的部位，買完後多空相抵就變空手。(我的理解，比如`空平`的买入，只代表当时的操作)  
-
-Short 是賣你沒有的東西，它暗示了一種責任，也代表了執行之的狀態是持有**空頭部位**。  
-Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位**不見得是看空**，只是變成空手罷了。  
-&lt;/p&gt;
+  &lt;div class=&#34;shortcode-notice-title note&#34;&gt;Buy / Sell / Long / Short 這些詞有什麼差別呢?
+    &lt;/div&gt;
+  &lt;div class=&#34;notice-content&#34;&gt;&lt;p&gt;&lt;a href=&#34;https://rich01.com/long-shor/&#34;&gt;引用链接&lt;/a&gt;：&lt;br&gt;
+在18世紀當時的人認為，&lt;strong&gt;放空&lt;/strong&gt; 是種 &lt;code&gt;短期 (Short)&lt;/code&gt; 的炒作，&lt;strong&gt;做多&lt;/strong&gt; 則相對是 &lt;code&gt;長期 (Long)&lt;/code&gt; 的投資。&lt;/p&gt;
+&lt;p&gt;Long 雖然意思包含買進。但它是不只是買進這項動作，它還包含了買進之後的方向是&lt;strong&gt;多頭部位&lt;/strong&gt;。它很明確的說明，你現在的狀態是持有多頭部位。&lt;br&gt;
+Buy 代表買進，但&lt;strong&gt;並不包含任何&lt;/strong&gt;&lt;code&gt;多空看法&lt;/code&gt;，因為買進後你可能持有多頭部位，也可能是買進回補的部位，買完後多空相抵就變空手。(我的理解，比如&lt;code&gt;空平&lt;/code&gt;的买入，只代表当时的操作)&lt;/p&gt;
+&lt;p&gt;Short 是賣你沒有的東西，它暗示了一種責任，也代表了執行之的狀態是持有&lt;strong&gt;空頭部位&lt;/strong&gt;。&lt;br&gt;
+Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;strong&gt;不見得是看空&lt;/strong&gt;，只是變成空手罷了。&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description>
     </item>
     
@@ -208,16 +195,11 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位**不見
       <description>&lt;p&gt;前两天美国大学舞弊案，造成的影响还是蛮大的(&lt;strong&gt;不过国内我身边的人，基本都不知道，不关心&lt;/strong&gt;)。结合&lt;code&gt;杨世光&lt;/code&gt;和&lt;code&gt;丁万鸣&lt;/code&gt;从&lt;strong&gt;社会阶级角度&lt;/strong&gt;的解读，深深的启发了我。最近几天我一直在思考&lt;code&gt;社会阶级&lt;/code&gt;这方面的东西，形成一点点自己的思考。&lt;/p&gt;
 &lt;p&gt;首先，简单说一下案件内容：&lt;/p&gt;
 &lt;div class=&#34;shortcode-notice info&#34;&gt;
-  &lt;div class=&#34;shortcode-notice-title info&#34;&gt;
-    
-      简单摘录
-    
-  &lt;/div&gt;
-  &lt;p&gt;
-美国司法部周二(2019年03月12日)宣布逮捕了50人，罪名是操作一个涉案金额达2500万美元的骗局，帮助一些富有的美国人的孩子在大学入学考试中`作弊`，**进入精英大学**，包括乔治城大学，斯坦福大学和耶鲁大学等。  
-
-威廉·里克·辛格(William Rick Singer)是此案的核心人物，他是加州非盈利升学机构Edge college &amp; Career Network的创始人。该机构又叫“钥匙”（The Key），专门为有需要的家长提供帮助，通过请人`替考`、`买通考官`在考试后修改成绩、买通名校教练`作伪证`、`假造`体育生资格等方式，让他们的孩子考上名校。  
-&lt;/p&gt;
+  &lt;div class=&#34;shortcode-notice-title info&#34;&gt;简单摘录
+    &lt;/div&gt;
+  &lt;div class=&#34;notice-content&#34;&gt;&lt;p&gt;美国司法部周二(2019年03月12日)宣布逮捕了50人，罪名是操作一个涉案金额达2500万美元的骗局，帮助一些富有的美国人的孩子在大学入学考试中&lt;code&gt;作弊&lt;/code&gt;，&lt;strong&gt;进入精英大学&lt;/strong&gt;，包括乔治城大学，斯坦福大学和耶鲁大学等。&lt;/p&gt;
+&lt;p&gt;威廉·里克·辛格(William Rick Singer)是此案的核心人物，他是加州非盈利升学机构Edge college &amp;amp; Career Network的创始人。该机构又叫“钥匙”（The Key），专门为有需要的家长提供帮助，通过请人&lt;code&gt;替考&lt;/code&gt;、&lt;code&gt;买通考官&lt;/code&gt;在考试后修改成绩、买通名校教练&lt;code&gt;作伪证&lt;/code&gt;、&lt;code&gt;假造&lt;/code&gt;体育生资格等方式，让他们的孩子考上名校。&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;</description>
     </item>
     
@@ -265,15 +247,143 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位**不見
       
       <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-ex/</guid>
       <description>&lt;div class=&#34;shortcode-notice note&#34;&gt;
-  &lt;div class=&#34;shortcode-notice-title note&#34;&gt;
-    
-      简介
-    
-  &lt;/div&gt;
-  &lt;p&gt;
-一个人开始推理之前，必须了解那些专门未受过相关训练大脑所埋设的陷阱。如果我们能识别这些圈套和花招，就可避免中招，也可阻止其他人过度依赖这些技巧。
-&lt;/p&gt;
+  &lt;div class=&#34;shortcode-notice-title note&#34;&gt;简介
+    &lt;/div&gt;
+  &lt;div class=&#34;notice-content&#34;&gt;一个人开始推理之前，必须了解那些专门未受过相关训练大脑所埋设的陷阱。如果我们能识别这些圈套和花招，就可避免中招，也可阻止其他人过度依赖这些技巧。&lt;/div&gt;
 &lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>[转]逻辑谬误列表(13-24)</title>
+      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-2/</link>
+      <pubDate>Fri, 07 Dec 2018 16:56:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-2/</guid>
+      <description>&lt;p&gt;13.合成谬误/分割谬误&lt;br&gt;
+14.轶事谬误（Anecdotal Fallacy）&lt;br&gt;
+15.诉诸情感（appeal to emotion）&lt;br&gt;
+16.你也一样（拉丁语：tu quoque）&lt;br&gt;
+17.转移举证责任（Burden of Proof）&lt;br&gt;
+18.没有真正的苏格兰人（No true Scotsman）&lt;br&gt;
+19.德州神枪手谬误（Texas sharpshooter fallacy）&lt;br&gt;
+20.谬误论证（argument from fallacy）&lt;br&gt;
+21.诉诸难以置信（Argument from incredulity）&lt;br&gt;
+22.歧义谬误（Ambiguity）&lt;br&gt;
+23.起源谬误（genetic fallacy）&lt;br&gt;
+24.诉诸中庸（英语：argument to moderation）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[转]逻辑谬误列表(1-12)</title>
+      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-1/</link>
+      <pubDate>Fri, 07 Dec 2018 15:56:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-1/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;稻草人论证（Strawman）&lt;/li&gt;
+&lt;li&gt;滑坡谬误（Slippery slope）&lt;/li&gt;
+&lt;li&gt;片面辩护（special pleading）&lt;/li&gt;
+&lt;li&gt;赌徒谬误（The Gambler＇s Fallacy）&lt;/li&gt;
+&lt;li&gt;假两难（推理、论证）（False dilemma）&lt;/li&gt;
+&lt;li&gt;因果谬误（Causal Fallacy）&lt;/li&gt;
+&lt;li&gt;诉诸人身谬误（英语：ad hominem fallacy）&lt;/li&gt;
+&lt;li&gt;既定观点问题（英语：loaded question）&lt;/li&gt;
+&lt;li&gt;诉诸群众（拉丁语：Argumentum ad populum）&lt;/li&gt;
+&lt;li&gt;窃取论点（英语：begging the question）&lt;/li&gt;
+&lt;li&gt;诉诸权威（英语：Appeal to Authority）&lt;/li&gt;
+&lt;li&gt;诉诸自然（英语：appeal to nature）&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>[转]逻辑谬误列表(序言)</title>
+      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/</link>
+      <pubDate>Fri, 07 Dec 2018 14:56:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/</guid>
+      <description>&lt;p&gt;我在网上浏览文章的时候，无意间在&lt;code&gt;评论区&lt;/code&gt;发现了，这个非常有价值的系列评论，我不能放置原文链接，见谅。&lt;br&gt;
+同时，为了保留这份资料，为以后重新学习，实践后再来重学。故此由此系列，我对原评论有结构调整。&lt;code&gt;遗憾：原文没有找到&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>我来回答一些这36个问题</title>
+      <link>https://mrbenwang.github.io/post/2018/20181130-i-ask-the-36-questions/</link>
+      <pubDate>Fri, 30 Nov 2018 16:30:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2018/20181130-i-ask-the-36-questions/</guid>
+      <description>&lt;p&gt;问题来自于，纽约时报《The 36 Questions That Lead to Love》：&lt;a href=&#34;https://www.nytimes.com/2015/01/11/fashion/no-37-big-wedding-or-small.html&#34;&gt;英文原文&lt;/a&gt;  -  &lt;a href=&#34;https://cn.nytimes.com/culture/20150123/t23questions/&#34;&gt;中文翻译&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;shortcode-notice info&#34;&gt;
+  &lt;div class=&#34;shortcode-notice-title info&#34;&gt;原文
+    &lt;/div&gt;
+  &lt;div class=&#34;notice-content&#34;&gt;&lt;p&gt;曼迪·莱恩·卡特隆(Mandy Len Catron)为“现代爱情”专栏写了一篇文章《如何快速与陌生人相爱》，她在文中提到心理学家阿瑟·亚伦(Arthur Aron)等人的研究成果：两个陌生人之间的亲密关系或许可以通过彼此询问一些特别的个人化问题而快速升温。这36个问题分为三组，一组比一组来得寻根究底。&lt;/p&gt;
+&lt;p&gt;这个理论的核心是，共同的脆弱能促进亲近感。这项研究的作者们称：“同伴之间发展亲密关系的关键模式在于持续、逐步升级、相互且个人化的袒露自我。”允许自己和另一个人共享脆弱可能非常困难，下面这个练习能迫使你做到这一点。&lt;/p&gt;
+&lt;p&gt;卡特隆和她的朋友在文中尝试的最后一件事是彼此对视四分钟，这个过程没有被详细记录（其实可以从两分钟到四分钟不等）。但是卡特隆毫不迟疑地推荐这件事。“两分钟的效果已经很惊人了，”她告诉我，“四分钟真的非常有效。”&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>“双十一”越火爆越好？</title>
+      <link>https://mrbenwang.github.io/post/2018/20181129-double-eleven-not-a-good-thing/</link>
+      <pubDate>Thu, 29 Nov 2018 15:30:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2018/20181129-double-eleven-not-a-good-thing/</guid>
+      <description>&lt;h2 id=&#34;我的观点&#34;&gt;我的观点&lt;/h2&gt;
+&lt;p&gt;个人认为双十一的成长已经到头了，它所产生的副作用，将会至少影响到未来半年的经发展。最主要的原因是，它提前透支的需求越多，对市场的供需平衡越不利，尤其是对未来很长一段时间的需求不振。它的好处则是，年底冲业绩，清仓的目的，但是这个好处越来越小了。&lt;br&gt;
+以下的内容，其中涉及到的数据，全部来自&lt;code&gt;互联网公开信息&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;打脸的事情来了&lt;/strong&gt;，现在2019年，14小时21分天猫双十一交易额突破2000亿元，突破2018年已经毫无悬念了。在前两天，我还在预测，今年结合大环境不景气，世界金融环境风险越来越大，今年销售额会低于去年的。。。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>自学日语记录历程</title>
+      <link>https://mrbenwang.github.io/post/2018/20181107-japanese-language-study-for-3months/</link>
+      <pubDate>Wed, 07 Nov 2018 09:33:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2018/20181107-japanese-language-study-for-3months/</guid>
+      <description>&lt;p&gt;不知不觉就已经学习日语三个月了，有点点小小的心得和经验。&lt;br&gt;
+这篇文章：一方面是整理，记忆，留作以后回忆使用，另一方面，也想对和我一样学习日语的人，如果能有&lt;code&gt;一点点帮助&lt;/code&gt;就再好不过了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>*域名注册经历的一些分享</title>
+      <link>https://mrbenwang.github.io/post/2018/20180930-domain-registration-share/</link>
+      <pubDate>Sun, 30 Sep 2018 09:04:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2018/20180930-domain-registration-share/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;一次偶然机会，看了一下新建一个&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;VPS实例&lt;/a&gt;的价格，发现最低价的配置，没有&lt;code&gt;ip4&lt;/code&gt;了(所幸我的还是ip4)，只能使用&lt;code&gt;ipv6&lt;/code&gt;。&lt;code&gt;2001:0db8:85a3:08d3:1319:8a2e:0370:7344&lt;/code&gt; 这样的ip地址，又长又难记忆。如果有个域名那不就简单记忆了嘛。&lt;br&gt;
+&lt;img src=&#34;https://mrbenwang.github.io/images/2018/20180930-domain-registration-share/ipv6_only.jpg&#34; alt=&#34;ipv6_only&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>由shadowsocks转为v2ray的体验</title>
+      <link>https://mrbenwang.github.io/post/2018/20180929-give-up-ss-and-change-to-v2ray/</link>
+      <pubDate>Sat, 29 Sep 2018 15:04:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2018/20180929-give-up-ss-and-change-to-v2ray/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近一段时间，总感觉&lt;code&gt;shadowsocks&lt;/code&gt;用起来非常的慢，时不时的断网，我就觉得可能不太对劲了。在issues看到有不少人提到，可能已经被人工智能识别，所以非常堪忧。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>*Hugo &#43; github 搭建个人博客</title>
+      <link>https://mrbenwang.github.io/post/2018/20180927-hugo-plus-github-build-blog/</link>
+      <pubDate>Thu, 27 Sep 2018 15:13:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2018/20180927-hugo-plus-github-build-blog/</guid>
+      <description>&lt;p&gt;很早以前就有想法，搭建一个个人的博客。没有实现的原因：一方面个人的服务器&lt;code&gt;不太安全&lt;/code&gt;，并且掉线，欠费等等，维护起来麻烦，另一方面，文章编辑发布起来也&lt;code&gt;不方便&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;后来了解到 github 提供了博客的功能，也一直没有实践。也鉴于上次文章被删，我也就开始实践了起来，&lt;code&gt;有一个备份总好于无&lt;/code&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>*在公网上的Linux，我的一些配置分享</title>
+      <link>https://mrbenwang.github.io/post/2018/20180926-linux-on-public-share-some-configration/</link>
+      <pubDate>Wed, 26 Sep 2018 10:16:00 +0800</pubDate>
+      
+      <guid>https://mrbenwang.github.io/post/2018/20180926-linux-on-public-share-some-configration/</guid>
+      <description>&lt;p&gt;去年的时候，有一篇介绍在&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;vultr&lt;/a&gt; 上 &lt;a href=&#34;https://mrbenwang.github.io/post/2014-2017/20170329-build-ss-on-vultr-vps/&#34;&gt;搭建ss服务器&lt;/a&gt; 的文章，由于某些众所周知的原因，被阿里云删除。&lt;/p&gt;
+&lt;p&gt;后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用&lt;code&gt;lastb&lt;/code&gt;命令，着实下了一跳，我的vps每天都有&lt;code&gt;几万次的失败登陆记录&lt;/code&gt;。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上&lt;strong&gt;所有国家&lt;/strong&gt;都有来过。&lt;/p&gt;
+&lt;p&gt;这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。&lt;/p&gt;</description>
     </item>
     
   </channel>

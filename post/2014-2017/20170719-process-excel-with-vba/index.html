@@ -27,7 +27,7 @@
 我就问她，整个是不是都是机械性重复的工作，如果是的话，完全可以用电脑来代替。然后我就帮她找工具来优化她的工作，减少出错机会。
 " />
 
-  <meta name="keywords" content="码农, 逻辑, 自由" />
+  <meta name="keywords" content="个人博客, 有趣, 编程, 生活" />
 
 
 
@@ -38,6 +38,8 @@
 
 
 <link rel="canonical" href="https://mrbenwang.github.io/post/2014-2017/20170719-process-excel-with-vba/" />
+
+
 
 
 
@@ -53,7 +55,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.af20b78e95c84de86b00a0242a4a77bd2601700e1b250edf27537d957ac0041d.css" integrity="sha256-ryC3jpXITehrAKAkKkp3vSYBcA4bJQ7fJ1N9lXrABB0=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css" integrity="sha256-s6iBPAbm14W&#43;uiK/gmThdPoss6OWsi&#43;bok4sAMGKr38=" media="screen" crossorigin="anonymous">
 
 
 
@@ -73,7 +75,7 @@
 我就问她，整个是不是都是机械性重复的工作，如果是的话，完全可以用电脑来代替。然后我就帮她找工具来优化她的工作，减少出错机会。">
 <meta itemprop="datePublished" content="2017-07-19T18:00:00+08:00" />
 <meta itemprop="dateModified" content="2017-07-19T18:00:00+08:00" />
-<meta itemprop="wordCount" content="1436">
+<meta itemprop="wordCount" content="1641">
 
 
 
@@ -154,6 +156,35 @@ if (!doNotTrack) {
           
             <a class="menu-item-link" href="https://mrbenwang.github.io/about/">关于</a>
           
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://mrbenwang.github.io/">
+              逻辑谬误
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/">[转]逻辑谬误列表(序言)</a>
+              </li>
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-1/">[转]逻辑谬误列表(1-12)</a>
+              </li>
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-2/">[转]逻辑谬误列表(13-24)</a>
+              </li>
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-ex/">[转]逻辑谬误列表(例子)</a>
+              </li>
+            
+          </ul>
         
       </li>
     
@@ -337,6 +368,34 @@ if (!doNotTrack) {
 
       </li>
     
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://mrbenwang.github.io/">逻辑谬误</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/">[转]逻辑谬误列表(序言)</a>
+              </li>
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-1/">[转]逻辑谬误列表(1-12)</a>
+              </li>
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-2/">[转]逻辑谬误列表(13-24)</a>
+              </li>
+            
+              <li>
+                <a href="https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-ex/">[转]逻辑谬误列表(例子)</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
 
     
     
@@ -378,8 +437,8 @@ if (!doNotTrack) {
             <a href="https://mrbenwang.github.io/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/"> 技术随笔 </a>
             
           </div>
-        <span class="more-meta"> 约 1436 字 </span>
-          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span class="more-meta"> 约 1641 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
 
         
         
@@ -458,8 +517,7 @@ if (!doNotTrack) {
     全部宏代码
     
   </summary>
-  
-<div class="highlight"><div class="chroma">
+  <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -529,70 +587,69 @@ if (!doNotTrack) {
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-vb" data-lang="vb"><span class="k">Sub</span> <span class="nf">ChangeFileFormat</span><span class="p">(</span><span class="n">xltxFolder</span><span class="p">,</span> <span class="n">xlsxFolder</span><span class="p">)</span>
+<pre><code>&lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strCurrentFileExt&lt;/span&gt;   &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strNewFileExt&lt;/span&gt;       &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objFSO&lt;/span&gt;              &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Object&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objFolder&lt;/span&gt;           &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Object&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objFile&lt;/span&gt;             &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Object&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xlFile&lt;/span&gt;              &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Workbook&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strNewName&lt;/span&gt;          &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strXltxFolderPath&lt;/span&gt;       &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strXlsxFolderPath&lt;/span&gt;       &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
 
-    <span class="k">Dim</span> <span class="n">strCurrentFileExt</span>   <span class="ow">As</span> <span class="kt">String</span>
-    <span class="k">Dim</span> <span class="n">strNewFileExt</span>       <span class="ow">As</span> <span class="kt">String</span>
-    <span class="k">Dim</span> <span class="n">objFSO</span>              <span class="ow">As</span> <span class="kt">Object</span>
-    <span class="k">Dim</span> <span class="n">objFolder</span>           <span class="ow">As</span> <span class="kt">Object</span>
-    <span class="k">Dim</span> <span class="n">objFile</span>             <span class="ow">As</span> <span class="kt">Object</span>
-    <span class="k">Dim</span> <span class="n">xlFile</span>              <span class="ow">As</span> <span class="n">Workbook</span>
-    <span class="k">Dim</span> <span class="n">strNewName</span>          <span class="ow">As</span> <span class="kt">String</span>
-    <span class="k">Dim</span> <span class="n">strXltxFolderPath</span>       <span class="ow">As</span> <span class="kt">String</span>
-    <span class="k">Dim</span> <span class="n">strXlsxFolderPath</span>       <span class="ow">As</span> <span class="kt">String</span>
+&lt;span class=&quot;k&quot;&gt;Set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objFSO&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CreateObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#34;Scripting.FileSystemObject&amp;#34;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-    <span class="k">Set</span> <span class="n">objFSO</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="p">(</span><span class="s">&#34;Scripting.FileSystemObject&#34;</span><span class="p">)</span>
+&lt;span class=&quot;n&quot;&gt;strCurrentFileExt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#34;.xltx&amp;#34;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;strNewFileExt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#34;.xlsx&amp;#34;&lt;/span&gt;
 
-    <span class="n">strCurrentFileExt</span> <span class="o">=</span> <span class="s">&#34;.xltx&#34;</span>
-    <span class="n">strNewFileExt</span> <span class="o">=</span> <span class="s">&#34;.xlsx&#34;</span>
+&lt;span class=&quot;n&quot;&gt;strXltxFolderPath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ThisWorkbook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#34;\&amp;#34;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xltxFolder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#34;\&amp;#34;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;strXlsxFolderPath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ThisWorkbook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#34;\&amp;#34;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xlsxFolder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#34;\&amp;#34;&lt;/span&gt;
 
-    <span class="n">strXltxFolderPath</span> <span class="o">=</span> <span class="n">ThisWorkbook</span><span class="p">.</span><span class="n">Path</span> <span class="o">&amp;</span> <span class="s">&#34;\&#34;</span> <span class="o">&amp;</span> <span class="n">xltxFolder</span> <span class="o">&amp;</span> <span class="s">&#34;\&#34;</span>
-    <span class="n">strXlsxFolderPath</span> <span class="o">=</span> <span class="n">ThisWorkbook</span><span class="p">.</span><span class="n">Path</span> <span class="o">&amp;</span> <span class="s">&#34;\&#34;</span> <span class="o">&amp;</span> <span class="n">xlsxFolder</span> <span class="o">&amp;</span> <span class="s">&#34;\&#34;</span>
-
-    <span class="k">If</span> <span class="k">Not</span> <span class="n">objFSO</span><span class="p">.</span><span class="n">FolderExists</span><span class="p">(</span><span class="n">strXltxFolderPath</span><span class="p">)</span> <span class="k">Then</span>   <span class="c">&#39;判断指定文件夹是否存在 
-</span><span class="c"></span>        <span class="n">MsgBox</span> <span class="s">&#34;【模板文件】文件夹不存在&#34;</span>
-        <span class="k">Exit</span> <span class="k">Sub</span>
-    <span class="nf">End</span> <span class="k">If</span>
-
-    <span class="k">If</span> <span class="k">Not</span> <span class="n">objFSO</span><span class="p">.</span><span class="n">FolderExists</span><span class="p">(</span><span class="n">strXlsxFolderPath</span><span class="p">)</span> <span class="k">Then</span>   <span class="c">&#39;判断指定文件夹是否存在
-</span><span class="c"></span>        <span class="n">fs</span><span class="p">.</span><span class="n">CreateFolder</span> <span class="n">strXlsxFolderPath</span>
-    <span class="k">End</span> <span class="k">If</span>
-
-    <span class="k">Set</span> <span class="n">objFolder</span> <span class="o">=</span> <span class="n">objFSO</span><span class="p">.</span><span class="n">getfolder</span><span class="p">(</span><span class="n">strXltxFolderPath</span><span class="p">)</span>
-    <span class="k">For</span> <span class="k">Each</span> <span class="n">objFile</span> <span class="ow">In</span> <span class="n">objFolder</span><span class="p">.</span><span class="n">Files</span> <span class="c">&#39;循环所有的模板文件
-</span><span class="c"></span>        <span class="n">strNewName</span> <span class="o">=</span> <span class="n">objFile</span><span class="p">.</span><span class="n">Name</span>
-        <span class="k">If</span> <span class="n">Right</span><span class="p">(</span><span class="n">strNewName</span><span class="p">,</span> <span class="n">Len</span><span class="p">(</span><span class="n">strCurrentFileExt</span><span class="p">))</span> <span class="o">=</span> <span class="n">strCurrentFileExt</span> <span class="k">Then</span>
-            <span class="n">Application</span><span class="p">.</span><span class="n">AskToUpdateLinks</span> <span class="o">=</span> <span class="k">False</span>     <span class="c">&#39;关闭程序询问更新链接提示
+&lt;span class=&quot;k&quot;&gt;If&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objFSO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FolderExists&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strXltxFolderPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Then&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;&amp;#39;判断指定文件夹是否存在 
+</code></pre>
+<p></span><span class="c"></span>        <span class="n">MsgBox</span> <span class="s">&quot;【模板文件】文件夹不存在&quot;</span>
+<span class="k">Exit</span> <span class="k">Sub</span>
+<span class="nf">End</span> <span class="k">If</span></p>
+<pre><code>&lt;span class=&quot;k&quot;&gt;If&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objFSO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FolderExists&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strXlsxFolderPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Then&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;&amp;#39;判断指定文件夹是否存在
+</code></pre>
+<p></span><span class="c"></span>        <span class="n">fs</span><span class="p">.</span><span class="n">CreateFolder</span> <span class="n">strXlsxFolderPath</span>
+<span class="k">End</span> <span class="k">If</span></p>
+<pre><code>&lt;span class=&quot;k&quot;&gt;Set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objFolder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objFSO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getfolder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strXltxFolderPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;For&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Each&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objFile&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objFolder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;#39;循环所有的模板文件
+</code></pre>
+<p></span><span class="c"></span>        <span class="n">strNewName</span> <span class="o">=</span> <span class="n">objFile</span><span class="p">.</span><span class="n">Name</span>
+<span class="k">If</span> <span class="n">Right</span><span class="p">(</span><span class="n">strNewName</span><span class="p">,</span> <span class="n">Len</span><span class="p">(</span><span class="n">strCurrentFileExt</span><span class="p">))</span> <span class="o">=</span> <span class="n">strCurrentFileExt</span> <span class="k">Then</span>
+<span class="n">Application</span><span class="p">.</span><span class="n">AskToUpdateLinks</span> <span class="o">=</span> <span class="k">False</span>     <span class="c">'关闭程序询问更新链接提示
 </span><span class="c"></span>            <span class="n">Application</span><span class="p">.</span><span class="n">DisplayAlerts</span> <span class="o">=</span> <span class="k">False</span>
-            <span class="n">ThisWorkbook</span><span class="p">.</span><span class="n">UpdateLinks</span> <span class="o">=</span> <span class="n">xlUpdateLinksAlways</span>  <span class="c">&#39;更新链接
+<span class="n">ThisWorkbook</span><span class="p">.</span><span class="n">UpdateLinks</span> <span class="o">=</span> <span class="n">xlUpdateLinksAlways</span>  <span class="c">'更新链接
 </span><span class="c"></span>
-            <span class="k">Set</span> <span class="n">xlFile</span> <span class="o">=</span> <span class="n">Workbooks</span><span class="p">.</span><span class="n">Open</span><span class="p">(</span><span class="n">objFile</span><span class="p">.</span><span class="n">Path</span><span class="p">,</span> <span class="p">,</span> <span class="k">True</span><span class="p">)</span> <span class="c">&#39;读取模板文件
-</span><span class="c"></span>            <span class="k">For</span> <span class="k">Each</span> <span class="n">sh</span> <span class="ow">In</span> <span class="n">xlFile</span><span class="p">.</span><span class="n">Sheets</span>  <span class="c">&#39;替换文件中的公式
+<span class="k">Set</span> <span class="n">xlFile</span> <span class="o">=</span> <span class="n">Workbooks</span><span class="p">.</span><span class="n">Open</span><span class="p">(</span><span class="n">objFile</span><span class="p">.</span><span class="n">Path</span><span class="p">,</span> <span class="p">,</span> <span class="k">True</span><span class="p">)</span> <span class="c">'读取模板文件
+</span><span class="c"></span>            <span class="k">For</span> <span class="k">Each</span> <span class="n">sh</span> <span class="ow">In</span> <span class="n">xlFile</span><span class="p">.</span><span class="n">Sheets</span>  <span class="c">'替换文件中的公式
 </span><span class="c"></span>               <span class="n">sh</span><span class="p">.</span><span class="n">UsedRange</span><span class="p">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">sh</span><span class="p">.</span><span class="n">UsedRange</span><span class="p">.</span><span class="n">Value</span>
-            <span class="k">Next</span>
-
-            <span class="n">strNewName</span> <span class="o">=</span> <span class="n">Replace</span><span class="p">(</span><span class="n">strNewName</span><span class="p">,</span> <span class="n">strCurrentFileExt</span><span class="p">,</span> <span class="n">strNewFileExt</span><span class="p">)</span> <span class="c">&#39;替换文件名为新的文件名
-</span><span class="c"></span>            <span class="k">Select</span> <span class="k">Case</span> <span class="n">strNewFileExt</span>
-            <span class="k">Case</span> <span class="s">&#34;.xlsx&#34;</span>
-                <span class="n">xlFile</span><span class="p">.</span><span class="n">SaveAs</span> <span class="n">strXlsxFolderPath</span> <span class="o">&amp;</span> <span class="n">strNewName</span><span class="p">,</span> <span class="n">XlFileFormat</span><span class="p">.</span><span class="n">xlOpenXMLWorkbook</span> <span class="c">&#39;保存为不带宏的excel
-</span><span class="c"></span>            <span class="k">Case</span> <span class="s">&#34;.xlsm&#34;</span>
-                <span class="n">xlFile</span><span class="p">.</span><span class="n">SaveAs</span> <span class="n">strXlsxFolderPath</span> <span class="o">&amp;</span> <span class="n">strNewName</span><span class="p">,</span> <span class="n">XlFileFormat</span><span class="p">.</span><span class="n">xlOpenXMLWorkbookMacroEnabled</span> <span class="c">&#39;保存为带宏的excel
+<span class="k">Next</span></p>
+<pre><code>        &lt;span class=&quot;n&quot;&gt;strNewName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strNewName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strCurrentFileExt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strNewFileExt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;#39;替换文件名为新的文件名
+</code></pre>
+<p></span><span class="c"></span>            <span class="k">Select</span> <span class="k">Case</span> <span class="n">strNewFileExt</span>
+<span class="k">Case</span> <span class="s">&quot;.xlsx&quot;</span>
+<span class="n">xlFile</span><span class="p">.</span><span class="n">SaveAs</span> <span class="n">strXlsxFolderPath</span> <span class="o">&amp;</span> <span class="n">strNewName</span><span class="p">,</span> <span class="n">XlFileFormat</span><span class="p">.</span><span class="n">xlOpenXMLWorkbook</span> <span class="c">'保存为不带宏的excel
+</span><span class="c"></span>            <span class="k">Case</span> <span class="s">&quot;.xlsm&quot;</span>
+<span class="n">xlFile</span><span class="p">.</span><span class="n">SaveAs</span> <span class="n">strXlsxFolderPath</span> <span class="o">&amp;</span> <span class="n">strNewName</span><span class="p">,</span> <span class="n">XlFileFormat</span><span class="p">.</span><span class="n">xlOpenXMLWorkbookMacroEnabled</span> <span class="c">'保存为带宏的excel
 </span><span class="c"></span>            <span class="k">End</span> <span class="k">Select</span>
-            <span class="n">xlFile</span><span class="p">.</span><span class="n">Close</span>
-            <span class="n">Application</span><span class="p">.</span><span class="n">AskToUpdateLinks</span> <span class="o">=</span> <span class="k">True</span>
-            <span class="n">Application</span><span class="p">.</span><span class="n">DisplayAlerts</span> <span class="o">=</span> <span class="k">True</span>
-        <span class="k">End</span> <span class="k">If</span>
-    <span class="k">Next</span> <span class="n">objFile</span>
-
-<span class="n">ClearMemory</span><span class="p">:</span>
-    <span class="n">strCurrentFileExt</span> <span class="o">=</span> <span class="n">vbNullString</span>
-    <span class="n">strNewFileExt</span> <span class="o">=</span> <span class="n">vbNullString</span>
-    <span class="k">Set</span> <span class="n">objFSO</span> <span class="o">=</span> <span class="k">Nothing</span>
-    <span class="k">Set</span> <span class="n">objFolder</span> <span class="o">=</span> <span class="k">Nothing</span>
-    <span class="k">Set</span> <span class="n">objFile</span> <span class="o">=</span> <span class="k">Nothing</span>
-    <span class="k">Set</span> <span class="n">xlFile</span> <span class="o">=</span> <span class="k">Nothing</span>
-    <span class="n">strNewName</span> <span class="o">=</span> <span class="n">vbNullString</span>
-    <span class="n">strFolderPath</span> <span class="o">=</span> <span class="n">vbNullString</span>
-<span class="k">End</span> <span class="k">Sub</span></code></pre></td></tr></table>
+<span class="n">xlFile</span><span class="p">.</span><span class="n">Close</span>
+<span class="n">Application</span><span class="p">.</span><span class="n">AskToUpdateLinks</span> <span class="o">=</span> <span class="k">True</span>
+<span class="n">Application</span><span class="p">.</span><span class="n">DisplayAlerts</span> <span class="o">=</span> <span class="k">True</span>
+<span class="k">End</span> <span class="k">If</span>
+<span class="k">Next</span> <span class="n">objFile</span></p>
+<p><span class="n">ClearMemory</span><span class="p">:</span>
+<span class="n">strCurrentFileExt</span> <span class="o">=</span> <span class="n">vbNullString</span>
+<span class="n">strNewFileExt</span> <span class="o">=</span> <span class="n">vbNullString</span>
+<span class="k">Set</span> <span class="n">objFSO</span> <span class="o">=</span> <span class="k">Nothing</span>
+<span class="k">Set</span> <span class="n">objFolder</span> <span class="o">=</span> <span class="k">Nothing</span>
+<span class="k">Set</span> <span class="n">objFile</span> <span class="o">=</span> <span class="k">Nothing</span>
+<span class="k">Set</span> <span class="n">xlFile</span> <span class="o">=</span> <span class="k">Nothing</span>
+<span class="n">strNewName</span> <span class="o">=</span> <span class="n">vbNullString</span>
+<span class="n">strFolderPath</span> <span class="o">=</span> <span class="n">vbNullString</span>
+<span class="k">End</span> <span class="k">Sub</span></code></pre></td></tr></table></p>
 </div>
 </div>
 
@@ -752,6 +809,17 @@ if (!doNotTrack) {
 
     </a>
   
+    <a href="https://www.instagram.com/mrbenwang/" rel="me noopener" class="iconfont"
+      title="instagram"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M853.333333 277.333333C853.333333 289.28 843.946667 298.666667 832 298.666667L746.666667 298.666667C734.72 298.666667 725.333333 289.28 725.333333 277.333333L725.333333 192C725.333333 180.053333 734.72 170.666667 746.666667 170.666667L832 170.666667C843.946667 170.666667 853.333333 180.053333 853.333333 192M192 853.333333C180.053333 853.333333 170.666667 843.946667 170.666667 832L170.666667 469.333333 259.84 469.333333C257.28 482.986667 256 497.493333 256 512 256 653.226667 370.773333 768 512 768 653.226667 768 768 653.226667 768 512 768 497.493333 766.293333 482.986667 764.16 469.333333L853.333333 469.333333 853.333333 832C853.333333 843.946667 843.946667 853.333333 832 853.333333M512 341.333333C606.293333 341.333333 682.666667 417.706667 682.666667 512 682.666667 606.293333 606.293333 682.666667 512 682.666667 417.706667 682.666667 341.333333 606.293333 341.333333 512 341.333333 417.706667 417.706667 341.333333 512 341.333333M853.333333 85.333333 170.666667 85.333333C123.306667 85.333333 85.333333 123.306667 85.333333 170.666667L85.333333 853.333333C85.333333 900.266667 123.733333 938.666667 170.666667 938.666667L853.333333 938.666667C900.266667 938.666667 938.666667 900.266667 938.666667 853.333333L938.666667 170.666667C938.666667 123.306667 900.266667 85.333333 853.333333 85.333333Z"></path>
+</svg>
+
+    </a>
+  
     <a href="https://space.bilibili.com/344871908" rel="me noopener" class="iconfont"
       title="bilibili"  target="_blank"
       >
@@ -843,7 +911,16 @@ if (!doNotTrack) {
 
 
 
-
+<script id="baidu_analytics">
+  var _hmt = _hmt || [];
+  (function() {
+    if (window.location.hostname === 'localhost') return;
+    var hm = document.createElement("script"); hm.async = true;
+    hm.src = "https://hm.baidu.com/hm.js?aa3ed9f94f89c971ad305e8796039253";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
 
 
 

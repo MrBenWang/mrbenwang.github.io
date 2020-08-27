@@ -76,7 +76,3 @@
     content: counters(linum, ".", decimal);
     margin-right: 10px;
 }
-
-/* .post .post-toc .post-toc-content ul li>a {
-    color: #139;
-} */
