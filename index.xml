@@ -64,7 +64,8 @@
 我真的好想赢，哪怕一次也好。&amp;mdash;-出自电影解说&lt;br&gt;
 他在透过树叶仰望这片陌生的天空时，会感到毛骨悚然。同时发觉一朵玫瑰花的丑恶，一片刚发芽小草的残酷。&amp;mdash;-《了不起的盖茨比》&lt;br&gt;
 使契为司徒，教以人伦：父子有亲，君臣有义，夫妇有别，长幼有序，朋友有信。&amp;mdash;-《孟子·滕文公上》&lt;br&gt;
-总有善意的光逃避现世的繁琐而寻找片刻的安宁，也许，就是你凝视这里的眼睛。&amp;mdash;-忘记了。。。&lt;/p&gt;
+总有善意的光逃避现世的繁琐而寻找片刻的安宁，也许，就是你凝视这里的眼睛。&amp;mdash;-忘记了。。。&lt;br&gt;
+常人贵远贱近，向声背实，又患闇于自见，谓己为贤。&amp;mdash;-曹丕《典论·论文》&lt;/p&gt;
 &lt;div class=&#34;shortcode-notice note&#34;&gt;
   &lt;div class=&#34;shortcode-notice-title note&#34;&gt;《杜伊诺哀歌》第一首，里尔克，灵石译
     &lt;/div&gt;
@@ -122,7 +123,17 @@
 人性非善非恶，人性是很归纳的。有句老话：醉过方知酒浓，爱后方知情重。事非经过不知难，书到用时方恨少。&lt;br&gt;
 不管什么事情，没有经历过大转折；无论怎么跟你讲，你都不会相信。&lt;br&gt;
 当遇到情况，整个反转的时候。就像是突然等开了以后，什么都看得一清二楚。 退潮以后，才知道谁在裸泳。&lt;br&gt;
-很多事情，想不到的就会发生。&lt;/p&gt;
+很多事情，想不到的就会发生。&lt;br&gt;
+真诚平和的基础，对人真心的欣赏，懂的怜悯，懂得体谅，会换位思考。以善念来思考，发自内心的语言。才是真正的好好说话，而不是固定的话术。&lt;br&gt;
+不想要去赢，而是考虑怎么不输。相比被别人拒绝，拒绝自己更可怕。很多事情，我们并不能掌控。&lt;br&gt;
+在这里只是告诉你，这里的一切都不属于你。包括你的肉体，唯一真正属于你的只有你的灵魂。&lt;br&gt;
+长期的快乐，1、提升人际关系；2、寻找做事的成就感；3、拥有正向的情绪。提升快乐感的方法：1、对过去能够释怀；2、对未来保持乐观；3、对现况感到满足。&amp;mdash;-《真實的快樂》&lt;br&gt;
+时代的一粒尘埃，落在每个人身上都是一座大山。&lt;/p&gt;
+&lt;p&gt;即便是创造性活动，也需要极其艰辛的过程，无意义无价值的探索。&lt;br&gt;
+周濂对于 UBI(unconditional basic income) 的实现显然有顾虑：“所有人都是趋易避难、趋乐避苦的，这是人性使然，所以 UBI 并不会给普通人带来真正意义上的自由，它当然给我们带来自由，但只是字面意义上的自由，而不是真正意义上的自由。”&lt;br&gt;
+我们为什么要这么地节约时间，我们节约的时间是为了让我们更拼命地去投入到另外的永不停止的机器的旋转当中，还是让我们的生活变得更美好？&lt;br&gt;
+社会中每个人扮演着不同的角色，不同的角色在不同的系统当中，不同的系统有不同的主宰者，周濂解释，比如孩子的系统中，校方或老师是主宰者，当他对家长提出各种各样的要求时，他从他的系统出发，不会因人而异地去考虑你在别的系统中的困境。&lt;br&gt;
+当每个人在大大小小的系统中，被各种各样的因素逼迫着、钳制着、约束着，然后做自己不得不做的事情。这种‘不得不’好像是我们今天所有人面临的困境。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;五种顶级思维方式：&lt;/p&gt;
 &lt;ol&gt;
@@ -447,8 +458,100 @@ EF当然是 &lt;code&gt;Database First&lt;/code&gt; 了，生成EF代码需要�
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多对多中间表的变化&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;其他问题&#34;&gt;其他问题&lt;/h3&gt;
+&lt;p&gt;在 EF6 中存在 A-B 多对多关系中，是在 A 和 B 中个创建一个外键关系，而在 EF Core 3.1 中间，则对 中间表单独创建 Entity。例如：学生(Students)和课程(Courses)关系为多对多关系。&lt;/p&gt;
+&lt;p&gt;EF6 中 DBFirst 生成的代码，没有中间表。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;    &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;partial&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;students&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;        [System.Diagnostics.CodeAnalysis.SuppressMessage(&amp;#34;Microsoft.Usage&amp;#34;, &amp;#34;CA2214:DoNotCallOverridableMethodsInConstructors&amp;#34;)]&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;students&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;courses&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HashSet&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;courses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;();&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+        &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;id&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stu_name&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;        [System.Diagnostics.CodeAnalysis.SuppressMessage(&amp;#34;Microsoft.Usage&amp;#34;, &amp;#34;CA2227:CollectionPropertiesShouldBeReadOnly&amp;#34;)]&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;virtual&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ICollection&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;courses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;courses&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;partial&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;courses&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;        [System.Diagnostics.CodeAnalysis.SuppressMessage(&amp;#34;Microsoft.Usage&amp;#34;, &amp;#34;CA2214:DoNotCallOverridableMethodsInConstructors&amp;#34;)]&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;courses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;students&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HashSet&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;students&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;();&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+        &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;id&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;course_name&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;        [System.Diagnostics.CodeAnalysis.SuppressMessage(&amp;#34;Microsoft.Usage&amp;#34;, &amp;#34;CA2227:CollectionPropertiesShouldBeReadOnly&amp;#34;)]&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;virtual&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ICollection&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;students&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;students&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;EF Core 3.1 中 DBFirst 生成的代码，存在中间表 &lt;code&gt;stu_course_ref&lt;/code&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;    &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;partial&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;stu_course_ref&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stu_id&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;course_id&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+        &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;virtual&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;students&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;students_&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;virtual&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;courses&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;courses_&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;其他问题&#34;&gt;其他问题&lt;/h3&gt;
 &lt;p&gt;出现问题：&lt;code&gt;指定的架构无效。错误: CLR 类型到 EDM 类型的映射不明确，因为多个 CLR 类型与 EDM 类型“user”匹配。&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;DbContext 的 MetadataWorkSpace 一旦生成会缓存起来。也就是说，在同一个应用程序域里面，一旦用dbcontext操作过数据库，它会自动读取类所在 assembly 里面的所有类，并尝试匹配数据库模型，然后将匹配结果保存起来(保存到上面的MetaOCSpace中)。当下次操作数据库时，返回数据对应类类所在其它assembly里面的类与当前已匹配数据库模型发生冲突时，便会报错。（这段话是网上抄的）&lt;/p&gt;
 &lt;div class=&#34;shortcode-notice note&#34;&gt;
@@ -955,28 +1058,22 @@ sudo ufw status
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bat&#34; data-lang=&#34;bat&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; only win10
 
 &lt;span class=&#34;k&#34;&gt;cd&lt;/span&gt; D:\Projects\lst\01-MyWebApi\MyWebApi
 &lt;span class=&#34;c1&#34;&gt;rem 已注释：dotnet publish --output bin/publish/ --configuration Release --runtime linux-x64 --framework netcoreapp3.1 --self-contained false&lt;/span&gt;
-dotnet publish -p:PublishProfileFullPath=/Properties/PublishProfiles/FolderProfile.pubxml --output bin/publish/
+&lt;span class=&#34;c1&#34;&gt;rem 已注释：dotnet publish -p:PublishProfileFullPath=/Properties/PublishProfiles/FolderProfile.pubxml --output bin/publish/  存在问题，并不会生成 Linux64的版本&lt;/span&gt;
+dotnet publish --runtime linux-x64 --framework netcoreapp3.1 --configuration Release --no-self-contained -nowarn:CS1591 --output bin/publish-lin64/
 
 &lt;span class=&#34;k&#34;&gt;cd&lt;/span&gt; bin
-tar.exe -a -c -f publish.zip publish
-
-&lt;span class=&#34;s2&#34;&gt;&amp;#34;C:\Program Files\PuTTY\psftp.exe&amp;#34;&lt;/span&gt;
-
-open 10.50.40.237
-Welcome123
-put &lt;span class=&#34;s2&#34;&gt;&amp;#34;D:\Projects\lst\01-LstWebApi\LenovoSmartToolWebApi\bin\publish.zip&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;exit&lt;/span&gt;
+tar.exe -a -c -f publish-lin64.zip publish-lin64
 
 &lt;span class=&#34;c1&#34;&gt;rem 已注释：&amp;#34;C:\Program Files\PuTTY\putty.exe&amp;#34; user@10.40.50.237 22 -pw password&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;C:\Program Files\PuTTY\psftp.exe&amp;#34;&lt;/span&gt; -i &lt;span class=&#34;s2&#34;&gt;&amp;#34;D:\Projects\ssh密钥.ppk&amp;#34;&lt;/span&gt; username@127.0.0.1
+put &lt;span class=&#34;s2&#34;&gt;&amp;#34;D:\Projects\lst\01-LstWebApi\LenovoSmartToolWebApi\bin\publish-lin64.zip&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;exit&lt;/span&gt;
 
 &lt;span class=&#34;k&#34;&gt;pause&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
@@ -1002,6 +1099,8 @@ put &lt;span class=&#34;s2&#34;&gt;&amp;#34;D:\Projects\lst\01-LstWebApi\LenovoS
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;部署到 Ubuntu 后，发现 log4net 报错。需要把 &lt;code&gt;log4net.Appender.ColoredConsoleAppender&lt;/code&gt; 替换为 &lt;code&gt;log4net.Appender.ManagedColoredConsoleAppender&lt;/code&gt;。是由于&lt;strong&gt;不同的 Appender 支持的 Framework 不同&lt;/strong&gt;， ColoredConsoleAppender 支持 NET Framework 1.0~4.0 ， ManagedColoredConsoleAppender 支持 NET Framework 2.0+ 。详见：&lt;a href=&#34;https://logging.apache.org/log4net/release/framework-support.html&#34;&gt;《Apache log4net™ Supported Frameworks》&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;升级到 &lt;code&gt;2.0.11&lt;/code&gt; 后，编译 Linux-64 版本时候 &lt;code&gt;NU1605 Detected package downgrade&lt;/code&gt;，该问题消失。这个问题是由于 Nuget 包的依赖关系解析错误导致的，只需要按照提示，添加较高的版本的引用包即可。&lt;/p&gt;
 &lt;h3 id=&#34;framework-40-的-md5-方法废弃&#34;&gt;Framework 4.0 的 md5 方法废弃&lt;/h3&gt;
 &lt;p&gt;MD5 摘要也出现问题，需要更改。原因是 HashPasswordForStoringInConfigFile 在 net core 中已经不可用了，该方法在 framework 4.5 中也提示为废弃的方法。修改为下面新的 MD5 方法即可。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1051,7 +1150,8 @@ put &lt;span class=&#34;s2&#34;&gt;&amp;#34;D:\Projects\lst\01-LstWebApi\LenovoS
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;datetimeoffset-和-datetime&#34;&gt;DateTimeOffset 和 DateTime&lt;/h3&gt;
-&lt;p&gt;以前从来没有考虑过 UTC 时间，这次深深的上了一课， WebApi 中所有传递的时间全部是 UTC 时间。 &lt;code&gt;DateTime.MinValue&lt;/code&gt; 转化为 UTC 时间后，可能会出现小于 &lt;code&gt;0001\01\01 00:00:00&lt;/code&gt;的时间。需要额外处理一下。&lt;/p&gt;
+&lt;p&gt;以前从来没有考虑过 UTC 时间，这次深深的上了一课， WebApi 中所有传递的时间全部是 UTC 时间，即包含 Offset 的时间格式。 &lt;code&gt;DateTime.MinValue&lt;/code&gt; 转化为 UTC 时间后，可能会出现小于 &lt;code&gt;0001\01\01 00:00:00&lt;/code&gt;的时间。需要额外处理一下。&lt;br&gt;
+为了兼容以前的数据问题，需要引入另一个错误来掩盖 &lt;code&gt;new DateTimeOffset(_newDataTime, TimeSpan.Zero)&lt;/code&gt; 。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -1068,6 +1168,7 @@ put &lt;span class=&#34;s2&#34;&gt;&amp;#34;D:\Projects\lst\01-LstWebApi\LenovoS
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RequestPartialContent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_userId&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DateTime&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_newDataTime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -1081,7 +1182,8 @@ put &lt;span class=&#34;s2&#34;&gt;&amp;#34;D:\Projects\lst\01-LstWebApi\LenovoS
     &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;StartDateVersion&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DateTimeOffset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_newDataTime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// 把本地时间转化为 Offset为0的 UTC 时间，例如：2020/3/5 17:38:59 +08:00  ==&amp;gt; 2020/3/5 17:38:59 +00:00
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;StartDateVersion&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DateTimeOffset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_newDataTime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TimeSpan&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Zero&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
@@ -1959,6 +2061,8 @@ al -target:lib -embed:LanguageResources.ResourceText.ja-JP.resources -culture:ja
 &lt;/div&gt;
 &lt;/details&gt;
 
+&lt;p&gt;简单的示例代码：&lt;a href=&#34;https://mrbenwang.github.io/files/MultiLanguageDemo.zip&#34;&gt;MultiLanguageDemo&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://mrbenwang.github.io/images/2020/20200408-wpf-multi-language/03-demo.jpg&#34; alt=&#34;demo示例&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
 &lt;p&gt;在项目运行至今，很明显第二种方法的好，测试人员，运维人员，在可以完全不接触代码的情况下。只操作Excel 来实现文件内容的翻译，并且“实时”的反应到软件上。&lt;br&gt;
 而我固执己见的“微软官方推荐方法”，并不适用于项目；好比是纸上谈兵的赵括，真的是越来越为当时的“倔强”，感到羞愧。。。&lt;/p&gt;</description>

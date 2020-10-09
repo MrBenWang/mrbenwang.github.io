@@ -80,7 +80,7 @@
 选择 RESTful 另一个最重要的原因是，gRPC 的底层框架需要HTTP2，而 win7 不支持HTTP2，有相当一部分用户在 win7 上。上篇有人推荐 grpc web ，由于项目是 WPF 桌面客户端，这种 web 方式可能就更不适合了。">
 <meta itemprop="datePublished" content="2020-08-14T11:11:00+08:00" />
 <meta itemprop="dateModified" content="2020-08-21T18:46:00+08:00" />
-<meta itemprop="wordCount" content="5488">
+<meta itemprop="wordCount" content="6009">
 
 
 
@@ -444,8 +444,8 @@ if (!doNotTrack) {
             <a href="https://mrbenwang.github.io/categories/%E5%B7%A5%E4%BD%9C%E9%9A%8F%E7%AC%94/"> 工作随笔 </a>
             
           </div>
-        <span class="more-meta"> 约 5488 字 </span>
-          <span class="more-meta"> 预计阅读 11 分钟 </span>
+        <span class="more-meta"> 约 6009 字 </span>
+          <span class="more-meta"> 预计阅读 12 分钟 </span>
 
         
         
@@ -751,8 +751,100 @@ EF当然是 <code>Database First</code> 了，生成EF代码需要在<code>Packa
 </code></pre></td></tr></table>
 </div>
 </div></li>
+<li>
+<p>多对多中间表的变化</p>
+</li>
 </ol>
-<h3 id="其他问题">其他问题</h3>
+<p>在 EF6 中存在 A-B 多对多关系中，是在 A 和 B 中个创建一个外键关系，而在 EF Core 3.1 中间，则对 中间表单独创建 Entity。例如：学生(Students)和课程(Courses)关系为多对多关系。</p>
+<p>EF6 中 DBFirst 生成的代码，没有中间表。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-csharp" data-lang="csharp">    <span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">students</span>
+    <span class="p">{</span>
+<span class="na">        [System.Diagnostics.CodeAnalysis.SuppressMessage(&#34;Microsoft.Usage&#34;, &#34;CA2214:DoNotCallOverridableMethodsInConstructors&#34;)]</span>
+        <span class="k">public</span> <span class="n">students</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">courses</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="p">&lt;</span><span class="n">courses</span><span class="p">&gt;();</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="kt">long</span> <span class="n">id</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">public</span> <span class="kt">string</span> <span class="n">stu_name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+<span class="na">
+</span><span class="na">        [System.Diagnostics.CodeAnalysis.SuppressMessage(&#34;Microsoft.Usage&#34;, &#34;CA2227:CollectionPropertiesShouldBeReadOnly&#34;)]</span>
+        <span class="k">public</span> <span class="k">virtual</span> <span class="n">ICollection</span><span class="p">&lt;</span><span class="n">courses</span><span class="p">&gt;</span> <span class="n">courses</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">courses</span>
+    <span class="p">{</span>
+<span class="na">        [System.Diagnostics.CodeAnalysis.SuppressMessage(&#34;Microsoft.Usage&#34;, &#34;CA2214:DoNotCallOverridableMethodsInConstructors&#34;)]</span>
+        <span class="k">public</span> <span class="n">courses</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">students</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="p">&lt;</span><span class="n">students</span><span class="p">&gt;();</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="kt">long</span> <span class="n">id</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">public</span> <span class="kt">string</span> <span class="n">course_name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+<span class="na">
+</span><span class="na">        [System.Diagnostics.CodeAnalysis.SuppressMessage(&#34;Microsoft.Usage&#34;, &#34;CA2227:CollectionPropertiesShouldBeReadOnly&#34;)]</span>
+        <span class="k">public</span> <span class="k">virtual</span> <span class="n">ICollection</span><span class="p">&lt;</span><span class="n">students</span><span class="p">&gt;</span> <span class="n">students</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>EF Core 3.1 中 DBFirst 生成的代码，存在中间表 <code>stu_course_ref</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-csharp" data-lang="csharp">    <span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">stu_course_ref</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="kt">long</span> <span class="n">stu_id</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">public</span> <span class="kt">long</span> <span class="n">course_id</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">virtual</span> <span class="n">students</span> <span class="n">students_</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">public</span> <span class="k">virtual</span> <span class="n">courses</span> <span class="n">courses_</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="其他问题">其他问题</h3>
 <p>出现问题：<code>指定的架构无效。错误: CLR 类型到 EDM 类型的映射不明确，因为多个 CLR 类型与 EDM 类型“user”匹配。</code></p>
 <p>DbContext 的 MetadataWorkSpace 一旦生成会缓存起来。也就是说，在同一个应用程序域里面，一旦用dbcontext操作过数据库，它会自动读取类所在 assembly 里面的所有类，并尝试匹配数据库模型，然后将匹配结果保存起来(保存到上面的MetaOCSpace中)。当下次操作数据库时，返回数据对应类类所在其它assembly里面的类与当前已匹配数据库模型发生冲突时，便会报错。（这段话是网上抄的）</p>
 <div class="shortcode-notice note">
@@ -1259,28 +1351,22 @@ sudo ufw status
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bat" data-lang="bat"><span class="k">echo</span> only win10
 
 <span class="k">cd</span> D:\Projects\lst\01-MyWebApi\MyWebApi
 <span class="c1">rem 已注释：dotnet publish --output bin/publish/ --configuration Release --runtime linux-x64 --framework netcoreapp3.1 --self-contained false</span>
-dotnet publish -p:PublishProfileFullPath=/Properties/PublishProfiles/FolderProfile.pubxml --output bin/publish/
+<span class="c1">rem 已注释：dotnet publish -p:PublishProfileFullPath=/Properties/PublishProfiles/FolderProfile.pubxml --output bin/publish/  存在问题，并不会生成 Linux64的版本</span>
+dotnet publish --runtime linux-x64 --framework netcoreapp3.1 --configuration Release --no-self-contained -nowarn:CS1591 --output bin/publish-lin64/
 
 <span class="k">cd</span> bin
-tar.exe -a -c -f publish.zip publish
-
-<span class="s2">&#34;C:\Program Files\PuTTY\psftp.exe&#34;</span>
-
-open 10.50.40.237
-Welcome123
-put <span class="s2">&#34;D:\Projects\lst\01-LstWebApi\LenovoSmartToolWebApi\bin\publish.zip&#34;</span>
-<span class="k">exit</span>
+tar.exe -a -c -f publish-lin64.zip publish-lin64
 
 <span class="c1">rem 已注释：&#34;C:\Program Files\PuTTY\putty.exe&#34; user@10.40.50.237 22 -pw password</span>
+<span class="s2">&#34;C:\Program Files\PuTTY\psftp.exe&#34;</span> -i <span class="s2">&#34;D:\Projects\ssh密钥.ppk&#34;</span> username@127.0.0.1
+put <span class="s2">&#34;D:\Projects\lst\01-LstWebApi\LenovoSmartToolWebApi\bin\publish-lin64.zip&#34;</span>
+<span class="k">exit</span>
 
 <span class="k">pause</span>
 </code></pre></td></tr></table>
@@ -1306,6 +1392,8 @@ put <span class="s2">&#34;D:\Projects\lst\01-LstWebApi\LenovoSmartToolWebApi\bin
 </code></pre></td></tr></table>
 </div>
 </div><p>部署到 Ubuntu 后，发现 log4net 报错。需要把 <code>log4net.Appender.ColoredConsoleAppender</code> 替换为 <code>log4net.Appender.ManagedColoredConsoleAppender</code>。是由于<strong>不同的 Appender 支持的 Framework 不同</strong>， ColoredConsoleAppender 支持 NET Framework 1.0~4.0 ， ManagedColoredConsoleAppender 支持 NET Framework 2.0+ 。详见：<a href="https://logging.apache.org/log4net/release/framework-support.html">《Apache log4net™ Supported Frameworks》</a></p>
+<hr>
+<p>升级到 <code>2.0.11</code> 后，编译 Linux-64 版本时候 <code>NU1605 Detected package downgrade</code>，该问题消失。这个问题是由于 Nuget 包的依赖关系解析错误导致的，只需要按照提示，添加较高的版本的引用包即可。</p>
 <h3 id="framework-40-的-md5-方法废弃">Framework 4.0 的 md5 方法废弃</h3>
 <p>MD5 摘要也出现问题，需要更改。原因是 HashPasswordForStoringInConfigFile 在 net core 中已经不可用了，该方法在 framework 4.5 中也提示为废弃的方法。修改为下面新的 MD5 方法即可。</p>
 <div class="highlight"><div class="chroma">
@@ -1355,7 +1443,8 @@ put <span class="s2">&#34;D:\Projects\lst\01-LstWebApi\LenovoSmartToolWebApi\bin
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="datetimeoffset-和-datetime">DateTimeOffset 和 DateTime</h3>
-<p>以前从来没有考虑过 UTC 时间，这次深深的上了一课， WebApi 中所有传递的时间全部是 UTC 时间。 <code>DateTime.MinValue</code> 转化为 UTC 时间后，可能会出现小于 <code>0001\01\01 00:00:00</code>的时间。需要额外处理一下。</p>
+<p>以前从来没有考虑过 UTC 时间，这次深深的上了一课， WebApi 中所有传递的时间全部是 UTC 时间，即包含 Offset 的时间格式。 <code>DateTime.MinValue</code> 转化为 UTC 时间后，可能会出现小于 <code>0001\01\01 00:00:00</code>的时间。需要额外处理一下。<br>
+为了兼容以前的数据问题，需要引入另一个错误来掩盖 <code>new DateTimeOffset(_newDataTime, TimeSpan.Zero)</code> 。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -1372,6 +1461,7 @@ put <span class="s2">&#34;D:\Projects\lst\01-LstWebApi\LenovoSmartToolWebApi\bin
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
+</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="n">RequestPartialContent</span><span class="p">(</span><span class="kt">long</span> <span class="n">_userId</span><span class="p">,</span> <span class="n">DateTime</span> <span class="n">_newDataTime</span><span class="p">)</span>
@@ -1385,7 +1475,8 @@ put <span class="s2">&#34;D:\Projects\lst\01-LstWebApi\LenovoSmartToolWebApi\bin
     <span class="p">}</span>
     <span class="k">else</span>
     <span class="p">{</span>
-        <span class="n">StartDateVersion</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DateTimeOffset</span><span class="p">(</span><span class="n">_newDataTime</span><span class="p">);</span>
+        <span class="c1">// 把本地时间转化为 Offset为0的 UTC 时间，例如：2020/3/5 17:38:59 +08:00  ==&gt; 2020/3/5 17:38:59 +00:00
+</span><span class="c1"></span>        <span class="n">StartDateVersion</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DateTimeOffset</span><span class="p">(</span><span class="n">_newDataTime</span><span class="p">,</span> <span class="n">TimeSpan</span><span class="p">.</span><span class="n">Zero</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></td></tr></table>
