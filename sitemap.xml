@@ -9,6 +9,62 @@
   </url>
   
   <url>
+    <loc>https://mrbenwang.github.io/categories/</loc>
+    <lastmod>2020-11-17T11:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://mrbenwang.github.io/post/</loc>
+    <lastmod>2020-11-17T11:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://mrbenwang.github.io/tags/</loc>
+    <lastmod>2020-11-17T11:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://mrbenwang.github.io/tags/%E5%8F%8D%E6%80%9D/</loc>
+    <lastmod>2020-11-17T11:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://mrbenwang.github.io/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2020-11-17T11:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://mrbenwang.github.io/tags/%E7%96%97%E4%BC%A4/</loc>
+    <lastmod>2020-11-17T11:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://mrbenwang.github.io/post/2020/20200918-self-healing-recongnize/</loc>
+    <lastmod>2020-11-17T11:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://mrbenwang.github.io/</loc>
+    <lastmod>2020-11-17T11:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://mrbenwang.github.io/post/2020/20200821-2020-daily-collections/</loc>
     <lastmod>2020-09-18T15:46:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -16,35 +72,7 @@
   </url>
   
   <url>
-    <loc>https://mrbenwang.github.io/categories/</loc>
-    <lastmod>2020-09-18T15:46:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://mrbenwang.github.io/post/</loc>
-    <lastmod>2020-09-18T15:46:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://mrbenwang.github.io/tags/</loc>
-    <lastmod>2020-09-18T15:46:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://mrbenwang.github.io/tags/%E5%93%B2%E7%90%86/</loc>
-    <lastmod>2020-09-18T15:46:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://mrbenwang.github.io/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2020-09-18T15:46:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -66,13 +94,6 @@
   
   <url>
     <loc>https://mrbenwang.github.io/tags/%E8%AF%97%E5%8F%A5/</loc>
-    <lastmod>2020-09-18T15:46:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://mrbenwang.github.io/</loc>
     <lastmod>2020-09-18T15:46:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
