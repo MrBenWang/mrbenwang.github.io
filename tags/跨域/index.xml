@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>跨域 on 风雪夜归人</title>
-    <link>https://mrbenwang.github.io/tags/%E8%B7%A8%E5%9F%9F/</link>
+    <link>/tags/%E8%B7%A8%E5%9F%9F/</link>
     <description>Recent content in 跨域 on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 15 Apr 2015 11:39:00 +0800</lastBuildDate>
     
-	<atom:link href="https://mrbenwang.github.io/tags/%E8%B7%A8%E5%9F%9F/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/%E8%B7%A8%E5%9F%9F/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>*跨域上传图片的尝试过程，最终成功了。哈哈</title>
-      <link>https://mrbenwang.github.io/post/2014-2017/20150415-cross-domain-upload-img/</link>
+      <link>/post/2014-2017/20150415-cross-domain-upload-img/</link>
       <pubDate>Wed, 15 Apr 2015 11:39:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2014-2017/20150415-cross-domain-upload-img/</guid>
+      <guid>/post/2014-2017/20150415-cross-domain-upload-img/</guid>
       <description>&lt;p&gt;关于这个跨域上传图片的问题，其实去年底的时候就该去实现的，因为老板朝三暮四，一会儿让做这个，一会儿看那个，就耽误了。因为这个过程花费了我整整一天的时间，我认为有必要记录下来。&lt;/p&gt;</description>
     </item>
     

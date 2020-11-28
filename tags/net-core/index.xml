@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>net core on 风雪夜归人</title>
-    <link>https://mrbenwang.github.io/tags/net-core/</link>
+    <link>/tags/net-core/</link>
     <description>Recent content in net core on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 14 Aug 2020 11:11:00 +0800</lastBuildDate>
     
-	<atom:link href="https://mrbenwang.github.io/tags/net-core/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/net-core/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>*旧 WCF 项目成功迁移到 asp.net core web api</title>
-      <link>https://mrbenwang.github.io/post/2020/20200814-wcf-to-aspnetcore-webapi/</link>
+      <link>/post/2020/20200814-wcf-to-aspnetcore-webapi/</link>
       <pubDate>Fri, 14 Aug 2020 11:11:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2020/20200814-wcf-to-aspnetcore-webapi/</guid>
+      <guid>/post/2020/20200814-wcf-to-aspnetcore-webapi/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;接上一篇，放弃了 asp.net core + gRPC 的方案后，我灵光一闪，为什么不用 web api 呢？不也是 asp.net core 的吗？虽然 RESTful 不是强约束，客户端写起来也麻烦，但还是可以满足基本需求，&lt;strong&gt;避免大幅修改&lt;/strong&gt;&lt;code&gt;旧有的业务逻辑代码&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;在网上找到相当多的文章，比较 gRPC 和 RESTful 的优缺点，结论都是 &lt;code&gt;gRPC&lt;/code&gt; 推荐用作&lt;strong&gt;内部系统间调用&lt;/strong&gt;， &lt;code&gt;RESTful&lt;/code&gt; 推荐用作&lt;strong&gt;对外开放接口&lt;/strong&gt;。&lt;br&gt;
@@ -25,10 +25,10 @@
     
     <item>
       <title>*旧 WCF 项目迁移到 asp.net core &#43; gRPC 的尝试</title>
-      <link>https://mrbenwang.github.io/post/2020/20200813-wcf-to-aspnetcore-grpc/</link>
+      <link>/post/2020/20200813-wcf-to-aspnetcore-grpc/</link>
       <pubDate>Thu, 13 Aug 2020 11:11:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2020/20200813-wcf-to-aspnetcore-grpc/</guid>
+      <guid>/post/2020/20200813-wcf-to-aspnetcore-grpc/</guid>
       <description>&lt;p&gt;一个月前，公司的运行WCF的windows服务器down掉了，由于 AWS 没有通知，没有能&lt;strong&gt;第一时间&lt;/strong&gt;发现问题。&lt;br&gt;
 所以，客户提出将WCF服务由C#改为JAVA，在Linux上面运行；一方面，AWS对Linux有较多的监控措施，另一方面，假如出现问题，可以设置自动重启等服务。&lt;/p&gt;</description>
     </item>

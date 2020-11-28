@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>批处理命令 on 风雪夜归人</title>
-    <link>https://mrbenwang.github.io/tags/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/</link>
+    <link>/tags/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/</link>
     <description>Recent content in 批处理命令 on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 20 May 2019 14:20:00 +0800</lastBuildDate>
     
-	<atom:link href="https://mrbenwang.github.io/tags/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>*C#执行批处理命令</title>
-      <link>https://mrbenwang.github.io/post/2019/20190520-csharp-exectue-bat/</link>
+      <link>/post/2019/20190520-csharp-exectue-bat/</link>
       <pubDate>Mon, 20 May 2019 14:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2019/20190520-csharp-exectue-bat/</guid>
+      <guid>/post/2019/20190520-csharp-exectue-bat/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。&lt;/p&gt;</description>
     </item>

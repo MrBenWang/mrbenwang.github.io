@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 风雪夜归人</title>
-    <link>https://mrbenwang.github.io/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 18 Sep 2020 11:11:00 +0800</lastBuildDate>
     
-	<atom:link href="https://mrbenwang.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>自我疗伤，重新审视自己，尝试改变</title>
-      <link>https://mrbenwang.github.io/post/2020/20200918-self-healing-recongnize/</link>
+      <link>/post/2020/20200918-self-healing-recongnize/</link>
       <pubDate>Fri, 18 Sep 2020 11:11:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2020/20200918-self-healing-recongnize/</guid>
+      <guid>/post/2020/20200918-self-healing-recongnize/</guid>
       <description>&lt;h2 id=&#34;提要&#34;&gt;提要&lt;/h2&gt;
 &lt;p&gt;三月份的重大打击，让我产生了严重的自我怀疑，自我否定。通过这五六个月的时间，慢慢走出了最初的痛苦。但现在回想起来，心中仍是隐隐作痛。假如当时XXX的话，XXX就好了。是时间治疗了我？还是我通过这段时间的改变，自己治疗自己？希望通过这篇文章，简单的总结一下。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>2020 日常句子、短语收集汇总</title>
-      <link>https://mrbenwang.github.io/post/2020/20200821-2020-daily-collections/</link>
+      <link>/post/2020/20200821-2020-daily-collections/</link>
       <pubDate>Fri, 21 Aug 2020 17:11:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2020/20200821-2020-daily-collections/</guid>
+      <guid>/post/2020/20200821-2020-daily-collections/</guid>
       <description>&lt;p&gt;最近，喜欢在抖音上面看一些知识类博主的视频，尤其是一个关于讲哲学的博主 &lt;code&gt;试图问倒自称懂哲学的老爸&lt;/code&gt; ，通过问答的方式，将一些&lt;strong&gt;深奥的哲学道理&lt;/strong&gt;讲出来，里面有好些富有哲理的句子，就顺手记了下来。&lt;/p&gt;
 &lt;p&gt;之前，我对于快手，抖音&lt;strong&gt;总带有偏见和刻板印象&lt;/strong&gt;，认为他们是属于三低为主的平台。其实他们是什么样子的，取决于&lt;code&gt;你这个人&lt;/code&gt;与&lt;code&gt;推荐算法&lt;/code&gt;。不过，确实在 2019-nCoV 以后，越来越多的医生，博士，都在这上面来普及，传播科学知识，扩大影响力。&lt;br&gt;
 这里面，有些是我自己的零零碎碎的文字，有感而发的。废话不多说，开始正文。&lt;/p&gt;</description>
@@ -34,10 +34,10 @@
     
     <item>
       <title>*旧 WCF 项目成功迁移到 asp.net core web api</title>
-      <link>https://mrbenwang.github.io/post/2020/20200814-wcf-to-aspnetcore-webapi/</link>
+      <link>/post/2020/20200814-wcf-to-aspnetcore-webapi/</link>
       <pubDate>Fri, 14 Aug 2020 11:11:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2020/20200814-wcf-to-aspnetcore-webapi/</guid>
+      <guid>/post/2020/20200814-wcf-to-aspnetcore-webapi/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;接上一篇，放弃了 asp.net core + gRPC 的方案后，我灵光一闪，为什么不用 web api 呢？不也是 asp.net core 的吗？虽然 RESTful 不是强约束，客户端写起来也麻烦，但还是可以满足基本需求，&lt;strong&gt;避免大幅修改&lt;/strong&gt;&lt;code&gt;旧有的业务逻辑代码&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;在网上找到相当多的文章，比较 gRPC 和 RESTful 的优缺点，结论都是 &lt;code&gt;gRPC&lt;/code&gt; 推荐用作&lt;strong&gt;内部系统间调用&lt;/strong&gt;， &lt;code&gt;RESTful&lt;/code&gt; 推荐用作&lt;strong&gt;对外开放接口&lt;/strong&gt;。&lt;br&gt;
@@ -46,39 +46,39 @@
     
     <item>
       <title>*旧 WCF 项目迁移到 asp.net core &#43; gRPC 的尝试</title>
-      <link>https://mrbenwang.github.io/post/2020/20200813-wcf-to-aspnetcore-grpc/</link>
+      <link>/post/2020/20200813-wcf-to-aspnetcore-grpc/</link>
       <pubDate>Thu, 13 Aug 2020 11:11:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2020/20200813-wcf-to-aspnetcore-grpc/</guid>
+      <guid>/post/2020/20200813-wcf-to-aspnetcore-grpc/</guid>
       <description>&lt;p&gt;一个月前，公司的运行WCF的windows服务器down掉了，由于 AWS 没有通知，没有能&lt;strong&gt;第一时间&lt;/strong&gt;发现问题。&lt;br&gt;
 所以，客户提出将WCF服务由C#改为JAVA，在Linux上面运行；一方面，AWS对Linux有较多的监控措施，另一方面，假如出现问题，可以设置自动重启等服务。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>*重构下载功能模块</title>
-      <link>https://mrbenwang.github.io/post/2020/20200622-restructure-download/</link>
+      <link>/post/2020/20200622-restructure-download/</link>
       <pubDate>Mon, 22 Jun 2020 10:07:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2020/20200622-restructure-download/</guid>
+      <guid>/post/2020/20200622-restructure-download/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;最近项目新上线的版本中，出现了很多涉及&lt;code&gt;下载相关&lt;/code&gt;的bug；经过艰难的代码调试排查，可还是没有准确定位问题。主要还是由于代码年久，经过多代人的修修补补，到处都是&lt;code&gt;“坏味道”的代码&lt;/code&gt;。跟项目经理沟通过后，同意重构这部分的代码。下面就简单记录一下重构的过程。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>*WPF 本地多语言总结</title>
-      <link>https://mrbenwang.github.io/post/2020/20200408-wpf-multi-language/</link>
+      <link>/post/2020/20200408-wpf-multi-language/</link>
       <pubDate>Wed, 08 Apr 2020 10:07:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2020/20200408-wpf-multi-language/</guid>
+      <guid>/post/2020/20200408-wpf-multi-language/</guid>
       <description>&lt;p&gt;去年底今年初，由于WPF项目，需要支持日本地区，要求可以切换语言。本篇文章汇总了一下，当时的调研的结果，和项目中所采用的方式。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>2020全球金融在崩盘，我也同时经历了生死</title>
-      <link>https://mrbenwang.github.io/post/2020/20200317-the-market-collapse/</link>
+      <link>/post/2020/20200317-the-market-collapse/</link>
       <pubDate>Tue, 17 Mar 2020 10:51:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2020/20200317-the-market-collapse/</guid>
+      <guid>/post/2020/20200317-the-market-collapse/</guid>
       <description>&lt;p&gt;崩盘！！！崩盘！！！崩盘！！！&lt;br&gt;
 近一周的金融市场，可以用血流成河来形容了。美国三大股指，历史上总共四次熔断，这八天就三次了。&lt;/p&gt;
 &lt;div class=&#34;shortcode-notice note&#34;&gt;
@@ -94,20 +94,20 @@
     
     <item>
       <title>拍照片、拍视频、修照片、剪辑视频</title>
-      <link>https://mrbenwang.github.io/post/2019/20191204-take-video-photos-and-edit/</link>
+      <link>/post/2019/20191204-take-video-photos-and-edit/</link>
       <pubDate>Wed, 04 Dec 2019 15:49:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2019/20191204-take-video-photos-and-edit/</guid>
+      <guid>/post/2019/20191204-take-video-photos-and-edit/</guid>
       <description>&lt;p&gt;最近买了一台**“网红”**相机，相机到手后，当然免不了各种折腾啦。拍拍照啦，录个像啦，琢磨琢磨相机的功能啦，调一调参数啦。&lt;/p&gt;
 &lt;p&gt;折腾一圈后，总是对拍摄效果甚不满意。马上又开始&lt;code&gt;Photoshop&lt;/code&gt;和&lt;code&gt;Premiere&lt;/code&gt;软件的学习，使用它们做出来一些，当时自己比较满意的作品。这篇文章，主要就是用来，总结记录这一段过程。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>投机者--又爱又恨的 futures</title>
-      <link>https://mrbenwang.github.io/post/2019/20191016-speculator-and-futures/</link>
+      <link>/post/2019/20191016-speculator-and-futures/</link>
       <pubDate>Wed, 16 Oct 2019 11:11:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2019/20191016-speculator-and-futures/</guid>
+      <guid>/post/2019/20191016-speculator-and-futures/</guid>
       <description>&lt;p&gt;意不意外，惊不惊喜。万万没想到 &lt;code&gt;Futures&lt;/code&gt; 的含义是期货，也就是&lt;code&gt;未来&lt;/code&gt;这个单词的复数，典型的&lt;strong&gt;拿今天“赌”未来&lt;/strong&gt;。还有 &lt;code&gt;long&lt;/code&gt; 代表多头，&lt;code&gt;short&lt;/code&gt; 代表空头。学了十多年的英语，才知道简单的单词，居然有这种含义。&lt;/p&gt;
 &lt;div class=&#34;shortcode-notice note&#34;&gt;
   &lt;div class=&#34;shortcode-notice-title note&#34;&gt;Buy / Sell / Long / Short 這些詞有什麼差別呢?
@@ -124,49 +124,49 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
     
     <item>
       <title>一些软件架构和架构师的想法</title>
-      <link>https://mrbenwang.github.io/post/2019/20190819-about-architect-train/</link>
+      <link>/post/2019/20190819-about-architect-train/</link>
       <pubDate>Mon, 19 Aug 2019 15:27:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2019/20190819-about-architect-train/</guid>
+      <guid>/post/2019/20190819-about-architect-train/</guid>
       <description>&lt;p&gt;上周四的时候，公司的唯一一位国内的架构师，来做培训。顺便就记录一下，我的一些思考和想法吧。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>我所理解的自由</title>
-      <link>https://mrbenwang.github.io/post/2019/20190709-freedom-in-my-head/</link>
+      <link>/post/2019/20190709-freedom-in-my-head/</link>
       <pubDate>Tue, 09 Jul 2019 15:27:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2019/20190709-freedom-in-my-head/</guid>
+      <guid>/post/2019/20190709-freedom-in-my-head/</guid>
       <description>&lt;p&gt;关于“&lt;code&gt;自由&lt;/code&gt;”这个词很重要，内涵又很丰富，很多专家都无法说清楚，我更没有资格去给人说，什么是自由。&lt;br&gt;
 在这里，我只是想简单的总结一下，&lt;code&gt;我理解中的自由&lt;/code&gt;是什么样子的，该篇文章作为一篇&lt;strong&gt;个人思考的总结&lt;/strong&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>相遇总是偶然，离别却是必然</title>
-      <link>https://mrbenwang.github.io/post/2019/20190606-meeting-and-parting/</link>
+      <link>/post/2019/20190606-meeting-and-parting/</link>
       <pubDate>Thu, 06 Jun 2019 14:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2019/20190606-meeting-and-parting/</guid>
+      <guid>/post/2019/20190606-meeting-and-parting/</guid>
       <description>&lt;h2 id=&#34;序言&#34;&gt;序言&lt;/h2&gt;
 &lt;p&gt;很久没有以一篇文章的方式，抒发自己的情感了，大都是朋友圈的只言片语。这两年写的最多的就是技术方面，或者是偏理性的文章。上周在医院住院期间，不用考虑工作，不用考虑吃穿，也不用强制完成当日的目标。脑子也就空闲了出来，也就发现了身边的美景和那久违的感动。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>*C#执行批处理命令</title>
-      <link>https://mrbenwang.github.io/post/2019/20190520-csharp-exectue-bat/</link>
+      <link>/post/2019/20190520-csharp-exectue-bat/</link>
       <pubDate>Mon, 20 May 2019 14:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2019/20190520-csharp-exectue-bat/</guid>
+      <guid>/post/2019/20190520-csharp-exectue-bat/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;前段时间，遇到一个需求，需要解压文件，并且执行里面的 bat 文件。还需要获取执行进度，并且在错误的时候，中断执行。在这期间，在网上查找了许多的实例，不断地尝试，兜兜转转的绕了一大圈，记录一下走过的一些坑。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>重塑健康的生活</title>
-      <link>https://mrbenwang.github.io/post/2019/20190514-reshape-healthy-life/</link>
+      <link>/post/2019/20190514-reshape-healthy-life/</link>
       <pubDate>Tue, 14 May 2019 16:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2019/20190514-reshape-healthy-life/</guid>
+      <guid>/post/2019/20190514-reshape-healthy-life/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;从去年开始，我开始&lt;strong&gt;有意识的改变&lt;/strong&gt;自己的&lt;code&gt;生活状况&lt;/code&gt;。尤其是从上个月开始，起初我在 YouTube 上面，只是看健身方面的内容，关于健身姿势啦，细节啦，要点啦，饮食啦之类的内容。后来 YouTube 又给我推送了，关于&lt;code&gt;驼背伸脖子&lt;/code&gt;，&lt;code&gt;骨骼健康&lt;/code&gt;，&lt;code&gt;脊柱健康&lt;/code&gt;的东西。就&lt;strong&gt;意识到&lt;/strong&gt;健康的重要，开始去重塑自己的体态，纠正伴随我二十多年的不健康姿势。&lt;/p&gt;
 &lt;p&gt;首先感谢，那些分享视频的 YouTuber 。我回想起小学，初中时候，被很多人说起过自己的驼背，像个&lt;code&gt;小老头&lt;/code&gt;，当时完全没有当回事。工作后虽然意识到问题了，但仍然不知道怎么去改变。现在&lt;strong&gt;这些科学的知识改变了我&lt;/strong&gt;，虽然它迟到了，但还不晚。&lt;/p&gt;
@@ -175,10 +175,10 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
     
     <item>
       <title>我变成了什么样的人？</title>
-      <link>https://mrbenwang.github.io/post/2019/20190404-what-person-do-i-become/</link>
+      <link>/post/2019/20190404-what-person-do-i-become/</link>
       <pubDate>Fri, 05 Apr 2019 20:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2019/20190404-what-person-do-i-become/</guid>
+      <guid>/post/2019/20190404-what-person-do-i-become/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;时间过的好快啊，上次在&lt;code&gt;行动&lt;/code&gt;和&lt;code&gt;意识&lt;/code&gt;上面&lt;strong&gt;改变自己&lt;/strong&gt;，是四五年前(2014-2015)。那个时候的我，变得勇于尝试很多从未接触过的事物，比如敷面膜，烫发，经验分享，参加社交活动。其中，有些成为了我的生活习惯，有些则不适合我被抛弃。&lt;/p&gt;
 &lt;p&gt;自从骨折以后，尤其是去年植骨手术后。我的&lt;code&gt;心态&lt;/code&gt;和&lt;code&gt;观念想法&lt;/code&gt;，发生了很大的变化。起初，我并没有意识到我的改变，它慢慢的累积，累积；直到年初，在油管上看到文睿讲&lt;code&gt;《人与人比，最终要看福分》&lt;/code&gt;这期视频里，突然意识到，我的内心发生了很多的变化。&lt;/p&gt;
@@ -187,10 +187,10 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
     
     <item>
       <title>经济知识学习小结</title>
-      <link>https://mrbenwang.github.io/post/2019/20190403-my-economic-learning/</link>
+      <link>/post/2019/20190403-my-economic-learning/</link>
       <pubDate>Tue, 02 Apr 2019 22:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2019/20190403-my-economic-learning/</guid>
+      <guid>/post/2019/20190403-my-economic-learning/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;从去年开始，&lt;strong&gt;有意识&lt;/strong&gt;的&lt;code&gt;记录&lt;/code&gt;和&lt;code&gt;收集&lt;/code&gt;，从各类财经视频中学习到的经济学小知识。毕竟不是系统的学习，当时只是为了更好的了解和解释，当时的一些经济现象。在这里，就简单的做一个学习小结。&lt;br&gt;
 在此，再此特别感谢&lt;code&gt;世光&lt;/code&gt;和&lt;code&gt;金钱爆&lt;/code&gt;节目组，所作的知识普及。&lt;/p&gt;</description>
@@ -198,10 +198,10 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
     
     <item>
       <title>由‘美国大学舞弊案’引发，社会阶级的思考</title>
-      <link>https://mrbenwang.github.io/post/2019/20190319-social-class-thinking/</link>
+      <link>/post/2019/20190319-social-class-thinking/</link>
       <pubDate>Tue, 19 Mar 2019 16:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2019/20190319-social-class-thinking/</guid>
+      <guid>/post/2019/20190319-social-class-thinking/</guid>
       <description>&lt;p&gt;前两天美国大学舞弊案，造成的影响还是蛮大的(&lt;strong&gt;不过国内我身边的人，基本都不知道，不关心&lt;/strong&gt;)。结合&lt;code&gt;杨世光&lt;/code&gt;和&lt;code&gt;丁万鸣&lt;/code&gt;从&lt;strong&gt;社会阶级角度&lt;/strong&gt;的解读，深深的启发了我。最近几天我一直在思考&lt;code&gt;社会阶级&lt;/code&gt;这方面的东西，形成一点点自己的思考。&lt;/p&gt;
 &lt;p&gt;首先，简单说一下案件内容：&lt;/p&gt;
 &lt;div class=&#34;shortcode-notice info&#34;&gt;
@@ -215,10 +215,10 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
     
     <item>
       <title>完成“局域网”数据备份</title>
-      <link>https://mrbenwang.github.io/post/2019/20190121-backup-infomation/</link>
+      <link>/post/2019/20190121-backup-infomation/</link>
       <pubDate>Mon, 21 Jan 2019 22:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2019/20190121-backup-infomation/</guid>
+      <guid>/post/2019/20190121-backup-infomation/</guid>
       <description>&lt;p&gt;刚刚，我用了三个小时的时间，清空了自己的新浪微博。仅仅保留第一条和最后一条。&lt;/p&gt;
 &lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
 &lt;p&gt;我在年前的时候，已经完成了大陆局域网的所有网络个人信息的备份。2018年中断断续续的备份了，百度网盘，qq空间，百度贴吧，新浪微博，等等。&lt;/p&gt;
@@ -228,10 +228,10 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
     
     <item>
       <title>我的戊戌年</title>
-      <link>https://mrbenwang.github.io/post/2018/20181225-review-my-wuxu-year/</link>
+      <link>/post/2018/20181225-review-my-wuxu-year/</link>
       <pubDate>Tue, 25 Dec 2018 15:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20181225-review-my-wuxu-year/</guid>
+      <guid>/post/2018/20181225-review-my-wuxu-year/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;子曰：“吾十有五，而志于学，三十而立，四十而不惑，五十而知天命，六十而耳顺，七十而从心所欲，不逾矩。”&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -242,20 +242,20 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
     
     <item>
       <title>*根据时间戳，增量同步数据的解决办法</title>
-      <link>https://mrbenwang.github.io/post/2018/20181215-incremen-sync-by-datetime/</link>
+      <link>/post/2018/20181215-incremen-sync-by-datetime/</link>
       <pubDate>Sat, 15 Dec 2018 15:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20181215-incremen-sync-by-datetime/</guid>
+      <guid>/post/2018/20181215-incremen-sync-by-datetime/</guid>
       <description>&lt;p&gt;最近在工作中遇到一个比较棘手的问题，客户端从服务端同步数据的问题。&lt;br&gt;
 思考这个解决的方法还是花费了不少的精力。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[转]逻辑谬误列表(例子)</title>
-      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-ex/</link>
+      <link>/post/2018/20181207-logical-fallacy-list-ex/</link>
       <pubDate>Fri, 07 Dec 2018 17:50:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-ex/</guid>
+      <guid>/post/2018/20181207-logical-fallacy-list-ex/</guid>
       <description>&lt;div class=&#34;shortcode-notice note&#34;&gt;
   &lt;div class=&#34;shortcode-notice-title note&#34;&gt;简介
     &lt;/div&gt;
@@ -265,10 +265,10 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
     
     <item>
       <title>[转]逻辑谬误列表(13-24)</title>
-      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-2/</link>
+      <link>/post/2018/20181207-logical-fallacy-list-2/</link>
       <pubDate>Fri, 07 Dec 2018 16:56:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-2/</guid>
+      <guid>/post/2018/20181207-logical-fallacy-list-2/</guid>
       <description>&lt;p&gt;13.合成谬误/分割谬误&lt;br&gt;
 14.轶事谬误（Anecdotal Fallacy）&lt;br&gt;
 15.诉诸情感（appeal to emotion）&lt;br&gt;
@@ -285,10 +285,10 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
     
     <item>
       <title>[转]逻辑谬误列表(1-12)</title>
-      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-1/</link>
+      <link>/post/2018/20181207-logical-fallacy-list-1/</link>
       <pubDate>Fri, 07 Dec 2018 15:56:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-1/</guid>
+      <guid>/post/2018/20181207-logical-fallacy-list-1/</guid>
       <description>&lt;ol&gt;
 &lt;li&gt;稻草人论证（Strawman）&lt;/li&gt;
 &lt;li&gt;滑坡谬误（Slippery slope）&lt;/li&gt;
@@ -307,20 +307,20 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
     
     <item>
       <title>[转]逻辑谬误列表(序言)</title>
-      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/</link>
+      <link>/post/2018/20181207-logical-fallacy-list-foreword/</link>
       <pubDate>Fri, 07 Dec 2018 14:56:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/</guid>
+      <guid>/post/2018/20181207-logical-fallacy-list-foreword/</guid>
       <description>&lt;p&gt;我在网上浏览文章的时候，无意间在&lt;code&gt;评论区&lt;/code&gt;发现了，这个非常有价值的系列评论，我不能放置原文链接，见谅。&lt;br&gt;
 同时，为了保留这份资料，为以后重新学习，实践后再来重学。故此由此系列，我对原评论有结构调整。&lt;code&gt;遗憾：原文没有找到&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>我来回答一些这36个问题</title>
-      <link>https://mrbenwang.github.io/post/2018/20181130-i-ask-the-36-questions/</link>
+      <link>/post/2018/20181130-i-ask-the-36-questions/</link>
       <pubDate>Fri, 30 Nov 2018 16:30:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20181130-i-ask-the-36-questions/</guid>
+      <guid>/post/2018/20181130-i-ask-the-36-questions/</guid>
       <description>&lt;p&gt;问题来自于，纽约时报《The 36 Questions That Lead to Love》：&lt;a href=&#34;https://www.nytimes.com/2015/01/11/fashion/no-37-big-wedding-or-small.html&#34;&gt;英文原文&lt;/a&gt;  -  &lt;a href=&#34;https://cn.nytimes.com/culture/20150123/t23questions/&#34;&gt;中文翻译&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&#34;shortcode-notice info&#34;&gt;
   &lt;div class=&#34;shortcode-notice-title info&#34;&gt;原文
@@ -334,10 +334,10 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
     
     <item>
       <title>“双十一”越火爆越好？</title>
-      <link>https://mrbenwang.github.io/post/2018/20181129-double-eleven-not-a-good-thing/</link>
+      <link>/post/2018/20181129-double-eleven-not-a-good-thing/</link>
       <pubDate>Thu, 29 Nov 2018 15:30:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20181129-double-eleven-not-a-good-thing/</guid>
+      <guid>/post/2018/20181129-double-eleven-not-a-good-thing/</guid>
       <description>&lt;h2 id=&#34;我的观点&#34;&gt;我的观点&lt;/h2&gt;
 &lt;p&gt;个人认为双十一的成长已经到头了，它所产生的副作用，将会至少影响到未来半年的经发展。最主要的原因是，它提前透支的需求越多，对市场的供需平衡越不利，尤其是对未来很长一段时间的需求不振。它的好处则是，年底冲业绩，清仓的目的，但是这个好处越来越小了。&lt;br&gt;
 以下的内容，其中涉及到的数据，全部来自&lt;code&gt;互联网公开信息&lt;/code&gt;。&lt;/p&gt;
@@ -346,41 +346,41 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
     
     <item>
       <title>自学日语记录历程</title>
-      <link>https://mrbenwang.github.io/post/2018/20181107-japanese-language-study-for-3months/</link>
+      <link>/post/2018/20181107-japanese-language-study-for-3months/</link>
       <pubDate>Wed, 07 Nov 2018 09:33:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20181107-japanese-language-study-for-3months/</guid>
+      <guid>/post/2018/20181107-japanese-language-study-for-3months/</guid>
       <description>&lt;p&gt;不知不觉就已经学习日语三个月了，有点点小小的心得和经验。&lt;br&gt;
 这篇文章：一方面是整理，记忆，留作以后回忆使用，另一方面，也想对和我一样学习日语的人，如果能有&lt;code&gt;一点点帮助&lt;/code&gt;就再好不过了。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>*域名注册经历的一些分享</title>
-      <link>https://mrbenwang.github.io/post/2018/20180930-domain-registration-share/</link>
+      <link>/post/2018/20180930-domain-registration-share/</link>
       <pubDate>Sun, 30 Sep 2018 09:04:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20180930-domain-registration-share/</guid>
+      <guid>/post/2018/20180930-domain-registration-share/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;一次偶然机会，看了一下新建一个&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;VPS实例&lt;/a&gt;的价格，发现最低价的配置，没有&lt;code&gt;ip4&lt;/code&gt;了(所幸我的还是ip4)，只能使用&lt;code&gt;ipv6&lt;/code&gt;。&lt;code&gt;2001:0db8:85a3:08d3:1319:8a2e:0370:7344&lt;/code&gt; 这样的ip地址，又长又难记忆。如果有个域名那不就简单记忆了嘛。&lt;br&gt;
-&lt;img src=&#34;https://mrbenwang.github.io/images/2018/20180930-domain-registration-share/ipv6_only.jpg&#34; alt=&#34;ipv6_only&#34;&gt;&lt;/p&gt;</description>
+&lt;img src=&#34;/images/2018/20180930-domain-registration-share/ipv6_only.jpg&#34; alt=&#34;ipv6_only&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>由shadowsocks转为v2ray的体验</title>
-      <link>https://mrbenwang.github.io/post/2018/20180929-give-up-ss-and-change-to-v2ray/</link>
+      <link>/post/2018/20180929-give-up-ss-and-change-to-v2ray/</link>
       <pubDate>Sat, 29 Sep 2018 15:04:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20180929-give-up-ss-and-change-to-v2ray/</guid>
+      <guid>/post/2018/20180929-give-up-ss-and-change-to-v2ray/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;最近一段时间，总感觉&lt;code&gt;shadowsocks&lt;/code&gt;用起来非常的慢，时不时的断网，我就觉得可能不太对劲了。在issues看到有不少人提到，可能已经被人工智能识别，所以非常堪忧。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>*Hugo &#43; github 搭建个人博客</title>
-      <link>https://mrbenwang.github.io/post/2018/20180927-hugo-plus-github-build-blog/</link>
+      <link>/post/2018/20180927-hugo-plus-github-build-blog/</link>
       <pubDate>Thu, 27 Sep 2018 15:13:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20180927-hugo-plus-github-build-blog/</guid>
+      <guid>/post/2018/20180927-hugo-plus-github-build-blog/</guid>
       <description>&lt;p&gt;很早以前就有想法，搭建一个个人的博客。没有实现的原因：一方面个人的服务器&lt;code&gt;不太安全&lt;/code&gt;，并且掉线，欠费等等，维护起来麻烦，另一方面，文章编辑发布起来也&lt;code&gt;不方便&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;后来了解到 github 提供了博客的功能，也一直没有实践。也鉴于上次文章被删，我也就开始实践了起来，&lt;code&gt;有一个备份总好于无&lt;/code&gt;。&lt;/p&gt;</description>
     </item>

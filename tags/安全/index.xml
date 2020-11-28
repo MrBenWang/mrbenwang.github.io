@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>安全 on 风雪夜归人</title>
-    <link>https://mrbenwang.github.io/tags/%E5%AE%89%E5%85%A8/</link>
+    <link>/tags/%E5%AE%89%E5%85%A8/</link>
     <description>Recent content in 安全 on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 26 Sep 2018 10:16:00 +0800</lastBuildDate>
     
-	<atom:link href="https://mrbenwang.github.io/tags/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>*在公网上的Linux，我的一些配置分享</title>
-      <link>https://mrbenwang.github.io/post/2018/20180926-linux-on-public-share-some-configration/</link>
+      <link>/post/2018/20180926-linux-on-public-share-some-configration/</link>
       <pubDate>Wed, 26 Sep 2018 10:16:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20180926-linux-on-public-share-some-configration/</guid>
-      <description>&lt;p&gt;去年的时候，有一篇介绍在&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;vultr&lt;/a&gt; 上 &lt;a href=&#34;https://mrbenwang.github.io/post/2014-2017/20170329-build-ss-on-vultr-vps/&#34;&gt;搭建ss服务器&lt;/a&gt; 的文章，由于某些众所周知的原因，被阿里云删除。&lt;/p&gt;
+      <guid>/post/2018/20180926-linux-on-public-share-some-configration/</guid>
+      <description>&lt;p&gt;去年的时候，有一篇介绍在&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;vultr&lt;/a&gt; 上 &lt;a href=&#34;/post/2014-2017/20170329-build-ss-on-vultr-vps/&#34;&gt;搭建ss服务器&lt;/a&gt; 的文章，由于某些众所周知的原因，被阿里云删除。&lt;/p&gt;
 &lt;p&gt;后来有段时间使用vps，配合《鸟哥私房菜》，学习实操linux。当时我以为只要root密码够复杂，就一切ok，有一两个月没有太关注安全的问题。偶然一次使用&lt;code&gt;lastb&lt;/code&gt;命令，着实下了一跳，我的vps每天都有&lt;code&gt;几万次的失败登陆记录&lt;/code&gt;。尝试登陆的IP，有俄罗斯，越南，巴西。。。。基本上地球上&lt;strong&gt;所有国家&lt;/strong&gt;都有来过。&lt;/p&gt;
 &lt;p&gt;这个时候我才意识到，如果不做相关的安全方面的措施，在公网的环境下，与裸奔无异。我的vps是CentOS 7，以下所有涉及到的配置文件，相关命令都是在CentOS 7以下并且生效了的。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>*记一次【模拟点击】，WinForm小软件开发过程</title>
-      <link>https://mrbenwang.github.io/post/2014-2017/20170921-simulator-click-baidu-ads/</link>
+      <link>/post/2014-2017/20170921-simulator-click-baidu-ads/</link>
       <pubDate>Thu, 21 Sep 2017 22:08:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2014-2017/20170921-simulator-click-baidu-ads/</guid>
+      <guid>/post/2014-2017/20170921-simulator-click-baidu-ads/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;年初四月份的时候，有朋友找到我，说想开发一个模拟点击的软件。最终软件做完后，发现效果不理想。唯一开发的我是认为&lt;code&gt;最好是放弃&lt;/code&gt;了，做运营的他，&lt;code&gt;坚持&lt;/code&gt;这个没问题，说是改变合作方式。最终也是不了了之了。&lt;/p&gt;</description>
     </item>

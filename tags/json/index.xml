@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>json on 风雪夜归人</title>
-    <link>https://mrbenwang.github.io/tags/json/</link>
+    <link>/tags/json/</link>
     <description>Recent content in json on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 07 Jun 2016 12:06:00 +0800</lastBuildDate>
     
-	<atom:link href="https://mrbenwang.github.io/tags/json/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/json/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>*关于json 与 Request Header 的Content-Type 一些关系。</title>
-      <link>https://mrbenwang.github.io/post/2014-2017/20160607-json-and-request-header-content-type/</link>
+      <link>/post/2014-2017/20160607-json-and-request-header-content-type/</link>
       <pubDate>Tue, 07 Jun 2016 12:06:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2014-2017/20160607-json-and-request-header-content-type/</guid>
+      <guid>/post/2014-2017/20160607-json-and-request-header-content-type/</guid>
       <description>&lt;p&gt;由于最近遇到关于，ashx文件 ajax解析参数的问题。查询网上很多资料后，已经解决。&lt;br&gt;
 鉴于网上已经足够多的，关于这个问题的文章。大部分内容来自互联网，我这里只是做一些整理和记录。特此说明并非原创。&lt;/p&gt;</description>
     </item>

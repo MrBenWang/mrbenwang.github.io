@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>点点想法 on 风雪夜归人</title>
-    <link>https://mrbenwang.github.io/categories/%E7%82%B9%E7%82%B9%E6%83%B3%E6%B3%95/</link>
+    <link>/categories/%E7%82%B9%E7%82%B9%E6%83%B3%E6%B3%95/</link>
     <description>Recent content in 点点想法 on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 19 Aug 2019 15:27:00 +0800</lastBuildDate>
     
-	<atom:link href="https://mrbenwang.github.io/categories/%E7%82%B9%E7%82%B9%E6%83%B3%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/%E7%82%B9%E7%82%B9%E6%83%B3%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>一些软件架构和架构师的想法</title>
-      <link>https://mrbenwang.github.io/post/2019/20190819-about-architect-train/</link>
+      <link>/post/2019/20190819-about-architect-train/</link>
       <pubDate>Mon, 19 Aug 2019 15:27:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2019/20190819-about-architect-train/</guid>
+      <guid>/post/2019/20190819-about-architect-train/</guid>
       <description>&lt;p&gt;上周四的时候，公司的唯一一位国内的架构师，来做培训。顺便就记录一下，我的一些思考和想法吧。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>我所理解的自由</title>
-      <link>https://mrbenwang.github.io/post/2019/20190709-freedom-in-my-head/</link>
+      <link>/post/2019/20190709-freedom-in-my-head/</link>
       <pubDate>Tue, 09 Jul 2019 15:27:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2019/20190709-freedom-in-my-head/</guid>
+      <guid>/post/2019/20190709-freedom-in-my-head/</guid>
       <description>&lt;p&gt;关于“&lt;code&gt;自由&lt;/code&gt;”这个词很重要，内涵又很丰富，很多专家都无法说清楚，我更没有资格去给人说，什么是自由。&lt;br&gt;
 在这里，我只是想简单的总结一下，&lt;code&gt;我理解中的自由&lt;/code&gt;是什么样子的，该篇文章作为一篇&lt;strong&gt;个人思考的总结&lt;/strong&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>由‘美国大学舞弊案’引发，社会阶级的思考</title>
-      <link>https://mrbenwang.github.io/post/2019/20190319-social-class-thinking/</link>
+      <link>/post/2019/20190319-social-class-thinking/</link>
       <pubDate>Tue, 19 Mar 2019 16:20:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2019/20190319-social-class-thinking/</guid>
+      <guid>/post/2019/20190319-social-class-thinking/</guid>
       <description>&lt;p&gt;前两天美国大学舞弊案，造成的影响还是蛮大的(&lt;strong&gt;不过国内我身边的人，基本都不知道，不关心&lt;/strong&gt;)。结合&lt;code&gt;杨世光&lt;/code&gt;和&lt;code&gt;丁万鸣&lt;/code&gt;从&lt;strong&gt;社会阶级角度&lt;/strong&gt;的解读，深深的启发了我。最近几天我一直在思考&lt;code&gt;社会阶级&lt;/code&gt;这方面的东西，形成一点点自己的思考。&lt;/p&gt;
 &lt;p&gt;首先，简单说一下案件内容：&lt;/p&gt;
 &lt;div class=&#34;shortcode-notice info&#34;&gt;
@@ -49,10 +49,10 @@
     
     <item>
       <title>[转]逻辑谬误列表(例子)</title>
-      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-ex/</link>
+      <link>/post/2018/20181207-logical-fallacy-list-ex/</link>
       <pubDate>Fri, 07 Dec 2018 17:50:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-ex/</guid>
+      <guid>/post/2018/20181207-logical-fallacy-list-ex/</guid>
       <description>&lt;div class=&#34;shortcode-notice note&#34;&gt;
   &lt;div class=&#34;shortcode-notice-title note&#34;&gt;简介
     &lt;/div&gt;
@@ -62,10 +62,10 @@
     
     <item>
       <title>[转]逻辑谬误列表(13-24)</title>
-      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-2/</link>
+      <link>/post/2018/20181207-logical-fallacy-list-2/</link>
       <pubDate>Fri, 07 Dec 2018 16:56:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-2/</guid>
+      <guid>/post/2018/20181207-logical-fallacy-list-2/</guid>
       <description>&lt;p&gt;13.合成谬误/分割谬误&lt;br&gt;
 14.轶事谬误（Anecdotal Fallacy）&lt;br&gt;
 15.诉诸情感（appeal to emotion）&lt;br&gt;
@@ -82,10 +82,10 @@
     
     <item>
       <title>[转]逻辑谬误列表(1-12)</title>
-      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-1/</link>
+      <link>/post/2018/20181207-logical-fallacy-list-1/</link>
       <pubDate>Fri, 07 Dec 2018 15:56:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-1/</guid>
+      <guid>/post/2018/20181207-logical-fallacy-list-1/</guid>
       <description>&lt;ol&gt;
 &lt;li&gt;稻草人论证（Strawman）&lt;/li&gt;
 &lt;li&gt;滑坡谬误（Slippery slope）&lt;/li&gt;
@@ -104,20 +104,20 @@
     
     <item>
       <title>[转]逻辑谬误列表(序言)</title>
-      <link>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/</link>
+      <link>/post/2018/20181207-logical-fallacy-list-foreword/</link>
       <pubDate>Fri, 07 Dec 2018 14:56:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20181207-logical-fallacy-list-foreword/</guid>
+      <guid>/post/2018/20181207-logical-fallacy-list-foreword/</guid>
       <description>&lt;p&gt;我在网上浏览文章的时候，无意间在&lt;code&gt;评论区&lt;/code&gt;发现了，这个非常有价值的系列评论，我不能放置原文链接，见谅。&lt;br&gt;
 同时，为了保留这份资料，为以后重新学习，实践后再来重学。故此由此系列，我对原评论有结构调整。&lt;code&gt;遗憾：原文没有找到&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>我来回答一些这36个问题</title>
-      <link>https://mrbenwang.github.io/post/2018/20181130-i-ask-the-36-questions/</link>
+      <link>/post/2018/20181130-i-ask-the-36-questions/</link>
       <pubDate>Fri, 30 Nov 2018 16:30:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20181130-i-ask-the-36-questions/</guid>
+      <guid>/post/2018/20181130-i-ask-the-36-questions/</guid>
       <description>&lt;p&gt;问题来自于，纽约时报《The 36 Questions That Lead to Love》：&lt;a href=&#34;https://www.nytimes.com/2015/01/11/fashion/no-37-big-wedding-or-small.html&#34;&gt;英文原文&lt;/a&gt;  -  &lt;a href=&#34;https://cn.nytimes.com/culture/20150123/t23questions/&#34;&gt;中文翻译&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&#34;shortcode-notice info&#34;&gt;
   &lt;div class=&#34;shortcode-notice-title info&#34;&gt;原文
@@ -131,10 +131,10 @@
     
     <item>
       <title>“双十一”越火爆越好？</title>
-      <link>https://mrbenwang.github.io/post/2018/20181129-double-eleven-not-a-good-thing/</link>
+      <link>/post/2018/20181129-double-eleven-not-a-good-thing/</link>
       <pubDate>Thu, 29 Nov 2018 15:30:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2018/20181129-double-eleven-not-a-good-thing/</guid>
+      <guid>/post/2018/20181129-double-eleven-not-a-good-thing/</guid>
       <description>&lt;h2 id=&#34;我的观点&#34;&gt;我的观点&lt;/h2&gt;
 &lt;p&gt;个人认为双十一的成长已经到头了，它所产生的副作用，将会至少影响到未来半年的经发展。最主要的原因是，它提前透支的需求越多，对市场的供需平衡越不利，尤其是对未来很长一段时间的需求不振。它的好处则是，年底冲业绩，清仓的目的，但是这个好处越来越小了。&lt;br&gt;
 以下的内容，其中涉及到的数据，全部来自&lt;code&gt;互联网公开信息&lt;/code&gt;。&lt;/p&gt;
@@ -143,30 +143,30 @@
     
     <item>
       <title>胡扯一堆</title>
-      <link>https://mrbenwang.github.io/post/old_article/00-zone/059-daily-2016-3-30/</link>
+      <link>/post/old_article/00-zone/059-daily-2016-3-30/</link>
       <pubDate>Wed, 30 Mar 2016 22:59:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/00-zone/059-daily-2016-3-30/</guid>
+      <guid>/post/old_article/00-zone/059-daily-2016-3-30/</guid>
       <description>&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
 &lt;p&gt;自从摔断了腿，行动受阻加上药物作用，&lt;strong&gt;无责任&lt;/strong&gt; &lt;strong&gt;无逻辑&lt;/strong&gt;&lt;code&gt;天马行空&lt;/code&gt; &lt;code&gt;思维混乱&lt;/code&gt;的瞎想，纪录如下，请勿当真。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>说说心里话，反感各种形式的面试教程攻略。</title>
-      <link>https://mrbenwang.github.io/post/old_article/00-zone/058-about-some-interview-tutorial/</link>
+      <link>/post/old_article/00-zone/058-about-some-interview-tutorial/</link>
       <pubDate>Fri, 11 Mar 2016 10:45:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/00-zone/058-about-some-interview-tutorial/</guid>
+      <guid>/post/old_article/00-zone/058-about-some-interview-tutorial/</guid>
       <description>&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
 &lt;p&gt;各种形式的教程攻略，有的直接道出考了&lt;code&gt;“哪些内容”&lt;/code&gt;，&lt;code&gt;“XXX是关键点”&lt;/code&gt;，&lt;code&gt;“XXX很多公司都会出的”&lt;/code&gt;，这类比较直接；有的呢，则是像一位长者，语重心长的给你讲一下&lt;strong&gt;人生道理&lt;/strong&gt;，这类比较委婉。形式不同，本质都是一样的。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>*我来谈谈我的游戏经历和“游戏三境界”</title>
-      <link>https://mrbenwang.github.io/post/2014-2017/20150430-my-playing-game-three-level/</link>
+      <link>/post/2014-2017/20150430-my-playing-game-three-level/</link>
       <pubDate>Thu, 30 Apr 2015 21:24:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2014-2017/20150430-my-playing-game-three-level/</guid>
+      <guid>/post/2014-2017/20150430-my-playing-game-three-level/</guid>
       <description>&lt;p&gt;说到三境界，很多人怕是首先想到王国维：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;王国维在《人间词话》说:&lt;br&gt;
@@ -180,20 +180,20 @@
     
     <item>
       <title>秋日随笔</title>
-      <link>https://mrbenwang.github.io/post/old_article/00-zone/055-autumn-daily/</link>
+      <link>/post/old_article/00-zone/055-autumn-daily/</link>
       <pubDate>Sun, 01 Sep 2013 20:40:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/00-zone/055-autumn-daily/</guid>
+      <guid>/post/old_article/00-zone/055-autumn-daily/</guid>
       <description>&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
 &lt;p&gt;今天飘了一天的小雨，绵绵细雨仿佛那绛珠草的露水，总也流不尽。微风徐徐，带着潮湿的空气抚过肌肤，忽然之间就感受到了初秋的凉意。缓步走在车辆稀少的道路上，不用打伞。任由轻风细雨滑过肩头，它带给你的不是抗在肩上的责任，也不是落在膀上的压力，是一份自然的宁静。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>般若波罗蜜心经</title>
-      <link>https://mrbenwang.github.io/post/old_article/00-zone/052-prajna-paramita/</link>
+      <link>/post/old_article/00-zone/052-prajna-paramita/</link>
       <pubDate>Tue, 13 Mar 2012 21:39:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/00-zone/052-prajna-paramita/</guid>
+      <guid>/post/old_article/00-zone/052-prajna-paramita/</guid>
       <description>&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
 &lt;div class=&#34;shortcode-notice note&#34;&gt;
   &lt;div class=&#34;shortcode-notice-title note&#34;&gt;原文
@@ -204,28 +204,28 @@
     
     <item>
       <title>我們都是一個有故事的人</title>
-      <link>https://mrbenwang.github.io/post/old_article/01-baidu/134-we-have-many-stories/</link>
+      <link>/post/old_article/01-baidu/134-we-have-many-stories/</link>
       <pubDate>Sat, 03 Mar 2012 00:07:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/01-baidu/134-we-have-many-stories/</guid>
+      <guid>/post/old_article/01-baidu/134-we-have-many-stories/</guid>
       <description>&lt;p&gt;既然咱們以前用的都是殘體字，那麼以後我還是儘量用完整的漢字吧。雖然手寫不出來，但是借助輸入法還是可以完成的。當時推廣簡體字是爲了方便大家識字，現在我感覺也沒有比要了吧。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>看完神经病人后一些想法</title>
-      <link>https://mrbenwang.github.io/post/old_article/01-baidu/130-read-jinshengbing/</link>
+      <link>/post/old_article/01-baidu/130-read-jinshengbing/</link>
       <pubDate>Fri, 19 Nov 2010 08:59:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/01-baidu/130-read-jinshengbing/</guid>
+      <guid>/post/old_article/01-baidu/130-read-jinshengbing/</guid>
       <description>&lt;p&gt;这两天看完《神经病人的世界》 说实话，很好奇，他们所描述的是一种以前从未有过的想法。 或是自己从来没有细想过，认为是理所当然的事情。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>十字路</title>
-      <link>https://mrbenwang.github.io/post/old_article/00-zone/042-crossroad/</link>
+      <link>/post/old_article/00-zone/042-crossroad/</link>
       <pubDate>Mon, 05 Apr 2010 23:15:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/00-zone/042-crossroad/</guid>
+      <guid>/post/old_article/00-zone/042-crossroad/</guid>
       <description>&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
 &lt;p&gt;两条路，一条人间路，另一条阴间路，在十字路口交汇。&lt;/p&gt;
 &lt;p&gt;今天看到很多柳絮在飞，开始还以为是蒲公英，让我想起来小学时候学的一篇课文就是讲蒲公英种子的。种子成熟了，大风一吹，都飞散开来，&lt;/p&gt;</description>
@@ -233,58 +233,58 @@
     
     <item>
       <title>猜火车</title>
-      <link>https://mrbenwang.github.io/post/old_article/00-zone/037-guess-the-train/</link>
+      <link>/post/old_article/00-zone/037-guess-the-train/</link>
       <pubDate>Tue, 08 Dec 2009 21:21:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/00-zone/037-guess-the-train/</guid>
+      <guid>/post/old_article/00-zone/037-guess-the-train/</guid>
       <description>&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
 &lt;p&gt;“选择生命，选择工作，选择职业，选择家庭，选择可恶的大彩电，选择洗衣机、汽车、雷射碟机，选择健康、低胆固醇和牙医保险，选择楼宇按揭，选择你的朋友，选择套装、便服和行李，选择分期付款和三件套西装，选择收看无聊的游戏节目，边看边吃零食&amp;hellip;&amp;hellip;选择你的未来，选择生命……太多选择，你选择什么，我选择不选择。”&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>读大学，为什么？</title>
-      <link>https://mrbenwang.github.io/post/old_article/00-zone/034-reading-university-why/</link>
+      <link>/post/old_article/00-zone/034-reading-university-why/</link>
       <pubDate>Fri, 13 Nov 2009 10:28:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/00-zone/034-reading-university-why/</guid>
+      <guid>/post/old_article/00-zone/034-reading-university-why/</guid>
       <description>&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
 &lt;p&gt;茫茫天涯路，飘然何所依&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>今天还会知道明天在哪里么？</title>
-      <link>https://mrbenwang.github.io/post/old_article/01-baidu/125-san-shu-die/</link>
+      <link>/post/old_article/01-baidu/125-san-shu-die/</link>
       <pubDate>Tue, 22 Sep 2009 16:59:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/01-baidu/125-san-shu-die/</guid>
+      <guid>/post/old_article/01-baidu/125-san-shu-die/</guid>
       <description>&lt;p&gt;太突然了，世事无常，今天还会知道明天在哪里么？&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[转] [回复]点名的…我写都嫌长 </title>
-      <link>https://mrbenwang.github.io/post/old_article/00-zone/031-question-and-answer/</link>
+      <link>/post/old_article/00-zone/031-question-and-answer/</link>
       <pubDate>Thu, 04 Jun 2009 00:15:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/00-zone/031-question-and-answer/</guid>
+      <guid>/post/old_article/00-zone/031-question-and-answer/</guid>
       <description>正文 幸福接力棒 Q1:你的大名? 性别？ WZL,MAN Q2:你认为什么才算是真正幸福？ 有山有水，还有我 Q3:你相信天长地久吗？ 我相信到我挂的时候天地还存在 Q</description>
     </item>
     
     <item>
       <title>关于大学生刘伟自杀事件的一点感想</title>
-      <link>https://mrbenwang.github.io/post/old_article/01-baidu/124-thoughts-about-liu-wei/</link>
+      <link>/post/old_article/01-baidu/124-thoughts-about-liu-wei/</link>
       <pubDate>Fri, 27 Feb 2009 23:42:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/01-baidu/124-thoughts-about-liu-wei/</guid>
+      <guid>/post/old_article/01-baidu/124-thoughts-about-liu-wei/</guid>
       <description>&lt;p&gt;看那个刘伟因为就业压力不能承受就自杀这件事。&lt;/p&gt;
 &lt;p&gt;我想：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>徒步之感</title>
-      <link>https://mrbenwang.github.io/post/old_article/00-zone/020-walking-thoughts/</link>
+      <link>/post/old_article/00-zone/020-walking-thoughts/</link>
       <pubDate>Tue, 09 Dec 2008 19:44:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/00-zone/020-walking-thoughts/</guid>
+      <guid>/post/old_article/00-zone/020-walking-thoughts/</guid>
       <description>&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
 &lt;p&gt;走了漫长的道路，我的双脚渐渐有了疼痛的感觉，双腿又渐渐变得麻木了。&lt;br&gt;
 每走一步都发出“嗒”“嗒”的声音，点点的震动都传入心灵的深处，一点点的感动，一点点的体会慢慢累积。&lt;/p&gt;</description>
@@ -292,10 +292,10 @@
     
     <item>
       <title>感谢</title>
-      <link>https://mrbenwang.github.io/post/old_article/00-zone/018-thanksgiving/</link>
+      <link>/post/old_article/00-zone/018-thanksgiving/</link>
       <pubDate>Tue, 09 Dec 2008 19:06:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/00-zone/018-thanksgiving/</guid>
+      <guid>/post/old_article/00-zone/018-thanksgiving/</guid>
       <description>&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
 &lt;p&gt;感谢太阳 他给予的光亮 让我看得见方向&lt;br&gt;
 感谢坚实的土地 他让我有路可走&lt;br&gt;
@@ -312,10 +312,10 @@
     
     <item>
       <title>中国的那些人都干嘛吃了？！</title>
-      <link>https://mrbenwang.github.io/post/old_article/00-zone/015-chinese-bed-people/</link>
+      <link>/post/old_article/00-zone/015-chinese-bed-people/</link>
       <pubDate>Sat, 11 Oct 2008 10:40:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/00-zone/015-chinese-bed-people/</guid>
+      <guid>/post/old_article/00-zone/015-chinese-bed-people/</guid>
       <description>&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
 &lt;p&gt;我刚刚看了一篇报道，说韩国历经三十年编了一套最全的汉子字典。&lt;/p&gt;
 &lt;p&gt;想想韩国学术界的那些人，为此付出三十年的孤独与寂寞，还有那些支持他们的搞学术的人，三十年是个什么概念？&lt;/p&gt;</description>
@@ -323,10 +323,10 @@
     
     <item>
       <title>一些感悟</title>
-      <link>https://mrbenwang.github.io/post/old_article/00-zone/010-some-thoughts-about-sunset/</link>
+      <link>/post/old_article/00-zone/010-some-thoughts-about-sunset/</link>
       <pubDate>Thu, 10 Jul 2008 09:08:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/00-zone/010-some-thoughts-about-sunset/</guid>
+      <guid>/post/old_article/00-zone/010-some-thoughts-about-sunset/</guid>
       <description>&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
 &lt;p&gt;这两天闲来无事，就爬上楼顶。说来也是，在顶上感觉就是不一般，有种“一揽众山小”的感觉，只是周围都是些高楼，要不就要“遗世独立”了。&lt;/p&gt;
 &lt;p&gt;这两天看晚霞，觉得十分美丽，尤其是今天的，最浓，最美，我也沉思良久。它美，我认为是其变化之美，在短短的几分钟间，它由碧红的长带，变为浅蓝的薄雾，由占据着天边的一线，凝聚为一点，每次看都会有一股新的感受，如潺潺流水般滑过心头，它的美在于变化，在于流动，总给人以新意。&lt;/p&gt;</description>
@@ -334,10 +334,10 @@
     
     <item>
       <title>这个时代</title>
-      <link>https://mrbenwang.github.io/post/old_article/00-zone/008-this-era/</link>
+      <link>/post/old_article/00-zone/008-this-era/</link>
       <pubDate>Fri, 20 Jun 2008 08:36:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/00-zone/008-this-era/</guid>
+      <guid>/post/old_article/00-zone/008-this-era/</guid>
       <description>&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
 &lt;p&gt;我们这个时代，这是什么样一个时代？&lt;/p&gt;
 &lt;p&gt;这是一个最昌明的时代，这是最衰微的时代；这是理智开化的时代，这是浑沌蒙昧的时代；这是阳光灿烂的季节，这是长夜晦暗的季节；这是欣欣向荣的春天，这是死气沉沉的冬天；我们眼前无所不有，我们眼前一无所有。&lt;/p&gt;</description>
@@ -345,29 +345,29 @@
     
     <item>
       <title>一些关于“死亡”的思考</title>
-      <link>https://mrbenwang.github.io/post/old_article/00-zone/001-some-thoughts-on-death/</link>
+      <link>/post/old_article/00-zone/001-some-thoughts-on-death/</link>
       <pubDate>Sun, 05 Aug 2007 10:54:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/00-zone/001-some-thoughts-on-death/</guid>
+      <guid>/post/old_article/00-zone/001-some-thoughts-on-death/</guid>
       <description>&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
 &lt;p&gt;人死以后的感觉，也许没有感觉，大概就是象那在熟睡中的人把。在这中间发生的一切，所有的一切都不知道，都与己无关，而醒来时仿佛又回到这个世界。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>由数学引发的思索</title>
-      <link>https://mrbenwang.github.io/post/old_article/01-baidu/115-thoughts-about-math/</link>
+      <link>/post/old_article/01-baidu/115-thoughts-about-math/</link>
       <pubDate>Sun, 29 Jul 2007 11:03:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/01-baidu/115-thoughts-about-math/</guid>
+      <guid>/post/old_article/01-baidu/115-thoughts-about-math/</guid>
       <description>&lt;p&gt;下午看了一篇关于数学与人们的生活，科学文章，引发了下面：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>患得患失</title>
-      <link>https://mrbenwang.github.io/post/old_article/01-baidu/114-huan-de-huan-shi/</link>
+      <link>/post/old_article/01-baidu/114-huan-de-huan-shi/</link>
       <pubDate>Wed, 20 Jun 2007 09:43:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/old_article/01-baidu/114-huan-de-huan-shi/</guid>
+      <guid>/post/old_article/01-baidu/114-huan-de-huan-shi/</guid>
       <description>&lt;p&gt;我失去了一些東西&lt;/p&gt;
 &lt;p&gt;同時也獲得了一些東西&lt;/p&gt;
 &lt;p&gt;上帝真的很公平&lt;/p&gt;</description>

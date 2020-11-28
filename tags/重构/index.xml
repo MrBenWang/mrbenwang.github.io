@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>重构 on 风雪夜归人</title>
-    <link>https://mrbenwang.github.io/tags/%E9%87%8D%E6%9E%84/</link>
+    <link>/tags/%E9%87%8D%E6%9E%84/</link>
     <description>Recent content in 重构 on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 22 Jun 2020 10:07:00 +0800</lastBuildDate>
     
-	<atom:link href="https://mrbenwang.github.io/tags/%E9%87%8D%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/%E9%87%8D%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>*重构下载功能模块</title>
-      <link>https://mrbenwang.github.io/post/2020/20200622-restructure-download/</link>
+      <link>/post/2020/20200622-restructure-download/</link>
       <pubDate>Mon, 22 Jun 2020 10:07:00 +0800</pubDate>
       
-      <guid>https://mrbenwang.github.io/post/2020/20200622-restructure-download/</guid>
+      <guid>/post/2020/20200622-restructure-download/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;最近项目新上线的版本中，出现了很多涉及&lt;code&gt;下载相关&lt;/code&gt;的bug；经过艰难的代码调试排查，可还是没有准确定位问题。主要还是由于代码年久，经过多代人的修修补补，到处都是&lt;code&gt;“坏味道”的代码&lt;/code&gt;。跟项目经理沟通过后，同意重构这部分的代码。下面就简单记录一下重构的过程。&lt;/p&gt;</description>
     </item>
