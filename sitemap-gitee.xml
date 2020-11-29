@@ -1,0 +1,1495 @@
+<?xml-stylesheet type="text/xsl" href="https://laowang-atlas.gitee.io/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/about/</loc>
+    <lastmod>2020-08-26T16:26:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/categories/</loc>
+    <lastmod>2020-11-17T11:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/</loc>
+    <lastmod>2020-11-17T11:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/</loc>
+    <lastmod>2020-11-17T11:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E5%8F%8D%E6%80%9D/</loc>
+    <lastmod>2020-11-17T11:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2020-11-17T11:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E7%96%97%E4%BC%A4/</loc>
+    <lastmod>2020-11-17T11:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2020/20200918-self-healing-recongnize/</loc>
+    <lastmod>2020-11-17T11:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/</loc>
+    <lastmod>2020-11-17T11:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2020/20200821-2020-daily-collections/</loc>
+    <lastmod>2020-09-18T15:46:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E5%93%B2%E7%90%86/</loc>
+    <lastmod>2020-09-18T15:46:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E7%BB%8F%E6%B5%8E/</loc>
+    <lastmod>2020-09-18T15:46:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E8%AE%A4%E7%9F%A5/</loc>
+    <lastmod>2020-09-18T15:46:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E8%AF%97%E5%8F%A5/</loc>
+    <lastmod>2020-09-18T15:46:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2020/20200814-wcf-to-aspnetcore-webapi/</loc>
+    <lastmod>2020-08-21T18:46:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/net-core/</loc>
+    <lastmod>2020-08-21T18:46:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/web-api/</loc>
+    <lastmod>2020-08-21T18:46:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/categories/%E5%B7%A5%E4%BD%9C%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2020-08-21T18:46:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2020/20200813-wcf-to-aspnetcore-grpc/</loc>
+    <lastmod>2020-08-13T19:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/grpc/</loc>
+    <lastmod>2020-08-13T19:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2020/20200622-restructure-download/</loc>
+    <lastmod>2020-06-22T10:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E9%87%8D%E6%9E%84/</loc>
+    <lastmod>2020-06-22T10:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2020/20200408-wpf-multi-language/</loc>
+    <lastmod>2020-04-08T10:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E5%A4%9A%E8%AF%AD%E8%A8%80/</loc>
+    <lastmod>2020-04-08T10:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2020/20200317-the-market-collapse/</loc>
+    <lastmod>2020-03-31T10:51:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2019/20191204-take-video-photos-and-edit/</loc>
+    <lastmod>2019-12-04T15:49:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2019/20191016-speculator-and-futures/</loc>
+    <lastmod>2019-10-23T16:26:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2019/20190819-about-architect-train/</loc>
+    <lastmod>2019-08-28T15:27:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/categories/%E7%82%B9%E7%82%B9%E6%83%B3%E6%B3%95/</loc>
+    <lastmod>2019-11-11T15:30:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2019/20190709-freedom-in-my-head/</loc>
+    <lastmod>2019-07-09T15:27:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2019/20190606-meeting-and-parting/</loc>
+    <lastmod>2019-06-07T16:40:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2019/20190520-csharp-exectue-bat/</loc>
+    <lastmod>2019-05-20T16:40:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2019-05-20T16:40:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E5%81%A5%E5%BA%B7/</loc>
+    <lastmod>2019-05-27T16:40:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2019-05-27T16:40:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2019/20190514-reshape-healthy-life/</loc>
+    <lastmod>2019-05-27T16:40:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E5%8F%8D%E7%9C%81/</loc>
+    <lastmod>2019-04-10T17:40:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2019/20190404-what-person-do-i-become/</loc>
+    <lastmod>2019-04-10T17:40:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2019-04-03T15:58:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2019/20190403-my-economic-learning/</loc>
+    <lastmod>2019-04-03T15:58:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2019/20190319-social-class-thinking/</loc>
+    <lastmod>2019-03-28T16:58:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E7%A4%BE%E4%BC%9A%E9%98%B6%E7%BA%A7/</loc>
+    <lastmod>2019-03-28T16:58:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2019/20190121-backup-infomation/</loc>
+    <lastmod>2019-02-19T16:58:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2018-12-30T13:29:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E6%88%8A%E6%88%8C%E5%B9%B4/</loc>
+    <lastmod>2018-12-30T13:29:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2018/20181225-review-my-wuxu-year/</loc>
+    <lastmod>2018-12-30T13:29:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2018/20181215-incremen-sync-by-datetime/</loc>
+    <lastmod>2018-12-15T15:20:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E5%A2%9E%E9%87%8F%E5%90%8C%E6%AD%A5/</loc>
+    <lastmod>2018-12-15T15:20:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2018/20181207-logical-fallacy-list-ex/</loc>
+    <lastmod>2018-12-07T17:50:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E8%B0%AC%E8%AF%AF/</loc>
+    <lastmod>2018-12-07T17:50:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E9%80%BB%E8%BE%91/</loc>
+    <lastmod>2018-12-07T17:50:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2018/20181207-logical-fallacy-list-2/</loc>
+    <lastmod>2018-12-07T16:56:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2018/20181207-logical-fallacy-list-1/</loc>
+    <lastmod>2018-12-07T15:56:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2018/20181207-logical-fallacy-list-foreword/</loc>
+    <lastmod>2018-12-07T14:56:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E6%83%85%E6%84%9F/</loc>
+    <lastmod>2018-11-30T16:30:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2018/20181130-i-ask-the-36-questions/</loc>
+    <lastmod>2018-11-30T16:30:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E8%A7%82%E5%BF%B5/</loc>
+    <lastmod>2018-11-30T16:30:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2018/20181129-double-eleven-not-a-good-thing/</loc>
+    <lastmod>2019-11-11T15:30:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E5%8F%8C%E5%8D%81%E4%B8%80/</loc>
+    <lastmod>2019-11-11T15:30:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E/</loc>
+    <lastmod>2019-05-13T10:16:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2018/20181107-japanese-language-study-for-3months/</loc>
+    <lastmod>2019-05-13T10:16:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2018/20180930-domain-registration-share/</loc>
+    <lastmod>2018-09-30T09:04:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/vps/</loc>
+    <lastmod>2019-01-07T15:04:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/categories/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2019-01-07T15:04:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/ss/</loc>
+    <lastmod>2019-01-07T15:04:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/v2ray/</loc>
+    <lastmod>2019-01-07T15:04:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2018/20180929-give-up-ss-and-change-to-v2ray/</loc>
+    <lastmod>2019-01-07T15:04:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2018/20180927-hugo-plus-github-build-blog/</loc>
+    <lastmod>2018-09-27T15:13:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/github/</loc>
+    <lastmod>2018-09-27T15:13:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2018/20180926-linux-on-public-share-some-configration/</loc>
+    <lastmod>2018-09-26T10:16:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/linux/</loc>
+    <lastmod>2018-09-26T10:16:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E5%AE%89%E5%85%A8/</loc>
+    <lastmod>2018-09-26T10:16:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2018/20180724-what-a-fuck-cnblog-delete-my-articel/</loc>
+    <lastmod>2018-07-24T20:42:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2014-2017/20170921-simulator-click-baidu-ads/</loc>
+    <lastmod>2017-09-21T22:08:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/winform/</loc>
+    <lastmod>2017-09-21T22:08:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/04-other/010-youdao-shouyi/</loc>
+    <lastmod>2017-09-01T13:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2014-2017/20170719-process-excel-with-vba/</loc>
+    <lastmod>2017-07-19T18:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2014-2017/20170329-build-ss-on-vultr-vps/</loc>
+    <lastmod>2017-03-29T12:04:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2014-2017/20170224-python-spider-note/</loc>
+    <lastmod>2017-02-24T12:33:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/python/</loc>
+    <lastmod>2017-02-24T12:33:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2014-2017/20160831-use-onenote-achieve-orc/</loc>
+    <lastmod>2016-08-31T16:50:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/orc/</loc>
+    <lastmod>2016-08-31T16:50:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2014-2017/20160607-json-and-request-header-content-type/</loc>
+    <lastmod>2016-06-07T12:06:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/chrome/</loc>
+    <lastmod>2016-06-07T12:06:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/json/</loc>
+    <lastmod>2016-06-07T12:06:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E4%B9%90%E8%A7%82/</loc>
+    <lastmod>2016-03-30T22:59:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/categories/%E5%A1%94%E5%B0%94%E5%A1%94%E7%BD%97%E6%96%AF/</loc>
+    <lastmod>2016-03-30T22:59:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E5%A4%A9%E8%B5%8B/</loc>
+    <lastmod>2016-03-30T22:59:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E6%97%85%E8%A1%8C/</loc>
+    <lastmod>2016-03-30T22:59:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E7%90%86%E6%80%A7/</loc>
+    <lastmod>2016-03-30T22:59:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2016-03-30T22:59:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E7%BE%8E%E4%B8%91/</loc>
+    <lastmod>2016-03-30T22:59:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/059-daily-2016-3-30/</loc>
+    <lastmod>2016-03-30T22:59:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/058-about-some-interview-tutorial/</loc>
+    <lastmod>2016-03-11T10:45:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/081-daily-2015-10-24/</loc>
+    <lastmod>2015-10-24T09:16:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E8%AF%97%E6%AD%8C/</loc>
+    <lastmod>2015-10-24T09:16:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2014-2017/20150810-install-win10-on-macbook-air/</loc>
+    <lastmod>2015-08-10T18:19:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/mac/</loc>
+    <lastmod>2015-08-10T18:19:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2014-2017/20150430-my-playing-game-three-level/</loc>
+    <lastmod>2015-04-30T21:24:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E5%A2%83%E7%95%8C/</loc>
+    <lastmod>2015-04-30T21:24:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2015-04-30T21:24:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2014-2017/20150415-cross-domain-upload-img/</loc>
+    <lastmod>2015-04-15T11:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E8%B7%A8%E5%9F%9F/</loc>
+    <lastmod>2015-04-15T11:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/2014-2017/20140923-design-principle-note/</loc>
+    <lastmod>2014-09-23T16:59:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/</loc>
+    <lastmod>2014-09-23T16:59:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/03-weblog/308-review-tokyo-story/</loc>
+    <lastmod>2014-09-21T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/03-weblog/307-ten-mile-changting/</loc>
+    <lastmod>2014-09-15T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/03-weblog/306-whats-wrong-the-world/</loc>
+    <lastmod>2014-09-11T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/04-other/011-daily-2014-9-10/</loc>
+    <lastmod>2014-09-10T13:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/03-weblog/305-a-walk-to-remember/</loc>
+    <lastmod>2014-09-09T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/03-weblog/304-encourage-others-and-myself/</loc>
+    <lastmod>2014-08-30T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/03-weblog/303-some-opinions-about-film/</loc>
+    <lastmod>2014-08-29T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/03-weblog/302-the-chioce-time/</loc>
+    <lastmod>2014-08-28T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/03-weblog/301-wechat-public-account-first/</loc>
+    <lastmod>2014-08-22T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/04-other/013-flyme-about-travel/</loc>
+    <lastmod>2015-05-15T13:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/057-beijing-travel-trip-2/</loc>
+    <lastmod>2014-01-09T00:56:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/097-about-2013/</loc>
+    <lastmod>2014-01-07T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/056-beijing-travel-trip-1/</loc>
+    <lastmod>2013-12-10T19:22:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E6%95%A3%E6%96%87/</loc>
+    <lastmod>2013-09-01T20:40:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E6%96%87%E5%AD%A6/</loc>
+    <lastmod>2013-09-01T20:40:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/055-autumn-daily/</loc>
+    <lastmod>2013-09-01T20:40:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/096-daily-2013-03-30/</loc>
+    <lastmod>2013-08-30T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/054-daily-2013-5-4/</loc>
+    <lastmod>2010-08-02T11:04:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E6%A2%A6/</loc>
+    <lastmod>2010-08-02T11:04:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/053-daily-2013-1-3/</loc>
+    <lastmod>2013-01-03T17:21:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/categories/%E4%BB%A5%E6%A2%A6%E4%B8%BA%E9%A9%AC/</loc>
+    <lastmod>2012-05-16T04:35:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/193-daliy-2012-05-16/</loc>
+    <lastmod>2012-05-16T04:35:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/137-hope-meet-you-again/</loc>
+    <lastmod>2012-03-14T19:46:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/052-prajna-paramita/</loc>
+    <lastmod>2012-03-13T21:39:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/136-hope-meet-her-again/</loc>
+    <lastmod>2012-03-12T14:56:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/135-i-am-24/</loc>
+    <lastmod>2012-03-03T00:14:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/134-we-have-many-stories/</loc>
+    <lastmod>2012-03-03T00:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/192-daliy-2011-12-07/</loc>
+    <lastmod>2011-12-07T14:15:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/133-ten-network-age/</loc>
+    <lastmod>2011-08-09T22:25:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/132-find-girl-friends/</loc>
+    <lastmod>2011-07-22T21:34:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/131-goodbye-my-first-job/</loc>
+    <lastmod>2011-07-22T13:22:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/050-daily-2011-2-14/</loc>
+    <lastmod>2011-02-14T08:45:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/02-zone2/205-daily-20110209/</loc>
+    <lastmod>2011-02-09T09:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/095-daily-2010-11-28/</loc>
+    <lastmod>2010-11-29T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/130-read-jinshengbing/</loc>
+    <lastmod>2010-11-19T08:59:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/045-huo-bu-dan-xing/</loc>
+    <lastmod>2010-07-15T17:13:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/046-my-qzone-record/</loc>
+    <lastmod>2010-05-27T18:23:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/129-ai-bei-ai-de-ren-a/</loc>
+    <lastmod>2010-04-23T22:10:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/043-revisit-blog/</loc>
+    <lastmod>2010-04-21T23:42:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/042-crossroad/</loc>
+    <lastmod>2010-04-05T23:15:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/041-daily-record-software-project/</loc>
+    <lastmod>2010-03-12T20:56:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/02-zone2/203-empty-cup/</loc>
+    <lastmod>2010-02-15T14:33:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/040-daily-record-read-all-day/</loc>
+    <lastmod>2010-01-08T02:05:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/039-write-for-tomorrow/</loc>
+    <lastmod>2009-12-31T23:14:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/080-daily-2009-12-31/</loc>
+    <lastmod>2009-12-31T22:52:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/038-first-interview/</loc>
+    <lastmod>2009-12-13T16:02:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/037-guess-the-train/</loc>
+    <lastmod>2009-12-08T21:21:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/036-about-internship-training/</loc>
+    <lastmod>2009-12-06T22:19:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/035-equation-solve-labyrinth/</loc>
+    <lastmod>2009-11-25T16:59:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/034-reading-university-why/</loc>
+    <lastmod>2009-11-13T10:28:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/128-ai-ju-ran/</loc>
+    <lastmod>2009-10-23T01:28:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/02-zone2/202-dream-flower-bloom-and-fall/</loc>
+    <lastmod>2009-10-20T13:15:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/032-dream-cannot-explain/</loc>
+    <lastmod>2009-10-19T00:07:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/127-time-change-manything/</loc>
+    <lastmod>2009-10-08T11:11:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/126-daily-2009-10-06/</loc>
+    <lastmod>2009-10-06T11:38:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/125-san-shu-die/</loc>
+    <lastmod>2009-09-22T16:59:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/094-daily-2009-9-2/</loc>
+    <lastmod>2009-09-03T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/02-zone2/206-mu-ai/</loc>
+    <lastmod>2009-06-22T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/093-zc/</loc>
+    <lastmod>2009-06-18T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/031-question-and-answer/</loc>
+    <lastmod>2009-06-04T00:15:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/030-daily-record/</loc>
+    <lastmod>2009-05-29T18:40:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/092-hake-jinsheng/</loc>
+    <lastmod>2009-05-10T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/091-xiang/</loc>
+    <lastmod>2009-05-05T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/029-back-to-begining/</loc>
+    <lastmod>2009-05-03T22:22:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/191-everything-coming-better/</loc>
+    <lastmod>2009-04-28T23:12:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/090-xiaohua-zhaichao/</loc>
+    <lastmod>2009-04-23T00:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/02-zone2/201-galois/</loc>
+    <lastmod>2009-04-22T20:08:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/02-zone2/204-friendship/</loc>
+    <lastmod>2009-04-22T20:08:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/028-nothing-to-talk-about/</loc>
+    <lastmod>2009-03-19T13:12:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/027-i-am-furious/</loc>
+    <lastmod>2009-03-18T14:19:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/190-daliy-2012-03-14/</loc>
+    <lastmod>2009-03-03T20:01:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/124-thoughts-about-liu-wei/</loc>
+    <lastmod>2009-02-27T23:42:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E5%A4%A7%E5%AD%A6/</loc>
+    <lastmod>2009-02-27T23:42:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E8%87%AA%E6%9D%80/</loc>
+    <lastmod>2009-02-27T23:42:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/025-ma-jia-jue-event/</loc>
+    <lastmod>2009-02-21T23:49:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/024-calendar/</loc>
+    <lastmod>2009-01-02T00:54:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/023-the-last-day-of-2008/</loc>
+    <lastmod>2008-12-31T19:17:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/022-meteor/</loc>
+    <lastmod>2008-12-14T23:50:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/021-about-1998-2008/</loc>
+    <lastmod>2008-12-13T11:44:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/020-walking-thoughts/</loc>
+    <lastmod>2008-12-09T19:44:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/018-thanksgiving/</loc>
+    <lastmod>2008-12-09T19:06:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/017-wu-yu/</loc>
+    <lastmod>2008-12-08T12:31:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/015-chinese-bed-people/</loc>
+    <lastmod>2008-10-11T10:40:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/010-some-thoughts-about-sunset/</loc>
+    <lastmod>2008-07-10T09:08:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/123-chioce-freedom/</loc>
+    <lastmod>2008-06-20T08:51:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/008-this-era/</loc>
+    <lastmod>2008-06-20T08:36:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/007-everything/</loc>
+    <lastmod>2008-06-14T08:29:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/003-some-thoughts-about-xi-zang/</loc>
+    <lastmod>2008-03-21T21:29:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/002-on-lantern-festival-night/</loc>
+    <lastmod>2008-02-21T21:48:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/120-dearest/</loc>
+    <lastmod>2007-11-17T11:49:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/119-write-something/</loc>
+    <lastmod>2007-10-01T09:36:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/118-chun-jiang-hua-yue-ye/</loc>
+    <lastmod>2007-08-31T09:54:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/117-song-bie/</loc>
+    <lastmod>2007-08-28T08:54:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/116-zui-chu-de-meng-xiang/</loc>
+    <lastmod>2007-08-27T16:36:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/00-zone/001-some-thoughts-on-death/</loc>
+    <lastmod>2007-08-05T10:54:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/tags/%E6%AD%BB%E4%BA%A1/</loc>
+    <lastmod>2007-08-05T10:54:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/115-thoughts-about-math/</loc>
+    <lastmod>2007-07-29T11:03:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/114-huan-de-huan-shi/</loc>
+    <lastmod>2007-06-20T09:43:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/113-jinrong-about-feeling/</loc>
+    <lastmod>2007-06-19T22:20:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/112-lose-culture/</loc>
+    <lastmod>2007-06-17T21:44:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/109-tong-meng-qi-yuan/</loc>
+    <lastmod>2007-05-04T19:09:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/108-the-story-about-equation/</loc>
+    <lastmod>2007-03-29T21:30:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/107-soul-onsite/</loc>
+    <lastmod>2007-03-23T13:56:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/106-time-works-product/</loc>
+    <lastmod>2007-03-23T13:54:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/121-find-the-lost/</loc>
+    <lastmod>2007-02-21T16:08:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/103-contradiction/</loc>
+    <lastmod>2007-02-21T16:08:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/102-daily/</loc>
+    <lastmod>2007-02-14T17:36:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laowang-atlas.gitee.io/post/old_article/01-baidu/101-hello-everyone/</loc>
+    <lastmod>2007-02-11T12:44:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>
