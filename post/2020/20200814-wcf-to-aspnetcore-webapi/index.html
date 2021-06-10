@@ -80,7 +80,7 @@
 选择 RESTful 另一个最重要的原因是，gRPC 的底层框架需要HTTP2，而 win7 不支持HTTP2，有相当一部分用户在 win7 上。上篇有人推荐 grpc web ，由于项目是 WPF 桌面客户端，这种 web 方式可能就更不适合了。">
 <meta itemprop="datePublished" content="2020-08-14T11:11:00+08:00" />
 <meta itemprop="dateModified" content="2020-08-21T18:46:00+08:00" />
-<meta itemprop="wordCount" content="6009">
+<meta itemprop="wordCount" content="6137">
 
 
 
@@ -444,8 +444,8 @@ if (!doNotTrack) {
             <a href="/categories/%E5%B7%A5%E4%BD%9C%E9%9A%8F%E7%AC%94/"> 工作随笔 </a>
             
           </div>
-        <span class="more-meta"> 约 6009 字 </span>
-          <span class="more-meta"> 预计阅读 12 分钟 </span>
+        <span class="more-meta"> 约 6137 字 </span>
+          <span class="more-meta"> 预计阅读 13 分钟 </span>
 
         
         
@@ -495,6 +495,7 @@ if (!doNotTrack) {
         <li><a href="#log4net">log4net</a></li>
         <li><a href="#framework-40-的-md5-方法废弃">Framework 4.0 的 md5 方法废弃</a></li>
         <li><a href="#datetimeoffset-和-datetime">DateTimeOffset 和 DateTime</a></li>
+        <li><a href="#单例模式的基类">单例模式的基类</a></li>
       </ul>
     </li>
     <li><a href="#总结">总结</a></li>
@@ -1481,6 +1482,40 @@ put <span class="s2">&#34;D:\Projects\lst\01-LstWebApi\LenovoSmartToolWebApi\bin
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
+</div><h3 id="单例模式的基类">单例模式的基类</h3>
+<p>在单例模式的子类里面，全部继承该基类。在基类里面实现了日志的初始化，子类的单例对象初始化，子类必须包<code>private 空的</code>默认构造对象。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="k">abstract</span> <span class="k">class</span> <span class="nc">BaseSingleton</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="k">where</span> <span class="n">T</span> <span class="p">:</span> <span class="n">BaseSingleton</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="n">LogMaker</span> <span class="n">m_logger</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+
+    <span class="k">protected</span> <span class="n">BaseSingleton</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">m_logger</span> <span class="p">=</span> <span class="k">new</span> <span class="n">LogMaker</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">GetType</span><span class="p">());</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">Lazy</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="n">Lazy</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Lazy</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(()</span> <span class="p">=&gt;</span> <span class="n">Activator</span><span class="p">.</span><span class="n">CreateInstance</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">T</span><span class="p">),</span> <span class="k">true</span><span class="p">)</span> <span class="k">as</span> <span class="n">T</span><span class="p">);</span>
+
+    <span class="k">public</span> <span class="k">static</span> <span class="n">T</span> <span class="n">Singleton</span> <span class="p">=&gt;</span> <span class="n">Lazy</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
 </div><h2 id="总结">总结</h2>
 <p>目前，只迁移了一部分的 WCF 接口过来，等待部署到生产环境，可以稳定运行后，再将剩余部分全部迁移过来。这次的尝试比较成功：</p>
 <ol>
@@ -1692,7 +1727,7 @@ put <span class="s2">&#34;D:\Projects\lst\01-LstWebApi\LenovoSmartToolWebApi\bin
     &copy;
     
       2007 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

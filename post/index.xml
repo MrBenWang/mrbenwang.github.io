@@ -6,10 +6,37 @@
     <description>Recent content in Posts on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 18 Sep 2020 11:11:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 Jun 2021 16:18:00 +0800</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>世界正在整体左转</title>
+      <link>/post/2021/20210609-world-turn-right/</link>
+      <pubDate>Tue, 08 Jun 2021 16:18:00 +0800</pubDate>
+      
+      <guid>/post/2021/20210609-world-turn-right/</guid>
+      <description>&lt;p&gt;最近，看到各种重磅的新闻，听了不少大V的分析。结合我自己的一些想法，得出来的结论就是：&lt;strong&gt;社会的深层变革在酝酿中，世界正在整体左转&lt;/strong&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>体检过后</title>
+      <link>/post/2021/20210531-medical-report/</link>
+      <pubDate>Mon, 31 May 2021 14:02:00 +0800</pubDate>
+      
+      <guid>/post/2021/20210531-medical-report/</guid>
+      <description>&lt;p&gt;上周二做了单位提供的体检项目，隔天拿到了体检报告后，看到&lt;code&gt;尿酸高&lt;/code&gt;、&lt;code&gt;血脂高&lt;/code&gt;、&lt;code&gt;甲状腺激素高&lt;/code&gt;这些结论后，我即可就进入了焦虑模式。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>聊聊近况</title>
+      <link>/post/2021/20210324-recent-situation/</link>
+      <pubDate>Tue, 23 Mar 2021 15:08:00 +0800</pubDate>
+      
+      <guid>/post/2021/20210324-recent-situation/</guid>
+      <description>&lt;p&gt;突然好有&lt;code&gt;负罪感&lt;/code&gt;，自从去年九月份后，就再也没有写过博客了。这篇博文就简单的聊一聊这半年发生的一些事情，和心里变化。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>自我疗伤，重新审视自己，尝试改变</title>
@@ -352,37 +379,6 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
       <guid>/post/2018/20181107-japanese-language-study-for-3months/</guid>
       <description>&lt;p&gt;不知不觉就已经学习日语三个月了，有点点小小的心得和经验。&lt;br&gt;
 这篇文章：一方面是整理，记忆，留作以后回忆使用，另一方面，也想对和我一样学习日语的人，如果能有&lt;code&gt;一点点帮助&lt;/code&gt;就再好不过了。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>*域名注册经历的一些分享</title>
-      <link>/post/2018/20180930-domain-registration-share/</link>
-      <pubDate>Sun, 30 Sep 2018 09:04:00 +0800</pubDate>
-      
-      <guid>/post/2018/20180930-domain-registration-share/</guid>
-      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;一次偶然机会，看了一下新建一个&lt;a href=&#34;https://www.vultr.com/?ref=7136316&#34;&gt;VPS实例&lt;/a&gt;的价格，发现最低价的配置，没有&lt;code&gt;ip4&lt;/code&gt;了(所幸我的还是ip4)，只能使用&lt;code&gt;ipv6&lt;/code&gt;。&lt;code&gt;2001:0db8:85a3:08d3:1319:8a2e:0370:7344&lt;/code&gt; 这样的ip地址，又长又难记忆。如果有个域名那不就简单记忆了嘛。&lt;br&gt;
-&lt;img src=&#34;/images/2018/20180930-domain-registration-share/ipv6_only.jpg&#34; alt=&#34;ipv6_only&#34;&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>由shadowsocks转为v2ray的体验</title>
-      <link>/post/2018/20180929-give-up-ss-and-change-to-v2ray/</link>
-      <pubDate>Sat, 29 Sep 2018 15:04:00 +0800</pubDate>
-      
-      <guid>/post/2018/20180929-give-up-ss-and-change-to-v2ray/</guid>
-      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;最近一段时间，总感觉&lt;code&gt;shadowsocks&lt;/code&gt;用起来非常的慢，时不时的断网，我就觉得可能不太对劲了。在issues看到有不少人提到，可能已经被人工智能识别，所以非常堪忧。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>*Hugo &#43; github 搭建个人博客</title>
-      <link>/post/2018/20180927-hugo-plus-github-build-blog/</link>
-      <pubDate>Thu, 27 Sep 2018 15:13:00 +0800</pubDate>
-      
-      <guid>/post/2018/20180927-hugo-plus-github-build-blog/</guid>
-      <description>&lt;p&gt;很早以前就有想法，搭建一个个人的博客。没有实现的原因：一方面个人的服务器&lt;code&gt;不太安全&lt;/code&gt;，并且掉线，欠费等等，维护起来麻烦，另一方面，文章编辑发布起来也&lt;code&gt;不方便&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;后来了解到 github 提供了博客的功能，也一直没有实践。也鉴于上次文章被删，我也就开始实践了起来，&lt;code&gt;有一个备份总好于无&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
   </channel>

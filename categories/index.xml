@@ -6,15 +6,24 @@
     <description>Recent content in Categories on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 18 Sep 2020 11:11:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 Jun 2021 16:18:00 +0800</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>点点想法</title>
+      <link>/categories/%E7%82%B9%E7%82%B9%E6%83%B3%E6%B3%95/</link>
+      <pubDate>Tue, 08 Jun 2021 16:18:00 +0800</pubDate>
+      
+      <guid>/categories/%E7%82%B9%E7%82%B9%E6%83%B3%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>生活随笔</title>
       <link>/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/</link>
-      <pubDate>Fri, 18 Sep 2020 11:11:00 +0800</pubDate>
+      <pubDate>Mon, 31 May 2021 14:02:00 +0800</pubDate>
       
       <guid>/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/</guid>
       <description></description>
@@ -26,15 +35,6 @@
       <pubDate>Fri, 14 Aug 2020 11:11:00 +0800</pubDate>
       
       <guid>/categories/%E5%B7%A5%E4%BD%9C%E9%9A%8F%E7%AC%94/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>点点想法</title>
-      <link>/categories/%E7%82%B9%E7%82%B9%E6%83%B3%E6%B3%95/</link>
-      <pubDate>Mon, 19 Aug 2019 15:27:00 +0800</pubDate>
-      
-      <guid>/categories/%E7%82%B9%E7%82%B9%E6%83%B3%E6%B3%95/</guid>
       <description></description>
     </item>
     
