@@ -6,10 +6,20 @@
     <description>Recent content in 点点想法 on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 08 Jun 2021 16:18:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 28 Jun 2021 14:45:00 +0800</lastBuildDate>
     
 	<atom:link href="/categories/%E7%82%B9%E7%82%B9%E6%83%B3%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>单身的原因分析</title>
+      <link>/post/2021/20210628-analysis-single-reasons/</link>
+      <pubDate>Mon, 28 Jun 2021 14:45:00 +0800</pubDate>
+      
+      <guid>/post/2021/20210628-analysis-single-reasons/</guid>
+      <description>&lt;p&gt;根据统计数据《中国统计年鉴2019》，2019年中国单身人口规模已达到2.4亿，这个数字超过了俄罗斯与英国的总人口之和，其中有7700万人独居。另据估计，到2021年，第二个数字将上升到9200万。&lt;/p&gt;
+&lt;p&gt;看到上面这则新闻的时候，我也是震惊的。中国怎么会有这么多单身人群，我怎么都没有感觉呢？是幸存者偏差的原因吗？我尝试分析一下原因，结合自身给出一些解决方法。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>世界正在整体左转</title>
@@ -360,15 +370,6 @@
       <guid>/post/old_article/00-zone/001-some-thoughts-on-death/</guid>
       <description>&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
 &lt;p&gt;人死以后的感觉，也许没有感觉，大概就是象那在熟睡中的人把。在这中间发生的一切，所有的一切都不知道，都与己无关，而醒来时仿佛又回到这个世界。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>由数学引发的思索</title>
-      <link>/post/old_article/01-baidu/115-thoughts-about-math/</link>
-      <pubDate>Sun, 29 Jul 2007 11:03:00 +0800</pubDate>
-      
-      <guid>/post/old_article/01-baidu/115-thoughts-about-math/</guid>
-      <description>&lt;p&gt;下午看了一篇关于数学与人们的生活，科学文章，引发了下面：&lt;/p&gt;</description>
     </item>
     
   </channel>

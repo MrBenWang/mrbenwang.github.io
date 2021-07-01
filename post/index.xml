@@ -6,10 +6,20 @@
     <description>Recent content in Posts on 风雪夜归人</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 08 Jun 2021 16:18:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 28 Jun 2021 14:45:00 +0800</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>单身的原因分析</title>
+      <link>/post/2021/20210628-analysis-single-reasons/</link>
+      <pubDate>Mon, 28 Jun 2021 14:45:00 +0800</pubDate>
+      
+      <guid>/post/2021/20210628-analysis-single-reasons/</guid>
+      <description>&lt;p&gt;根据统计数据《中国统计年鉴2019》，2019年中国单身人口规模已达到2.4亿，这个数字超过了俄罗斯与英国的总人口之和，其中有7700万人独居。另据估计，到2021年，第二个数字将上升到9200万。&lt;/p&gt;
+&lt;p&gt;看到上面这则新闻的时候，我也是震惊的。中国怎么会有这么多单身人群，我怎么都没有感觉呢？是幸存者偏差的原因吗？我尝试分析一下原因，结合自身给出一些解决方法。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>世界正在整体左转</title>
@@ -369,16 +379,6 @@ Sell 則僅僅是賣一項你擁有的東西，因此Sell以後的部位&lt;stro
 &lt;p&gt;个人认为双十一的成长已经到头了，它所产生的副作用，将会至少影响到未来半年的经发展。最主要的原因是，它提前透支的需求越多，对市场的供需平衡越不利，尤其是对未来很长一段时间的需求不振。它的好处则是，年底冲业绩，清仓的目的，但是这个好处越来越小了。&lt;br&gt;
 以下的内容，其中涉及到的数据，全部来自&lt;code&gt;互联网公开信息&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;打脸的事情来了&lt;/strong&gt;，现在2019年，14小时21分天猫双十一交易额突破2000亿元，突破2018年已经毫无悬念了。在前两天，我还在预测，今年结合大环境不景气，世界金融环境风险越来越大，今年销售额会低于去年的。。。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>自学日语记录历程</title>
-      <link>/post/2018/20181107-japanese-language-study-for-3months/</link>
-      <pubDate>Wed, 07 Nov 2018 09:33:00 +0800</pubDate>
-      
-      <guid>/post/2018/20181107-japanese-language-study-for-3months/</guid>
-      <description>&lt;p&gt;不知不觉就已经学习日语三个月了，有点点小小的心得和经验。&lt;br&gt;
-这篇文章：一方面是整理，记忆，留作以后回忆使用，另一方面，也想对和我一样学习日语的人，如果能有&lt;code&gt;一点点帮助&lt;/code&gt;就再好不过了。&lt;/p&gt;</description>
     </item>
     
   </channel>
